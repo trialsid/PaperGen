@@ -1,0 +1,6 @@
+/Generated_Papers/
+/images/
+*.json
+/.venv/
+/fonts/
+/paper_generators/__pycache__/
