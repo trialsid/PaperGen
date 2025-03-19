@@ -407,10 +407,10 @@ class MCQPaperGenerator(BasePaperGenerator):
         return lines * self.config.spacing['line_height']
 
     def add_question(self, number: int, question_text: str, choices: List[str], 
-                    correct_answer_index: Optional[int] = None) -> None:
+                    correct_answer_index: Optional[int] = None, reasoning: Optional[str] = None) -> None:
         """Add a question with its options, ensuring they stay together."""
         # Calculate total height needed for question and all options
-        needed_height = self.measure_question_height(question_text, choices)
+        needed_height = self.measure_question_height(question_text, choices, reasoning)
         
         # Add a very minimal buffer to ensure we don't get too close to the bottom
         safety_buffer = 3  # Reduced from 5 to 3
@@ -456,7 +456,7 @@ class MCQPaperGenerator(BasePaperGenerator):
                 self.set_xy(10, 20)
             
             # After moving, call add_question again to ensure proper positioning
-            return self.add_question(number, question_text, choices, correct_answer_index)
+            return self.add_question(number, question_text, choices, correct_answer_index, reasoning)
         
         # Now we're sure we have enough space for the entire question and all options
         x_start = 10 if self.current_side == 'left' else self.w/2 + 2
@@ -507,6 +507,21 @@ class MCQPaperGenerator(BasePaperGenerator):
                     i += 1
                 current_y += height + 1
             
+            # Add reasoning if available and showing answers
+            if reasoning and self.show_answers:
+                # Add some space before the reasoning
+                current_y += 1
+                self.set_xy(options_x, current_y)
+                # Use the same font style and size as option labels
+                self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
+                self.cell(30, 5, "Explanation:", 0, 0)
+                
+                # Write the reasoning text with the same font as options
+                self.set_xy(options_x, current_y + 5)
+                self.set_font('ArialUni', '', self.config.font_sizes['option'])
+                self.multi_cell(self._options_width, self.config.spacing['line_height'], reasoning)
+                current_y = self.get_y() + 2
+            
             # Update Y position after writing everything
             self.set_y(current_y + 1)  # Reduced from 2 to 1
             
@@ -522,7 +537,7 @@ class MCQPaperGenerator(BasePaperGenerator):
                 self.current_side = 'left'
                 self.set_xy(10, 20)
 
-    def measure_question_height(self, question_text: str, choices: List[str]) -> float:
+    def measure_question_height(self, question_text: str, choices: List[str], reasoning: Optional[str] = None) -> float:
         """Calculate the height needed for a question and its options."""
         # Calculate question text height with minimal padding
         question_height = self.estimate_text_height(
@@ -567,6 +582,15 @@ class MCQPaperGenerator(BasePaperGenerator):
             total_height += option_height
             i += 1
             total_height += 0.5  # Reduced from 0.75 to 0.5
+        
+        # Add height for reasoning if available and we're showing answers
+        if reasoning and self.show_answers:
+            reasoning_height = self.estimate_text_height(
+                f"Explanation: {reasoning}",
+                self._options_width,
+                self.config.font_sizes['option']
+            )
+            total_height += reasoning_height + 7  # Extra space for the explanation label and padding
         
         # Add a very minimal buffer for safety
         buffer_space = 2  # Reduced from 3 to 2
@@ -632,7 +656,8 @@ class MCQPaperGenerator(BasePaperGenerator):
             first_question = questions_with_numbers[0]
             first_question_height = self.measure_question_height(
                 first_question['question'],
-                first_question['choices']
+                first_question['choices'],
+                first_question.get('reasoning')
             )
             
             # Add section header with knowledge of next question's height
@@ -643,7 +668,8 @@ class MCQPaperGenerator(BasePaperGenerator):
                 first_question['number'],
                 first_question['question'],
                 first_question['choices'],
-                first_question['choices'].index(first_question['answer']) if self.show_answers else None
+                first_question['choices'].index(first_question['answer']) if self.show_answers else None,
+                first_question.get('reasoning') if self.show_answers and 'reasoning' in first_question else None
             )
             
             # Add the remaining questions for this section with space optimization
@@ -652,7 +678,8 @@ class MCQPaperGenerator(BasePaperGenerator):
                 question = questions_with_numbers[current_idx]
                 needed_height = self.measure_question_height(
                     question['question'],
-                    question['choices']
+                    question['choices'],
+                    question.get('reasoning')
                 )
                 
                 # Only adjust position if not using strict ordering
@@ -675,7 +702,8 @@ class MCQPaperGenerator(BasePaperGenerator):
                     question['number'],
                     question['question'],
                     question['choices'],
-                    question['choices'].index(question['answer']) if self.show_answers else None
+                    question['choices'].index(question['answer']) if self.show_answers else None,
+                    question.get('reasoning') if self.show_answers and 'reasoning' in question else None
                 )
                 
                 current_idx += 1
