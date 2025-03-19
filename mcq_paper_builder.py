@@ -192,7 +192,8 @@ def generate_mcq_sets_with_keys(
     num_sets: int,
     output_prefix: str = 'mcq_set',
     paper_format: str = 'A4',
-    config: Optional[MCQConfig] = None
+    config: Optional[MCQConfig] = None,
+    no_shuffle: bool = False
 ) -> Dict:
     """Generate MCQ sets with sections and answer keys."""
     set_names = list(string.ascii_uppercase[:num_sets])
@@ -236,26 +237,30 @@ def generate_mcq_sets_with_keys(
                     all_choices = question_copy['choices'].copy()
                     correct_answer = q['answer']
                     
-                    # Store original indices before shuffling to track answer position
-                    original_indices = list(range(len(all_choices)))
-                    # Shuffle both choices and indices together
-                    combined = list(zip(all_choices, original_indices))
-                    random.shuffle(combined)
-                    shuffled_choices, shuffled_indices = zip(*combined)
-                    
-                    # Update the question with shuffled choices
-                    question_copy['choices'] = list(shuffled_choices)
-                    # Find new position of correct answer
-                    correct_index = all_choices.index(correct_answer)
-                    new_answer_index = shuffled_indices.index(correct_index)
-                    question_copy['answer'] = shuffled_choices[new_answer_index]
+                    if not no_shuffle:
+                        # Store original indices before shuffling to track answer position
+                        original_indices = list(range(len(all_choices)))
+                        # Shuffle both choices and indices together
+                        combined = list(zip(all_choices, original_indices))
+                        random.shuffle(combined)
+                        shuffled_choices, shuffled_indices = zip(*combined)
+                        
+                        # Update the question with shuffled choices
+                        question_copy['choices'] = list(shuffled_choices)
+                        # Find new position of correct answer
+                        correct_index = all_choices.index(correct_answer)
+                        new_answer_index = shuffled_indices.index(correct_index)
+                        question_copy['answer'] = shuffled_choices[new_answer_index]
                     
                     shuffled_questions.append(question_copy)
                 
                 # Shuffle questions and store their order
-                question_indices = list(range(len(shuffled_questions)))
-                random.shuffle(question_indices)
-                ordered_questions = [shuffled_questions[i] for i in question_indices]
+                if not no_shuffle:
+                    question_indices = list(range(len(shuffled_questions)))
+                    random.shuffle(question_indices)
+                    ordered_questions = [shuffled_questions[i] for i in question_indices]
+                else:
+                    ordered_questions = shuffled_questions
                 
                 section_copy = SectionConfig(
                     name=section.name,
@@ -273,21 +278,24 @@ def generate_mcq_sets_with_keys(
             
             # Generate question PDF
             pdf = MCQPaperGenerator(config=config, show_answers=False, paper_format=paper_format, 
-                                   question_count=total_questions, show_student_info=not args.no_student_info)
+                                   question_count=total_questions, show_student_info=not args.no_student_info,
+                                   strict_ordering=no_shuffle)
             pdf.set_set_name(set_name)
             pdf.add_page()
             total_marks = pdf.generate_from_sections(set_sections)
             
             # Generate answers PDF using same data and ordering
             pdf_answers = MCQPaperGenerator(config=config, show_answers=True, paper_format=paper_format, 
-                                          question_count=total_questions, show_student_info=not args.no_student_info)
+                                          question_count=total_questions, show_student_info=not args.no_student_info,
+                                          strict_ordering=no_shuffle)
             pdf_answers.set_set_name(set_name)
             pdf_answers.add_page()
             pdf_answers.generate_from_sections(set_sections)
             
             # Generate A3 booklet format
             pdf_booklet = MCQPaperGenerator(config=config, show_answers=False, paper_format='A3', 
-                                          question_count=total_questions, show_student_info=not args.no_student_info)
+                                          question_count=total_questions, show_student_info=not args.no_student_info,
+                                          strict_ordering=no_shuffle)
             pdf_booklet.set_set_name(set_name)
             pdf_booklet.add_page()
             pdf_booklet.generate_from_sections(set_sections)
@@ -388,6 +396,8 @@ if __name__ == "__main__":
                           help='Remove student information and instructions from the first page')
         parser.add_argument('--layout', choices=['one-column', 'two-column'], default='two-column',
                           help='Layout type for the paper (one-column or two-column). NOTE: This feature is not fully implemented yet.')
+        parser.add_argument('--no-shuffle', action='store_true',
+                          help='Do not shuffle questions and options. Questions and answer options will appear in the same order as in the input file, even across multiple sets.')
         args = parser.parse_args()
         
         # Override defaults with command line arguments if provided
@@ -431,7 +441,8 @@ if __name__ == "__main__":
             num_sets=NUM_SETS,
             output_prefix='Generated_Papers/MCQ/Questions/mcq_set',
             paper_format='A4',
-            config=config
+            config=config,
+            no_shuffle=args.no_shuffle
         )
         
         print("\nGeneration complete!")
