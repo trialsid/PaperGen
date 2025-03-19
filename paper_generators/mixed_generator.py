@@ -579,12 +579,14 @@ class MixedPaperGenerator(BasePaperGenerator):
         image_height = 0
         if 'image' in question:
             try:
-                # Get image dimensions
-                img_path = question['image']
-                img = self.fpdf.get_image_info(img_path)
-                if img:
-                    # Calculate scaled height maintaining aspect ratio
-                    img_aspect = img['h'] / img['w']
+                # Get image dimensions using PIL directly
+                from PIL import Image
+                # Check if the path already includes questions_data
+                if not question['image'].startswith('questions_data/'):
+                    img_path = f"questions_data/{question['image']}"
+                with Image.open(img_path) as img:
+                    img_w, img_h = img.size
+                    img_aspect = img_h / img_w
                     scaled_height = self._question_width * img_aspect
                     image_height = scaled_height + 2  # 2 units padding after image
             except:
@@ -618,6 +620,9 @@ class MixedPaperGenerator(BasePaperGenerator):
                 
                 # Place image centered under the question text
                 img_path = question['image']
+                # Check if the path already includes questions_data
+                if not img_path.startswith('questions_data/'):
+                    img_path = f"questions_data/{img_path}"
                 self.image(img_path, x=question_x, y=img_y, w=self._question_width)
                 
                 # Update Y position to after the image

@@ -380,8 +380,8 @@ if __name__ == "__main__":
         parser.add_argument('--title', type=str, help='School name (max 60 characters)')
         parser.add_argument('--subtitle', type=str, help='Subtitle (max 50 characters)')
         parser.add_argument('--exam-title', type=str, help='Exam title (max 50 characters)')
-        parser.add_argument('--input-file', type=str, default='mcq_questions.json',
-                          help='Input JSON file with sections data (default: mcq_questions.json)')
+        parser.add_argument('--input-file', type=str, default='questions_data/mcq_questions.json',
+                          help='Input JSON file with sections data (default: questions_data/mcq_questions.json)')
         parser.add_argument('--size', type=str, default='medium', choices=['small', 'medium', 'large'],
                           help='Font and spacing size configuration (default: medium)')
         parser.add_argument('--no-student-info', action='store_true',

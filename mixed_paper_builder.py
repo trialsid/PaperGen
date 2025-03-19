@@ -228,8 +228,8 @@ def generate_mixed_paper(sections_data: List[Dict], output_path: str, config: Mi
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(description='Generate mixed question papers')
-    parser.add_argument('--input-file', type=str, default='mixed_questions.json',
-                      help='Input JSON file with sections data (default: mixed_questions.json)')
+    parser.add_argument('--input-file', type=str, default='questions_data/mixed_questions.json',
+                      help='Input JSON file with sections data (default: questions_data/mixed_questions.json)')
     parser.add_argument('--output-file', type=str, 
                       default='Generated_Papers/Mixed/Questions/mixed_paper.pdf',
                       help='Output PDF file path')

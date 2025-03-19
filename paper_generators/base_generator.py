@@ -331,6 +331,25 @@ class BasePaperGenerator(FPDF):
         Draw a styled "END" marker with gradient-colored asterisks.
         This is used at the end of question papers to indicate the end of the questions.
         """
+        # Check if there's enough space for the end marker in the current column
+        y_pos = self.get_y()
+        end_marker_height = 20  # Approximate height for the end marker with spacing
+        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+
+        # If there's not enough space in the current column for the end marker
+        if (y_pos + end_marker_height) > effective_page_height:
+            # Move to the next column or page
+            if self.current_side == 'left':
+                # Try right column
+                right_column_start = self.first_page_offset + 5 if self.page_no() == 1 else 20
+                self.current_side = 'right'
+                self.set_xy(self.w/2 + 2, right_column_start)
+            else:
+                # If we're already on right side, create new page
+                self.add_page()
+                self.current_side = 'left'
+                self.set_xy(10, 20)
+        
         # Determine which column we're in
         if self.current_side == 'left':
             x = 10
