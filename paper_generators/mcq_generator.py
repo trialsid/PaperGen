@@ -332,10 +332,17 @@ class MCQPaperGenerator(BasePaperGenerator):
     def write_option(self, label: str, option_text: str, x: float, y: float, 
                     width: float, is_answer: bool = False) -> float:
         """Write a single option and return its height."""
-        # Check if we're too close to the footer
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Reduced from 3 to 2
-        if y > (self.h - footer_buffer):
-            return 0  # Return 0 instead of -1 since we now pre-check space
+        # Calculate height needed for this option first
+        option_height = self.estimate_text_height(
+            f"{label} {option_text}", 
+            width, 
+            self.config.font_sizes['option']
+        )
+        
+        # Check if we have enough space for this complete option
+        footer_buffer = self.MIN_FOOTER_BUFFER + 2
+        if (y + option_height) > (self.h - footer_buffer):
+            return -1  # Return -1 to indicate insufficient space
             
         # Calculate vertical offset to align baseline of different fonts
         label_font_size = self.config.font_sizes['option_label']
@@ -372,22 +379,59 @@ class MCQPaperGenerator(BasePaperGenerator):
         if start_idx >= len(options):
             return 0
 
-        # Check if we're too close to the footer
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Reduced from 3 to 2
-        if y > (self.h - footer_buffer):
-            return 0  # Return 0 instead of -1 since we now pre-check space
-            
         half_width = (width - self.config.spacing['option_column_gap']) / 2
         label1, text1, is_answer1 = options[start_idx]
+        
+        # Check space for first option
         height1 = self.write_option(label1, text1, x, y, half_width, is_answer1)
+        if height1 == -1:  # Insufficient space
+            return -1
         
         height2 = 0
         if start_idx + 1 < len(options):
             label2, text2, is_answer2 = options[start_idx + 1]
             x2 = x + half_width + self.config.spacing['option_column_gap']
             height2 = self.write_option(label2, text2, x2, y, half_width, is_answer2)
+            if height2 == -1:  # Insufficient space for second option
+                return -1
         
         return max(height1, height2)
+    
+    def _write_single_option(self, label: str, option_text: str, x: float, y: float, 
+                            width: float, is_answer: bool = False) -> float:
+        """Write a single option and return its height."""
+        # Set position for label
+        self.set_xy(x, y)
+        label_width = 5
+        self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
+        self.cell(label_width, 5, label, 0, 0)
+        
+        # Set position for option text
+        self.set_xy(x + label_width, y)
+        
+        # Set font for option text
+        if is_answer and self.show_answers:
+            self.set_font('ArialUni', 'B', self.config.font_sizes['option'])
+            option_text = option_text + " *"
+        else:
+            self.set_font('ArialUni', '', self.config.font_sizes['option'])
+            
+        # Write the option text
+        self.multi_cell(width - label_width + 1, self.config.spacing['line_height'], option_text, align='L')
+        return self.get_y() - y
+    
+    def _move_to_next_position(self):
+        """Move to next column or page when current position has insufficient space."""
+        if self.current_side == 'left':
+            # Try right column
+            right_column_start = self.first_page_offset + 5 if self.page_no() == 1 else 20
+            self.current_side = 'right'
+            self.set_xy(self.w/2 + 2, right_column_start)
+        else:
+            # Already on right side, start new page
+            self.add_page()
+            self.current_side = 'left'
+            self.set_xy(10, 20)
     
     @lru_cache(maxsize=1024)
     def estimate_text_height(self, text: str, width: float, font_size: int = 12) -> float:
@@ -409,133 +453,113 @@ class MCQPaperGenerator(BasePaperGenerator):
     def add_question(self, number: int, question_text: str, choices: List[str], 
                     correct_answer_index: Optional[int] = None, reasoning: Optional[str] = None) -> None:
         """Add a question with its options, ensuring they stay together."""
-        # Calculate total height needed for question and all options
-        needed_height = self.measure_question_height(question_text, choices, reasoning)
+        # This is a complete rewrite to fix the option splitting issue
         
-        # Add a very minimal buffer to ensure we don't get too close to the bottom
-        safety_buffer = 3  # Reduced from 5 to 3
+        # Calculate actual height needed more accurately
+        needed_height = self.measure_question_height(question_text, choices, reasoning)
+        safety_buffer = 5  # Keep reasonable buffer
         total_needed_height = needed_height + safety_buffer
         
-        # Check if the question can fit in a single column
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Reduced from 3 to 2
-        effective_page_height = self.h - footer_buffer
-        column_height = effective_page_height - (self.first_page_offset + 5 if self.page_no() == 1 else 20)
-        
-        # If the question is too tall for a single column, we need to adjust our approach
-        if needed_height > column_height:
-            # Add a buffer to ensure we don't get too close to the bottom
-            buffer = 2  # Reduced from 3 to 2
-            needed_height = min(needed_height, column_height - buffer)
-        
-        # Get current position
+        # Get current position and effective page bounds
         current_y = self.get_y()
-        current_side = self.current_side
+        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        effective_page_height = self.h - footer_buffer
         
-        # Pre-check if there's enough space for the ENTIRE question and ALL options
-        # This is the key improvement - we check BEFORE writing anything
-        if (current_y + total_needed_height) > effective_page_height:
-            # Not enough space in current column, try to move
-            if current_side == 'left':
+        # Calculate available space in current position
+        available_space = effective_page_height - current_y
+        
+        # If not enough space, move to next column or page BEFORE writing anything
+        if total_needed_height > available_space:
+            if self.current_side == 'left':
                 # Try right column
                 right_column_start = self.first_page_offset + 5 if self.page_no() == 1 else 20
-                right_column_space = effective_page_height - right_column_start
+                right_available_space = effective_page_height - right_column_start
                 
-                if (right_column_space - safety_buffer) >= needed_height:
-                    # Move to right column if there's enough space
+                if total_needed_height <= right_available_space:
+                    # Move to right column
                     self.current_side = 'right'
                     self.set_xy(self.w/2 + 2, right_column_start)
                 else:
-                    # If right column can't fit, create new page
+                    # Need new page
                     self.add_page()
                     self.current_side = 'left'
                     self.set_xy(10, 20)
             else:
-                # If we're already on right side, start new page
+                # Already on right side, need new page
                 self.add_page()
                 self.current_side = 'left'
                 self.set_xy(10, 20)
             
-            # After moving, call add_question again to ensure proper positioning
+            # Now call recursively with better positioning
             return self.add_question(number, question_text, choices, correct_answer_index, reasoning)
         
-        # Now we're sure we have enough space for the entire question and all options
+        # Now we have confirmed space - write the question
         x_start = 10 if self.current_side == 'left' else self.w/2 + 2
         start_y = self.get_y()
         
-        try:
-            # Write question number
-            question_number_font_size = self.config.font_sizes['question_number']
-            question_font_size = self.config.font_sizes['question']
-            
-            self.set_font('Noto', 'B', question_number_font_size)
-            self.set_xy(x_start, start_y)
-            self.cell(self.config.spacing['question_number_width'], 5, f"{number}.", 0, 0, 'R')
-            
-            # Write question text with vertical alignment
-            question_x = x_start + self.config.spacing['question_number_width'] + 1
-            self.set_xy(question_x, start_y)
-            self.set_font('ArialUni', 'I', question_font_size)
-            self.multi_cell(self._question_width, self.config.spacing['line_height'], question_text)
-            
-            # Prepare options
-            options = []
-            for i, choice in enumerate(choices):
+        # Write question number and text
+        self.set_font('Noto', 'B', self.config.font_sizes['question_number'])
+        self.set_xy(x_start, start_y)
+        self.cell(self.config.spacing['question_number_width'], 5, f"{number}.", 0, 0, 'R')
+        
+        question_x = x_start + self.config.spacing['question_number_width'] + 1
+        self.set_xy(question_x, start_y)
+        self.set_font('ArialUni', 'I', self.config.font_sizes['question'])
+        self.multi_cell(self._question_width, self.config.spacing['line_height'], question_text)
+        
+        # Write options - use intelligent pairing when possible
+        options_x = question_x + 2
+        current_y = self.get_y() + 1
+        i = 0
+        
+        while i < len(choices):
+            # Check if we can fit two options side by side
+            if (i + 1 < len(choices) and 
+                self.can_fit_two_options(choices[i], choices[i+1])):
+                # Write two options side by side
+                half_width = (self._options_width - self.config.spacing['option_column_gap']) / 2
+                
+                # First option
+                label1 = f"{chr(65+i)}."
+                is_answer1 = (i == correct_answer_index)
+                option_height1 = self._write_single_option(
+                    label1, choices[i], options_x, current_y, half_width, is_answer1
+                )
+                
+                # Second option  
+                label2 = f"{chr(65+i+1)}."
+                is_answer2 = (i+1 == correct_answer_index)
+                x2 = options_x + half_width + self.config.spacing['option_column_gap']
+                option_height2 = self._write_single_option(
+                    label2, choices[i+1], x2, current_y, half_width, is_answer2
+                )
+                
+                current_y += max(option_height1, option_height2) + 1
+                i += 2
+            else:
+                # Write single option
                 label = f"{chr(65+i)}."
                 is_answer = (i == correct_answer_index)
-                options.append((label, choice, is_answer))
+                option_height = self._write_single_option(
+                    label, choices[i], options_x, current_y, self._options_width, is_answer
+                )
+                current_y += option_height + 1
+                i += 1
+        
+        # Add reasoning if needed
+        if reasoning and self.show_answers:
+            current_y += 1
+            self.set_xy(options_x, current_y)
+            self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
+            self.cell(30, 5, "Explanation:", 0, 0)
             
-            # Write options
-            options_x = question_x + 2
-            current_y = self.get_y() + 1
-            i = 0
-            
-            while i < len(options):
-                # Check if we can fit two options side by side
-                if (i + 1 < len(options) and 
-                    self.can_fit_two_options(options[i][1], options[i+1][1])):
-                    height = self.write_option_pair(options, i, options_x, current_y, self._options_width)
-                    i += 2
-                else:
-                    height = self.write_option(
-                        options[i][0], 
-                        options[i][1], 
-                        options_x, 
-                        current_y, 
-                        self._options_width, 
-                        options[i][2]
-                    )
-                    i += 1
-                current_y += height + 1
-            
-            # Add reasoning if available and showing answers
-            if reasoning and self.show_answers:
-                # Add some space before the reasoning
-                current_y += 1
-                self.set_xy(options_x, current_y)
-                # Use the same font style and size as option labels
-                self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
-                self.cell(30, 5, "Explanation:", 0, 0)
-                
-                # Write the reasoning text with the same font as options
-                self.set_xy(options_x, current_y + 5)
-                self.set_font('ArialUni', '', self.config.font_sizes['option'])
-                self.multi_cell(self._options_width, self.config.spacing['line_height'], reasoning)
-                current_y = self.get_y() + 2
-            
-            # Update Y position after writing everything
-            self.set_y(current_y + 1)  # Reduced from 2 to 1
-            
-        except Exception as e:
-            # If anything goes wrong, log the error and try to recover
-            print(f"Error adding question {number}: {e}")
-            # Move to next column or page to avoid further issues
-            if self.current_side == 'left':
-                self.current_side = 'right'
-                self.set_xy(self.w/2 + 2, 20)
-            else:
-                self.add_page()
-                self.current_side = 'left'
-                self.set_xy(10, 20)
+            self.set_xy(options_x, current_y + 5)
+            self.set_font('ArialUni', '', self.config.font_sizes['option'])
+            self.multi_cell(self._options_width, self.config.spacing['line_height'], reasoning)
+            current_y = self.get_y() + 2
+        
+        # Set final position
+        self.set_y(current_y + 1)
 
     def measure_question_height(self, question_text: str, choices: List[str], reasoning: Optional[str] = None) -> float:
         """Calculate the height needed for a question and its options."""
