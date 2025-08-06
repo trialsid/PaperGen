@@ -1,0 +1,230 @@
+{
+    "sections": [
+      {
+        "name": "Parliament - Polity (exp)",
+        "description": "Choose the correct option for each question. Each question carries 1 mark.",
+        "questions": [
+          {
+            "question": "Which of the following is *correct* regarding the lapsing of a bill that originated in Rajya Sabha but is pending in Lok Sabha?",
+            "choices": [
+              "It will lapse only if the bill has gone through a Joint Committee of both Houses prior to Lok Sabha dissolution.",
+              "It will lapse if Lok Sabha is dissolved, even if it has already been considered by a Parliamentary Committee.",
+              "It will not lapse upon dissolution of Lok Sabha if the President has been informed of its pendency.",
+              "It will not lapse if Rajya Sabha passes a special resolution to that effect before Lok Sabha dissolution."
+            ],
+            "answer": "It will lapse if Lok Sabha is dissolved, even if it has already been considered by a Parliamentary Committee.",
+            "reasoning": "According to Article 107 of the Constitution, any bill pending in the Lok Sabha (regardless of where it originated) lapses with the dissolution of Lok Sabha. Being considered by a committee doesn't provide any exception. The other options suggest fictional provisions not found in the Constitution - there is no special procedure for Joint Committee bills, no presidential notification mechanism, and no special resolution provision in Rajya Sabha that can prevent lapsing."
+          },
+          {
+            "question": "Concerning 'Quorum' in Parliament, which statement is *incorrect*?",
+            "choices": [
+              "If quorum is lacking at the start of a sitting, the presiding officer can wait for a reasonable time before adjourning.",
+              "A House that has been adjourned for lack of quorum can be reconvened on the same day if quorum is subsequently achieved.",
+              "The Constitution explicitly permits the Speaker to continue proceedings during national emergencies even without quorum.",
+              "When a member points out lack of quorum, the presiding officer must either count or order a division."
+            ],
+            "answer": "The Constitution explicitly permits the Speaker to continue proceedings during national emergencies even without quorum.",
+            "reasoning": "This statement is incorrect because the Constitution makes no exception to the quorum requirement (one-tenth of total membership) even during emergencies. The other statements correctly describe quorum procedures: presiding officers can wait before adjourning, a House can reconvene on the same day if quorum is later achieved, and when quorum is questioned, the presiding officer must verify by counting or division."
+          },
+          {
+            "question": "Regarding the 'Ethics Committee' of Parliament, which statement is *most accurate*?",
+            "choices": [
+              "It has the authority to directly expel a member found guilty of ethical violations without requiring a vote of the full House.",
+              "It can initiate suo moto investigations into alleged misconduct without requiring formal complaints or references.",
+              "Its recommendations, though technically advisory, are nearly always implemented through a formal resolution of the House.",
+              "It has jurisdiction to investigate ethical misconduct of ministers related to their ministerial duties."
+            ],
+            "answer": "It can initiate suo moto investigations into alleged misconduct without requiring formal complaints or references.",
+            "reasoning": "The Ethics Committee can initiate suo moto investigations without formal complaints. However, it cannot directly expel members (it can only recommend expulsion to the full House), its recommendations require implementation through House resolution, and it doesn't have jurisdiction over ministers' ministerial duties (which fall under executive accountability rather than parliamentary ethics)."
+          },
+          {
+            "question": "An 'Adjournment Motion' may be *rightfully rejected* by the Speaker when:",
+            "choices": [
+              "It relates to a matter discussed previously in the same session through any procedural device.",
+              "The government assures that a separate discussion will be allowed through another procedural device later.",
+              "The motion deals with a matter that has significant public importance but is politically sensitive.",
+              "Less than 50 members support the motion when the House is divided."
+            ],
+            "answer": "It relates to a matter discussed previously in the same session through any procedural device.",
+            "reasoning": "The Speaker can rightfully reject an Adjournment Motion if the matter has already been discussed in the same session through another procedural device. Government assurances about future discussions are not valid grounds for rejection. Political sensitivity is not a valid reason if the matter has public importance. The support of 50 members relates to procedural aspects after admission, not grounds for initial rejection by the Speaker."
+          },
+          {
+            "question": "If both the Speaker and Deputy Speaker offices are vacant, who presides over the Lok Sabha until new elections are held?",
+            "choices": [
+              "The member with the longest continuous legislative service, regardless of party affiliation.",
+              "A member from the majority party nominated by the President on advice of the Prime Minister.",
+              "A member from the Panel of Chairpersons previously nominated by the outgoing Speaker.",
+              "The Secretary-General of Lok Sabha in an administrative capacity without voting rights."
+            ],
+            "answer": "A member from the Panel of Chairpersons previously nominated by the outgoing Speaker.",
+            "reasoning": "When both Speaker and Deputy Speaker positions are vacant, a member from the Panel of Chairpersons (previously nominated by the Speaker) presides over the House. The other options are incorrect: seniority of service is not the determining factor, the President does not nominate temporary presiding officers, and the Secretary-General is an administrative official with no authority to preside over parliamentary proceedings."
+          },
+          {
+            "question": "Which of the following would *most likely* be considered a breach of parliamentary privilege?",
+            "choices": [
+              "A newspaper editorial strongly criticizing a newly passed parliamentary law.",
+              "A citizen's protest outside Parliament House during an ongoing session.",
+              "A member revealing confidential committee deliberations to the media before the report is tabled.",
+              "A court examining the legality of the internal proceedings of Parliament."
+            ],
+            "answer": "A member revealing confidential committee deliberations to the media before the report is tabled.",
+            "reasoning": "Revealing confidential committee proceedings before they are officially reported to the House is a clear breach of parliamentary privilege. Newspaper editorials criticizing laws are protected under freedom of speech. Protests outside Parliament don't interfere with its functioning. Courts examining parliamentary proceedings' legality would implicate separation of powers concerns, but is less directly a privilege breach than disclosure of confidential committee deliberations."
+          },
+          {
+            "question": "Regarding parliamentary voting procedures, which statement is *accurate*?",
+            "choices": [
+              "The Speaker's casting vote must be exercised in favor of maintaining the status quo rather than enabling change.",
+              "Division must be ordered whenever requested by even a single member, regardless of the matter's significance.",
+              "Voice vote is constitutionally prescribed for Money Bills to ensure expedited passage.",
+              "Electronic voting is mandatory for Constitutional Amendment Bills to ensure accurate recording."
+            ],
+            "answer": "The Speaker's casting vote must be exercised in favor of maintaining the status quo rather than enabling change.",
+            "reasoning": "By parliamentary convention, when the Speaker exercises a casting vote in case of a tie, it should be done to maintain the status quo rather than enabling change. The other statements are incorrect: Division can be refused for trivial matters; the Constitution doesn't prescribe specific voting methods for different bill types; and electronic voting is one option but not mandatory for Constitutional Amendments."
+          },
+          {
+            "question": "Which statement about Parliamentary sessions is *false*?",
+            "choices": [
+              "The President summons Parliament on the recommendation of the Council of Ministers.",
+              "The decision to prorogue Parliament is taken by the Speaker in consultation with the Business Advisory Committee.",
+              "There must be at least two sessions of Parliament in a year with less than six months between them.",
+              "Parliament can be summoned for an urgent session with less than the customary notice period."
+            ],
+            "answer": "The decision to prorogue Parliament is taken by the Speaker in consultation with the Business Advisory Committee.",
+            "reasoning": "This statement is false. The power to prorogue (end a session of) Parliament rests with the President acting on the advice of the Council of Ministers, not with the Speaker. The other statements are accurate: the President summons Parliament on ministerial advice, there must be sessions with gaps not exceeding six months, and urgent sessions can be called with shorter notice periods."
+          },
+          {
+            "question": "A bill containing provisions for imposition of taxes *and* other matters not related to Article 110 would be classified as:",
+            "choices": [
+              "A Money Bill if the Speaker certifies it as such, exercising complete discretion.",
+              "A Financial Bill Category I that follows the same procedure as a Money Bill.",
+              "A Financial Bill Category I that allows Rajya Sabha to suggest amendments but not reject it entirely.",
+              "An ordinary bill if the taxation provisions are merely incidental to its main objectives."
+            ],
+            "answer": "A Financial Bill Category I that allows Rajya Sabha to suggest amendments but not reject it entirely.",
+            "reasoning": "A bill with tax provisions and other matters not listed in Article 110 is classified as a Financial Bill Category I. Unlike Money Bills (which must exclusively contain provisions under Article 110), Rajya Sabha can suggest amendments to Financial Bills Category I but cannot reject them outright. The Speaker doesn't have complete discretion to certify mixed bills as Money Bills, and such bills don't automatically become ordinary bills when taxation is incidental."
+          },
+          {
+            "question": "The primary purpose of a 'Token Cut Motion' in the parliamentary budgetary process is to:",
+            "choices": [
+              "Express specific grievances with administration of the program being funded.",
+              "Reduce the allocation to a symbolic amount of ₹1 to demonstrate complete disapproval.",
+              "Reduce the demand by ₹100 to critically examine economy measures.",
+              "Delay the passage of the budget until certain conditions are met."
+            ],
+            "answer": "Express specific grievances with administration of the program being funded.",
+            "reasoning": "A Token Cut Motion (which seeks a nominal reduction, typically of ₹1) is moved to express specific grievances about policies or administration. The second option describes a Disapproval Cut Motion (reduction to ₹1). The third option resembles an Economy Cut Motion (which focuses on economy in administration). The fourth option is incorrect as cut motions don't function as delaying tactics but as expressions of specific concerns."
+          },
+          {
+            "question": "Which committee's jurisdiction is *different* from the others in terms of focus?",
+            "choices": [
+              "Public Accounts Committee",
+              "Committee on Estimates",
+              "Committee on Subordinate Legislation",
+              "Committee on Public Undertakings"
+            ],
+            "answer": "Committee on Subordinate Legislation",
+            "reasoning": "The Committee on Subordinate Legislation examines rules, regulations, and delegated legislation issued by the executive under powers granted by Parliament - a focus completely different from the others. The Public Accounts Committee, Committee on Estimates, and Committee on Public Undertakings all focus on different aspects of financial oversight and expenditure monitoring, making them similar in their general domain of financial scrutiny."
+          },
+          {
+            "question": "Which statement about government funds is *inaccurate*?",
+            "choices": [
+              "The Consolidated Fund of India includes all revenues received by the Government of India, including loans raised.",
+              "Expenditures charged upon the Consolidated Fund are not subject to parliamentary vote but can be discussed.",
+              "The Contingency Fund of India can be utilized without prior parliamentary approval for urgent unanticipated expenses.",
+              "All public accounts and banking operations of the government must be conducted through the Consolidated Fund."
+            ],
+            "answer": "All public accounts and banking operations of the government must be conducted through the Consolidated Fund.",
+            "reasoning": "This statement is inaccurate. The Public Account of India is separate from the Consolidated Fund and handles funds not belonging to the government but held in trust (like provident funds). The other statements correctly describe the Consolidated Fund (which includes all revenues and loans), charged expenditures (discussable but not votable), and the Contingency Fund (usable without prior approval for emergencies)."
+          },
+          {
+            "question": "When a Constitutional Amendment Bill is presented to the President after passing both Houses with requisite majority, the President:",
+            "choices": [
+              "Can withhold assent indefinitely if the amendment affects the federal structure.",
+              "Must give assent but can delay for up to 30 days to seek legal opinion.",
+              "Has no option but to give assent, lacking any power to withhold or return it.",
+              "Can return it once for reconsideration but must assent if passed again."
+            ],
+            "answer": "Has no option but to give assent, lacking any power to withhold or return it.",
+            "reasoning": "Unlike ordinary bills, the President must give assent to Constitutional Amendment Bills that have been passed with the required majority. The President cannot withhold assent, return it for reconsideration, or delay based on the content of the amendment. The Constitution doesn't provide any discretion to the President regarding Constitutional Amendments once they've been properly passed by Parliament."
+          },
+          {
+            "question": "Which topic would be *permissible* to raise during Question Hour in Parliament?",
+            "choices": [
+              "A matter currently under adjudication by the Supreme Court.",
+              "A confidential military operation recently conducted in a border state.",
+              "Implementation status of a government welfare scheme in specific constituencies.",
+              "The personal conduct of a judge of the High Court."
+            ],
+            "answer": "Implementation status of a government welfare scheme in specific constituencies.",
+            "reasoning": "The implementation status of government schemes in constituencies is a permissible topic during Question Hour. The other options describe prohibited topics: sub-judice matters (under court consideration), confidential military operations (national security), and personal conduct of judges (which can only be discussed through specific substantive motions, not during Question Hour)."
+          },
+          {
+            "question": "Under the 'Doctrine of Collective Responsibility', which situation would be *acceptable*?",
+            "choices": [
+              "A cabinet minister publicly expressing disagreement with a policy decision after it has been announced.",
+              "A minister abstaining from voting on a government bill in Parliament.",
+              "A minister expressing personal views on a policy matter before the Cabinet has taken a formal decision.",
+              "A minister of state expressing different views from the cabinet minister of the same ministry during parliamentary debates."
+            ],
+            "answer": "A minister expressing personal views on a policy matter before the Cabinet has taken a formal decision.",
+            "reasoning": "Ministers can express personal views before a formal Cabinet decision. However, once a decision is made, the doctrine of collective responsibility requires all ministers to publicly support it or resign. Ministers cannot publicly disagree with announced policies, abstain on government bills, or contradict their cabinet ministers in Parliament without violating this constitutional principle."
+          },
+          {
+            "question": "Which disqualification for membership of Parliament is specified in the Representation of People Act, 1951 and *not* directly in the Constitution?",
+            "choices": [
+              "Holding an office of profit under any government.",
+              "Being of unsound mind and declared so by a competent court.",
+              "Having voluntarily acquired citizenship of a foreign state.",
+              "Being convicted of promoting enmity between different groups."
+            ],
+            "answer": "Being convicted of promoting enmity between different groups.",
+            "reasoning": "Disqualification for criminal convictions, including promoting enmity between groups, is specified in the Representation of People Act, 1951, not directly in the Constitution. The Constitution (Article 102) explicitly lists the other disqualifications mentioned: holding office of profit, being of unsound mind, and having acquired foreign citizenship. Specific crime-based disqualifications are left to parliamentary legislation."
+          },
+          {
+            "question": "Which statement about financial legislation is *most accurate*?",
+            "choices": [
+              "The Finance Bill is generally passed before the Appropriation Bill in the budgetary cycle.",
+              "Rajya Sabha can delay a Finance Bill certified as Money Bill for up to 21 days.",
+              "The Appropriation Bill authorizes withdrawal of funds while the Finance Bill proposes taxation measures.",
+              "Amendments to both Finance Bill and Appropriation Bill can only be moved by ministers."
+            ],
+            "answer": "The Appropriation Bill authorizes withdrawal of funds while the Finance Bill proposes taxation measures.",
+            "reasoning": "This correctly describes the distinct purposes of these bills. The Appropriation Bill authorizes expenditure from the Consolidated Fund, while the Finance Bill contains taxation proposals. The other options contain inaccuracies: the Finance Bill is generally passed after the Appropriation Bill, Rajya Sabha can delay a Money Bill for up to 14 days (not 21), and while there are restrictions on amendments, they are not limited only to ministers."
+          },
+          {
+            "question": "A joint sitting of Parliament can be convened to resolve deadlock between the Houses on:",
+            "choices": [
+              "A Money Bill that Rajya Sabha has failed to return within 14 days.",
+              "A Constitution Amendment Bill passed by Lok Sabha but rejected by Rajya Sabha.",
+              "An Ordinary Bill that has remained pending in Rajya Sabha for more than six months after passage by Lok Sabha.",
+              "A State Reorganization Bill that has been passed with different amendments by each House."
+            ],
+            "answer": "An Ordinary Bill that has remained pending in Rajya Sabha for more than six months after passage by Lok Sabha.",
+            "reasoning": "Joint sittings can be convened for ordinary bills where there's deadlock (including those pending in Rajya Sabha for more than six months). Joint sittings are not applicable for Money Bills (as Rajya Sabha has limited powers) or Constitutional Amendment Bills (which require separate majority in each house). State Reorganization Bills follow the ordinary bill procedure and could be subject to joint sitting, but the scenario describing it is less precise than the correct answer."
+          },
+          {
+            "question": "If a State Legislature passes a bill again after the President has returned it for reconsideration, which statement is *correct*?",
+            "choices": [
+              "The President is now constitutionally bound to give assent to the bill.",
+              "The President must refer the bill to the Supreme Court for opinion if assent is still withheld.",
+              "The President's assent becomes mandatory only if the bill is passed in its original form without amendments.",
+              "The President continues to have discretion to withhold assent indefinitely, regardless of amendments made."
+            ],
+            "answer": "The President continues to have discretion to withhold assent indefinitely, regardless of amendments made.",
+            "reasoning": "When a state bill reserved for the President is returned for reconsideration, even if passed again by the State Legislature (with or without amendments), the President retains full discretion to withhold assent indefinitely. There is no constitutional obligation to give assent after reconsideration, no requirement to refer to the Supreme Court, and no distinction based on whether amendments were made."
+          },
+          {
+            "question": "Which is *not* a statutorily recognized function of the Leader of Opposition?",
+            "choices": [
+              "Serving on the committee for selection of the Chairperson of National Human Rights Commission.",
+              "Participating in the selection committee for the Chief Information Commissioner.",
+              "Leading government formation discussions with the President if the ruling party loses confidence.",
+              "Being consulted on appointments to the office of Central Vigilance Commissioner."
+            ],
+            "answer": "Leading government formation discussions with the President if the ruling party loses confidence.",
+            "reasoning": "Leading government formation discussions with the President is not a statutorily recognized function of the Leader of Opposition. While the Leader may be consulted informally during government formation, there is no statutory provision for this role. The other options correctly identify statutorily mandated roles in selection committees for the NHRC Chairperson, Chief Information Commissioner, and Central Vigilance Commissioner."
+          }
+        ]
+      }
+    ]
+  }

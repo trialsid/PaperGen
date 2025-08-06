@@ -1,0 +1,340 @@
+{
+    "sections": [
+      {
+        "name": "Telugu",
+        "description": "ఈ విభాగం తెలుగు భాష మరియు వ్యాకరణంలో మీ పరిజ్ఞానాన్ని పరీక్షిస్తుంది.",
+        "questions": [
+          {
+            "question": "'అ' నుండి 'అః' వరకు గల అక్షరాలను ఏమంటారు?",
+            "choices": ["అచ్చులు", "హల్లులు", "ఉభయాక్షరాలు", "గుణింతాలు"],
+            "answer": "అచ్చులు"
+          },
+          {
+            "question": "కింది వాటిలో నామవాచకం ఏది?",
+            "choices": ["రాముడు", "పరిగెత్తు", "అందమైన", "వేగంగా"],
+            "answer": "రాముడు"
+          },
+          {
+            "question": "'పుస్తకం' అనే పదానికి బహువచనం ఏమిటి?",
+            "choices": ["పుస్తకము", "పుస్తకాలు", "పుస్తకానికి", "పుస్తకంలో"],
+            "answer": "పుస్తకాలు"
+          },
+          {
+            "question": "'మంచి' అనే పదానికి వ్యతిరేక పదం ఏమిటి?",
+            "choices": ["చెడు", "అందం", "పొడవు", "పొట్టి"],
+            "answer": "చెడు"
+          },
+          {
+            "question": "'ఆకాశం' అనే పదానికి సమానార్థక పదం ఏమిటి?",
+            "choices": ["భూమి", "నింగి", "నీరు", "గాలి"],
+            "answer": "నింగి"
+          },
+          {
+            "question": "కింది వాటిలో 'క్రియ'ను గుర్తించండి.",
+            "choices": ["బల్ల", "ఎరుపు", "చదువుతున్నాడు", "నేను"],
+            "answer": "చదువుతున్నాడు"
+          },
+          {
+            "question": "కింది వాటిలో 'హల్లులు' ఏవి?",
+            "choices": ["అ, ఆ, ఇ, ఈ", "క, ఖ, గ, ఘ", "సున్నా, అరసున్నా, విసర్గ", "అం, అః"],
+            "answer": "క, ఖ, గ, ఘ"
+          },
+          {
+            "question": "వేమన శతకం రాసింది ఎవరు?",
+            "choices": ["వేమన", "తిక్కన", "నన్నయ", "శ్రీనాథుడు"],
+            "answer": "వేమన"
+          },
+          {
+            "question": "'రాజు' అనే పదానికి స్త్రీలింగం ఏది?",
+            "choices": ["రాణి", "యువరాజు", "మహారాజు", "సైనికుడు"],
+            "answer": "రాణి"
+          },
+          {
+            "question": "మన జాతీయ గీతం ఏది?",
+            "choices": ["వందేమాతరం", "జనగణమన", "మా తెలుగు తల్లికి", "సారే జహాఁ సే అచ్ఛా"],
+            "answer": "జనగణమన"
+          }
+        ]
+      },
+      {
+        "name": "English",
+        "description": "This section assesses your understanding of English grammar, vocabulary, and comprehension.",
+        "questions": [
+          {
+            "question": "Identify the noun in the following sentence: 'The cat sat on the mat.'",
+            "choices": ["The", "sat", "on", "cat"],
+            "answer": "cat"
+          },
+          {
+            "question": "Choose the correct article: 'I saw ___ elephant in the zoo.'",
+            "choices": ["a", "an", "the", "no article"],
+            "answer": "an"
+          },
+          {
+            "question": "What is the opposite of 'happy'?",
+            "choices": ["Joyful", "Glad", "Sad", "Cheerful"],
+            "answer": "Sad"
+          },
+          {
+            "question": "Which word is spelled correctly?",
+            "choices": ["Beleive", "Recieve", "Achieve", "Peice"],
+            "answer": "Achieve"
+          },
+          {
+            "question": "What is the past tense of the verb 'go'?",
+            "choices": ["Goed", "Gone", "Went", "Going"],
+            "answer": "Went"
+          },
+          {
+            "question": "A person who writes books is called an ___.",
+            "choices": ["author", "actor", "artist", "baker"],
+            "answer": "author"
+          },
+          {
+            "question": "What is the plural of 'child'?",
+            "choices": ["childs", "childes", "childrens", "children"],
+            "answer": "children"
+          },
+          {
+            "question": "Choose the correct preposition: 'The book is ___ the table.'",
+            "choices": ["in", "at", "on", "with"],
+            "answer": "on"
+          },
+          {
+            "question": "Which of these is a verb?",
+            "choices": ["Quickly", "Beautiful", "Run", "House"],
+            "answer": "Run"
+          },
+          {
+            "question": "A group of lions is called a ___.",
+            "choices": ["herd", "flock", "pride", "pack"],
+            "answer": "pride"
+          }
+        ]
+      },
+      {
+        "name": "Maths",
+        "description": "This section covers basic mathematical concepts including arithmetic, geometry, and algebra.",
+        "questions": [
+          {
+            "question": "What is the successor of 999?",
+            "choices": ["998", "1000", "9990", "100"],
+            "answer": "1000"
+          },
+          {
+            "question": "Which is the smallest whole number?",
+            "choices": ["1", "-1", "0", "2"],
+            "answer": "0"
+          },
+          {
+            "question": "What is the formula for the area of a rectangle?",
+            "choices": ["length + width", "2 * (length + width)", "length × width", "length / width"],
+            "answer": "length × width"
+          },
+          {
+            "question": "A triangle with all three sides equal is called?",
+            "choices": ["Isosceles triangle", "Scalene triangle", "Right-angled triangle", "Equilateral triangle"],
+            "answer": "Equilateral triangle"
+          },
+          {
+            "question": "What is 1/2 + 1/4?",
+            "choices": ["1/6", "2/6", "3/4", "1/8"],
+            "answer": "3/4"
+          },
+          {
+            "question": "What is the perimeter of a square with a side of 5 cm?",
+            "choices": ["25 cm", "10 cm", "20 cm", "15 cm"],
+            "answer": "20 cm"
+          },
+          {
+            "question": "How many sides does a hexagon have?",
+            "choices": ["5", "6", "7", "8"],
+            "answer": "6"
+          },
+          {
+            "question": "If x - 5 = 10, what is the value of x?",
+            "choices": ["5", "10", "15", "20"],
+            "answer": "15"
+          },
+          {
+            "question": "Which of the following is a prime number?",
+            "choices": ["4", "9", "6", "11"],
+            "answer": "11"
+          },
+          {
+            "question": "How many millimeters are in 1 centimeter?",
+            "choices": ["10", "100", "1000", "1"],
+            "answer": "10"
+          }
+        ]
+      },
+      {
+        "name": "Physics",
+        "description": "This section tests your understanding of fundamental concepts in Physics from General Science.",
+        "questions": [
+          {
+            "question": "What is the standard unit of length?",
+            "choices": ["Kilogram", "Meter", "Liter", "Second"],
+            "answer": "Meter"
+          },
+          {
+            "question": "Which of these is an opaque object?",
+            "choices": ["Clear Glass", "Water", "A Wooden Door", "Air"],
+            "answer": "A Wooden Door"
+          },
+          {
+            "question": "The process of a liquid changing into a gas is called?",
+            "choices": ["Condensation", "Freezing", "Melting", "Evaporation"],
+            "answer": "Evaporation"
+          },
+          {
+            "question": "What force pulls objects towards the center of the Earth?",
+            "choices": ["Friction", "Magnetic Force", "Gravity", "Tension"],
+            "answer": "Gravity"
+          },
+          {
+            "question": "What type of energy does a moving car have?",
+            "choices": ["Potential Energy", "Kinetic Energy", "Chemical Energy", "Heat Energy"],
+            "answer": "Kinetic Energy"
+          },
+          {
+            "question": "Which device is used to measure temperature?",
+            "choices": ["Barometer", "Speedometer", "Thermometer", "Ammeter"],
+            "answer": "Thermometer"
+          },
+          {
+            "question": "Sound cannot travel through a ___.",
+            "choices": ["Solid", "Liquid", "Gas", "Vacuum"],
+            "answer": "Vacuum"
+          },
+          {
+            "question": "The north pole of a magnet will repel the ___.",
+            "choices": ["south pole of another magnet", "north pole of another magnet", "iron filings", "a piece of wood"],
+            "answer": "north pole of another magnet"
+          },
+          {
+            "question": "What is the main source of energy on Earth?",
+            "choices": ["Moon", "Wind", "Sun", "Water"],
+            "answer": "Sun"
+          },
+          {
+            "question": "Materials that allow electricity to pass through them are called ___.",
+            "choices": ["Insulators", "Conductors", "Semiconductors", "Resistors"],
+            "answer": "Conductors"
+          }
+        ]
+      },
+      {
+        "name": "Biology",
+        "description": "This section examines your knowledge of living organisms and their life processes from General Science.",
+        "questions": [
+          {
+            "question": "Which part of the plant makes food?",
+            "choices": ["Root", "Stem", "Flower", "Leaf"],
+            "answer": "Leaf"
+          },
+          {
+            "question": "The process by which plants make their own food is called?",
+            "choices": ["Respiration", "Photosynthesis", "Transpiration", "Germination"],
+            "answer": "Photosynthesis"
+          },
+          {
+            "question": "Which of these is a herbivore?",
+            "choices": ["Lion", "Tiger", "Cow", "Wolf"],
+            "answer": "Cow"
+          },
+          {
+            "question": "What is the breathing organ in fish?",
+            "choices": ["Lungs", "Skin", "Gills", "Nose"],
+            "answer": "Gills"
+          },
+          {
+            "question": "Deficiency of Vitamin C causes which disease?",
+            "choices": ["Rickets", "Scurvy", "Night blindness", "Goitre"],
+            "answer": "Scurvy"
+          },
+          {
+            "question": "Which part of the blood helps in clotting?",
+            "choices": ["Red Blood Cells", "White Blood Cells", "Plasma", "Platelets"],
+            "answer": "Platelets"
+          },
+          {
+            "question": "The green pigment in leaves that helps in photosynthesis is called?",
+            "choices": ["Chlorophyll", "Xylem", "Phloem", "Stomata"],
+            "answer": "Chlorophyll"
+          },
+          {
+            "question": "Which of these is a root vegetable?",
+            "choices": ["Spinach", "Cabbage", "Carrot", "Broccoli"],
+            "answer": "Carrot"
+          },
+          {
+            "question": "How many bones are there in an adult human body?",
+            "choices": ["300", "250", "206", "156"],
+            "answer": "206"
+          },
+          {
+            "question": "Which gas do plants release during photosynthesis?",
+            "choices": ["Carbon Dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+            "answer": "Oxygen"
+          }
+        ]
+      },
+      {
+        "name": "Social",
+        "description": "This section covers topics from History, Civics, and Geography.",
+        "questions": [
+          {
+            "question": "Who was the first Prime Minister of India?",
+            "choices": ["Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Jawaharlal Nehru", "Dr. B. R. Ambedkar"],
+            "answer": "Jawaharlal Nehru"
+          },
+          {
+            "question": "In which continent is India located?",
+            "choices": ["Africa", "Europe", "Asia", "Australia"],
+            "answer": "Asia"
+          },
+          {
+            "question": "What is the capital of India?",
+            "choices": ["Mumbai", "Kolkata", "Chennai", "New Delhi"],
+            "answer": "New Delhi"
+          },
+          {
+            "question": "The Earth rotating on its axis causes ___.",
+            "choices": ["Seasons", "Years", "Day and Night", "Earthquakes"],
+            "answer": "Day and Night"
+          },
+          {
+            "question": "Who is known as the 'Father of the Nation' in India?",
+            "choices": ["Jawaharlal Nehru", "Subhas Chandra Bose", "Mahatma Gandhi", "Bhagat Singh"],
+            "answer": "Mahatma Gandhi"
+          },
+          {
+            "question": "The highest mountain peak in the world is ___.",
+            "choices": ["K2", "Kangchenjunga", "Mount Everest", "Nanda Devi"],
+            "answer": "Mount Everest"
+          },
+          {
+            "question": "How many states are there in India? (as of 2024)",
+            "choices": ["29", "28", "30", "27"],
+            "answer": "28"
+          },
+          {
+            "question": "What is the largest planet in our solar system?",
+            "choices": ["Earth", "Mars", "Jupiter", "Saturn"],
+            "answer": "Jupiter"
+          },
+          {
+            "question": "What is the national animal of India?",
+            "choices": ["Lion", "Elephant", "Tiger", "Leopard"],
+            "answer": "Tiger"
+          },
+          {
+            "question": "The people who govern a country are part of the ___.",
+            "choices": ["Judiciary", "Government", "Media", "Police"],
+            "answer": "Government"
+          }
+        ]
+      }
+    ]
+  }

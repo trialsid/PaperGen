@@ -1,0 +1,624 @@
+{
+    "sections": [
+      {
+        "name": "SCIENCE",
+        "description": "Choose the correct option for each question. Each question tests general science concepts.",
+        "questions": [
+          {
+            "question": "Which of the following is an essential component needed by the body?",
+            "choices": [
+              "Water",
+              "Salt",
+              "Sugar",
+              "Fibre"
+            ],
+            "answer": "Water"
+          },
+          {
+            "question": "Rubbing a food sample on paper and observing if the paper turns translucent is a simple test for the presence of which nutrient?",
+            "choices": [
+              "Starch",
+              "Proteins",
+              "Fats",
+              "Minerals"
+            ],
+            "answer": "Fats"
+          },
+          {
+            "question": "What colour change indicates the presence of starch when tested with an iodine solution?",
+            "choices": [
+              "Red",
+              "Yellow",
+              "Dark-blue or black",
+              "Green"
+            ],
+            "answer": "Dark-blue or black"
+          },
+          {
+            "question": "Which of the following can be used as a natural indicator to test for acids and bases?",
+            "choices": [
+              "Methyl orange",
+              "Phenolphthalein",
+              "Litmus paper",
+              "Hibiscus petals"
+            ],
+            "answer": "Hibiscus petals"
+          },
+          {
+            "question": "Substances that turn blue litmus paper red are generally considered to be _________ in nature.",
+            "choices": [
+              "Basic",
+              "Acidic",
+              "Neutral",
+              "Salty"
+            ],
+            "answer": "Acidic"
+          },
+          {
+            "question": "What colour does the indicator methyl orange turn when added to a basic solution?",
+            "choices": [
+              "Red",
+              "Yellow",
+              "Colourless",
+              "Pink"
+            ],
+            "answer": "Yellow"
+          },
+          {
+            "question": "In a neutralization reaction, what products are typically formed when an acid reacts completely with a base?",
+            "choices": [
+              "Only water",
+              "Only salts",
+              "Salts and water",
+              "Carbon dioxide"
+            ],
+            "answer": "Salts and water"
+          },
+          {
+            "question": "Which type of salt solution will not change the colour of either blue or red litmus paper?",
+            "choices": [
+              "Acidic salts",
+              "Basic salts",
+              "Neutral salts",
+              "Salty salts"
+            ],
+            "answer": "Neutral salts"
+          },
+          {
+            "question": "In a common dry cell battery, what part typically serves as the negative terminal?",
+            "choices": [
+              "Carbon rod",
+              "Zinc metal container",
+              "Ammonium chloride paste",
+              "Metal cap"
+            ],
+            "answer": "Zinc metal container"
+          },
+          {
+            "question": "Which component is primarily designed as a safety device to protect an electric circuit from excessive current?",
+            "choices": [
+              "Electric bulb",
+              "Battery",
+              "Switch",
+              "Fuse"
+            ],
+            "answer": "Fuse"
+          },
+          {
+            "question": "In which type of electric circuit is there only one path for the electricity to flow?",
+            "choices": [
+              "Series circuit",
+              "Parallel circuit",
+              "Complex circuit",
+              "Open circuit"
+            ],
+            "answer": "Series circuit"
+          },
+          {
+            "question": "Organisms called saprophytes obtain their food primarily from what source?",
+            "choices": [
+              "Sunlight",
+              "Living insects",
+              "Dead and decaying organisms",
+              "Nutrients absorbed directly from soil"
+            ],
+            "answer": "Dead and decaying organisms"
+          },
+          {
+            "question": "What are the small pores present on the stems of some plants that help in the exchange of gases called?",
+            "choices": [
+              "Root hairs",
+              "Stomata",
+              "Lenticels",
+              "Guard cells"
+            ],
+            "answer": "Lenticels"
+          },
+          {
+            "question": "What is the biological process where oxygen is typically taken in, and carbon dioxide and water vapour are released by living organisms?",
+            "choices": [
+              "Breathing",
+              "Digestion",
+              "Respiration",
+              "Circulation"
+            ],
+            "answer": "Respiration"
+          },
+          {
+            "question": "In plants, what is the primary function of stomata, usually found on leaves?",
+            "choices": [
+              "Absorbing water",
+              "Exchanging gases",
+              "Absorbing nutrients",
+              "Storing energy"
+            ],
+            "answer": "Exchanging gases"
+          },
+          {
+            "question": "From which part of a flower do seeds typically develop after fertilization occurs?",
+            "choices": [
+              "Ovary",
+              "Petals",
+              "Ovule",
+              "Stamen"
+            ],
+            "answer": "Ovule"
+          },
+          {
+            "question": "In the context of wastewater treatment, what does 'sludge' refer to?",
+            "choices": [
+              "Clean, drinkable water",
+              "Water after initial treatment",
+              "Settled solid waste material",
+              "Chemicals added for purification"
+            ],
+            "answer": "Settled solid waste material"
+          },
+          {
+            "question": "Which of the following properties is often examined when identifying or studying different types of soil?",
+            "choices": [
+              "Taste",
+              "Weight",
+              "Smell",
+              "Sound"
+            ],
+            "answer": "Smell"
+          },
+          {
+            "question": "Forests are sometimes called the 'lungs of the planet' mainly because of their role in:",
+            "choices": [
+              "Producing timber for construction",
+              "Providing homes for animals",
+              "Producing oxygen and absorbing carbon dioxide",
+              "Preventing soil from washing away"
+            ],
+            "answer": "Producing oxygen and absorbing carbon dioxide"
+          },
+          {
+            "question": "Which of the following is a key characteristic that distinguishes a chemical change from a physical change?",
+            "choices": [
+              "Change in state (e.g., solid to liquid)",
+              "Change in colour",
+              "Formation of one or more new substances",
+              "Change in shape or size"
+            ],
+            "answer": "Formation of one or more new substances"
+          }
+        ]
+      },
+      {
+        "name": "ENGLISH",
+        "description": "Choose the correct option. Each question tests general English language concepts.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "question": "If you encounter an unfamiliar word while reading, what is a helpful first step to understand its meaning?",
+            "choices": [
+              "Stop reading immediately",
+              "Look for clues in the surrounding words and sentences",
+              "Skip the entire paragraph",
+              "Memorize the word without understanding it"
+            ],
+            "answer": "Look for clues in the surrounding words and sentences"
+          },
+          {
+            "question": "What do we call a poem or text where the first letter of each line spells out a specific word or message vertically?",
+            "choices": [
+              "Haiku",
+              "Sonnet",
+              "Acrostic",
+              "Ballad"
+            ],
+            "answer": "Acrostic"
+          },
+          {
+            "question": "Why is an apostrophe used in the contraction 'don't'?",
+            "choices": [
+              "To show ownership",
+              "To mark the end of the sentence",
+              "To indicate that a letter ('o' in 'not') has been omitted",
+              "To make the word plural"
+            ],
+            "answer": "To indicate that a letter ('o' in 'not') has been omitted"
+          },
+          {
+            "question": "Which reference book primarily lists words in alphabetical order and provides their definitions, pronunciations, and usage?",
+            "choices": [
+              "Thesaurus",
+              "Encyclopedia",
+              "Atlas",
+              "Dictionary"
+            ],
+            "answer": "Dictionary"
+          },
+          {
+            "question": "The word 'furniture' can refer to items like 'chair', 'table', or 'sofa'. What is the grammatical term for a general word like 'furniture' that includes the meanings of more specific words?",
+            "choices": [
+              "Antonym",
+              "Hyponym",
+              "Synonym",
+              "Hypernym"
+            ],
+            "answer": "Hypernym"
+          },
+          {
+            "question": "Which punctuation mark is used to separate items in a list, such as 'apples, oranges, and bananas'?",
+            "choices": [
+              "Period (.)",
+              "Comma (,)",
+              "Question Mark (?)",
+              "Exclamation Mark (!)"
+            ],
+            "answer": "Comma (,)"
+          },
+          {
+            "question": "Which sentence demonstrates correct subject-verb agreement?",
+            "choices": [
+              "The cats sleeps on the mat.",
+              "The cat sleep on the mat.",
+              "The cats sleep on the mat.",
+              "The cat sleeps the mat on."
+            ],
+            "answer": "The cats sleep on the mat."
+          },
+          {
+            "question": "What is the main purpose of a paragraph in writing?",
+            "choices": [
+              "To make the text look longer",
+              "To group sentences related to a single main idea",
+              "To list vocabulary words",
+              "To confuse the reader"
+            ],
+            "answer": "To group sentences related to a single main idea"
+          },
+          {
+            "question": "A story written about a real person's life by that same person is called a(n):",
+            "choices": [
+              "Fiction",
+              "Autobiography",
+              "Biography",
+              "Fable"
+            ],
+            "answer": "Autobiography"
+          },
+          {
+            "question": "Which question asks for an opinion rather than a specific factual answer?",
+            "choices": [
+              "What year did India gain independence?",
+              "Who is the main character in the story?",
+              "Was the movie enjoyable?",
+              "How many sides does a triangle have?"
+            ],
+            "answer": "Was the movie enjoyable?"
+          },
+          {
+            "question": "Looking at a bar graph is most helpful for:",
+            "choices": [
+              "Understanding definitions",
+              "Comparing quantities or amounts of different items",
+              "Finding the correct spelling of a word",
+              "Reading a fictional story"
+            ],
+            "answer": "Comparing quantities or amounts of different items"
+          },
+          {
+            "question": "What is the term for a word that means the opposite of another word (e.g., hot/cold)?",
+            "choices": [
+              "Synonym",
+              "Homophone",
+              "Antonym",
+              "Hypernym"
+            ],
+            "answer": "Antonym"
+          },
+          {
+            "question": "Choose the sentence where the contraction is used correctly.",
+            "choices": [
+              "Its a beautiful day outside.",
+              "The dog wagged it's tail.",
+              "They're going to the park.",
+              "Your very talented."
+            ],
+            "answer": "They're going to the park."
+          },
+          {
+            "question": "In the sentence 'If it rains, we will stay inside,' the part 'If it rains' is what type of clause?",
+            "choices": [
+              "Main clause",
+              "Noun clause",
+              "Conditional clause",
+              "Relative clause"
+            ],
+            "answer": "Conditional clause"
+          },
+          {
+            "question": "What is the purpose of a glossary typically found at the end of a book?",
+            "choices": [
+              "To list the chapter titles",
+              "To provide definitions of specific or difficult terms used in the book",
+              "To summarize the entire story",
+              "To ask questions about the content"
+            ],
+            "answer": "To provide definitions of specific or difficult terms used in the book"
+          },
+          {
+            "question": "Which part of speech describes a noun (e.g., 'red' in 'red car')?",
+            "choices": [
+              "Verb",
+              "Adverb",
+              "Adjective",
+              "Pronoun"
+            ],
+            "answer": "Adjective"
+          },
+          {
+            "question": "What does the prefix 'un-' usually mean when added to a word, like in 'happy' vs 'unhappy'?",
+            "choices": [
+              "Again",
+              "Not",
+              "Before",
+              "Together"
+            ],
+            "answer": "Not"
+          },
+          {
+            "question": "Which sentence is a command?",
+            "choices": [
+              "Are you coming with us?",
+              "Please close the door.",
+              "The sky is blue.",
+              "I like ice cream."
+            ],
+            "answer": "Please close the door."
+          },
+          {
+            "question": "Which word is a synonym for 'happy'?",
+            "choices": [
+              "Sad",
+              "Angry",
+              "Joyful",
+              "Tired"
+            ],
+            "answer": "Joyful"
+          },
+          {
+            "question": "Which activity would likely be most helpful for improving your ability to understand spoken English?",
+            "choices": [
+              "Writing a story in English",
+              "Listening to English songs or podcasts",
+              "Reading an English newspaper silently",
+              "Memorizing English vocabulary lists"
+            ],
+            "answer": "Listening to English songs or podcasts"
+          }
+        ]
+      },
+      {
+        "name": "SOCIAL STUDIES",
+        "description": "Choose the correct option. Each question relates to general Social Studies concepts.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "question": "What is a primary goal of studying Social Studies?",
+            "choices": [
+              "To memorize dates of historical events only",
+              "To understand the society we live in, including its history, geography, and government",
+              "To learn how to draw maps accurately",
+              "To focus only on current news events"
+            ],
+            "answer": "To understand the society we live in, including its history, geography, and government"
+          },
+          {
+            "question": "When studying different societies or historical events, why is it important to ask questions?",
+            "choices": [
+              "To prove the teacher wrong",
+              "To show that you are confused",
+              "To gain deeper understanding and think critically about the information",
+              "To make the lesson last longer"
+            ],
+            "answer": "To gain deeper understanding and think critically about the information"
+          },
+          {
+            "question": "To learn about how people live in your community, who might be useful people to talk to?",
+            "choices": [
+              "Only your close friends",
+              "Only your teachers",
+              "Different kinds of people like shopkeepers, elders, or local workers",
+              "Only people from other cities"
+            ],
+            "answer": "Different kinds of people like shopkeepers, elders, or local workers"
+          },
+          {
+            "question": "What part of a map helps you understand the meaning of different colours and symbols used on it?",
+            "choices": [
+              "The title",
+              "The scale",
+              "The legend or key",
+              "The compass rose"
+            ],
+            "answer": "The legend or key"
+          },
+          {
+            "question": "What feature on a map is used to figure out the actual distance between two places?",
+            "choices": [
+              "The compass rose",
+              "The map's title",
+              "The scale bar",
+              "The grid lines"
+            ],
+            "answer": "The scale bar"
+          },
+          {
+            "question": "What do symbols like a small picture of an airplane or a crossed knife and fork usually represent on a map?",
+            "choices": [
+              "Random decorations",
+              "Specific locations or features like airports or restaurants",
+              "The direction North",
+              "The name of the mapmaker"
+            ],
+            "answer": "Specific locations or features like airports or restaurants"
+          },
+          {
+            "question": "Resources like air, rivers, and groundwater that are available to everyone are often called:",
+            "choices": [
+              "Private resources",
+              "Man-made resources",
+              "Common resources",
+              "Expensive resources"
+            ],
+            "answer": "Common resources"
+          },
+          {
+            "question": "Besides the price (fare), how else might different forms of public transport (like a local bus vs. an express train) typically differ?",
+            "choices": [
+              "Only by colour",
+              "In comfort level, speed, and the number of stops",
+              "They are always exactly the same",
+              "Only by the driver's name"
+            ],
+            "answer": "In comfort level, speed, and the number of stops"
+          },
+          {
+            "question": "In many democratic countries, how are government officials usually selected for positions like police officers or administrators?",
+            "choices": [
+              "Based on family connections",
+              "Through competitive examinations or specific qualifications",
+              "By winning a lottery",
+              "By being the wealthiest person"
+            ],
+            "answer": "Through competitive examinations or specific qualifications"
+          },
+          {
+            "question": "The Indian Constitution declared which discriminatory practice, based on caste, illegal?",
+            "choices": [
+              "Voting in elections",
+              "Paying taxes",
+              "Practicing untouchability",
+              "Going to school"
+            ],
+            "answer": "Practicing untouchability"
+          },
+          {
+            "question": "Folk traditions and local customs sometimes involve showing reverence or respect towards:",
+            "choices": [
+              "Only political leaders",
+              "Specific local deities, saints, natural elements, or ancestors",
+              "Only modern technology",
+              "Only famous actors"
+            ],
+            "answer": "Specific local deities, saints, natural elements, or ancestors"
+          },
+          {
+            "question": "What is a constitution?",
+            "choices": [
+              "A history book",
+              "A set of fundamental rules and principles by which a country or state is governed",
+              "A map of a country",
+              "A list of all citizens"
+            ],
+            "answer": "A set of fundamental rules and principles by which a country or state is governed"
+          },
+          {
+            "question": "Gathering information from surveys, interviews, or observations and then organizing it into tables or charts is part of which skill?",
+            "choices": [
+              "Drawing skills",
+              "Information gathering and analysis",
+              "Writing fiction",
+              "Singing skills"
+            ],
+            "answer": "Information gathering and analysis"
+          },
+          {
+            "question": "The ability to read and understand information presented on maps, including directions and locations, is called:",
+            "choices": [
+              "Storytelling",
+              "Mathematical calculation",
+              "Map reading skills",
+              "Scientific experimentation"
+            ],
+            "answer": "Map reading skills"
+          },
+          {
+            "question": "When learning about a historical event or a different place, why is it useful to look at photographs, drawings, or charts related to it?",
+            "choices": [
+              "They make the book heavier",
+              "They provide visual information and context that text alone might not",
+              "They are just there for decoration",
+              "They always contain secret messages"
+            ],
+            "answer": "They provide visual information and context that text alone might not"
+          },
+          {
+            "question": "Which of the following pieces of information is commonly used to describe a specific region or country?",
+            "choices": [
+              "The favourite colour of its inhabitants",
+              "The total land area",
+              "The number of pets",
+              "The most popular song"
+            ],
+            "answer": "The total land area"
+          },
+          {
+            "question": "What type of government system involves citizens electing representatives to make decisions on their behalf?",
+            "choices": [
+              "Monarchy",
+              "Dictatorship",
+              "Democracy",
+              "Oligarchy"
+            ],
+            "answer": "Democracy"
+          },
+          {
+            "question": "Understanding how goods are produced, distributed, and consumed in a society relates to which area of Social Studies?",
+            "choices": [
+              "Geography",
+              "Civics",
+              "History",
+              "Economics"
+            ],
+            "answer": "Economics"
+          },
+          {
+            "question": "What is the term for the movement of people from one place to live in another?",
+            "choices": [
+              "Transportation",
+              "Communication",
+              "Migration",
+              "Celebration"
+            ],
+            "answer": "Migration"
+          },
+          {
+            "question": "Learning about different cultures and traditions helps us to:",
+            "choices": [
+              "Prove our own culture is superior",
+              "Appreciate diversity and understand different perspectives",
+              "Ignore people who are different",
+              "Focus only on our own traditions"
+            ],
+            "answer": "Appreciate diversity and understand different perspectives"
+          }
+        ]
+      }
+    ]
+  }

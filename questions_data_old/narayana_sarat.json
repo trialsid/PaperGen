@@ -1,0 +1,1010 @@
+{
+    "sections": [
+      {
+        "name": "Indian Polity and Governance",
+        "description": "Multiple choice questions related to the Indian political system, constitution, and governance.",
+        "questions": [
+          {
+            "question": "Which of the following is/are correct with reference to the Cantonment Board? \n1. It is established for municipal administration for civilian population in the cantonment area. \n2. It works under the administrative control of the Union Ministry of Home Affairs. \n3. It consists of partly elected and partly nominated members. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "Which of the following statements is correct regarding a State's bill?",
+            "choices": [
+              "The president has no role to play in the passage of a state's bill.",
+              "State's bill can be reserved for the President but once reserved the Governor has no role to play.",
+              "State's bill can be reserved for the President but the President has to give assent to the bill.",
+              "None of the above"
+            ],
+            "answer": "State's bill can be reserved for the President but once reserved the Governor has no role to play."
+          },
+          {
+            "question": "Consider the following statements: \n1. Adjournment motion can be introduced in Lok Sabha only. \n2. No confidence motion can be moved against an individual minister or the entire council of minister. \n3. Censure motion can be moved against the entire council of minister only. \nWhich of the statements given above is/are not correct?",
+            "choices": [
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 and 3",
+              "1, 2 and 3"
+            ],
+            "answer": "2 and 3 only"
+          },
+          {
+            "question": "Who among the following is responsible for the conduct of elections in the Parliamentary or assembly constituency?",
+            "choices": [
+              "Returning Officer",
+              "Chief Electoral Officer",
+              "District Election Officer",
+              "Electoral Registration Officer"
+            ],
+            "answer": "Returning Officer"
+          },
+          {
+            "question": "Which of the following statements is correct regarding the salary and allowances of supreme court judges in India?",
+            "choices": [
+              "They are determined by the President.",
+              "It can be altered by the Parliament to the judge's disadvantage after his appointment.",
+              "It is charged on the Consolidated Fund of State.",
+              "None of the above statements are correct."
+            ],
+            "answer": "None of the above statements are correct."
+          },
+          {
+            "question": "In the context of the Indian polity, in which of the following matters can the Governor act “in his discretion”? \n1. Submitting a report to the President under Art 356 on the failure of Constitutional machinery in the state. \n2. Reserving bills for the consideration of the President \n3. Appointing a Chief Minister if no single party has secured a majority in the state election. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "1 and 2 only",
+              "1, 2 and 3",
+              "3 only"
+            ],
+            "answer": "1, 2 and 3"
+          },
+          {
+            "question": "With reference to the District Planning Committee (DPC), consider the following statements: \n1. The 74th Amendment Act provides for the establishment of DPC. \n2. All members of the DPC are nominated by the Governor of the state. \n3. It has representation of both rural and urban population of the district. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "With reference to Vice President of India, which of the following statements is/are correct? \n1. Vice President is elected by the same electoral college as that of the President. \n2. A resolution for his removal need to be passed with special majority in both the houses. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Consider the following statements regarding Committee on Public undertakings: \n1. The chairman of this Committee can be only from Lok sabha. \n2. The members are elected every year for a term of one year. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "The Vice-President gives his resignation letter to",
+            "choices": [
+              "Deputy Chairman of Rajya Sabha",
+              "Speaker of Lok Sabha",
+              "Secretary-General, Rajya Sabha",
+              "President of India"
+            ],
+            "answer": "President of India"
+          },
+          {
+            "question": "Consider the following statements: \n1. There is no fixed tenure for the supreme court judge as he can be removed from his office by the President on the recommendation of the Parliament. \n2. The conduct of supreme court judges cannot be discussed in the legislature except during impeachment motions. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "Consider the following statements regarding Legislative Council: \n1. The creation of the legislative council of states needs a constitutional amendment. \n2. It enjoys equal powers as the legislative assembly for ordinary bills. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Under which of the following circumstances the members of the State Legislative Assembly is/are disqualified? \n1. if he is an undischarged insolvent. \n2. if he is of unsound mind and stands so declared by a court \n3. If he is disqualified under the provisions of the Tenth schedule. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 2 only",
+              "2 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1, 2 and 3"
+          },
+          {
+            "question": "With reference to the evolution of Panchayati Raj in India, consider the following statements: \n1. The Balwant Rai Mehta Committee recommended establishment of a two- tier Panchayati Raj system. \n2. Rajasthan was the first state in independent India to establish Panchayati Raj. \n3. The Panchayati Raj institutions got constitutional status in 1982. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 and 2 only",
+              "2 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "With reference to inter-state trade and commerce, consider the following statements: \n1. The Constitution of India remains totally silent on trade and commerce within the Indian territory and leaves it to the Parliament to legislate on. \n2. Parliament can impose restrictions on the freedom of trade and commerce between the states. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "The provisions in the Fifth Schedule and Sixth Schedule in the Constitution of India are related to",
+            "choices": [
+              "the promotion of the interests of linguistic minorities in every Indian state.",
+              "the protection the interests of Scheduled Tribes.",
+              "oaths and affirmations meant for a few important office-holders",
+              "protect the interests of the people living in those Indian states that share border with other countries."
+            ],
+            "answer": "the protection the interests of Scheduled Tribes."
+          },
+          {
+            "question": "On premature dissolution of panchayat after 2 years of its constitution:",
+            "choices": [
+              "It will be reconstituted to serve a full term of 5 years",
+              "No fresh elections shall take place for remainder of the term",
+              "It will be reconstituted to serve remainder of the period",
+              "State legislative assembly shall decide the course of action"
+            ],
+            "answer": "It will be reconstituted to serve remainder of the period"
+          },
+          {
+            "question": "In the context of the seventh schedule, 'Local Government' as a subject comes under which of the following?",
+            "choices": [
+              "Union List",
+              "State List",
+              "Concurrent List",
+              "Residuary Powers"
+            ],
+            "answer": "State List"
+          },
+          {
+            "question": "Consider the following statements with regard to state legislature: \n1. Legislative Assembly while passing an ordinary bill can override the amendments made by Legislative Council. \n2. A bill rejected by the Legislative Assembly, irrespective of its origin, ends and becomes dead. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Which of the following committees made recommendations with respect to Centre- State relations? \n1. Sarkaria Commission \n2. M M Punchhi Commission \n3. Rajamannar Committee \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1, 2 and 3"
+          },
+          {
+            "question": "Which of the following is/are correct regarding impeachment of the President? \n1. He can be impeached only on the charge of violation of Constitution. \n2. On removal of President, Vice-President takes charge as president for the remaining tenure. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "With reference to the Chief Minister, consider the following statements: \n1. He holds office during the pleasure of the Governor. \n2. He can be dismissed by the Governor at any time. \n3. He can recommend the dissolution of the Legislative Assembly to the Governor at any time. \nWhich of the statements given above are correct?",
+            "choices": [
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "With reference to political parties as recognized by the Election Commission (EC), consider the following statements: \n1. EC recognizes parties as national parties or state parties on the basis of their poll performance. \n2. The recognition granted by EC to political parties determines their right to certain privileges in elections. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Consider the following statements regarding Cabinet Committees: \n1. They are extra constitutional bodies. \n2. All cabinet committees are headed by the Prime minister. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Consider the following statements regarding the First Past the Post system of elections in India: \n1. In this system each constituency elects one representative. \n2. The winning candidate in this system must secure more than fifty percent votes. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Consider the following statements:\n1. Council of minister is an executive branch of the parliament and it collectively governs on behalf of the Parliament.\n2. It is binding on all ministers to pursue or agree to a policy for which there is collective responsibility.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "With reference to Money Bill, consider the following statements:\n1. All money bills are financial bills but not all financial bills are money bill.\n2. Joint sitting for passing money bill is presided by the Speaker.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Who among the following can be the electors in the elections to the Legislative Councils of the State?\n1. Members of municipalities\n2. Primary school teachers\n3. MLAs from the state\n4. MPs from the state\nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 , 2 and 3 only",
+              "1 and 3 only",
+              "2, 3 and 4 only",
+              "1, 2 and 4 only"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "In case of vacancy in the office of speaker and deputy speaker in Lok Sabha who may elect any member as acting speaker?",
+            "choices": [
+              "Members of Lok Sabha",
+              "President",
+              "Vice President",
+              "Prime minister"
+            ],
+            "answer": "President"
+          },
+          {
+            "question": "Consider the following statements with reference to various state-level electoral offices:\n1. Chief Electoral Officer at the state level is appointed by the Governor.\n2. Returning officer at the district level is nominated by the District Magistrate of the district.\nWhich of the statements given above is/are not correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "With reference to the Municipal Corporations, consider the following statements:\n1. They are established in the states by an act of the concerned state legislatures.\n2. The Mayor is the chief executive authority of the corporation.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "With reference to Private Members bills,consider the following statements:\n1. It is a bill introduced by any member of Parliament who is not a Minister.\n2. It is drafted by the concerned department in consultation with the law department.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Consider the following statements:\n1. A member can be nominated to Rajya Sabha for any number of times.\n2. The normal term of Rajya Sabha is six years at a time.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "With reference to Indian judiciary, consider the following statements:\n1. The oath and affirmations for the supreme court judge is provided under the second schedule to the Indian Constitution.\n2. Any retired judge of the Supreme Court of India can be called back to sit and act as a Supreme Court judge by the Chief Justice of India with prior permission of the President of India.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "Mr XYZ wants to become a supreme court judge. What is the minimum age qualification so that he becomes a supreme court judge?",
+            "choices": [
+              "35 years",
+              "40 years",
+              "21 years",
+              "No Minimum age is prescribed in the Constitution."
+            ],
+            "answer": "No Minimum age is prescribed in the Constitution."
+          },
+          {
+            "question": "In which of the following cases the Supreme Court has the original jurisdiction?",
+            "choices": [
+              "Inter-State Water disputes",
+              "Matters referred to the Finance Commission",
+              "Adjustment of expenses between the Centre and the States",
+              "Writ Jurisdiction"
+            ],
+            "answer": "Adjustment of expenses between the Centre and the States"
+          },
+          {
+            "question": "Recently, the Supreme Court asked the Centre and States to respond to a petition to enforce the fundamental duties of citizens. In this context, consider the following statements regarding the Fundamental Duties: \n1. At present, there are fourteen Fundamental Duties. \n2. After their incorporation in the constitution, the part that enshrines the duties has been amended only once. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "If the President wants to seek legal opinion on a matter of public importance from the Supreme Court, then:",
+            "choices": [
+              "Supreme Court can assume to itself the power of legislation.",
+              "President has to accept the advice given by the court.",
+              "Supreme Court may refuse to tender its opinion.",
+              "President has to first get the approval of the Parliament for the same."
+            ],
+            "answer": "Supreme Court may refuse to tender its opinion."
+          },
+          {
+            "question": "The president exercises executive power through:",
+            "choices": [
+              "Prime Minister",
+              "Council of Ministers headed by Prime Minister",
+              "Parliament",
+              "Chief Justice of Supreme Court"
+            ],
+            "answer": "Council of Ministers headed by Prime Minister"
+          },
+          {
+            "question": "Indian federalism differs from that of the federalism of the United States of America. In this context, consider the differences between the federal or supreme courts of India and the USA: \n1. The original jurisdiction of the American Supreme Court is wider than that of the Indian Supreme Court. \n2. The appellate jurisdiction of both the courts is confined to constitutional cases only. \n3. The Indian Supreme Court has advisory jurisdiction whereas the American Supreme Court has no advisory jurisdiction. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "2 only",
+              "1 and 3 only",
+              "1, 2 and 3",
+              "2 and 3 only"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "Which of the following statements is/are correct regarding Cabinet? \n1. It is a smaller body than the Council of Ministers. \n2. Its powers and functions are defined in the constitution. \n3. It is an advisory body to the president and its advice is binding on him. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "1 and 3 only",
+              "2 and 3 only",
+              "1 and 2 only"
+            ],
+            "answer": "1 and 3 only"
+          },
+          {
+            "question": "With reference to the office of Governor, consider the following statements: \n1. In case of a bicameral legislature, Governor can issue ordinance only when both the houses are not in session. \n2. He enjoys personal immunity from legal liability for his official acts. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "In which of the following cases does membership to Parliament incur disqualification under the Tenth Schedule? \n1. If any independent member joins any political party before the expiry of six months. \n2. If any nominated member joins any political party before the expiry of six months. \n3. If he voluntarily gives up the membership of the political party to which he belonged. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 3 only",
+              "1 and 2 only",
+              "3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "3 only"
+          },
+          {
+            "question": "With reference to co-operative societies,consider the following statements: \n1. Elections to a co-operative society are conducted by State Election Commission. \n2. Number of directors of a co-operative society shall not exceed twenty-one. \n3. Cooperative Board shall have at least two women representatives. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "2 and 3 only"
+          },
+          {
+            "question": "Which of the following is/are the discretionary powers of President? \n1. Exercise of suspensive veto power \n2. Appointment of Prime Minister when no Political Party has majority in Lok Sabha \n3. Appointment of Governor in a state \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "1 and 2 only",
+              "2 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 and 2 only"
+          },
+          {
+            "question": "Consider the following statements regarding the territorial extent of Central and State legislation in India: \n1. The territorial jurisdiction of the Parliament is absolute in nature for whole or any part of the territory of India. \n2. The laws enacted by state legislature cannot be applicable outside the state. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Supreme Court is a Court of Record. It implies that \n1. The judgements of Supreme Court are recorded for perpetual memory. \n2. The Supreme Court has the power to punish for contempt of court. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "The Eleventh Schedule of the Constitution places which of the following under the purview of panchayats? \n1. Agriculture \n2. Khadi, village and cottage industries \n3. Slum improvement and upgradation \n4. Public Distribution System \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 2 only",
+              "3 and 4 only",
+              "1, 2 and 4 only",
+              "2, 3 and 4 only"
+            ],
+            "answer": "1, 2 and 4 only"
+          },
+          {
+            "question": "The executive branch of the Union government consists of which? \n1. President \n2. Council of Ministers \n3. All Members of Parliament \n4. Attorney General \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 3 only",
+              "1, 2 and 4 only",
+              "1, 2 and 3 only",
+              "1, 2, 3 and 4"
+            ],
+            "answer": "1, 2 and 4 only"
+          },
+          {
+            "question": "Which of the following statements is/are correct regarding the Departmental Standing Committees? \n1. The members of this committee are elected by proportional representation. \n2. It considers the demands for grants of concerned ministries and can suggest cuts in the budget. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Which of the following is/are not compulsory provisions under the 73rd Constitutional Amendment Act of 1992? \n1. Organization of Gram Sabha in a village or group of villages \n2. Constitution of a State Finance Commission \n3. Giving representation to members of the Parliament in the panchayats \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 2 only",
+              "3 only",
+              "1 and 3 only",
+              "2 only"
+            ],
+            "answer": "3 only"
+          },
+          {
+            "question": "Which of the following is/are the possible reasons for appointing the Governor rather than electing him? \n1. To prevent friction between Governor and Chief Minister. \n2. To reduce the election expenses involved in the election process \n3. It would discourage separatist tendencies in the States. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 and 3 only",
+              "1 and 2 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1, 2 and 3"
+          },
+          {
+            "question": "With reference to the President of India, which of the following statements is/are correct? \n1. The President must act according to aid and advice of the Council of Ministers. \n2. When the Council of Ministers resigns, the President acts according to his own discretion. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Who among the following can vote in the election of the President? \n1. Elected and nominated members of the Lok Sabha. \n2. Elected Members of Rajya Sabha. \n3. Elected Members of Legislative Assemblies of UTs \n4. Elected members of Legislative Councils \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1, 2 and 3 only",
+              "2 and 3 only",
+              "1 and 4 only",
+              "1, 2, 3 and 4"
+            ],
+            "answer": "2 and 3 only"
+          },
+          {
+            "question": "Consider the following statements regarding the parliamentary privileges available to the members: \n1. They cannot be arrested during the session of Parliament for both civil and criminal offences. \n2. The presiding officer of the house has the final authority in deciding matters of breach of privileges. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "The strength of the High Court is decided by:",
+            "choices": [
+              "Supreme Court",
+              "President of India",
+              "Parliament",
+              "Governor of respective state"
+            ],
+            "answer": "President of India"
+          },
+          {
+            "question": "Which of the following is not correct when Vice-President is discharging functions of President?",
+            "choices": [
+              "He enjoys all immunities which are available to the President for his official acts.",
+              "He continues to perform the duties of chairman of Rajya Sabha.",
+              "He can pardon the sentence of a court martial.",
+              "He can promulgate ordinances on the advice of Council of Ministers."
+            ],
+            "answer": "He continues to perform the duties of chairman of Rajya Sabha."
+          },
+          {
+            "question": "Consider the following statements with reference to The Provisions of the Panchayats (Extension to Scheduled Areas) Act, 1996 (PESA): \n1. The provisions of the Act apply to the states of the North East India only. \n2. Ministry of Rural Development and Ministry of Development of North Eastern Region are the nodal ministries for the implementation of the provisions under this Act. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Consider the following statements with regard to the Estimates Committee: \n1. It is called a ‘continuous economy committee’ since it examines all the ministries and departments throughout the year. \n2. It examines the budget estimates only after they have been voted by the Parliament. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Consider the following statements regarding the removal of judges: \n1. The judge of a high court can be removed on the same ground as a judge of the supreme court. \n2. Violation of the constitution is the only ground for the removal of a high court judge. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Which of the following statements is/are correct with respect to the High Courts of Union territories? \n1. The High Court of Delhi was established by the Constitution under Article 239AA. \n2. Establishing a High Court for a Union Territory would require a constitutional amendment. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Which of the following is not the purpose of constituting Cabinet committees?",
+            "choices": [
+              "To reduce the enormous workload on Cabinet.",
+              "To facilitate in depth examination of policy issues and effective delegation.",
+              "To give federal character to policy making.",
+              "To sort out issues and formulate proposals for the consideration of the Cabinet."
+            ],
+            "answer": "To give federal character to policy making."
+          },
+          {
+            "question": "Under the 73rd and 74th Constitutional Amendment Acts, no election to any municipality/panchayat can be questioned except by an election petition presented to which of the following authority?",
+            "choices": [
+              "A district court in the district to which the municipality or the panchayat belongs",
+              "The High Court of the concerned state",
+              "Any authority as provided by the State legislature",
+              "The State Election Commission"
+            ],
+            "answer": "Any authority as provided by the State legislature"
+          },
+          {
+            "question": "Which of the following statements is/are correct regarding the election of Rajya Sabha members? \n1. All the members of the State Legislative Assembly participate in the election. \n2. Election for the vacant seats of Rajya Sabha are held every third year. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "The Central Council of Local Government is chaired by who among the following?",
+            "choices": [
+              "Minister of Panchayati Raj",
+              "Minister of Housing and Urban Affairs",
+              "Minister of Home Affairs",
+              "The Prime Minister of India"
+            ],
+            "answer": "Minister of Housing and Urban Affairs"
+          },
+          {
+            "question": "Which of the following is/are not an essential feature of local governance? \n1. Active participation of the citizenry \n2. Increased accountability of the administration \n3. Centralization of decision making \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1, 2 and 3",
+              "3 only",
+              "1 and 2 only",
+              "2 only"
+            ],
+            "answer": "3 only"
+          },
+          {
+            "question": "Consider the following statements regarding the Chief Minister of a State: \n1. A person who is not a member of the state legislature cannot be appointed as the Chief Minister. \n2. He/she should be of a minimum age of 30 years to be appointed as a chief minister of a state. \nWhich of the statements given above is/are not correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "With reference to State Governor, consider the following statements: \n1. Method of appointment of Governor is adopted from Canadian Constitution. \n2. The same person can be appointed as Governor for two or more states. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "With reference to the budgetary process in India, appropriation bill refers to:",
+            "choices": [
+              "authorization of the withdrawal from the Consolidated Fund of India.",
+              "taxation proposals of the government.",
+              "demands for grants by ministries.",
+              "provision to make any grant in advance for a part of the financial year."
+            ],
+            "answer": "authorization of the withdrawal from the Consolidated Fund of India."
+          },
+          {
+            "question": "With reference to the powers of the President, consider the following statements: \n1. His prior assent is required to introduce Constitutional Amendment Bill and Money bill. \n2. He can nominate 2 members to the Rajya Sabha from Anglo Indian community. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Which among the following Parliamentary Privileges are mentioned in the Constitution? \n1. Freedom of speech in Parliament \n2. Right of publication of parliamentary proceedings \n3. Right to punish for contempt of house \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 and 2 only"
+          },
+          {
+            "question": "Which of the following statements is/are correct with regard to discussions in the parliament? \n1. During the Zero Hour, the members are free to raise any matter that they think is important. \n2. During the Question Hour, Ministers are bound to give oral answers to all the types of questions. \nSelect the correct answer using code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Consider the following statements regarding Council of Ministers: \n1. The strength of the Council of Ministers cannot exceed 10 percent of total number of members of the Lok Sabha. \n2. Council of Ministers is collectively responsible to the Parliament. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Neither 1 nor 2"
+          },
+          {
+            "question": "Which of the following statements are correct regarding office of the Prime minister? \n1. He holds office during the pleasure of the President. \n2. Resignation of Prime minister automatically dissolves the council of ministers. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Which of the following is/are the exclusive powers of Lok Sabha? \n1. Vote of demand for grants \n2. Introduction of Constitution Amendment bill \n3. Creation of All India Services \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "2 and 3 only",
+              "1 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "With reference to the qualifications for election as Vice-President, consider the following statements:\n1. He should be naturalized citizen of India.\n2. He should have completed 35 years of age.\n3. He should be qualified for election as a member of the Lok Sabha and Rajya Sabha.\nHow many of the above statements are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only one"
+          },
+          {
+            "question": "Consider the following statements with reference to the reservation of seats under the PESA Act, 1996:\n1. The reservation of seats for the scheduled tribes in every panchayat in scheduled areas cannot be less than half of the total number of seats.\n2. All seats of chairpersons of panchayats at all levels have to be reserved for the scheduled tribes.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "Consider the following situations/scenarios:\n1. When no party has a clear majority in the Lok Sabha.\n2. When the Prime Minister in office dies and there is no obvious successor.\n3. When no pre-poll alliance gets clear majority in the Lok Sabha election.\nIn how many of the above situations/scenarios the President may have to exercise his discretion in the appointment of the Prime Minister?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "All three"
+          },
+          {
+            "question": "Who among the following may be provided representation in a municipality by the state legislature? \n1. Person having special knowledge or experience in municipal administration without the right to vote in the meetings of the municipality. \n2. The members of Lok Sabha and the state legislative assembly representing constituencies comprising wholly or partly the municipal area. \n3. The members of the Rajya Sabha & the state legislative council registered as electors within the municipal area. \nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 only",
+              "1 and 3 only",
+              "2 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "1, 2 and 3"
+          },
+          {
+            "question": "Consider the following statements: \n1. The Judges of the Supreme Court are appointed by the President. \n2. The Judges of the High Courts are appointed by the Governors of the respective states. \n3. The Judges of both the Supreme Court and the High Courts can only be removed by an order of the President. \nHow many of the statements given above are correct?",
+            "choices": [
+              "only one",
+              "only two",
+              "All three",
+              "None"
+            ],
+            "answer": "only two"
+          },
+          {
+            "question": "How many of the following statements about the functions of the speaker of the state legislative assembly are correct?\n1. He can direct a member to withdraw from the House for disorderly conduct.\n2. He summons and prorogues the house in session.\n3. He is empowered for revocation of suspension of a member.\nSelect the correct answer using the code given below.",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only one"
+          },
+          {
+            "question": "Consider the following statements regarding the reservation of Bills by the Governor for the consideration of the President:\n1. If the President returns a Bill for reconsideration, the State Legislature must act on it within six months.\n2. If the State Legislature re passes the Bill with or without amendments, the President is bound to give his assent.\n3. The Governor is required to reserve for Presidential consideration any Bill that affects the jurisdiction of the State High Court.\nHow many of the statements given above are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only two"
+          },
+          {
+            "question": "Recently, the Union government has launched the National Critical Mineral Mission. In this context, consider the following statements regarding the National Critical Mineral Mission: \n1. The mission aims to encourage Indian PSUs and private sector companies to acquire critical mineral assets abroad. \n2. The mission will encompass all stages of the value chain from mineral exploration to recovery from end-of-life products. \n3. It is launched by the Ministry of Science and Technology. \nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1, 2 and 3",
+              "1 and 2 only",
+              "2 and 3 only",
+              "1 only"
+            ],
+            "answer": "1 and 2 only"
+          },
+          {
+            "question": "Which of the following statements is not correct about the money bill in Parliament?",
+            "choices": [
+              "All finance bills are money bills but all money bills are not finance bills.",
+              "The Speaker of Lok Sabha certifies a bill as a money bill.",
+              "A minister who is a member of the Rajya Sabha, cannot introduce a money bill in the Rajya Sabha.",
+              "The President can withhold his assent to a money bill but cannot return it for reconsideration of the Houses."
+            ],
+            "answer": "All finance bills are money bills but all money bills are not finance bills."
+          },
+          {
+            "question": "Consider the following statements regarding the Speaker and the Deputy Speaker of the state legislative assemblies:\n1. They are neither entitled to vote in the first instance nor provide a casting vote when a resolution for their removal is under consideration.\n2. In case of vacancy in both offices, the Governor performs the duties of the Speaker.\n3. While the Deputy Speaker submits his resignation to the Speaker, the latter does it to the Governor of the State.\nHow many of the statements given above are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only one"
+          },
+          {
+            "question": "Consider the following statements regarding the SVAMITVA Scheme:\n1. It aims to establish clear ownership of property in rural inhabited (“Abadi”)areas.\n2. It is implemented by the Ministry of Rural Development in collaboration with State governments.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "Consider the following statements about the National Broadband Mission 2.0:\n1. National Broadband Mission 2.0 aims to achieve minimum fixed broadband download speed of 100 Mbps all over India by 2030\n2. The mission is implemented by the Ministry of Communications.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "2 only"
+          },
+          {
+            "question": "With reference to the National Live stock Mission, consider the following statements:\n1. It aims to ensure promoting risk management measures including livestock insurance for farmers.\n2. Its objective is to promote entrepreneurship in the field of rural poultry and fodder sector.\n3. It is implemented by the Ministry of Fisheries, Animal Husbandry and Dairying.\nHow many of the statements given above are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "All three"
+          },
+          {
+            "question": "With respect to Gram Nyayalayas, consider the following statements:\n1. It has been set up through laws of respective state legislatures.\n2. Its presiding officer, Nyayadhikari is appointed by the State Government in consultation with the High Court.\n3. The Gram Nyayalaya shall exercise the powers of both Criminal and Civil Courts.\nHow many of the statements given above are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only two"
+          },
+          {
+            "question": "Consider the following statements: \n1. All the legally authorized payments on behalf of the Government of India are made out of the Public Account of India. \n2. The payments from the Public Account of India can be made without parliamentary appropriation. \n3. The Contingency Fund of India is held by the finance secretary on behalf of the President of India. \nWhich of the statements given above are correct?",
+            "choices": [
+              "1, 2 and 3",
+              "1 and 2 only",
+              "2 and 3 only",
+              "1, 2 and 3"
+            ],
+            "answer": "2 and 3 only"
+          },
+          {
+            "question": "The term \"DeepSeek\" sometimes seen in the news in the context of:",
+            "choices": [
+              "India's Artificial Intelligence (AI)-led language translation platform.",
+              "computer programmes AI chatbot developed by China based start up which simulate human-style conversation with a user.",
+              "cloud-based aerial traffic management system.",
+              "artificial intelligence-based text to-image generation tool developed by Google."
+            ],
+            "answer": "computer programmes AI chatbot developed by China based start up which simulate human-style conversation with a user."
+          },
+          {
+            "question": "Consider the following statements with reference to the dissolution of Panchayats, under the Constitution: \n1. The Constitution of India has not specified the grounds for the dissolution of Panchayats. \n2. The new Panchayat constituted upon the dissolution of a Panchayat before the expiration of its duration continues only for the remainder of the period.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "Both 1 and 2"
+          },
+          {
+            "question": "With reference to Panchayati Raj Institutions,which of the following committees was constituted earliest?",
+            "choices": [
+              "Thungon committee",
+              "Ashok Mehta committee",
+              "G V K Rao committee",
+              "LM Singhvi committee"
+            ],
+            "answer": "Ashok Mehta committee"
+          },
+          {
+            "question": "Which of the following committees have made recommendations regarding Centre-State relations?\n1. Khusro Committee\n2. Rajamannar Committee\n3. M.M. Punchhi Commission\n4. Sarkaria Commission\nSelect the correct answer using the code given below.",
+            "choices": [
+              "1 and 4 only",
+              "2, 3 and 4 only",
+              "1, 2 and 3 only",
+              "1, 2, 3 and 4"
+            ],
+            "answer": "2, 3 and 4 only"
+          },
+          {
+            "question": "Experimental Advanced Superconducting Tokamak (EAST) reactor, sometimes seen in news, belongs to which one of the following countries?",
+            "choices": [
+              "South Korea",
+              "France",
+              "India",
+              "China"
+            ],
+            "answer": "China"
+          },
+          {
+            "question": "Kokborok language, sometimes mentioned in news, belongs to which one of the following states of India?",
+            "choices": [
+              "Manipur",
+              "Nagaland",
+              "Tripura",
+              "Assam"
+            ],
+            "answer": "Tripura"
+          },
+          {
+            "question": "“These toys are traditional toys made by artisans belonging to Andhra Pradesh and are made from the wood of the Ankudu tree. Recently, on India’s 76th Republic Day, Andhra Pradesh’s tableau featured these 400-year-old craft”. \nWhich one of the following toys correctly describes in the above paragraph?",
+            "choices": [
+              "Kondapalli toys",
+              "Nirmal toys",
+              "Etikoppaka toys",
+              "Thanjavur dolls"
+            ],
+            "answer": "Etikoppaka toys"
+          },
+          {
+            "question": "With respect to Appropriation Bill:\n1. The government cannot withdraw moneyfrom the Consolidated Fund of India till the enactment of the appropriation bill.\n2. It can be introduced in either Lok Sabha or Rajya Sabha.\nWhich of the statements given above is/are correct?",
+            "choices": [
+              "1 only",
+              "2 only",
+              "Both 1 and 2",
+              "Neither 1 nor 2"
+            ],
+            "answer": "1 only"
+          },
+          {
+            "question": "With respect to Lok Adalats, consider the following statements:\n1. It has been given statutory status under the Legal Services Authorities Act, 1987.\n2. The award by the Lok Adalat is not binding and it is appealable.\n3. There is no strict application of procedural laws like the Civil Procedure Code and the Evidence Act while assessing the claim by Lok Adalat. \nHow many of the statements given above are correct?",
+            "choices": [
+              "Only one",
+              "Only two",
+              "All three",
+              "None"
+            ],
+            "answer": "Only two"
+          },
+          {
+            "question": "Union Territories are represented in the Lok Sabha by:",
+            "choices": [
+              "directly elected MPs",
+              "nominated MPs",
+              "indirectly elected MPs",
+              "none"
+            ],
+            "answer": "directly elected MPs"
+          }
+        ]
+      }
+    ]
+  }

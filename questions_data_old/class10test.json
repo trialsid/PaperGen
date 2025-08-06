@@ -1,0 +1,278 @@
+{
+  "sections": [
+    {
+      "name": "Science – Physics",
+      "description": "Questions based on Class 10 NCERT topics: Light, Electricity and Magnetic Effects of Current.",
+      "questions": [
+        {
+          "question": "Which mirror always forms a virtual, erect and diminished image of an object placed in front of it?",
+          "choices": ["Concave mirror", "Plane mirror", "Convex mirror", "Parabolic mirror"],
+          "answer": "Convex mirror"
+        },
+        {
+          "question": "According to the law of reflection, the angle of incidence is equal to the angle of __________.",
+          "choices": ["Refraction", "Dispersion", "Deviation", "Reflection"],
+          "answer": "Reflection"
+        },
+        {
+          "question": "The SI unit of electric current is:",
+          "choices": ["Volt", "Ohm", "Ampere", "Coulomb"],
+          "answer": "Ampere"
+        },
+        {
+          "question": "In a series circuit, the current flowing through each resistor is:",
+          "choices": ["Different for each resistor", "Equal to the total current", "Half of the total current", "Zero"],
+          "answer": "Equal to the total current"
+        },
+        {
+          "question": "Fleming’s Left-Hand Rule is used to find the direction of:",
+          "choices": ["Induced current", "Magnetic field around a conductor", "Force on a current-carrying conductor", "Electric field"],
+          "answer": "Force on a current-carrying conductor"
+        },
+        {
+          "question": "If the magnification produced by a mirror is positive, the image formed is:",
+          "choices": ["Real and inverted", "Virtual and erect", "Real and erect", "Virtual and inverted"],
+          "answer": "Virtual and erect"
+        },
+        {
+          "question": "The electrical power consumed by an appliance is given by the expression P = __________.",
+          "choices": ["IV", "I/R", "I²R", "Both IV and I²R"],
+          "answer": "Both IV and I²R"
+        }
+      ]
+    },
+    {
+      "name": "Science – Chemistry",
+      "description": "MCQs covering Chemical Reactions, Acids-Bases-Salts, Metals & Non-metals, and Carbon Compounds.",
+      "questions": [
+        {
+          "question": "Which type of chemical reaction is represented by 2KClO₃ → 2KCl + 3O₂?",
+          "choices": ["Combination", "Decomposition", "Double displacement", "Neutralisation"],
+          "answer": "Decomposition"
+        },
+        {
+          "question": "The pH value of a neutral solution at 25 °C is:",
+          "choices": ["0", "7", "14", "1"],
+          "answer": "7"
+        },
+        {
+          "question": "Which of the following is NOT an ore of iron?",
+          "choices": ["Haematite", "Magnetite", "Bauxite", "Limonite"],
+          "answer": "Bauxite"
+        },
+        {
+          "question": "Which gas is produced when zinc reacts with dilute hydrochloric acid?",
+          "choices": ["Hydrogen", "Chlorine", "Oxygen", "Nitrogen"],
+          "answer": "Hydrogen"
+        },
+        {
+          "question": "In the reactivity series of metals, the most reactive metal among the following is:",
+          "choices": ["Copper", "Silver", "Iron", "Potassium"],
+          "answer": "Potassium"
+        },
+        {
+          "question": "The functional group present in ethanol is:",
+          "choices": ["–CHO", "–OH", "–COOH", "–NH₂"],
+          "answer": "–OH"
+        },
+        {
+          "question": "Which salt is commonly known as baking soda?",
+          "choices": ["Sodium carbonate", "Sodium bicarbonate", "Calcium carbonate", "Potassium nitrate"],
+          "answer": "Sodium bicarbonate"
+        },
+        {
+          "question": "The reaction of an acid with a base to form salt and water is called:",
+          "choices": ["Redox reaction", "Neutralisation", "Combustion", "Decomposition"],
+          "answer": "Neutralisation"
+        },
+        {
+          "question": "Which allotrope of carbon is a good lubricant due to its layered structure?",
+          "choices": ["Diamond", "Buckminsterfullerene", "Graphite", "Charcoal"],
+          "answer": "Graphite"
+        }
+      ]
+    },
+    {
+      "name": "Science – Biology",
+      "description": "MCQs from Life Processes, Control & Coordination, Reproduction, Heredity & Evolution, and Environment.",
+      "questions": [
+        {
+          "question": "The process by which green plants prepare their own food is called:",
+          "choices": ["Respiration", "Transpiration", "Photosynthesis", "Germination"],
+          "answer": "Photosynthesis"
+        },
+        {
+          "question": "Which blood vessel carries blood from the heart to the lungs for oxygenation?",
+          "choices": ["Pulmonary artery", "Pulmonary vein", "Aorta", "Vena cava"],
+          "answer": "Pulmonary artery"
+        },
+        {
+          "question": "Iodine solution is used to test the presence of __________ in leaves.",
+          "choices": ["Glucose", "Starch", "Protein", "Fat"],
+          "answer": "Starch"
+        },
+        {
+          "question": "Which hormone is responsible for lowering blood glucose levels?",
+          "choices": ["Adrenaline", "Insulin", "Thyroxine", "Glucagon"],
+          "answer": "Insulin"
+        },
+        {
+          "question": "In human females, the site of fertilisation is usually the:",
+          "choices": ["Uterus", "Vagina", "Ovary", "Fallopian tube"],
+          "answer": "Fallopian tube"
+        },
+        {
+          "question": "Mendel’s law of segregation is based on separation of alleles during formation of:",
+          "choices": ["Zygotes", "Gametes", "Embryos", "Seeds"],
+          "answer": "Gametes"
+        },
+        {
+          "question": "The gradual change in the inherited traits of a population over generations is called:",
+          "choices": ["Metabolism", "Evolution", "Mutation", "Adaptation"],
+          "answer": "Evolution"
+        },
+        {
+          "question": "Excessive use of fertilisers and pesticides in agriculture leads primarily to:",
+          "choices": ["Enhanced biodiversity", "Soil pollution", "Water conservation", "Ozone formation"],
+          "answer": "Soil pollution"
+        },
+        {
+          "question": "Which of the following is a renewable, inexhaustible source of energy?",
+          "choices": ["Coal", "Petroleum", "Wind energy", "Natural gas"],
+          "answer": "Wind energy"
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "description": "25 MCQs covering Number Systems, Algebra, Geometry, Trigonometry, Mensuration, and Statistics & Probability.",
+      "questions": [
+        {
+          "question": "The decimal expansion of 7/8 terminates after how many decimal places?",
+          "choices": ["1", "2", "3", "None (non-terminating)"],
+          "answer": "3"
+        },
+        {
+          "question": "If the discriminant of a quadratic equation is zero, the roots are:",
+          "choices": ["Real and distinct", "Real and equal", "Imaginary", "One real, one imaginary"],
+          "answer": "Real and equal"
+        },
+        {
+          "question": "The coefficient of x² in the expansion of (x + 3)² is:",
+          "choices": ["1", "3", "6", "9"],
+          "answer": "1"
+        },
+        {
+          "question": "For the linear pair of equations 3x + 2y = 6 and 6x + 4y = 12, the system is:",
+          "choices": ["Consistent with unique solution", "Inconsistent", "Consistent with infinitely many solutions", "None of these"],
+          "answer": "Consistent with infinitely many solutions"
+        },
+        {
+          "question": "Distance between points (1, 2) and (4, 6) in the coordinate plane is:",
+          "choices": ["3", "5", "√13", "5"],
+          "answer": "5"
+        },
+        {
+          "question": "In ∆ABC, if ∠A = 90°, then the side opposite ∠A is called:",
+          "choices": ["Adjacent side", "Hypotenuse", "Altitude", "Median"],
+          "answer": "Hypotenuse"
+        },
+        {
+          "question": "The value of sin 30° is:",
+          "choices": ["1", "1/2", "√2/2", "√3/2"],
+          "answer": "1/2"
+        },
+        {
+          "question": "If tan θ = 1, then θ equals:",
+          "choices": ["0°", "30°", "45°", "60°"],
+          "answer": "45°"
+        },
+        {
+          "question": "Circumference of a circle with radius 7 cm is:",
+          "choices": ["14 cm", "22 cm", "44 cm", "None of these"],
+          "answer": "44 cm"
+        },
+        {
+          "question": "Area of a square having diagonal 10 cm is:",
+          "choices": ["50 cm²", "100 cm²", "25 cm²", "200 cm²"],
+          "answer": "50 cm²"
+        },
+        {
+          "question": "A cube has volume 125 cm³. Its surface area is:",
+          "choices": ["125 cm²", "150 cm²", "300 cm²", "600 cm²"],
+          "answer": "150 cm²"
+        },
+        {
+          "question": "Mean of the data 2, 4, 6, 8, 10 is:",
+          "choices": ["5", "6", "7", "8"],
+          "answer": "6"
+        },
+        {
+          "question": "In probability, the sum of probabilities of all elementary events of an experiment is:",
+          "choices": ["0", "1", "Less than 1", "Greater than 1"],
+          "answer": "1"
+        },
+        {
+          "question": "If two lines are perpendicular, the product of their slopes is:",
+          "choices": ["0", "1", "–1", "Undefined"],
+          "answer": "–1"
+        },
+        {
+          "question": "The roots of x² – 5x + 6 = 0 are:",
+          "choices": ["1 and 6", "2 and 3", "3 and 2", "–2 and –3"],
+          "answer": "2 and 3"
+        },
+        {
+          "question": "Mode of the data set 3, 3, 5, 6, 6, 6, 7, 8 is:",
+          "choices": ["3", "5", "6", "7"],
+          "answer": "6"
+        },
+        {
+          "question": "The probability of getting a head when a fair coin is tossed once is:",
+          "choices": ["0", "1/2", "1", "2"],
+          "answer": "1/2"
+        },
+        {
+          "question": "Volume of a right circular cone is $\\frac{1}{3} \\pi r^2 h$. If r = 3 cm and h = 5 cm, volume equals:",
+          "choices": ["15π cm³", "30π cm³", "45π cm³", "60π cm³"],
+          "answer": "15π cm³"
+        },
+        {
+          "question": "In an AP, the common difference is found by:",
+          "choices": ["a₂ + a₁", "a₂ – a₁", "a₁ – a₂", "a₁ × a₂"],
+          "answer": "a₂ – a₁"
+        },
+        {
+          "question": "Sum of the first n natural numbers is:",
+          "choices": ["n(n+1)", "n(n+1)/2", "n²", "2n"],
+          "answer": "n(n+1)/2"
+        },
+        {
+          "question": "If sec θ = 13/12, then cos θ is:",
+          "choices": ["12/13", "13/12", "5/13", "12/5"],
+          "answer": "12/13"
+        },
+        {
+          "question": "The coordinates of the midpoint of the line joining (–2, 4) and (4, –6) are:",
+          "choices": ["(1, –1)", "(1, –2)", "(–1, 1)", "(0, 0)"],
+          "answer": "(1, –1)"
+        },
+        {
+          "question": "If a chord of a circle subtends a right angle at the centre, the chord is:",
+          "choices": ["Equal to radius", "Equal to diameter", "Greater than radius but less than diameter", "None of these"],
+          "answer": "Greater than radius but less than diameter"
+        },
+        {
+          "question": "The standard deviation is a measure of:",
+          "choices": ["Central tendency", "Dispersion", "Correlation", "Probability"],
+          "answer": "Dispersion"
+        },
+        {
+          "question": "If two dice are thrown simultaneously, the total number of possible outcomes is:",
+          "choices": ["6", "12", "18", "36"],
+          "answer": "36"
+        }
+      ]
+    }
+  ]
+}

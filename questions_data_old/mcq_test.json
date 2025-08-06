@@ -1,0 +1,228 @@
+{
+  "sections": [
+    {
+      "name": "History: The World Between the World Wars (1900-1950)",
+      "description": "Questions covering key events, ideologies, and figures from the period between the two World Wars.",
+      "questions": [
+        {
+          "question": "Which of the following treaties officially ended World War I and imposed harsh penalties on Germany?",
+          "choices": [
+            "Treaty of Versailles",
+            "Treaty of Trianon",
+            "Treaty of Saint-Germain-en-Laye",
+            "Treaty of Neuilly-sur-Seine"
+          ],
+          "answer": "Treaty of Versailles"
+        },
+        {
+          "question": "Who was the leader of the Bolsheviks during the Russian Revolution of 1917?",
+          "choices": [
+            "Joseph Stalin",
+            "Leon Trotsky",
+            "Vladimir Lenin",
+            "Alexander Kerensky"
+          ],
+          "answer": "Vladimir Lenin"
+        },
+        {
+          "question": "The Great Depression, which began in 1929, primarily originated in which country?",
+          "choices": [
+            "United Kingdom",
+            "Germany",
+            "United States",
+            "France"
+          ],
+          "answer": "United States"
+        },
+        {
+          "question": "Which ideology is characterized by extreme nationalism, authoritarianism, and the suppression of opposition?",
+          "choices": [
+            "Communism",
+            "Liberalism",
+            "Fascism",
+            "Socialism"
+          ],
+          "answer": "Fascism"
+        },
+        {
+          "question": "What was the main purpose of the League of Nations, established after World War I?",
+          "choices": [
+            "To promote economic cooperation",
+            "To prevent future wars",
+            "To enforce colonial rule",
+            "To establish a global currency"
+          ],
+          "answer": "To prevent future wars"
+        }
+      ]
+    },
+    {
+      "name": "Geography: India - Resources and Development",
+      "description": "Questions on the natural resources, agriculture, industries, and development patterns of India.",
+      "questions": [
+        {
+          "question": "Which of the following is the most widely grown food crop in India?",
+          "choices": [
+            "Wheat",
+            "Rice",
+            "Maize",
+            "Millet"
+          ],
+          "answer": "Rice"
+        },
+        {
+          "question": "The ______ plains are formed by the deposition of fertile alluvial soil by rivers originating from the Himalayas.",
+          "choices": [
+            "Deccan",
+            "Coastal",
+            "Northern",
+            "Thar"
+          ],
+          "answer": "Northern"
+        },
+        {
+          "question": "Which state in India is the largest producer of bauxite?",
+          "choices": [
+            "Odisha",
+            "Jharkhand",
+            "Chhattisgarh",
+            "Gujarat"
+          ],
+          "answer": "Odisha"
+        },
+        {
+          "question": "What is the primary source of irrigation in most parts of the Deccan Plateau?",
+          "choices": [
+            "Canals",
+            "Wells and Tube wells",
+            "Tanks",
+            "Dams"
+          ],
+          "answer": "Tanks"
+        },
+        {
+          "question": "The 'Green Revolution' in India was primarily aimed at increasing the production of:",
+          "choices": [
+            "Pulses",
+            "Oilseeds",
+            "Food grains",
+            "Cash crops"
+          ],
+          "answer": "Food grains"
+        }
+      ]
+    },
+    {
+      "name": "Civics: Indian Constitution and Government",
+      "description": "Questions on the fundamental principles of the Indian Constitution, different branches of government, and citizen rights.",
+      "questions": [
+        {
+          "question": "When was the Constitution of India adopted?",
+          "choices": [
+            "26 January 1950",
+            "15 August 1947",
+            "26 November 1949",
+            "2 October 1948"
+          ],
+          "answer": "26 November 1949"
+        },
+        {
+          "question": "How many fundamental rights are guaranteed to the citizens of India by the Constitution?",
+          "choices": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "answer": "6"
+        },
+        {
+          "question": "Who is the head of the Indian Union executive?",
+          "choices": [
+            "Prime Minister",
+            "President",
+            "Chief Justice",
+            "Vice President"
+          ],
+          "answer": "President"
+        },
+        {
+          "question": "The system of 'Panchayati Raj' in India is a form of:",
+          "choices": [
+            "Central government",
+            "State government",
+            "Local self-government",
+            "Military rule"
+          ],
+          "answer": "Local self-government"
+        },
+        {
+          "question": "Which body is responsible for conducting elections in India?",
+          "choices": [
+            "Supreme Court",
+            "Parliament",
+            "Election Commission of India",
+            "Ministry of Home Affairs"
+          ],
+          "answer": "Election Commission of India"
+        }
+      ]
+    },
+    {
+      "name": "Economics: Development and Economic Systems",
+      "description": "Questions on concepts of development, economic sectors, and various economic systems.",
+      "questions": [
+        {
+          "question": "Which of the following is considered a developed country?",
+          "choices": [
+            "India",
+            "Brazil",
+            "Japan",
+            "South Africa"
+          ],
+          "answer": "Japan"
+        },
+        {
+          "question": "The primary sector of the economy includes activities related to:",
+          "choices": [
+            "Manufacturing",
+            "Agriculture and mining",
+            "Services",
+            "Trade"
+          ],
+          "answer": "Agriculture and mining"
+        },
+        {
+          "question": "What does 'GDP' stand for in economics?",
+          "choices": [
+            "Gross Domestic Product",
+            "General Development Plan",
+            "Global Demand Proportion",
+            "Government Debt Payment"
+          ],
+          "answer": "Gross Domestic Product"
+        },
+        {
+          "question": "In a socialist economic system, who largely controls the means of production?",
+          "choices": [
+            "Private individuals",
+            "Corporations",
+            "The government",
+            "Foreign investors"
+          ],
+          "answer": "The government"
+        },
+        {
+          "question": "What is the main objective of sustainable development?",
+          "choices": [
+            "Maximizing current economic growth",
+            "Meeting the needs of the present without compromising the ability of future generations to meet their own needs",
+            "Exploiting all available natural resources",
+            "Promoting rapid industrialization at any cost"
+          ],
+          "answer": "Meeting the needs of the present without compromising the ability of future generations to meet their own needs"
+        }
+      ]
+    }
+  ]
+}

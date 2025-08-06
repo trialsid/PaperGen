@@ -1,0 +1,137 @@
+{
+    "sections": [
+      {
+        "name": "I - Answer in Writing (Short)",
+        "description": "Attempt all questions. Each question carries 2 marks.",
+        "section_type": "AW",
+        "questions": [
+          {
+            "question": "Why did Dobereiner's triads fail to include all known elements?",
+            "type": "short",
+            "image":"images/test.jpg"
+          },
+          {
+            "question": "Did Mendeleev see the gaps in his table as errors or as predictions?",
+            "type": "short"
+          },
+          {
+            "question": "Is the *total* number of electrons or the *outer shell* most important in the modern periodic law?",
+            "type": "short",
+            "image":"images/test2.jpg"
+          }
+        ]
+      },
+      {
+        "name": "II - Answer in Writing (Long)",
+        "description": "Attempt all questions. Each question carries 4 marks.",
+        "section_type": "AW",
+        "questions": [
+          {
+            "question": "Before Mendeleev, describe the thought process for creating a better element classification system.",
+            "type": "long"
+          },
+          {
+            "question": "How did Moseley resolve Mendeleev's 'anomalous pairs' and provide a more fundamental ordering?",
+            "type": "long"
+          },
+          {
+            "question": "Explain s, p, d, and f blocks, linking them to electron subshells, and give an example of each.",
+            "type": "long"
+          }
+        ]
+      },
+      {
+        "name": "III - Multiple Choice Questions",
+        "description": "Attempt all questions. Each question carries 1 mark.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "question": "Robert Boyle defined an element as a substance that cannot be further broken down by what means?",
+            "choices": [
+              "Heating it to extremely high temperatures.",
+              "Only by using very strong acids.",
+              "Physical or chemical changes.",
+              "Only by nuclear reactions."
+            ],
+            "answer": "Physical or chemical changes."
+          },
+          {
+            "question": "Döbereiner's law of triads grouped elements based on what?",
+            "choices": [
+              "Similar color",
+              "Similar physical state",
+              "Similar chemical properties",
+              "Similar melting points"
+            ],
+            "answer": "Similar chemical properties"
+          },
+          {
+            "question": "The modern periodic law states that the properties of elements are a periodic function of their what?",
+            "choices": [
+              "Atomic weights",
+              "Atomic numbers",
+              "Densities",
+              "Melting points"
+            ],
+            "answer": "Atomic numbers"
+          }
+        ]
+      },
+      {
+        "name": "IV - Fill in the Blanks",
+        "description": "Complete all sentences. Each blank carries 1 mark.",
+        "section_type": "FB",
+        "questions": [
+          {
+            "question": "Robert Boyle defined an element as any substance that cannot be ________ into a further simple substance by a physical or chemical change."
+          },
+          {
+            "question": "Döbereiner stated that the atomic weight of the ________ element is the average of the atomic weights of the first and third elements in a triad."
+          },
+          {
+            "question": "Mendeleev arranged elements in increasing order of their ________ weights."
+          }
+        ]
+      },
+      {
+        "name": "V - Match the Following",
+        "description": "Match the items in Column A with those in Column B. Each correct match carries 1 mark.",
+        "section_type": "MTF",
+        "questions": [
+          {
+            "question": "Match the Scientists with their contributions to periodic classification:",
+            "match_pairs": {
+              "A": "Dobereiner",
+              "B": "Mendeleev",
+              "C": "Moseley",
+              "1": "Atomic Number",
+              "2": "Law of Triads",
+              "3": "Atomic Weights" 
+            }
+          },
+           {
+            "question": "Match the term with the correct description:",
+            "match_pairs": {
+              "A": "Triads",
+              "B": "Groups",
+              "C": "Periods",
+              "1": "Vertical columns",
+              "2": "Horizontal rows",
+              "3": "Three similar elements"
+            }
+          },
+          {
+            "question": "Match the 'eka-' named elements with their later discovered names:",
+            "match_pairs": {
+              "A": "Eka-aluminium",
+              "B": "Eka-boron",
+              "C": "Eka-silicon",
+              "1": "Germanium",
+              "2": "Gallium",
+              "3": "Scandium"
+            }
+          }
+        ]
+      }
+    ]
+  }

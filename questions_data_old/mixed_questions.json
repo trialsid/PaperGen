@@ -1,0 +1,181 @@
+{
+  "sections": [
+      {
+          "name": "I - Answer in Writing (Short)",
+          "description": "Attempt all questions. Each question carries 2 marks.",
+          "section_type": "AW",
+          "questions": [
+              {
+                  "question": "Why did Dobereiner's triads fail to include all known elements?",
+                  "type": "short"
+              },
+              {
+                  "question": "Are elements in Newlands' octaves *identical* or just *similar* to the first in the series?",
+                  "type": "short"
+              },
+              {
+                  "question": "Did Mendeleev see the gaps in his table as errors or as predictions?",
+                  "type": "short"
+              },
+              {
+                  "question": "How did Moseley's X-ray work change the basis of the periodic table?",
+                  "type": "short"
+              },
+              {
+                  "question": "Is the *total* number of electrons or the *outer shell* most important in the modern periodic law?",
+                  "type": "short"
+              }
+          ]
+      },
+      {
+          "name": "II - Answer in Writing (Long)",
+          "description": "Attempt all questions. Each question carries 4 marks.",
+          "section_type": "AW",
+          "questions": [
+              {
+                  "question": "Before Mendeleev, describe the thought process for creating a better element classification system.",
+                  "type": "long"
+              },
+              {
+                  "question": "How did Moseley resolve Mendeleev's 'anomalous pairs' and provide a more fundamental ordering?",
+                  "type": "long"
+              },
+              {
+                  "question": "Explain periods and groups using electron configurations: (a) period start/end? (b) group similarity?",
+                  "type": "long"
+              },
+              {
+                  "question": "Relate *two* of these: atomic radius, ionization energy, electronegativity. How does one affect the other?",
+                  "type": "long"
+              },
+              {
+                  "question": "Explain s, p, d, and f blocks, linking them to electron subshells, and give an example of each.",
+                  "type": "long"
+              }
+          ]
+      },
+      {
+          "name": "III - Multiple Choice Questions",
+          "description": "Attempt all questions. Each question carries 1 mark.",
+          "section_type": "MCQ",
+          "questions": [
+              {
+                  "question": "Robert Boyle defined an element as a substance that cannot be further broken down by what means?",
+                  "choices": [
+                      "Heating it to extremely high temperatures.",
+                      "Only by using very strong acids.",
+                      "Physical or chemical changes.",
+                      "Only by nuclear reactions."
+                  ],
+                  "answer": "Physical or chemical changes."
+              },
+              {
+                  "question": "Döbereiner's law of triads grouped elements based on what?",
+                  "choices": [
+                      "Similar color",
+                      "Similar physical state",
+                      "Similar chemical properties",
+                      "Similar melting points"
+                  ],
+                  "answer": "Similar chemical properties"
+              },
+              {
+                  "question": "According to Newlands' law of octaves, elements were arranged in ascending order of what?",
+                  "choices": [
+                      "Atomic number",
+                      "Atomic weights",
+                      "Number of neutrons",
+                      "Density"
+                  ],
+                  "answer": "Atomic weights"
+              },
+              {
+                  "question": "Mendeleev divided his periodic table into vertical columns called what?",
+                  "choices": [
+                      "Periods",
+                      "Rows",
+                      "Groups",
+                      "Series"
+                  ],
+                  "answer": "Groups"
+              },
+              {
+                  "question": "The modern periodic law states that the properties of elements are a periodic function of their what?",
+                  "choices": [
+                      "Atomic weights",
+                      "Atomic numbers",
+                      "Densities",
+                      "Melting points"
+                  ],
+                  "answer": "Atomic numbers"
+              }
+          ]
+      },
+      {
+          "name": "IV - Fill in the Blanks",
+          "description": "Complete all sentences. Each blank carries 1 mark.",
+          "section_type": "FB",
+          "questions": [
+              {
+                  "question": "Robert Boyle defined an element as any substance that cannot be ________ into a further simple substance by a physical or chemical change."
+              },
+              {
+                  "question": "Döbereiner stated that the atomic weight of the ________ element is the average of the atomic weights of the first and third elements in a triad."
+              },
+              {
+                  "question": "Newlands' law of octaves states that when elements are arranged in ascending order of their atomic weights, their ________ repeat at regular intervals."
+              },
+              {
+                  "question": "Mendeleev arranged elements in increasing order of their ________ weights."
+              },
+              {
+                  "question": "Moseley realized that the ________ number is a more fundamental characteristic of an element than its atomic weight."
+              }
+          ]
+      },
+      {
+          "name": "V - Match the Following",
+          "description": "Match the items in Column A with those in Column B. Each correct match carries 1 mark.",
+          "section_type": "MTF",
+          "questions": [
+              {
+                  "question": "Match the Scientists with their contributions to periodic classification:",
+                  "match_pairs": {
+                      "A": "Dobereiner",
+                      "B": "Newlands",
+                      "C": "Mendeleev",
+                      "D": "Moseley",
+                      "1": "Law of Octaves",
+                      "2": "Atomic Number",
+                      "3": "Law of Triads",
+                      "4": "Atomic Weights"
+                  }
+              },
+              {
+                  "question": "Match the term with the correct description:",
+                  "match_pairs": {
+                      "A": "Triads",
+                      "B": "Octaves",
+                      "C": "Groups",
+                      "D": "Periods",
+                      "1": "Vertical columns",
+                      "2": "Horizontal rows",
+                      "3": "Three similar elements",
+                      "4": "Every eighth element similar"
+                  }
+              },
+              {
+                  "question": "Match the 'eka-' named elements with their later discovered names:",
+                  "match_pairs": {
+                      "A": "Eka-aluminium",
+                      "B": "Eka-boron",
+                      "C": "Eka-silicon",
+                      "1": "Germanium",
+                      "2": "Gallium",
+                      "3": "Scandium"
+                  }
+              }
+          ]
+      }
+  ]
+}

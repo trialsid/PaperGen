@@ -979,8 +979,13 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         self.set_xy(x, y)
         
         # Check if this is a special keyword
-        if segment == "STATEMENT":
-            return self._render_statement(kwargs.get('statement', ''), x, y)
+        if segment == "STATEMENT" or segment == "STATEMENTS":
+            # Handle both old single statement and new multiple statements structure
+            if 'statements' in kwargs:
+                return self._render_statements(kwargs.get('statements', []), x, y)
+            else:
+                # Backward compatibility: single statement
+                return self._render_statement(kwargs.get('statement', ''), x, y)
         elif segment == "LIST":
             return self._render_list(kwargs.get('list_items', []), x, y)
         elif segment == "MTF_DATA":
@@ -1018,6 +1023,38 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], statement)  # Adjusted width
         
         return self.get_y() + 2  # Add spacing after statement
+    
+    def _render_statements(self, statements: List[dict], x: float, y: float) -> float:
+        """Render multiple statements with labels and return new Y position."""
+        current_y = y
+        statement_x = x + 5
+        
+        for i, statement_obj in enumerate(statements):
+            if i > 0:
+                current_y += 1  # Small gap between multiple statements
+            
+            current_y += 1  # Gap before each statement block
+            
+            # Render statement label
+            label = statement_obj.get('label', 'Statement')
+            text = statement_obj.get('text', '')
+            
+            self.set_xy(statement_x, current_y)
+            self.set_font('ArialUni', 'B', self.config.font_sizes['option_label'])
+            label_height = self.config.spacing['line_height']
+            self.cell(20, label_height, f"{label}:", 0, 0)
+            
+            # Move to next line with proper spacing
+            current_y += label_height + 1
+            
+            # Render statement content at same indentation as label
+            self.set_xy(statement_x, current_y)
+            self.set_font('ArialUni', '', self.config.font_sizes['option'])
+            self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], text)
+            
+            current_y = self.get_y() + 1  # Small spacing after each statement
+        
+        return current_y + 1  # Final spacing after all statements
     
     def _render_list(self, list_items: List[str], x: float, y: float) -> float:
         """Render any list of items and return new Y position."""
@@ -1118,13 +1155,23 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         # Height for each question segment
         for segment in question_text:
             if segment.strip():
-                if segment == "STATEMENT":
-                    # Account for final spacing: +1 before, label_height, +1 between, content, +2 after
-                    label_height = self.config.spacing['line_height']
-                    statement_height = self.estimate_text_height(
-                        kwargs.get('statement', ''), self._question_width - 5, self.config.font_sizes['option']  # Same width as label indentation
-                    )
-                    total_height += 1 + label_height + 1 + statement_height + 2
+                if segment == "STATEMENT" or segment == "STATEMENTS":
+                    # Handle both old single statement and new multiple statements structure
+                    if 'statements' in kwargs:
+                        statements = kwargs.get('statements', [])
+                        for statement_obj in statements:
+                            label_height = self.config.spacing['line_height']
+                            statement_height = self.estimate_text_height(
+                                statement_obj.get('text', ''), self._question_width - 5, self.config.font_sizes['option']
+                            )
+                            total_height += 1 + label_height + 1 + statement_height + 2
+                    else:
+                        # Backward compatibility: single statement
+                        label_height = self.config.spacing['line_height']
+                        statement_height = self.estimate_text_height(
+                            kwargs.get('statement', ''), self._question_width - 5, self.config.font_sizes['option']
+                        )
+                        total_height += 1 + label_height + 1 + statement_height + 2
                 elif segment == "LIST":
                     list_items = kwargs.get('list_items', [])
                     for item in list_items:
@@ -1227,6 +1274,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 
                 # Add all question type specific data to kwargs (universal approach)
                 kwargs['statement'] = question.get('statement', '')
+                kwargs['statements'] = question.get('statements', [])
                 kwargs['list_items'] = question.get('list_items', [])
                 kwargs['paragraph'] = question.get('paragraph', '')
                 kwargs['mtf_data'] = question.get('mtf_data', {})

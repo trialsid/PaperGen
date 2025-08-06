@@ -1,0 +1,637 @@
+{
+    "sections": [
+      {
+        "name": "BIOLOGY",
+        "description": "Choose the correct option for each question. Each question carries 1 mark.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "difficulty": "easy",
+            "question": "What is the process by which green plants use sunlight, water, and carbon dioxide to create their own food?",
+            "choices": [
+              "Respiration",
+              "Transpiration",
+              "Photosynthesis",
+              "Digestion"
+            ],
+            "answer": "Photosynthesis"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which part of a plant is primarily responsible for absorbing water and nutrients from the soil?",
+            "choices": [
+              "Leaf",
+              "Stem",
+              "Flower",
+              "Root"
+            ],
+            "answer": "Root"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What gas do humans and animals breathe out during respiration?",
+            "choices": [
+              "Oxygen",
+              "Nitrogen",
+              "Carbon Dioxide",
+              "Hydrogen"
+            ],
+            "answer": "Carbon Dioxide"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is a key difference between unicellular and multicellular organisms?",
+            "choices": [
+              "Multicellular organisms are always microscopic",
+              "Unicellular organisms have complex organ systems",
+              "Unicellular organisms perform all life processes within a single cell",
+              "Multicellular organisms lack a nucleus"
+            ],
+            "answer": "Unicellular organisms perform all life processes within a single cell"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the primary role of the nucleus within a cell?",
+            "choices": [
+              "Energy production",
+              "Waste removal",
+              "Controls cell activity",
+              "Storing water"
+            ],
+            "answer": "Controls cell activity"
+          },
+          {
+            "difficulty": "medium",
+            "question": "Why is staining often used when observing cells, like onion peel cells, under a microscope?",
+            "choices": [
+              "To make the cell parts colourless",
+              "To make transparent cell parts like the nucleus more visible",
+              "To increase the size of the cell",
+              "To keep the cell alive longer"
+            ],
+            "answer": "To make transparent cell parts like the nucleus more visible"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which organ system in the human body is responsible for pumping blood?",
+            "choices": [
+              "Respiratory system",
+              "Digestive system",
+              "Circulatory system",
+              "Nervous system"
+            ],
+            "answer": "Circulatory system"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the name of the green pigment found in plant leaves that captures sunlight?",
+            "choices": [
+              "Hemoglobin",
+              "Chlorophyll",
+              "Melanin",
+              "Carotene"
+            ],
+            "answer": "Chlorophyll"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which of the following is NOT considered a living thing?",
+            "choices": [
+              "A tree",
+              "A bird",
+              "A rock",
+              "A fish"
+            ],
+            "answer": "A rock"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Why is regularly washing your hands with soap and water important for staying healthy?",
+            "choices": [
+              "It makes hands look clean only",
+              "It removes harmful germs and prevents illness",
+              "It helps save water",
+              "It is only needed before eating"
+            ],
+            "answer": "It removes harmful germs and prevents illness"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the basic structural and functional unit of all known living organisms?",
+            "choices": [
+              "Tissue",
+              "Organ",
+              "Cell",
+              "Molecule"
+            ],
+            "answer": "Cell"
+          },
+          {
+            "difficulty": "medium",
+            "question": "What does the term 'endemic species' mean?",
+            "choices": [
+              "Species that are extinct",
+              "Species found all over the world",
+              "Species found naturally only in a specific geographical area",
+              "Species that migrate long distances every year"
+            ],
+            "answer": "Species found naturally only in a specific geographical area"
+          },
+          {
+            "difficulty": "medium",
+            "question": "In an ecosystem with snakes that eat mice, what is likely to happen to the mouse population if many snakes are removed?",
+            "choices": [
+              "The number of mice will increase",
+              "The number of mice will decrease",
+              "The number of mice will remain the same",
+              "The mice will leave the ecosystem"
+            ],
+            "answer": "The number of mice will increase"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Children often resemble their parents. Which of these is an example of an inherited physical trait?",
+            "choices": [
+              "Hairstyle",
+              "Eye colour",
+              "Favourite food",
+              "Language spoken"
+            ],
+            "answer": "Eye colour"
+          }
+        ]
+      },
+      {
+        "name": "PHYSICS",
+        "description": "Choose the correct option for each question. Each question carries 1 mark.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "difficulty": "easy",
+            "question": "What force pulls objects towards the center of the Earth, making them fall when dropped?",
+            "choices": [
+              "Magnetic force",
+              "Friction",
+              "Gravity",
+              "Air resistance"
+            ],
+            "answer": "Gravity"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is a major risk associated with synthetic fabrics like nylon or polyester when exposed to high heat or flames?",
+            "choices": [
+              "They change colour permanently",
+              "They become very strong",
+              "They melt and can stick to the skin",
+              "They absorb water quickly"
+            ],
+            "answer": "They melt and can stick to the skin"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Why is it generally advised not to wear synthetic clothes, like nylon, while working near a fire (e.g., in the kitchen)?",
+            "choices": [
+              "They are not fashionable",
+              "They get dirty easily",
+              "They are too warm to wear",
+              "They can melt and stick to the body if they catch fire"
+            ],
+            "answer": "They can melt and stick to the body if they catch fire"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What does the number inside the triangular recycling symbol found on many plastic items indicate?",
+            "choices": [
+              "The price of the item",
+              "The number of times it has been recycled",
+              "The type of plastic resin used",
+              "The expiry date"
+            ],
+            "answer": "The type of plastic resin used"
+          },
+          {
+            "difficulty": "easy",
+            "question": "A plastic bottle has a recycling symbol with the number '1' inside. What type of plastic is it likely made of?",
+            "choices": [
+              "PVC (Polyvinyl Chloride)",
+              "PP (Polypropylene)",
+              "PET (Polyethylene Terephthalate)",
+              "PS (Polystyrene)"
+            ],
+            "answer": "PET (Polyethylene Terephthalate)"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which of these describes a common physical property of metals?",
+            "choices": [
+              "They are usually dull",
+              "They are poor conductors of heat",
+              "They are brittle (break easily)",
+              "They are lustrous (shiny)"
+            ],
+            "answer": "They are lustrous (shiny)"
+          },
+          {
+            "difficulty": "easy",
+            "question": "The property of metals that allows them to be drawn into thin wires, like copper wires, is called:",
+            "choices": [
+              "Malleability",
+              "Sonority",
+              "Ductility",
+              "Lustre"
+            ],
+            "answer": "Ductility"
+          },
+          {
+            "difficulty": "easy",
+            "question": "When non-metals like sulfur or carbon burn and react with oxygen, what type of oxides do they generally form?",
+            "choices": [
+              "Basic oxides",
+              "Neutral oxides",
+              "Metallic oxides",
+              "Acidic oxides"
+            ],
+            "answer": "Acidic oxides"
+          },
+          {
+            "difficulty": "easy",
+            "question": "When metals like magnesium or iron react with oxygen, what type of oxides do they generally form?",
+            "choices": [
+              "Acidic oxides",
+              "Neutral oxides",
+              "Basic oxides",
+              "Non-metallic oxides"
+            ],
+            "answer": "Basic oxides"
+          },
+          {
+            "difficulty": "medium",
+            "question": "If you place an iron nail in a solution of copper sulphate, the blue solution turns green and copper deposits on the nail. What does this indicate about the reactivity of iron and copper?",
+            "choices": [
+              "Iron is less reactive than copper",
+              "Iron is more reactive than copper",
+              "Iron and copper have equal reactivity",
+              "Neither iron nor copper is reactive"
+            ],
+            "answer": "Iron is more reactive than copper"
+          },
+          {
+            "difficulty": "easy",
+            "question": "How well does pure, distilled water conduct electricity?",
+            "choices": [
+              "It is a very good conductor",
+              "It is a semiconductor",
+              "It is a poor conductor (acts as an insulator)",
+              "It conducts electricity only when frozen"
+            ],
+            "answer": "It is a poor conductor (acts as an insulator)"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which process uses electricity to coat a thin layer of one metal onto another metal, often used for decoration or preventing rust (like chrome plating)?",
+            "choices": [
+              "Melting",
+              "Distillation",
+              "Electroplating",
+              "Combustion"
+            ],
+            "answer": "Electroplating"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Why is it dangerous to use water to put out a fire involving electrical appliances that are plugged in?",
+            "choices": [
+              "Water makes the fire burn hotter",
+              "Water can damage the appliance further",
+              "Water conducts electricity and can cause electric shock",
+              "Water turns into steam too quickly"
+            ],
+            "answer": "Water conducts electricity and can cause electric shock"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What gas from the air is essential for burning (combustion) to happen?",
+            "choices": [
+              "Nitrogen",
+              "Carbon dioxide",
+              "Oxygen",
+              "Argon"
+            ],
+            "answer": "Oxygen"
+          }
+        ]
+      },
+      {
+        "name": "ENGLISH",
+        "description": "Choose the correct option for each question. Each question carries 1 mark.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "difficulty": "easy",
+            "question": "Which of the following words is a noun?",
+            "choices": [
+              "quickly",
+              "run",
+              "house",
+              "beautiful"
+            ],
+            "answer": "house"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the opposite of the word 'start'?",
+            "choices": [
+              "Begin",
+              "Stop",
+              "Continue",
+              "Middle"
+            ],
+            "answer": "Stop"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Identify the verb in the following sentence: 'The birds sing sweetly in the morning.'",
+            "choices": [
+              "birds",
+              "sing",
+              "sweetly",
+              "morning"
+            ],
+            "answer": "sing"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which sentence is grammatically correct?",
+            "choices": [
+              "She go to school everyday.",
+              "He play cricket yesterday.",
+              "They are watching television now.",
+              "We eats lunch at noon."
+            ],
+            "answer": "They are watching television now."
+          },
+          {
+            "difficulty": "easy",
+            "question": "What punctuation mark is usually used at the end of a sentence that asks a question?",
+            "choices": [
+              "Period (.)",
+              "Comma (,)",
+              "Exclamation mark (!)",
+              "Question mark (?)"
+            ],
+            "answer": "Question mark (?)"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Choose the correct spelling for the word that means to get something.",
+            "choices": [
+              "recieve",
+              "receive",
+              "recive",
+              "receeve"
+            ],
+            "answer": "receive"
+          },
+          {
+            "difficulty": "easy",
+            "question": "The word 'bat' can mean a flying mammal or a piece of sports equipment. What is the term for words spelled the same but having different meanings?",
+            "choices": [
+              "Synonyms",
+              "Antonyms",
+              "Homophones",
+              "Homonyms"
+            ],
+            "answer": "Homonyms"
+          },
+          {
+            "difficulty": "easy",
+            "question": "The words 'there', 'their', and 'they're' sound the same but have different spellings and meanings. What are these types of words called?",
+            "choices": [
+              "Homonyms",
+              "Antonyms",
+              "Homophones",
+              "Synonyms"
+            ],
+            "answer": "Homophones"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What do we call a word used to describe a noun or pronoun, such as 'blue' in 'blue sky'?",
+            "choices": [
+               "Verb",
+               "Adverb",
+               "Adjective",
+               "Preposition"
+              ],
+            "answer": "Adjective"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the plural form of the noun 'mouse'?",
+            "choices": [
+              "Mouses",
+              "Mice",
+              "Mouse",
+              "Mices"
+            ],
+            "answer": "Mice"
+          },
+          {
+              "difficulty": "easy",
+              "question": "Which word means 'very small'?",
+              "choices": [
+                 "Large",
+                 "Huge",
+                 "Tiny",
+                 "Giant"
+                ],
+              "answer": "Tiny"
+            },
+          {
+              "difficulty": "easy",
+              "question": "What is the past tense of the verb 'eat'?",
+              "choices": [
+                 "Eated",
+                 "Ate",
+                 "Eaten",
+                 "Eat"
+                ],
+              "answer": "Ate"
+            },
+          {
+            "difficulty": "easy",
+            "question": "Which of the following words is a pronoun (a word that replaces a noun)?",
+            "choices": [
+              "John",
+              "run",
+              "he",
+              "quickly"
+            ],
+            "answer": "he"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What do we call the central topic or message conveyed in a piece of writing, like a story or poem?",
+            "choices": [
+              "Character",
+              "Setting",
+              "Plot",
+              "Theme"
+            ],
+            "answer": "Theme"
+          }
+        ]
+      },
+      {
+        "name": "SOCIAL STUDIES",
+        "description": "Choose the correct option for each question. Each question carries 1 mark.",
+        "section_type": "MCQ",
+        "questions": [
+          {
+            "difficulty": "easy",
+            "question": "What is the capital city of India?",
+            "choices": [
+              "Mumbai",
+              "Kolkata",
+              "Chennai",
+              "New Delhi"
+            ],
+            "answer": "New Delhi"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which major ocean lies to the south of India?",
+            "choices": [
+              "Pacific Ocean",
+              "Atlantic Ocean",
+              "Indian Ocean",
+              "Arctic Ocean"
+            ],
+            "answer": "Indian Ocean"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is the system of government called where citizens elect representatives to make laws and decisions for them?",
+            "choices": [
+              "Monarchy",
+              "Dictatorship",
+              "Democracy",
+              "Aristocracy"
+            ],
+            "answer": "Democracy"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Who was the first Prime Minister of independent India?",
+            "choices": [
+              "Mahatma Gandhi",
+              "Sardar Vallabhbhai Patel",
+              "Jawaharlal Nehru",
+              "Dr. B.R. Ambedkar"
+            ],
+            "answer": "Jawaharlal Nehru"
+          },
+          {
+            "difficulty": "easy",
+            "question": "Which major mountain range forms India's northern border?",
+            "choices": [
+              "Andes Mountains",
+              "Rocky Mountains",
+              "Alps",
+              "Himalayas"
+            ],
+            "answer": "Himalayas"
+          },
+          {
+            "difficulty": "easy",
+            "question": "What is a globe?",
+            "choices": [
+              "A flat map of a country",
+              "A drawing of the solar system",
+              "A spherical model of the Earth",
+              "A weather chart"
+            ],
+            "answer": "A spherical model of the Earth"
+          },
+          {
+              "difficulty": "easy",
+              "question": "In India, government functions are divided between the Central government, State governments, and which other level?",
+              "choices": [
+                 "International Government",
+                 "District Government",
+                 "Local Government (Panchayats/Municipalities)",
+                 "Regional Government"
+                ],
+              "answer": "Local Government (Panchayats/Municipalities)"
+            },
+          {
+              "difficulty": "easy",
+              "question": "Which important document lays down the framework, fundamental rights, principles, and duties for governing India?",
+              "choices": [
+                 "The Election Manifesto",
+                 "The Annual Budget",
+                 "The Constitution of India",
+                 "The Penal Code"
+                ],
+              "answer": "The Constitution of India"
+            },
+          {
+              "difficulty": "easy",
+              "question": "On a map, what is the purpose of the 'legend' or 'key'?",
+              "choices": [
+                 "To show the map's title",
+                 "To indicate the North direction",
+                 "To explain the meaning of symbols and colours used on the map",
+                 "To show the distance scale"
+                ],
+              "answer": "To explain the meaning of symbols and colours used on the map"
+            },
+          {
+            "difficulty": "easy",
+            "question": "What does secularism mean in the Indian context?",
+            "choices": [
+              "Making one religion the official state religion",
+              "The state treating all religions equally and not favouring any one religion",
+              "Banning all religious practices",
+              "Forcing everyone to follow the same religion"
+            ],
+            "answer": "The state treating all religions equally and not favouring any one religion"
+          },
+          {
+            "difficulty": "medium",
+            "question": "What was a major challenge during the first general elections held in India soon after independence?",
+            "choices": [
+              "Very few people wanted to vote",
+              "Lack of international observers",
+              "Organizing elections for a vast population, many of whom were illiterate, across a newly partitioned country",
+              "Absence of political parties"
+            ],
+            "answer": "Organizing elections for a vast population, many of whom were illiterate, across a newly partitioned country"
+          },
+          {
+            "difficulty": "easy",
+            "question": "In India, the central government needs the approval of which body to pass its annual budget (plan for income and spending)?",
+            "choices": [
+              "The Supreme Court",
+              "The President",
+              "The Parliament (Lok Sabha and Rajya Sabha)",
+              "The State Governments"
+            ],
+            "answer": "The Parliament (Lok Sabha and Rajya Sabha)"
+          },
+          {
+            "difficulty": "medium",
+            "question": "The Forest Rights Act, 2006, grants certain rights to forest-dwelling tribal communities and other traditional forest dwellers. Which of these is a key right recognized under this Act?",
+            "choices": [
+              "Right to sell forest land to private companies",
+              "Right to build large industries inside forests",
+              "Rights over community forest resources which they traditionally protected and conserved",
+              "Right to prevent anyone from entering the forest"
+            ],
+            "answer": "Rights over community forest resources which they traditionally protected and conserved"
+          }
+        ]
+      }
+    ]
+  }
