@@ -400,13 +400,13 @@ class MCQPaperGenerator(BasePaperGenerator):
     def _write_single_option(self, label: str, option_text: str, x: float, y: float, 
                             width: float, is_answer: bool = False) -> float:
         """Write a single option and return its height."""
-        # Set position for label
+        # Set position for label - use same line height as option text
         self.set_xy(x, y)
         label_width = 5
         self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
-        self.cell(label_width, 5, label, 0, 0)
+        self.cell(label_width, self.config.spacing['line_height'], label, 0, 0)
         
-        # Set position for option text
+        # Set position for option text at same baseline
         self.set_xy(x + label_width, y)
         
         # Set font for option text

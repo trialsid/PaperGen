@@ -32,7 +32,29 @@ def analyze_question_types(sections):
     
     for section in sections:
         for question in section.questions:
-            q_type = question.get('question_type', 'mcq')
+            # Detect question type from special keywords in question_text
+            q_type = 'mcq'  # default
+            question_text = question.get('question_text', [])
+            if isinstance(question_text, list):
+                for segment in question_text:
+                    if segment == 'STATEMENT':
+                        q_type = 's-mcq'
+                        break
+                    elif segment == 'LIST':
+                        # Determine if it's ms-mcq or seq-mcq based on list content
+                        list_items = question.get('list_items', [])
+                        if list_items and list_items[0].startswith('i.'):
+                            q_type = 'ms-mcq'
+                        elif list_items and list_items[0].startswith('A.'):
+                            q_type = 'seq-mcq'
+                        break
+                    elif segment == 'MTF_DATA':
+                        q_type = 'mtf-mcq'
+                        break
+                    elif segment == 'PARAGRAPH':
+                        q_type = 'p-mcq'
+                        break
+            
             type_counts[q_type] = type_counts.get(q_type, 0) + 1
             total_questions += 1
     
@@ -62,10 +84,10 @@ def main():
         print()
         
         # Display implementation status
-        print("⚠️  Implementation Status:")
-        print("   ✅ Fully Supported: mcq, mtf-mcq")
-        print("   ⚠️  Treated as standard MCQ: s-mcq, ms-mcq, seq-mcq, p-mcq")
-        print("   Note: Unsupported types will render as standard MCQ questions")
+        print("✅ Implementation Status:")
+        print("   ✅ Fully Supported: mcq, s-mcq, ms-mcq, mtf-mcq, seq-mcq, p-mcq")
+        print("   ✅ Array format support: All question types support question_text arrays")
+        print("   ✅ Backward compatibility: Single string question_text still supported")
         print()
         
         print(f"✅ Loaded {len(sections)} sections")
@@ -74,7 +96,29 @@ def main():
         for i, section in enumerate(sections):
             section_types = {}
             for q in section.questions:
-                q_type = q.get('question_type', 'mcq')
+                # Detect question type from special keywords in question_text
+                q_type = 'mcq'  # default
+                question_text = q.get('question_text', [])
+                if isinstance(question_text, list):
+                    for segment in question_text:
+                        if segment == 'STATEMENT':
+                            q_type = 's-mcq'
+                            break
+                        elif segment == 'LIST':
+                            # Determine if it's ms-mcq or seq-mcq based on list content
+                            list_items = q.get('list_items', [])
+                            if list_items and list_items[0].startswith('i.'):
+                                q_type = 'ms-mcq'
+                            elif list_items and list_items[0].startswith('A.'):
+                                q_type = 'seq-mcq'
+                            break
+                        elif segment == 'MTF_DATA':
+                            q_type = 'mtf-mcq'
+                            break
+                        elif segment == 'PARAGRAPH':
+                            q_type = 'p-mcq'
+                            break
+                
                 section_types[q_type] = section_types.get(q_type, 0) + 1
             
             type_summary = ", ".join([f"{count} {q_type}" for q_type, count in sorted(section_types.items())])
@@ -87,7 +131,7 @@ def main():
             subtitle="Class X - Multi-Type MCQ Paper", 
             exam_title="6 Different MCQ Question Types",
             paper_format='A4',
-            size_config='medium'
+            size_config='small'
         )
         
         # Create generator with enhanced support
@@ -115,10 +159,11 @@ def main():
         print(f"📊 Total Questions: {generator.question_count}")
         
         # Display type breakdown
-        supported_count = type_counts.get('mcq', 0) + type_counts.get('mtf-mcq', 0)
-        unsupported_count = total_questions - supported_count
-        print(f"   - Fully supported types: {supported_count}")
-        print(f"   - Rendered as standard MCQ: {unsupported_count}")
+        specialized_types = ['s-mcq', 'ms-mcq', 'mtf-mcq', 'seq-mcq', 'p-mcq']
+        specialized_count = sum(type_counts.get(qtype, 0) for qtype in specialized_types)
+        standard_count = type_counts.get('mcq', 0)
+        print(f"   - Standard MCQ: {standard_count}")
+        print(f"   - Specialized types with custom rendering: {specialized_count}")
         
         print(f"🎯 Total Marks: {total_marks}")
         print(f"📋 Sections: {len(sections)}")

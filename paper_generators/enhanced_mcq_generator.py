@@ -900,62 +900,280 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
     def add_question(self, number: int, question_text, choices: List[str], 
                     correct_answer_index: Optional[int] = None, reasoning: Optional[str] = None,
                     question_type: str = "mcq", **kwargs) -> None:
-        """Enhanced add_question method that handles all MCQ question types."""
+        """Universal question renderer that processes question_text arrays sequentially."""
         
-        # Convert array to string if needed
-        if isinstance(question_text, list):
-            # For arrays, render each text segment with appropriate spacing
-            combined_text = ""
-            for i, text in enumerate(question_text):
-                if text.strip():
-                    if i > 0:
-                        combined_text += " "  # Add space between segments
-                    combined_text += text
-            question_text = combined_text
+        # Convert single string to array for backward compatibility
+        if isinstance(question_text, str):
+            question_text = [question_text]
         
-        if question_type == "mtf-mcq":
-            # Handle MTF question
-            mtf_data = kwargs.get('mtf_data', {})
-            self.add_mtf_question(
-                number, question_text, 
-                mtf_data.get('left_column', []), 
-                mtf_data.get('right_column', []),
-                choices, correct_answer_index, reasoning
-            )
-        elif question_type == "s-mcq":
-            # Handle Statement Based MCQ
-            statement = kwargs.get('statement', '')
-            self.add_statement_question(
-                number, question_text, statement,
-                choices, correct_answer_index, reasoning
-            )
-        elif question_type == "ms-mcq":
-            # Handle Multiple Statement MCQ
-            statements = kwargs.get('statements', [])
-            self.add_multiple_statement_question(
-                number, question_text, statements,
-                choices, correct_answer_index, reasoning
-            )
-        elif question_type == "seq-mcq":
-            # Handle Sequencing MCQ
-            sequence_items = kwargs.get('sequence_items', [])
-            self.add_sequencing_question(
-                number, question_text, sequence_items,
-                choices, correct_answer_index, reasoning
-            )
-        elif question_type == "p-mcq":
-            # Handle Paragraph Based MCQ
-            paragraph = kwargs.get('paragraph', '')
-            question_text_after = kwargs.get('question_text_after', question_text)
-            # For p-mcq, the question_text should be empty/generic since the real question comes after paragraph
-            intro_text = ""  # No introductory text needed
-            self.add_paragraph_question(
-                number, intro_text, paragraph, question_text_after,
-                choices, correct_answer_index, reasoning
-            )
+        # Calculate total height needed for the entire question
+        needed_height = self._measure_universal_question_height(
+            question_text, choices, reasoning, **kwargs
+        )
+        
+        safety_buffer = 5
+        total_needed_height = needed_height + safety_buffer
+        
+        # Check if we need to move to next column/page
+        current_y = self.get_y()
+        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        effective_page_height = self.h - footer_buffer
+        available_space = effective_page_height - current_y
+        
+        if total_needed_height > available_space:
+            if self.current_side == 'left':
+                right_column_start = self.first_page_offset + 5 if self.page_no() == 1 else 20
+                right_available_space = effective_page_height - right_column_start
+                
+                if total_needed_height <= right_available_space:
+                    self.current_side = 'right'
+                    self.set_xy(self.w/2 + 2, right_column_start)
+                else:
+                    self.add_page()
+                    self.current_side = 'left'
+                    self.set_xy(10, 20)
+            else:
+                self.add_page()
+                self.current_side = 'left'
+                self.set_xy(10, 20)
+            
+            return self.add_question(number, question_text, choices, 
+                                   correct_answer_index, reasoning, question_type, **kwargs)
+        
+        # Now render the question
+        x_start = 10 if self.current_side == 'left' else self.w/2 + 2
+        start_y = self.get_y()
+        
+        # Write question number
+        self.set_font('Noto', 'B', self.config.font_sizes['question_number'])
+        self.set_xy(x_start, start_y)
+        self.cell(self.config.spacing['question_number_width'], 5, f"{number}.", 0, 0, 'R')
+        
+        question_x = x_start + self.config.spacing['question_number_width'] + 1
+        current_y = start_y
+        
+        # Process question_text array sequentially
+        for segment in question_text:
+            if segment.strip():  # Only process non-empty segments
+                current_y = self._render_question_segment(
+                    segment, question_x, current_y, **kwargs
+                )
+        
+        # Add spacing before choices
+        current_y += 1
+        
+        # Render choices
+        current_y = self._render_choices(
+            choices, question_x + 2, current_y, correct_answer_index
+        )
+        
+        # Add reasoning if needed
+        if reasoning and self.show_answers:
+            current_y = self._render_reasoning(reasoning, question_x + 2, current_y)
+        
+        # Set final position
+        self.set_y(current_y + 1)
+    
+    def _render_question_segment(self, segment: str, x: float, y: float, **kwargs) -> float:
+        """Render a single question segment and return the new Y position."""
+        self.set_xy(x, y)
+        
+        # Check if this is a special keyword
+        if segment == "STATEMENT":
+            return self._render_statement(kwargs.get('statement', ''), x, y)
+        elif segment == "LIST":
+            return self._render_list(kwargs.get('list_items', []), x, y)
+        elif segment == "MTF_DATA":
+            return self._render_mtf_data(kwargs.get('mtf_data', {}), x, y)
+        elif segment == "PARAGRAPH":
+            return self._render_paragraph(kwargs.get('paragraph', ''), x, y)
         else:
-            # Handle regular MCQ question (default)
-            super().add_question(number, question_text, choices, correct_answer_index, reasoning)
+            # Regular text segment
+            return self._render_text(segment, x, y)
+    
+    def _render_text(self, text: str, x: float, y: float) -> float:
+        """Render regular text and return new Y position."""
+        self.set_xy(x, y)
+        self.set_font('ArialUni', 'I', self.config.font_sizes['question'])
+        self.multi_cell(self._question_width, self.config.spacing['line_height'], text)
+        return self.get_y() + 1  # Add spacing after text
+    
+    def _render_statement(self, statement: str, x: float, y: float) -> float:
+        """Render a statement in highlighted format and return new Y position."""
+        current_y = y + 1
+        statement_x = x + 5
+        
+        # "Statement:" label
+        self.set_xy(statement_x, current_y)
+        self.set_font('ArialUni', 'B', self.config.font_sizes['option'])
+        self.cell(20, 5, "Statement:", 0, 0)
+        
+        current_y += 4
+        self.set_xy(statement_x, current_y)
+        self.set_font('ArialUni', '', self.config.font_sizes['option'])
+        self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], statement)
+        
+        return self.get_y() + 1  # Add spacing after statement
+    
+    def _render_list(self, list_items: List[str], x: float, y: float) -> float:
+        """Render any list of items and return new Y position."""
+        current_y = y + 1
+        items_x = x + 5
+        
+        for item in list_items:
+            self.set_xy(items_x, current_y)
+            self.set_font('ArialUni', '', self.config.font_sizes['option'])
+            self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], item)
+            current_y = self.get_y() + 1
+        
+        return current_y + 1  # Add spacing after list items
+    
+    def _render_mtf_data(self, mtf_data: Dict, x: float, y: float) -> float:
+        """Render MTF table and return new Y position."""
+        current_y = y + 1
+        table_width = self._question_width - 5
+        table_x = x + 5
+        
+        left_column = mtf_data.get('left_column', [])
+        right_column = mtf_data.get('right_column', [])
+        
+        mtf_height = self.render_mtf_table(left_column, right_column, 
+                                          table_x, current_y, table_width)
+        
+        return current_y + mtf_height + 1  # Add spacing after MTF table
+    
+    def _render_paragraph(self, paragraph: str, x: float, y: float) -> float:
+        """Render paragraph in indented format and return new Y position."""
+        current_y = y + 1
+        paragraph_x = x + 5
+        
+        self.set_xy(paragraph_x, current_y)
+        self.set_font('ArialUni', '', self.config.font_sizes['option'])
+        self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], paragraph)
+        
+        return self.get_y() + 1  # Add spacing after paragraph
+    
+    def _render_choices(self, choices: List[str], x: float, y: float, 
+                       correct_answer_index: Optional[int]) -> float:
+        """Render answer choices and return new Y position."""
+        current_y = y
+        i = 0
+        
+        while i < len(choices):
+            if (i + 1 < len(choices) and 
+                self.can_fit_two_options(choices[i], choices[i+1])):
+                # Write two options side by side
+                half_width = (self._options_width - self.config.spacing['option_column_gap']) / 2
+                
+                label1 = f"{chr(65+i)}."
+                is_answer1 = (i == correct_answer_index)
+                option_height1 = self._write_single_option(
+                    label1, choices[i], x, current_y, half_width, is_answer1
+                )
+                
+                label2 = f"{chr(65+i+1)}."
+                is_answer2 = (i+1 == correct_answer_index)
+                x2 = x + half_width + self.config.spacing['option_column_gap']
+                option_height2 = self._write_single_option(
+                    label2, choices[i+1], x2, current_y, half_width, is_answer2
+                )
+                
+                current_y += max(option_height1, option_height2) + 1
+                i += 2
+            else:
+                # Write single option
+                label = f"{chr(65+i)}."
+                is_answer = (i == correct_answer_index)
+                option_height = self._write_single_option(
+                    label, choices[i], x, current_y, self._options_width, is_answer
+                )
+                current_y += option_height + 1
+                i += 1
+        
+        return current_y
+    
+    def _render_reasoning(self, reasoning: str, x: float, y: float) -> float:
+        """Render reasoning/explanation and return new Y position."""
+        current_y = y + 1
+        
+        self.set_xy(x, current_y)
+        self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
+        self.cell(30, 5, "Explanation:", 0, 0)
+        
+        self.set_xy(x, current_y + 5)
+        self.set_font('ArialUni', '', self.config.font_sizes['option'])
+        self.multi_cell(self._options_width, self.config.spacing['line_height'], reasoning)
+        
+        return self.get_y() + 2
+    
+    def _measure_universal_question_height(self, question_text: List[str], choices: List[str], 
+                                         reasoning: Optional[str] = None, **kwargs) -> float:
+        """Calculate height needed for universal question format."""
+        total_height = 0
+        
+        # Height for each question segment
+        for segment in question_text:
+            if segment.strip():
+                if segment == "STATEMENT":
+                    statement_height = self.estimate_text_height(
+                        kwargs.get('statement', ''), self._question_width - 5, self.config.font_sizes['option']
+                    ) + 8  # Extra for "Statement:" label
+                    total_height += statement_height + 5
+                elif segment == "LIST":
+                    list_items = kwargs.get('list_items', [])
+                    for item in list_items:
+                        item_height = self.estimate_text_height(
+                            item, self._question_width - 5, self.config.font_sizes['option']
+                        )
+                        total_height += item_height + 1
+                    total_height += 2
+                elif segment == "MTF_DATA":
+                    mtf_data = kwargs.get('mtf_data', {})
+                    left_column = mtf_data.get('left_column', [])
+                    right_column = mtf_data.get('right_column', [])
+                    max_items = max(len(left_column), len(right_column))
+                    table_width = self._question_width - 5
+                    left_width = table_width * 0.45
+                    right_width = table_width * 0.45
+                    
+                    mtf_height = 0
+                    for i in range(max_items):
+                        row_height = 0
+                        if i < len(left_column):
+                            left_height = self.estimate_text_height(
+                                left_column[i], left_width, self.config.font_sizes['option']
+                            )
+                            row_height = max(row_height, left_height)
+                        if i < len(right_column):
+                            right_height = self.estimate_text_height(
+                                right_column[i], right_width, self.config.font_sizes['option']
+                            )
+                            row_height = max(row_height, right_height)
+                        mtf_height += row_height + 1
+                    total_height += mtf_height + 5
+                elif segment == "PARAGRAPH":
+                    paragraph_height = self.estimate_text_height(
+                        kwargs.get('paragraph', ''), self._question_width - 5, self.config.font_sizes['option']
+                    )
+                    total_height += paragraph_height + 5
+                else:
+                    # Regular text
+                    text_height = self.estimate_text_height(
+                        segment, self._question_width, self.config.font_sizes['question']
+                    )
+                    total_height += text_height + 2
+        
+        # Choices height
+        total_height += self._calculate_choices_height(choices)
+        
+        # Reasoning height
+        if reasoning and self.show_answers:
+            reasoning_height = self.estimate_text_height(
+                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+            )
+            total_height += reasoning_height + 7
+        
+        return total_height + 5  # Safety buffer
     
     def generate_from_sections(self, sections: List[SectionConfig]) -> int:
         """Enhanced generate_from_sections that handles MTF questions."""
@@ -972,60 +1190,25 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 questions_with_numbers.append(q_data)
                 question_number += 1
             
-            # Calculate height of first question based on type
+            # Calculate height of first question using universal method
             first_question = questions_with_numbers[0]
-            q_type = first_question.get('question_type', 'mcq')
+            question_texts = self._get_question_text(first_question)
             
-            if q_type == 'mtf-mcq':
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_mtf_question_height(
-                    question_texts,
-                    first_question.get('mtf_data', {}).get('left_column', []),
-                    first_question.get('mtf_data', {}).get('right_column', []),
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
-            elif q_type == 's-mcq':
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_statement_question_height(
-                    question_texts,
-                    first_question.get('statement', ''),
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
-            elif q_type == 'ms-mcq':
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_multiple_statement_question_height(
-                    question_texts,
-                    first_question.get('statements', []),
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
-            elif q_type == 'seq-mcq':
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_sequencing_question_height(
-                    question_texts,
-                    first_question.get('sequence_items', []),
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
-            elif q_type == 'p-mcq':
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_paragraph_question_height(
-                    question_texts,
-                    first_question.get('paragraph', ''),
-                    question_texts,
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
-            else:
-                # Default MCQ
-                question_texts = self._get_question_text(first_question)
-                first_question_height = self.measure_question_height(
-                    question_texts,
-                    first_question['choices'],
-                    first_question.get('reasoning')
-                )
+            # Prepare kwargs for height calculation
+            height_kwargs = {
+                'statement': first_question.get('statement', ''),
+                'statements': first_question.get('statements', []),
+                'sequence_items': first_question.get('sequence_items', []),
+                'paragraph': first_question.get('paragraph', ''),
+                'mtf_data': first_question.get('mtf_data', {})
+            }
+            
+            first_question_height = self._measure_universal_question_height(
+                question_texts,
+                first_question['choices'],
+                first_question.get('reasoning'),
+                **height_kwargs
+            )
             
             # Add section header
             self.add_section(section.name, section.description, first_question_height)
@@ -1036,18 +1219,11 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 kwargs = {}
                 q_type = question.get('question_type', 'mcq')
                 
-                if q_type == 'mtf-mcq':
-                    kwargs['mtf_data'] = question.get('mtf_data', {})
-                elif q_type == 's-mcq':
-                    kwargs['statement'] = question.get('statement', '')
-                elif q_type == 'ms-mcq':
-                    kwargs['statements'] = question.get('statements', [])
-                elif q_type == 'seq-mcq':
-                    kwargs['sequence_items'] = question.get('sequence_items', [])
-                elif q_type == 'p-mcq':
-                    kwargs['paragraph'] = question.get('paragraph', '')
-                    question_texts = self._get_question_text(question)
-                    kwargs['question_text_after'] = question_texts[-1] if question_texts else ''
+                # Add all question type specific data to kwargs (universal approach)
+                kwargs['statement'] = question.get('statement', '')
+                kwargs['list_items'] = question.get('list_items', [])
+                kwargs['paragraph'] = question.get('paragraph', '')
+                kwargs['mtf_data'] = question.get('mtf_data', {})
                 
                 question_texts = self._get_question_text(question)
                 
