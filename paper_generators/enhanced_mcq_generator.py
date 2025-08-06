@@ -1000,20 +1000,24 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
     
     def _render_statement(self, statement: str, x: float, y: float) -> float:
         """Render a statement in highlighted format and return new Y position."""
-        current_y = y + 1
+        current_y = y + 1  # Remove extra gap above label
         statement_x = x + 5
         
-        # "Statement:" label
+        # "Statement:" label with smaller font size
         self.set_xy(statement_x, current_y)
-        self.set_font('ArialUni', 'B', self.config.font_sizes['option'])
-        self.cell(20, 5, "Statement:", 0, 0)
+        self.set_font('ArialUni', 'B', self.config.font_sizes['option_label'])  # Smaller font size
+        label_height = self.config.spacing['line_height']
+        self.cell(20, label_height, "Statement:", 0, 0)
         
-        current_y += 4
-        self.set_xy(statement_x, current_y)
+        # Move to next line with proper spacing
+        current_y += label_height + 1
+        
+        # Render statement content at same indentation as label
+        self.set_xy(statement_x, current_y)  # Same indentation as label
         self.set_font('ArialUni', '', self.config.font_sizes['option'])
-        self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], statement)
+        self.multi_cell(self._question_width - 5, self.config.spacing['line_height'], statement)  # Adjusted width
         
-        return self.get_y() + 1  # Add spacing after statement
+        return self.get_y() + 2  # Add spacing after statement
     
     def _render_list(self, list_items: List[str], x: float, y: float) -> float:
         """Render any list of items and return new Y position."""
@@ -1115,10 +1119,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         for segment in question_text:
             if segment.strip():
                 if segment == "STATEMENT":
+                    # Account for final spacing: +1 before, label_height, +1 between, content, +2 after
+                    label_height = self.config.spacing['line_height']
                     statement_height = self.estimate_text_height(
-                        kwargs.get('statement', ''), self._question_width - 5, self.config.font_sizes['option']
-                    ) + 8  # Extra for "Statement:" label
-                    total_height += statement_height + 5
+                        kwargs.get('statement', ''), self._question_width - 5, self.config.font_sizes['option']  # Same width as label indentation
+                    )
+                    total_height += 1 + label_height + 1 + statement_height + 2
                 elif segment == "LIST":
                     list_items = kwargs.get('list_items', [])
                     for item in list_items:
