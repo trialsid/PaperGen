@@ -67,45 +67,40 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Render each row
         for i in range(max_items):
-            row_height = 0
+            row_start_y = current_y
+            left_end_y = row_start_y
+            right_end_y = row_start_y
             
             # Left column item
             if i < len(left_column):
                 self.set_xy(x, current_y)
                 left_text = left_column[i]
                 
-                # Calculate height needed for this text
-                left_height = self.estimate_text_height(
-                    left_text, left_width, self.config.font_sizes['option']
-                )
-                
-                # Write left column text
+                # Write left column text and track actual end position
                 self.multi_cell(left_width, self.config.spacing['line_height'], 
                               left_text, align='L')
-                row_height = max(row_height, left_height)
+                left_end_y = self.get_y()
             
-            # Dash separator
-            dash_y = current_y + (row_height / 2) - 2  # Center vertically
+            # Right column item - render at same starting Y as left column
+            if i < len(right_column):
+                self.set_xy(x + left_width + dash_width, row_start_y)
+                right_text = right_column[i]
+                
+                # Write right column text and track actual end position
+                self.multi_cell(right_width, self.config.spacing['line_height'], 
+                              right_text, align='L')
+                right_end_y = self.get_y()
+            
+            # Calculate actual row height based on which column went further
+            actual_row_height = max(left_end_y, right_end_y) - row_start_y
+            
+            # Position dash separator at the middle of the actual row height
+            dash_y = row_start_y + (actual_row_height / 2) - 2
             self.set_xy(x + left_width, dash_y)
             self.cell(dash_width, 5, '-', 0, 0, 'C')
             
-            # Right column item
-            if i < len(right_column):
-                self.set_xy(x + left_width + dash_width, current_y)
-                right_text = right_column[i]
-                
-                # Calculate height needed for this text
-                right_height = self.estimate_text_height(
-                    right_text, right_width, self.config.font_sizes['option']
-                )
-                
-                # Write right column text
-                self.multi_cell(right_width, self.config.spacing['line_height'], 
-                              right_text, align='L')
-                row_height = max(row_height, right_height)
-            
-            # Move to next row
-            current_y += row_height + 1  # Small spacing between rows
+            # Move to next row based on actual heights
+            current_y = max(left_end_y, right_end_y) + 1  # Small spacing between rows
         
         return current_y - y
     
@@ -711,7 +706,8 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 )
                 row_height = max(row_height, right_height)
             
-            total_height += row_height + 1  # Row height + spacing
+            # Use the maximum height from both columns for each row
+            total_height += row_height + 1  # Row height + spacing between rows
         
         total_height += 3  # Spacing after table
         
@@ -1202,7 +1198,8 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                                 right_column[i], right_width, self.config.font_sizes['option']
                             )
                             row_height = max(row_height, right_height)
-                        mtf_height += row_height + 1
+                        # Use the maximum height from both columns for each row
+                        mtf_height += row_height + 1  # Row height + spacing between rows
                     total_height += mtf_height + 5
                 elif segment == "PARAGRAPH":
                     paragraph_height = self.estimate_text_height(
