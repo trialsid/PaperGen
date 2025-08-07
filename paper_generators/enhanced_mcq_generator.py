@@ -119,7 +119,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -239,7 +239,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -356,7 +356,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -452,7 +452,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -574,7 +574,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -912,7 +912,7 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER + 3
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
