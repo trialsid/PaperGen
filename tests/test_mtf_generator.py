@@ -6,6 +6,13 @@ Demonstrates generation of papers with both Normal MCQs and MTF (Match the Follo
 
 import json
 import os
+import sys
+import os
+
+# Add parent directory to path for imports
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
+
 from paper_generators.enhanced_mcq_generator import EnhancedMCQPaperGenerator, MCQConfig, SectionConfig
 
 def load_questions_from_json(file_path: str):
@@ -28,7 +35,9 @@ def main():
     """Generate test paper with both Normal MCQs and MTF MCQs."""
     try:
         # Load questions from enhanced struct.json
-        struct_file = "questions_data/struct.json"
+        # Use absolute path relative to project root
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        struct_file = os.path.join(project_root, "questions_data", "struct.json")
         if not os.path.exists(struct_file):
             print(f"Error: {struct_file} not found!")
             return
@@ -85,7 +94,7 @@ def main():
         total_marks = generator.generate_from_sections(sections)
         
         # Save the paper
-        output_file = "mixed_mcq_paper.pdf"
+        output_file = os.path.join(project_root, "outputs", "mixed_mcq_paper.pdf")
         generator.output(output_file)
         
         print(f"✅ Mixed MCQ Paper generated successfully!")
@@ -107,7 +116,7 @@ def main():
             answer_generator.add_page()
             answer_generator.generate_from_sections(sections)
             
-            answer_file = "mixed_mcq_paper_answers.pdf"
+            answer_file = os.path.join(project_root, "outputs", "mixed_mcq_paper_answers.pdf")
             answer_generator.output(answer_file)
             print(f"✅ Answer key generated: {answer_file}")
             print(f"   Contains explanations for both Normal MCQs and MTF MCQs")
