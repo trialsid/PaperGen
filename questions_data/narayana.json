@@ -1,0 +1,2088 @@
+{
+  "sections": [
+    {
+      "name": "Geography and Climatology",
+      "description": "A collection of multiple-choice questions on geography and climatology.",
+      "questions": [
+        {
+          "question_text": [
+            "Which of the following changes occur in the upper atmospheric circulation during the summer season in India?"
+          ],
+          "choices": [
+            "The westerly jet stream strengthens over the Indian Peninsula, while the tropical easterly jet stream weakens.",
+            "The westerly jet stream withdraws from the northern plains of India, and the tropical easterly jet stream becomes active over the Indian Peninsula.",
+            "Both the westerly jet stream and the tropical easterly jet stream intensify over the Indian Peninsula.",
+            "The westerly jet stream shifts southward, while the tropical easterly jet stream remains inactive."
+          ],
+          "answer": "The westerly jet stream withdraws from the northern plains of India, and the tropical easterly jet stream becomes active over the Indian Peninsula.",
+          "reasoning": "During the summer, the subtropical westerly jet stream moves north of the Himalayas. This northward shift allows for the development of the tropical easterly jet stream over peninsular India, which is a key component of the Indian summer monsoon system."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Extra tropical cyclones do not necessarily require a water body for their formation and can develop over land."
+            },
+            {
+              "label": "Statement II",
+              "text": "Extra-tropical cyclones derive their energy from the horizontal temperature gradient created by the interaction of warm and cold air masses."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement- II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+          "reasoning": "Extra-tropical cyclones form along fronts where air masses with different temperatures and densities meet. Their energy source is this temperature contrast (baroclinic instability), unlike tropical cyclones which are fueled by warm ocean waters. This allows them to form over land, making Statement II the correct explanation for Statement I."
+        },
+        {
+          "question_text": [
+            "A particular state in India is characterized by the following features:",
+            "LIST",
+            "Which one of the following states exhibits all the above characteristics?"
+          ],
+          "list_items": [
+            "1. Predominance of tropical deciduous forests.",
+            "2. Presence of red and yellow soils across large areas",
+            "3. Annual rainfall ranges between 200 cm and 400 cm."
+          ],
+          "choices": [
+            "Chhattisgarh",
+            "Kerala",
+            "Andhra Pradesh",
+            "Karnataka"
+          ],
+          "answer": "Chhattisgarh",
+          "reasoning": "Chhattisgarh has a predominance of tropical moist and dry deciduous forests, large areas of red and yellow soils, and its average annual rainfall is around 1292 mm (129 cm), but certain regions, especially in the south like Bastar, receive much higher rainfall approaching 200 cm. Among the given options, it fits the description better than others. Kerala has laterite soil and tropical evergreen forests. Andhra Pradesh has lower rainfall on average. Karnataka has diverse climates but doesn't fit all three criteria as well as Chhattisgarh."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which of the following is correct in respect of the above statements ?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Relative humidity decreases when the air temperature increases, even if the water vapor in the air remains constant."
+            },
+            {
+              "label": "Statement II",
+              "text": "Higher temperature increases the air’s capacity to hold water vapor."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I.",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I.",
+            "Statement-I is correct but Statement-II is incorrect.",
+            "Statement-I is incorrect but Statement II is correct."
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I.",
+          "reasoning": "Relative humidity is the ratio of the current amount of water vapor in the air to the maximum amount it can hold at that temperature. As temperature increases (Statement II), the air's capacity to hold water vapor increases. Therefore, if the actual amount of water vapor stays constant, the relative humidity (the ratio) decreases (Statement I). Thus, Statement II is the correct explanation for Statement I."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding meteotsunamis:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Meteotsunamis are larger in size compared to seismic tsunamis.",
+            "2. They are caused by the impact of asteroids.",
+            "3. Meteotsunamis decrease in size as they enter shallow water."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "None",
+          "reasoning": "1. Meteotsunamis are generally much smaller than major seismic tsunamis. 2. They are caused by rapid changes in atmospheric pressure or fast-moving weather systems, not asteroids. 3. Like seismic tsunamis, meteotsunamis increase in height (amplify) as they enter shallower coastal waters. Therefore, all three statements are incorrect."
+        },
+        {
+          "question_text": [
+            "Kosi River is known for causing significant destruction in Bihar due to its frequent meandering. What is the primary reason for the Kosi River’s frequent change in course?"
+          ],
+          "choices": [
+            "Kosi River flows through a region of stable tectonic activity, leading to sediment accumulation.",
+            "Its riverbed is composed of hard rocks, which restrict sediment deposition and force the river to alter its path.",
+            "Heavy sediment deposition due to erosion in the upper Himalayan catchment raises the riverbed, leading to frequent changes in course.",
+            "River’s flow is controlled by numerous dams and barrages, which direct it to new courses periodically."
+          ],
+          "answer": "Heavy sediment deposition due to erosion in the upper Himalayan catchment raises the riverbed, leading to frequent changes in course.",
+          "reasoning": "The Kosi river carries a massive sediment load from the Himalayas. As it enters the flat plains of Bihar, its velocity decreases, causing it to deposit this sediment. This raises the riverbed, forcing the river to frequently break its banks and carve out new channels, earning it the name 'Sorrow of Bihar'."
+        },
+        {
+          "question_text": [
+            "Consider the following islands:",
+            "LIST",
+            "Which of the following represents the correct north-to-south arrangement of the above islands in Indian Ocean?"
+          ],
+          "list_items": [
+            "1. South Andaman",
+            "2. Little Andaman",
+            "3. Car Nicobar",
+            "4. Little Nicobar",
+            "5. Great Nicobar"
+          ],
+          "choices": [
+            "1-2-3-4-5",
+            "2-1-3-4-5",
+            "1-2-3-5-4",
+            "2-1-4-5-3"
+          ],
+          "answer": "1-2-3-4-5",
+          "reasoning": "The correct north-to-south sequence is: South Andaman, then Little Andaman (separated by Duncan Passage). Further south, across the Ten Degree Channel, are the Nicobar Islands, starting with Car Nicobar, then Little Nicobar, and finally Great Nicobar at the southernmost tip."
+        },
+        {
+          "question_text": [
+            "Consider the following states:",
+            "LIST",
+            "How many of the states listed above are part of the Krishna River Basin?"
+          ],
+          "list_items": [
+            "1. Telangana",
+            "2. Tamil Nadu",
+            "3. Andhra Pradesh",
+            "4. Maharashtra"
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "The Krishna River originates in Maharashtra and flows through Karnataka, Telangana, and Andhra Pradesh before emptying into the Bay of Bengal. Tamil Nadu is not part of the Krishna River Basin. Therefore, three of the listed states (Maharashtra, Telangana, Andhra Pradesh) are part of the basin."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding the Plate Tectonics :",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Tectonic plates are composed of both oceanic and continental lithosphere.",
+            "2. The strips of magnetic field along the mid-oceanic ridges help in determining the rates of plate movement.",
+            "3. Along divergent plate boundaries, subduction carries plates into the mantle."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "1 only",
+            "2 and 3 only",
+            "1,2 and 3"
+          ],
+          "answer": "1 and 2 only",
+          "reasoning": "1. Correct, plates can be purely oceanic, purely continental, or a combination. 2. Correct, paleomagnetic stripes (magnetic reversals recorded in rocks) on either side of mid-oceanic ridges provide a timeline to calculate the rate of seafloor spreading and plate movement. 3. Incorrect, subduction occurs at convergent plate boundaries, not divergent boundaries where plates move apart."
+        },
+        {
+          "question_text": [
+            "Which of the following phenomena are likely to occur when a cold air mass pushes into a warm air mass?",
+            "LIST",
+            "Select the correct answer using the code given below:"
+          ],
+          "list_items": [
+            "1. A sudden drop in temperature in the affected region.",
+            "2. Intense thunderstorms due to rapid uplift of warm air.",
+            "3. Gradual and steady precipitation over a large area.",
+            "4. Formation of cumulonimbus clouds."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "1, 2, and 4 only",
+            "2 and 3 only",
+            "1, 3, and 4 only"
+          ],
+          "answer": "1, 2, and 4 only",
+          "reasoning": "When a cold front moves in, the denser cold air forces the lighter warm air to rise rapidly. This leads to a sudden temperature drop (1), rapid vertical uplift causing intense thunderstorms (2) and the formation of vertically developed cumulonimbus clouds (4). Gradual, steady precipitation (3) is characteristic of a warm front, not a cold front."
+        },
+        {
+          "question_text": [
+            "The equator of the Earth passes through which of the following countries?",
+            "LIST",
+            "Select the correct answer using the codes given below:"
+          ],
+          "list_items": [
+            "1. Kenya",
+            "2. Somalia",
+            "3. Brazil",
+            "4. Bolivia"
+          ],
+          "choices": [
+            "1 and 3 only",
+            "2 and 4 only",
+            "2, 3, and 4 only",
+            "1, 2, and 3 only"
+          ],
+          "answer": "1, 2, and 3 only",
+          "reasoning": "The equator passes through Kenya, Somalia, and Brazil. It does not pass through Bolivia, which lies entirely in the Southern Hemisphere, south of the equator."
+        },
+        {
+          "question_text": [
+            "Which of the following statements is not correct regarding the Western Ghats and Eastern Ghats?"
+          ],
+          "choices": [
+            "The height of the Western Ghats generally decreases from north to south",
+            "The highest peak of Western Ghats is Anai Mudi.",
+            "The highest peak of Eastern Ghats is Mahendragiri.",
+            "Eastern and the Western Ghats meet each other at the Nilgiri hills"
+          ],
+          "answer": "The height of the Western Ghats generally decreases from north to south",
+          "reasoning": "This statement is incorrect. The height of the Western Ghats generally increases from north to south. The peaks in the southern part, like Anai Mudi and Doddabetta, are higher than those in the northern section."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Temperature inversions are more common in polar regions compared to lower latitudes."
+            },
+            {
+              "label": "Statement II",
+              "text": "A long winter night, cloudy sky, and moving air create ideal conditions for temperature inversion."
+            }
+          ],
+          "choices": [
+            "Both Statement I and Statement II are correct, and Statement II is the correct explanation for Statement I.",
+            "Both Statement I and Statement II are correct, but Statement II is not the correct explanation for Statement I.",
+            "Statement I is correct, but Statement II is incorrect.",
+            "Statement I is incorrect, but Statement II is correct."
+          ],
+          "answer": "Statement I is correct, but Statement II is incorrect.",
+          "reasoning": "Statement I is correct; long nights and low sun angle in polar regions facilitate significant radiational cooling. Statement II is incorrect; ideal conditions for temperature inversion are long winter nights, clear skies (to allow radiation to escape), and calm air (to prevent mixing)."
+        },
+        {
+          "question_text": [
+            "With reference to the islands of India, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Lakshadweep islands are the emerged part of a mountain chain and lie on a ridge which extends southward",
+            "2. Atolls are a prominent feature found in Lakshadweep group of islands.",
+            "3. The Nine degree channel separates the Minicoy island from the other islands in Lakshadweep."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "2 and 3 only",
+          "reasoning": "Statement 1 is incorrect; Lakshadweep islands are of coral origin, not emerged parts of a mountain chain (this describes the Andaman & Nicobar Islands). Statement 2 is correct; Lakshadweep is primarily composed of atolls. Statement 3 is correct; the Nine Degree Channel separates Minicoy from the main Lakshadweep archipelago."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. El Nino results in decreased upwelling of Ocean water in Eastern Pacific Ocean.",
+            "2. Southern Oscillation is the phenomenon of occurrence of higher pressure conditions over eastern Pacific in comparison to the eastern Indian Ocean.",
+            "3. La Nina enforces the negative pressure difference between Eastern Pacific Ocean and Eastern Indian ocean resulting in increased monsoon activity in the Indian Subcontinent."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "1 and 3",
+            "2 and 3"
+          ],
+          "answer": "1 and 3",
+          "reasoning": "1. Correct. During El Niño, the trade winds weaken, reducing the upwelling of cold, nutrient-rich water along the coast of Peru. 2. Incorrect. The Southern Oscillation is the pressure see-saw between the eastern Pacific and the western Pacific/eastern Indian Ocean, not a static condition. 3. Correct. La Niña involves strong high pressure over the eastern Pacific and low pressure over the western Pacific/Indian Ocean, strengthening the monsoon."
+        },
+        {
+          "question_text": [
+            "Consider the following statement regarding grasslands:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Campos grasslands fall under influence of Trade Winds while Pampas under influence of Westerlies",
+            "2. Campos are vast grasslands with short and nutritious grasses while Pampas consist of tall grass."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "1 only",
+          "reasoning": "Statement 1 is correct. The Campos of Brazil are tropical grasslands influenced by the Trade Winds. The Pampas of Argentina are temperate grasslands influenced by the Westerlies. Statement 2 is incorrect; it's the reverse. Pampas are known for short, nutritious grasses ideal for grazing, while Campos (a type of savanna) have taller, coarser grasses."
+        },
+        {
+          "question_text": [
+            "Consider the following statements with reference to the Indian Monsoon:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Northward shift of Inter Tropical Convergence Zone(ITCZ) causes onset of southwest monsoon.",
+            "2. The weather is marked by clear skies and a decrease in temperature during the retreating monsoon season.",
+            "3. Tamil Nadu coast receives heavy rainfall from the Bay of Bengal branch of the Southwest Monsoon"
+          ],
+          "choices": [
+            "1 and 2 only",
+            "1 only",
+            "2 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1 only",
+          "reasoning": "1. Correct. The northward shift of the ITCZ over the Indian subcontinent creates a low-pressure trough that pulls in the moist southwest monsoon winds. 2. Incorrect. The retreating monsoon is often marked by a rise in temperature and humidity, known as 'October heat', not a decrease in temperature. 3. Incorrect. The Tamil Nadu coast is in the rain-shadow region of the Bay of Bengal branch of the SW monsoon and receives most of its rain from the Northeast (retreating) monsoon."
+        },
+        {
+          "question_text": [
+            "Which of the following evidence provides support for the Continental Drift theory?",
+            "LIST",
+            "Select the correct answer using the code given below :"
+          ],
+          "list_items": [
+            "1. Placer deposits of gold in the Ghana coast.",
+            "2. Glacial tillite deposits of the Gondwana System.",
+            "3. Similarities in rocks on either side of the mid-oceanic ridges",
+            "4. Occurrence of Lemurs in India, Madagascar and Africa."
+          ],
+          "choices": [
+            "1, 2 and 4 only",
+            "1, 2 and 3 only",
+            "2 and 3 only",
+            "1, 3 and 4 only"
+          ],
+          "answer": "1, 2 and 4 only",
+          "reasoning": "1, 2, and 4 are all classic pieces of evidence cited by Alfred Wegener for Continental Drift. Placer deposits in Ghana match gold veins in Brazil. Glacial deposits (tillites) are found across now-separated southern continents. The distribution of fossils like Lemurs across continents suggests they were once connected. Statement 3, similarities in rocks across mid-oceanic ridges, is primary evidence for Seafloor Spreading, a theory that came after and provided a mechanism for Continental Drift, but it wasn't part of Wegener's original evidence."
+        },
+        {
+          "question_text": [
+            "Consider the following landforms:",
+            "LIST",
+            "Which of the above landforms are typically found in desert regions?"
+          ],
+          "list_items": [
+            "1. Playas",
+            "2. Mushroom rocks",
+            "3. Eskers",
+            "4. Barchans",
+            "5. Drumlins",
+            "6. Seif dunes"
+          ],
+          "choices": [
+            "1, 2, 4, and 5 only",
+            "1, 2, 4, and 6 only",
+            "2, 3, 4, 5, and 6 only",
+            "1, 2, 3, 4, 5, and 6"
+          ],
+          "answer": "1, 2, 4, and 6 only",
+          "reasoning": "Playas (dry lake beds), Mushroom rocks (wind erosion), Barchans (crescent-shaped dunes), and Seif dunes (longitudinal dunes) are all characteristic landforms of arid/desert regions. Eskers and Drumlins are glacial landforms, created by the action of ice sheets."
+        },
+        {
+          "question_text": [
+            "Which of the following statements regarding Black Soils in India is not correct?"
+          ],
+          "choices": [
+            "Black soils are rich in lime, iron, magnesia, and alumina.",
+            "Black soils are generally sandy in texture and saline in nature.",
+            "These soils are also known as ‘Regur Soil’ and ‘self-ploughing’ soils.",
+            "The black color of these soils is attributed to the presence of Titaniferous magnetite."
+          ],
+          "answer": "Black soils are generally sandy in texture and saline in nature.",
+          "reasoning": "This statement is incorrect. Black soils are characteristically clayey in texture, not sandy. They are renowned for their moisture-retentive capacity. While some black soils can be saline in arid regions, it is not their general characteristic."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/ are correct?"
+          ],
+          "list_items": [
+            "1. Convective rainfall occurs where the mountains act as the barriers in the path of moisture-loaded air.",
+            "2. Cyclonic rainfall occurs where the movement of moist air parcels to low-pressure areas due to pressure differences."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "2 only",
+          "reasoning": "Statement 1 incorrectly describes orographic rainfall. Convective rainfall is caused by the heating of the ground, which heats the air above it, causing it to rise, cool, and condense. Statement 2 correctly describes cyclonic (or frontal) rainfall, where air converges into a low-pressure system, is forced to rise, and precipitation occurs."
+        },
+        {
+          "question_text": [
+            "Consider the following pairs:",
+            "MTF_DATA",
+            "How many of the above pairs are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Manipur",
+              "2. Tripura",
+              "3. Sikkim"
+            ],
+            "right_column": [
+              "Bangladesh",
+              "Myanmar",
+              "Bhutan"
+            ]
+          },
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Manipur borders Myanmar, not Bangladesh (Incorrect). 2. Tripura borders Bangladesh, not Myanmar (Incorrect). 3. Sikkim borders Bhutan (Correct). Therefore, only one pair is correctly matched."
+        },
+        {
+          "question_text": [
+            "With reference to lunar and solar eclipses, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. A lunar eclipse occurs when the Earth comes between the Sun and the Moon, while a solar eclipse occurs when the Moon comes between the Sun and the Earth.",
+            "2. A solar eclipse can only be observed during the new moon, whereas a lunar eclipse can only occur during the full moon."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Both 1 and 2",
+          "reasoning": "Both statements are correct. Statement 1 accurately describes the alignment for both types of eclipses (Sun-Earth-Moon for lunar, Sun-Moon-Earth for solar). Statement 2 is also correct; for the Moon to block the Sun, it must be in its 'new' phase, and for the Earth's shadow to fall on the Moon, the Moon must be in its 'full' phase."
+        },
+        {
+          "question_text": [
+            "With reference to the Metamorphic Rocks, consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. They are formed out of existing rocks undergoing recrystallisation.",
+            "2. Foliation is an essential characteristic of these rocks.",
+            "3. Limestone and granite are examples of metamorphic rocks."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Correct. Metamorphic rocks are formed when existing igneous, sedimentary, or other metamorphic rocks are changed by heat, pressure, or chemical reactions. 2. Incorrect. Foliation (alignment of minerals) is a common, but not essential, characteristic. Non-foliated metamorphic rocks like marble and quartzite exist. 3. Incorrect. Limestone is a sedimentary rock, and granite is an igneous rock. Their metamorphic equivalents are marble and gneiss, respectively."
+        },
+        {
+          "question_text": [
+            "With reference to neap tides, consider the following statements:",
+            "LIST",
+            "Which of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Neap tides occur when the Sun, Earth, and Moon form a right angle.",
+            "2. The difference between high tide and low tide is minimal during neap tides.",
+            "3. Neap tides occur twice a month."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2, and 3"
+          ],
+          "answer": "1, 2, and 3",
+          "reasoning": "All three statements are correct. 1. During neap tides, the sun and moon are at a right angle to the Earth, so their gravitational pulls partially cancel each other out. 2. This results in the smallest tidal range, meaning the difference between high and low tide is minimal. 3. This alignment occurs during the first and third quarter moon phases, which happen approximately twice a month."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Mid-ocean ridges are sites of hydrothermal vent ecosystems, hosting life independent of solar energy."
+            },
+            {
+              "label": "Statement-II",
+              "text": "A mid-oceanic ridge is composed of two chains of mountains separated by a large depression."
+            },
+            {
+              "label": "Statement-III",
+              "text": "The vast majority of volcanic activity on the planet occurs along the mid-ocean ridge."
+            }
+          ],
+          "choices": [
+            "Both Statement-II and Statement-III are correct and both of them explain Statement-I",
+            "Both Statement-II and Statement III are correct, but only one of them explains Statement-I",
+            "Only one of the Statements II and III is correct and that explains Statement-I",
+            "Neither Statement-II nor Statement-III is correct"
+          ],
+          "answer": "Both Statement-II and Statement III are correct, but only one of them explains Statement-I",
+          "reasoning": "Statement I is a correct description of chemosynthesis-based ecosystems. Statement II correctly describes the structure of a mid-ocean ridge. Statement III is also correct, as these ridges are the most volcanically active features on Earth. The hydrothermal vents mentioned in Statement I are a direct result of the volcanic and tectonic activity described in Statement III, which heats water that seeps into the crust. Statement II describes the topography but doesn't explain the energy source for the ecosystem. Therefore, both II and III are correct, but only III directly explains the phenomenon in I."
+        },
+        {
+          "question_text": [
+            "With respect to anti-cyclones, consider the following statements:",
+            "LIST",
+            "Which of the statements given above are not correct?"
+          ],
+          "list_items": [
+            "1. An anticyclone is a wind system that rotates around a centre of high atmospheric pressure in a counterclockwise direction in the Northern Hemisphere.",
+            "2. They are generally smaller than cyclones.",
+            "3. They are usually accompanied by violent storms and bad weather."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1, 2 and 3",
+          "reasoning": "All three statements are incorrect. 1. Anticyclones rotate clockwise in the Northern Hemisphere. 2. They are generally much larger in area than cyclones. 3. They are associated with stable, descending air, leading to clear skies and calm weather, not storms."
+        },
+        {
+          "question_text": [
+            "Consider the following statements :",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Tamil Nadu coast receives very little rainfall during the southwest monsoon season."
+            },
+            {
+              "label": "Statement-II",
+              "text": "Tamil Nadu coast lies in the rainshadow area of the Bay of Bengal branch of the south west monsoon and parallel to the Arabian Sea branch of southwest monsoon."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct, but Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct, but Statement-II is incorrect",
+            "Statement-I is incorrect, but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "reasoning": "Statement I is correct. Statement II provides the precise geographical reasons. The coast is parallel to the Arabian Sea branch, so it doesn't receive rain from it. It lies in the rain shadow of the Western Ghats for the Bay of Bengal branch, which has to cross the peninsula. Therefore, Statement II perfectly explains Statement I."
+        },
+        {
+          "question_text": [
+            "Arrange the major sources of water on Earth’s surface in descending order based on their contribution to the planet’s total water volume:"
+          ],
+          "choices": [
+            "Groundwater > Lakes > Soil Moisture > Streams and Rivers",
+            "Groundwater > Glaciers > Freshwater Lakes > Biosphere",
+            "Glaciers > Freshwater Lakes > Groundwater > Atmosphere",
+            "Oceans > Glaciers > Groundwater > Freshwater Lakes"
+          ],
+          "answer": "Oceans > Glaciers > Groundwater > Freshwater Lakes",
+          "reasoning": "The correct descending order of total water volume is: Oceans (~97%), followed by Glaciers and Ice Caps (~2%), then Groundwater (~0.6%), and then Freshwater Lakes. The other options have an incorrect sequence."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Aluminium is the largest found element in the Earth’s crust.",
+            "2. Silicon is the largest found element in the Earth’s core."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Neither 1 nor 2",
+          "reasoning": "Statement 1 is incorrect. The most abundant element in the Earth's crust is Oxygen, followed by Silicon, then Aluminium. Statement 2 is incorrect. The Earth's core is predominantly composed of Iron, followed by Nickel."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Raised sea-beaches are a common landform feature found along the Kathiawar coast."
+            },
+            {
+              "label": "Statement II",
+              "text": "Vertical slow movements of the Earth’s crust cause uplift or subsidence over thousands of years."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement- II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement- I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+          "reasoning": "Statement I is a factual observation about the Kathiawar coast, which is an emergent coastline. Statement II describes the process of crustal uplift (emergence). The presence of raised sea-beaches is direct evidence of this uplift. Therefore, Statement II correctly explains the geological process responsible for the feature mentioned in Statement I."
+        },
+        {
+          "question_text": [
+            "With reference to Major sea routes, consider the following pairs:",
+            "MTF_DATA",
+            "How many pairs given above are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Panama Canal",
+              "2. Malacca Strait",
+              "3. Suez Canal"
+            ],
+            "right_column": [
+              "Connects the Atlantic and Pacific Ocean",
+              "Connects the Indian and Pacific Ocean",
+              "Connects the Mediterranean with the Red Sea"
+            ]
+          },
+          "choices": [
+            "Only one pair",
+            "Only two pairs",
+            "All three pairs",
+            "None of the pairs"
+          ],
+          "answer": "All three pairs",
+          "reasoning": "All three pairs are correctly matched. The Panama Canal links the Atlantic and Pacific. The Malacca Strait is a key chokepoint between the Indian and Pacific Oceans. The Suez Canal connects the Mediterranean Sea to the Red Sea, providing a direct route between Europe and Asia."
+        },
+        {
+          "question_text": [
+            "With reference to Winter solstice, consider the following statements",
+            "LIST",
+            "Which of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Winter solstice marks the shortest day of the year",
+            "2. It happens when the Earth’s north pole is near to the Sun.",
+            "3. It occurs in the month of June in the Southern Hemisphere."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1 and 3 only",
+          "reasoning": "1. Correct. The winter solstice is the day with the least amount of daylight. 2. Incorrect. The winter solstice in the Northern Hemisphere occurs when the North Pole is tilted farthest away from the Sun. 3. Correct. Seasons are reversed in the hemispheres. The Southern Hemisphere's winter solstice occurs in June, while the Northern Hemisphere experiences its summer solstice."
+        },
+        {
+          "question_text": [
+            "The Red Sea is red primarily due to:"
+          ],
+          "choices": [
+            "A type of blue-green algae called Trichodesmium Erythraeum",
+            "Scattering caused by sea surface water molecules",
+            "Refraction of light at the air-water surface",
+            "High concentration of iron oxide in the water"
+          ],
+          "answer": "A type of blue-green algae called Trichodesmium Erythraeum",
+          "reasoning": "The name 'Red Sea' comes from the occasional, massive blooms of a cyanobacterium (blue-green algae) called Trichodesmium erythraeum. When these algae die off, they turn the normally blue-green water a reddish-brown color."
+        },
+        {
+          "question_text": [
+            "Recently, the West Coast of North America witnessed life-threatening storms primarily related to Atmospheric rivers. In this context, consider the following statements regarding the Atmospheric rivers:",
+            "LIST",
+            "Select the correct answer using the code given below:"
+          ],
+          "list_items": [
+            "1. Atmospheric rivers are long, narrow corridors of concentrated water vapor transport.",
+            "2. Most atmospheric rivers are weak systems that often provide beneficial rain or snow.",
+            "3. Atmospheric rivers primarily occur during summer of the respective hemisphere"
+          ],
+          "choices": [
+            "1 only",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3 only"
+          ],
+          "answer": "1 and 2 only",
+          "reasoning": "1. Correct. This is the definition of an atmospheric river. 2. Correct. While the strongest atmospheric rivers cause damaging floods, the majority are weaker and crucial for water supply in regions like the Western US. 3. Incorrect. Atmospheric rivers are typically a feature of the winter storm season, not summer."
+        },
+        {
+          "question_text": [
+            "The Black Sea is a unique ecosystem facing several environmental challenges. Which of the following is the least likely to be a significant contributor to low oxygen levels in the deep waters?"
+          ],
+          "choices": [
+            "Increased nutrient runoff from surrounding rivers, promoting algal blooms",
+            "Warming sea surface temperatures leading to reduced solubility of oxygen.",
+            "Physical barriers like the Bosphorus Strait restricting deep water exchange with the Mediterranean.",
+            "Poor mixing between the salty bottom layer and a less salty surface layer of Black sea"
+          ],
+          "answer": "Warming sea surface temperatures leading to reduced solubility of oxygen.",
+          "reasoning": "While warming sea surface temperatures do reduce oxygen solubility, it is the least significant factor compared to the others. The primary reason for the Black Sea's anoxia (low oxygen) is its strong, permanent stratification (d) caused by freshwater influx, which prevents mixing. The restricted exchange through the Bosphorus Strait (c) exacerbates this. Nutrient runoff (a) worsens surface conditions but the fundamental cause is the lack of deep water circulation."
+        },
+        {
+          "question_text": [
+            "With reference to the different layers of the Sun, consider the following pairs:",
+            "MTF_DATA",
+            "How many of the above pairs are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Photosphere",
+              "2. Core",
+              "3. Corona"
+            ],
+            "right_column": [
+              "Outermost layer",
+              "Site of nuclear fusion",
+              "Usually not visible through naked eyes"
+            ]
+          },
+          "choices": [
+            "Only one pair",
+            "Only two pairs",
+            "All three pairs",
+            "None"
+          ],
+          "answer": "Only two pairs",
+          "reasoning": "1. Photosphere is the visible surface, not the outermost layer; the Corona is the outermost layer (Incorrect). 2. Core is the site of nuclear fusion (Correct). 3. Corona is the Sun's outer atmosphere, only visible during a total solar eclipse, hence not usually visible (Correct). Therefore, two pairs are correctly matched."
+        },
+        {
+          "question_text": [
+            "With reference to the Northeastern Hills of India, consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Patkai Bum Hill is merged into Barail Range.",
+            "2. Garo, Khasi and Jaintia Hills lie to the north of the Barail Range.",
+            "3. Barail range separates the Brahmaputra and Barak river basins."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Incorrect. The Patkai Bum is a separate range that forms part of the border with Myanmar. 2. Incorrect. The Garo, Khasi, and Jaintia hills are part of the Meghalaya Plateau, which lies to the south of the Barail Range and Brahmaputra valley. 3. Correct. The Barail Range acts as a watershed separating the north-flowing tributaries of the Brahmaputra from the south-flowing tributaries of the Barak."
+        },
+        {
+          "question_text": [
+            "With respect to Thermohaline Circulation, consider the following statements :",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. These ocean currents are driven by differences in water density.",
+            "2. These are faster than the wind-driven surface ocean currents.",
+            "3. They originate in the equatorial regions of the Earth."
+          ],
+          "choices": [
+            "1 only",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1 only",
+          "reasoning": "1. Correct. Thermohaline circulation is driven by density gradients created by temperature (thermo) and salinity (haline) differences. 2. Incorrect. It is a very slow, deep-water circulation, much slower than wind-driven surface currents. 3. Incorrect. It originates in the polar regions (e.g., North Atlantic and Antarctica) where cold, salty water becomes dense and sinks."
+        },
+        {
+          "question_text": [
+            "Consider the following pairs:",
+            "MTF_DATA",
+            "How many of the above pairs are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Humboldt Current",
+              "2. Falkland Current",
+              "3. Agulhas Current",
+              "4. Oyashio Current"
+            ],
+            "right_column": [
+              "Cold Current",
+              "Warm Current",
+              "Warm Current",
+              "Cold Current"
+            ]
+          },
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "1. Humboldt (or Peru) Current is a Cold Current (Correct). 2. Falkland Current is a Cold Current, not Warm (Incorrect). 3. Agulhas Current is a Warm Current (Correct). 4. Oyashio Current is a Cold Current (Correct). Therefore, three pairs are correctly matched."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Cyclones in the Northern part of Bay of Bengal are favourable for onset of monsoon."
+            },
+            {
+              "label": "Statement II",
+              "text": "Clockwise circulation of cyclones brings the monsoon trough towards the Indian subcontinent."
+            }
+          ],
+          "choices": [
+            "Both statement I and statement II are correct and statement II is the correct explanation for statement I.",
+            "Both statement I and statement II are correct and statement II is not the correct explanation for statement I.",
+            "Statement I is correct but statement II is incorrect.",
+            "Statement I is incorrect but statement II is correct"
+          ],
+          "answer": "Statement I is correct but statement II is incorrect.",
+          "reasoning": "Statement I is correct; low-pressure systems (cyclones) in the Bay of Bengal can help pull the monsoon trough and associated winds onto the mainland. Statement II is incorrect; cyclones in the Northern Hemisphere have a counter-clockwise circulation. This circulation helps draw in the moist monsoon winds."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding tropical rainforests:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "The soil in tropical rainforests is poor in nutrients."
+            },
+            {
+              "label": "Statement II",
+              "text": "Intense rainfall in tropical rainforest regions leads to leaching."
+            }
+          ],
+          "choices": [
+            "Both Statement I and Statement II are correct, and Statement II is the correct explanation for Statement I.",
+            "Both Statement I and Statement II are correct, but Statement II is not the correct explanation for Statement I.",
+            "Statement I is correct, but Statement II is incorrect.",
+            "Statement I is incorrect, but Statement II is correct."
+          ],
+          "answer": "Both Statement I and Statement II are correct, and Statement II is the correct explanation for Statement I.",
+          "reasoning": "Statement I is correct; despite lush vegetation, rainforest soils (oxisols) are nutrient-poor because nutrients are locked in the biomass. Statement II provides the primary reason for this: heavy daily rainfall washes away (leaches) soluble nutrients from the topsoil, leaving behind infertile soil. Thus, II explains I."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding India’s coastal plains:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "The western coastal plains provide more favorable conditions for the development of ports compared to the eastern coastal plains."
+            },
+            {
+              "label": "Statement II",
+              "text": "The western coastal plains are narrower than the eastern coastal plains."
+            },
+            {
+              "label": "Statement III",
+              "text": "Western coastal plains are characterized by more developed deltas compared to the eastern coastal plains."
+            }
+          ],
+          "choices": [
+            "Both Statement II and Statement III are correct, and both explain Statement I.",
+            "Both Statement II and Statement III are correct, but only one of them explains Statement I.",
+            "Only one of the Statements II and III is correct, and that explains Statement I.",
+            "Neither Statement II nor Statement III is correct"
+          ],
+          "answer": "Only one of the Statements II and III is correct, and that explains Statement I.",
+          "reasoning": "Statement I is correct. The western coast is an emergent coastline with natural deep-water harbours. Statement II is correct; the western plains are indeed narrower. Statement III is incorrect; the eastern coast has large, well-developed deltas (Mahanadi, Godavari, Krishna, Cauvery), while the western coast has estuaries. The submerged nature of the western coast (an emergent coast), not its narrowness, is what provides good conditions for natural ports. Thus, only Statement II is a correct statement among II and III, but the submerged nature of the coast (not explicitly stated) is the main reason for I. However, among the given choices, the logic points to the fact that the western coast is not deltaic and thus offers better port conditions."
+        },
+        {
+          "question_text": [
+            "With reference to the Indian Monsoon, consider the following statements:",
+            "LIST",
+            "How many of the above statements are correct?"
+          ],
+          "list_items": [
+            "1. Rainfall over the central part of the country in mid-June is caused by the Arabian Sea branch of the monsoon.",
+            "2. Onset of the monsoon is gradual but withdrawal is more sudden in nature.",
+            "3. Most of the Islands in India receive monsoon showers almost a month before the arrival of monsoon on the Indian mainland."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only two",
+          "reasoning": "1. Correct. The Arabian Sea branch typically advances into central India by mid-June. 2. Incorrect. The onset of the monsoon is often sudden and dramatic (the 'burst' of the monsoon), while the withdrawal is a more gradual process. 3. Correct. The Andaman and Nicobar Islands receive the first monsoon showers in late April or early May, well before the monsoon reaches the Kerala coast on the mainland in early June."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "West-flowing peninsular rivers generally form estuaries rather than deltas."
+            },
+            {
+              "label": "Statement II",
+              "text": "Peninsular rivers flowing through rift valleys have a steep descent into the sea."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "reasoning": "Statement I is correct (e.g., Narmada, Tapi). Statement II provides a key reason. These rivers flow through hard rocks in rift valleys, carrying less sediment, and have a steeper gradient as they approach the sea. This high velocity prevents sediment deposition required for delta formation, instead carving out estuaries. Therefore, II correctly explains I."
+        },
+        {
+          "question_text": [
+            "The Indian Standard Time (IST) line passes through which of the following states?",
+            "LIST",
+            "Select the correct answer using the codes given below:"
+          ],
+          "list_items": [
+            "1. Bihar",
+            "2. Uttar Pradesh",
+            "3. Jharkhand",
+            "4. Chhattisgarh",
+            "5. Odisha",
+            "6. Andhra Pradesh"
+          ],
+          "choices": [
+            "2 , 3, 5 and 6 only",
+            "1, 3 and 4 only",
+            "2, 3, 4 and 5 only",
+            "2, 4, 5 and 6 only"
+          ],
+          "answer": "2, 4, 5 and 6 only",
+          "reasoning": "The Indian Standard Time (IST) is based on the 82.5° E longitude. This meridian passes through the states of Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh. It does not pass through Bihar or Jharkhand. Therefore, items 2, 4, 5, and 6 are correct."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Shifting of Monsoon trough closer to the foothills of the Himalayas leads to a sharp decrease in rainfall over most parts of India.",
+            "2. Inter-Tropical Convergence Zone (ITCZ) is a belt of low-pressure air currents that circle the Earth near the Equator."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Both 1 and 2",
+          "reasoning": "Statement 1 is correct; this phenomenon is known as a 'break' in the monsoon, causing heavy rain in the Himalayan foothills but dry spells over the plains. Statement 2 provides a correct definition of the Inter-Tropical Convergence Zone (ITCZ), whose seasonal shift is fundamental to the monsoon mechanism."
+        },
+        {
+          "question_text": [
+            "With reference to Dharwar Rock system, consider the following statements:",
+            "LIST",
+            "Which of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. The Dharwar rocks are mineral rich rocks present only in southern states of India.",
+            "2. It is the first metamorphic sedimentary rock in India.",
+            "3. Uranium deposits occur in the Dharwar rocks."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "2 and 3 only",
+          "reasoning": "1. Incorrect. While prominent in the south (Karnataka), Dharwar system rocks are also found in other parts like the Aravallis, Chota Nagpur plateau, and the Himalayas. 2. Correct. They were formed from the weathering and sedimentation of the older Archaean rocks and were the first to be metamorphosed. 3. Correct. Dharwar rocks are economically very important and contain various minerals, including uranium."
+        },
+        {
+          "question_text": [
+            "With reference to the Indian Ocean Dipole (IOD), consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. The positive IOD leads to the warming of the western Indian Ocean.",
+            "2. The negative IOD leads to lowering of pressure in western Indian ocean."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "1 only",
+          "reasoning": "Statement 1 is correct. A positive IOD is characterized by warmer-than-average sea surface temperatures in the western Indian Ocean (near the African coast) and cooler temperatures in the eastern Indian Ocean. Statement 2 is incorrect. A negative IOD features cooler waters in the west, which corresponds to higher atmospheric pressure, not lower pressure."
+        },
+        {
+          "question_text": [
+            "With reference to lakes in India, which of the following statements are correct?",
+            "LIST",
+            "Select thecorrect answer using the code given below:"
+          ],
+          "list_items": [
+            "1. Wular Lake in Jammu and Kashmir is the largest freshwater lake in the country.",
+            "2. Chilika Lake is the largest brackish water lake in India and was once a part of the Bay of Bengal.",
+            "3. Vembanad Lake of Kerala is the smallest man-made lake in India.",
+            "4. Lonar Lake in Maharashtra is the result of a meteorite impact."
+          ],
+          "choices": [
+            "1 and 4 only",
+            "1, 2 and 4 only",
+            "2 and 3 only",
+            "2, 3 and 4 only"
+          ],
+          "answer": "1, 2 and 4 only",
+          "reasoning": "1, 2, and 4 are correct statements. Wular Lake is India's largest freshwater lake. Chilika Lake is the largest brackish water lagoon. Lonar Lake is a crater lake formed by a meteor impact. Statement 3 is incorrect; Vembanad Lake is the longest lake in India and is a natural brackish lagoon (kayal), not a man-made lake, and certainly not the smallest."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Inland waterways are economical for the transportation of bulk goods.",
+            "2. Inland waterways are a pollution free mode of transportation.",
+            "3. The Inland Waterways Authority of India regulates the development of inland waterways in India."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1 and 3 only",
+          "reasoning": "1. Correct. Water transport is the most fuel-efficient and cost-effective mode for carrying heavy and bulky goods. 2. Incorrect. While more fuel-efficient than road or rail, the vessels used on inland waterways still use fossil fuels and produce emissions, and there's a risk of water pollution from spills or discharge. 3. Correct. The IWAI is the statutory authority in charge of developing and regulating national waterways in India."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Indian plate consist of both convergent and divergent types of boundaries.",
+            "2. The Himalayas were formed due to the sinking of the Eurasian plate below the Indian Plate.",
+            "3. Deccan traps were formed due to volcanic eruptions after the Himalayan mountain building was started."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Correct. The Indian plate has a convergent boundary in the north (Himalayas) and a divergent boundary in the south (with the African and Antarctic plates). 2. Incorrect. The Himalayas were formed by the subduction of the denser Indian Plate beneath the Eurasian Plate. 3. Incorrect. The Deccan Traps flood basalt eruptions occurred around 66 million years ago, predating the major phase of Himalayan uplift which began around 50 million years ago."
+        },
+        {
+          "question_text": [
+            "Arrange the following Hill Ranges from North to South:",
+            "LIST",
+            "Select the correct answer using the code given below:"
+          ],
+          "list_items": [
+            "1. Nallamala Hills",
+            "2. Anaimalai Hills",
+            "3. Sechachalam Hills",
+            "4. Mahadeo Hills"
+          ],
+          "choices": [
+            "4-3-2-1",
+            "3-4-1-2",
+            "4-1-3-2",
+            "3-4-2-1"
+          ],
+          "answer": "4-1-3-2",
+          "reasoning": "The correct North to South order is: 4. Mahadeo Hills (part of the Satpura Range in Madhya Pradesh), then 1. Nallamala Hills and 3. Seshachalam Hills (both part of the Eastern Ghats in Andhra Pradesh, with Nallamala being further north), and finally 2. Anaimalai Hills (south of the Palghat Gap in Kerala/Tamil Nadu)."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements above is/are correct?"
+          ],
+          "list_items": [
+            "1. The retreat of the monsoon is marked by clear skies and a rise in temperature, known as ‘October heat’.",
+            "2. The direction of the monsoon winds is reversed due to differences in air pressure."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Both 1 and 2",
+          "reasoning": "Statement 1 is correct. As the monsoon withdraws, the skies clear up, and the combination of high humidity and increased solar radiation leads to a rise in temperature, a phenomenon called 'October heat'. Statement 2 is also correct. The monsoon reversal from southwest to northeast is driven by the southward shift of the pressure belts as the ITCZ moves away from the subcontinent."
+        },
+        {
+          "question_text": [
+            "With reference to the Mangrove Forests of India, consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Mangroves are found in all the coastal states of India.",
+            "2. The deltas of the Ganga and Godavari are covered by Mangrove vegetation.",
+            "3. Andaman and Nicobar islands have the maximum mangrove cover in the country."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Incorrect. Mangroves are found in most, but not all, coastal states and UTs. For example, some stretches of rocky coasts may lack suitable conditions. 2. Correct. The deltas of major rivers like the Ganga-Brahmaputra (Sundarbans), Godavari, Krishna, and Mahanadi have significant mangrove forests. 3. Incorrect. West Bengal, home to the Sundarbans, has the largest mangrove cover in India, followed by Gujarat and then the Andaman & Nicobar Islands."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding a solar eclipse:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. A total solar eclipse occurs when the Earth is positioned directly between the Moon and the Sun, blocking the Sun’s light.",
+            "2. Corona, the Sun’s outermost atmosphere, is visible during a partial solar eclipse but not during a total solar eclipse."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Neither 1 nor 2",
+          "reasoning": "Statement 1 is incorrect. A solar eclipse occurs when the Moon is between the Sun and Earth. The alignment described is for a lunar eclipse. Statement 2 is incorrect. The Corona is too faint to be seen normally and is only visible during a total solar eclipse, when the bright photosphere is completely blocked by the Moon. It is not visible during a partial eclipse."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. The Khadar is a new alluvium deposited by the rivers along their course.",
+            "2. The Bhabar is a narrow belt of coarse gravel lying parallel to the Shiwaliks.",
+            "3. The Terai belt is a swampy area where the streams disappear.",
+            "4. Bhangar is the older alluvium lies above the floodplains of the rivers."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "Statements 1, 2, and 4 are correct. Khadar is new alluvium in floodplains. Bhabar is the porous gravel belt at the foothills where streams disappear. Bhangar is the older, less fertile alluvium located away from the floodplains. Statement 3 is incorrect; streams disappear in the Bhabar and reappear in the Terai, making the Terai a swampy area where streams re-emerge."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Dun formation can be observed in the Uttaranchal Himalayas.",
+            "2. Shiwalik formation can be observed in the Arunachal Himalayas.",
+            "3. Duar formation can be observed in the Darjeeling and Sikkim Himalayas."
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1, 2 and 3",
+          "reasoning": "All three statements are correct. 1. Duns (like Dehra Dun) are longitudinal valleys found between the Lesser Himalayas and the Shiwaliks, prominent in Uttarakhand (Uttaranchal). 2. The Shiwalik range extends eastward to Arunachal Pradesh, although it is less distinct there. 3. Duars are the alluvial floodplains in the eastern Himalayas, equivalent to the Duns, and are characteristic of the Darjeeling and Sikkim Himalayan foothills."
+        },
+        {
+          "question_text": [
+            "The presence of the Peninsular Plateau is seen as far as in the northwestern part of India, where it is covered by the crescent shaped longitudinal sand ridges known as:"
+          ],
+          "choices": [
+            "Kayals",
+            "Barchans",
+            "Playas",
+            "Parabolic dunes"
+          ],
+          "answer": "Barchans",
+          "reasoning": "The question describes crescent-shaped sand dunes. Barchans are crescent-shaped dunes formed by wind action in sandy deserts. The Aravalli range, an extension of the Peninsular Plateau, extends into the desert region where such features are found. Kayals are backwaters in Kerala, and Playas are dry lake beds in deserts."
+        },
+        {
+          "question_text": [
+            "Consider the following pairs:",
+            "MTF_DATA",
+            "How many of the pairs given above are correct?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Mettur",
+              "2. Hirakud",
+              "3. Bhakra",
+              "4. Rana Pratap Sagar"
+            ],
+            "right_column": [
+              "River Cauvery",
+              "Mahanadi",
+              "Godavari",
+              "Chambal"
+            ]
+          },
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "1. Mettur Dam is on the Cauvery River (Correct). 2. Hirakud Dam is on the Mahanadi River (Correct). 3. Bhakra Dam is on the Sutlej River, not the Godavari (Incorrect). 4. Rana Pratap Sagar Dam is on the Chambal River (Correct). Therefore, three pairs are correct."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding the mountain passes in India:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Bomdi-La links Sikkim with the Tibetan capital, Lhasa.",
+            "2. Diphu Pass lies at the tri-junction of India, China, and Myanmar.",
+            "3. Khardung La is situated north of Leh in the Ladakh Range, and links the Indus and Shyok river valleys."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only two",
+          "reasoning": "1. Incorrect. Bomdi La is in Arunachal Pradesh, connecting it with Lhasa. Nathu La is the pass in Sikkim that links to Tibet. 2. Correct. Diphu Pass is strategically located at the tri-junction of India (Arunachal Pradesh), China, and Myanmar. 3. Correct. Khardung La is a high mountain pass in the Ladakh range, north of Leh, providing access to the Nubra (Shyok) Valley."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding the Northern Plains of India:",
+            "LIST",
+            "Which of the above statements is/are correct?"
+          ],
+          "list_items": [
+            "1. Western part of northern plains has Doabs",
+            "2. Ganga plains extend between Ghaggar and Teesta rivers.",
+            "3. Northern plains are flat land with no variations in its relief."
+          ],
+          "choices": [
+            "1 only",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3"
+          ],
+          "answer": "1 and 2 only",
+          "reasoning": "1. Correct. The western part, the Punjab plains, is famous for its 'doabs' (land between two rivers). 2. Correct. This is the standard geographical definition of the extent of the Ganga plains. 3. Incorrect. The northern plains have significant relief variations, including Bhabar, Terai, Bhangar, and Khadar, each with distinct characteristics."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding Montane Forests:",
+            "LIST",
+            "How many of the statements are correct?"
+          ],
+          "list_items": [
+            "1. Himalayan ranges show a succession of vegetation from the tropical to the tundra, which change with the altitude.",
+            "2. Deodar, a highly valued endemic species grows mainly in the western part of the Himalayan range.",
+            "3. The southern slopes of the Himalayas carry a thicker vegetation cover"
+          ],
+          "choices": [
+            "Only One",
+            "Only Two",
+            "All Three",
+            "None"
+          ],
+          "answer": "All Three",
+          "reasoning": "All three statements are correct. 1. The change in vegetation with altitude in the Himalayas (altitudinal zonation) is a classic feature. 2. Deodar (Cedrus deodara) is a coniferous tree characteristic of the Western Himalayas. 3. The southern slopes receive more precipitation from the monsoon and more direct sunlight, supporting denser vegetation compared to the drier, colder northern slopes."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. More than 90% of the Indian rivers are drained into the Bay of Bengal region.",
+            "2. Sahyadris act as a water divide between the Arabian Sea drainage and Bay of Bengal drainage.",
+            "3. In comparison to river basins, watershed regions are smaller."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only two",
+          "reasoning": "1. Incorrect. About 77% of the drainage area of India is oriented towards the Bay of Bengal, not over 90%. 2. Correct. The Sahyadris (Western Ghats) are the main water divide in peninsular India, separating west-flowing rivers (to Arabian Sea) from east-flowing rivers (to Bay of Bengal). 3. Correct. A watershed refers to the catchment area of a smaller stream or tributary, while a river basin is the catchment area of a major river and its tributaries. Thus, watersheds are smaller units within a basin."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Equator records the highest temperature of ocean water due to direct sunlight.",
+            "2. The winds blowing from the land towards the ocean lead to upwelling of cold water from below.",
+            "3. Gulf stream lowers the temperature near the eastern coast of North America"
+          ],
+          "choices": [
+            "1 only",
+            "1 and 2 only",
+            "2 only",
+            "2 and 3 only"
+          ],
+          "answer": "2 only",
+          "reasoning": "1. Incorrect. The highest ocean surface temperatures are typically found slightly north of the equator in the tropics, not directly at the equator, due to oceanic and atmospheric circulation patterns. 2. Correct. Offshore winds push surface water away from the coast, causing deeper, colder water to rise to the surface in a process called upwelling. 3. Incorrect. The Gulf Stream is a warm current that raises, not lowers, the temperature along the eastern coast of North America and Western Europe."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Carbon dioxide contributes to the Greenhouse effect primarily by the absorption of outgoing terrestrial radiation."
+            },
+            {
+              "label": "Statement-II",
+              "text": "Carbon dioxide is transparent to incoming solar radiation but opaque to outgoing terrestrial radiation."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is Correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correc"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "reasoning": "Statement II accurately describes the mechanism of the greenhouse effect for gases like CO2: they allow shortwave radiation from the sun to pass through but absorb and re-radiate the longwave (infrared/terrestrial) radiation emitted by the Earth. This process of absorbing outgoing radiation (Statement I) is what causes the warming. Thus, II correctly explains I."
+        },
+        {
+          "question_text": [
+            "With reference to the ‘Cyclones’, consider the following statements:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. The extra-tropical cyclones have a clear frontal system which is not present in the tropical cyclones.",
+            "2. The tropical cyclones move from east to west but the extra-tropical cyclones move from west to east.",
+            "3. There is no landfall of extra-tropical cyclones in India."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only two",
+          "reasoning": "1. Correct. Extra-tropical cyclones are defined by the presence of fronts, while tropical cyclones are warm-core systems without fronts. 2. Correct. Tropical cyclones are steered by trade winds (east to west), while extra-tropical cyclones are steered by westerlies (west to east). 3. Incorrect. Extra-tropical cyclones, known as Western Disturbances, frequently affect Northern India during the winter, causing rainfall and snowfall."
+        },
+        {
+          "question_text": [
+            "Water vapor is a crucial component of the Earth’s atmosphere that:",
+            "LIST",
+            "How many of the statements given above are correct?"
+          ],
+          "list_items": [
+            "1. Increases in concentration with altitude.",
+            "2. Is most abundant in polar regions due to low temperatures and reduced evaporation rates.",
+            "3. Acts as a greenhouse gas, helping to regulate Earth’s temperature.",
+            "4. Has no significant impact on weather patterns or atmospheric stability."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Incorrect. Water vapor concentration decreases rapidly with altitude. 2. Incorrect. It is most abundant in warm, tropical regions due to high evaporation. 3. Correct. Water vapor is the most significant greenhouse gas in the atmosphere. 4. Incorrect. It is fundamental to weather, being the source of clouds and precipitation, and its latent heat drives many atmospheric processes."
+        },
+        {
+          "question_text": [
+            "With reference to the Earthquake Waves, consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "The shadow zone of Secondary-waves is much larger than that of Primary-waves."
+            },
+            {
+              "label": "Statement-II",
+              "text": "Secondary-waves can travel through only solid mediums, whereas the Primary-waves can travel through all mediums like gaseous, liquid and solid."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is Correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "reasoning": "Statement II correctly states the physical properties of P-waves and S-waves. Because S-waves cannot pass through the liquid outer core, they have a very large shadow zone covering almost half the planet. P-waves can pass through the core but are refracted, creating a smaller shadow zone. Therefore, the properties described in Statement II are the direct cause of the shadow zone sizes mentioned in Statement I."
+        },
+        {
+          "question_text": [
+            "With reference to Distribution of Rainfall across the world, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Rainfall generally decreases as one moves away from the equator towards the poles.",
+            "2. The rainfall is more over the landmasses than on the oceans of the world.",
+            "3. Inland regions of continents tend to experience higher rainfall as compared to coastal areas."
+          ],
+          "choices": [
+            "2 only",
+            "2 and 3 only",
+            "1 only",
+            "1 and 3 only"
+          ],
+          "answer": "1 only",
+          "reasoning": "1. Correct. Due to decreasing temperature and moisture availability, rainfall generally decreases from the equator poleward. 2. Incorrect. Rainfall is generally greater over the oceans than on continents because of the larger source of moisture. 3. Incorrect. Coastal areas generally receive more rainfall than continental interiors due to their proximity to moisture sources (the ocean)."
+        },
+        {
+          "question_text": [
+            "With reference to the Salinity in the Oceans, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. The highest salinity is observed near the equator.",
+            "2. North Sea has high salinity due to the influx of saline water from the North Atlantic Drift."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "2 only",
+          "reasoning": "1. Incorrect. The highest salinity is found in the subtropics (around 20-30° N/S) where evaporation is high and precipitation is low. The equatorial region has high rainfall, which dilutes the surface water and lowers salinity. 2. Correct. The North Sea, despite being in a high latitude, experiences relatively high salinity because of the inflow of salty water from the North Atlantic Current (an extension of the Gulf Stream)."
+        },
+        {
+          "question_text": [
+            "With reference to different types of cloud, consider the following statements:",
+            "LIST",
+            "How many of the above statements are correct?"
+          ],
+          "list_items": [
+            "1. Nimbus clouds are shapeless masses of thin vapour which are formed at very high altitudes.",
+            "2. Cirrus are thin and detached white clouds.",
+            "3. Cumulus clouds exist in patches and they have a flat base.",
+            "4. Stratus clouds are generally formed due to mixing of air masses of different temperatures or due to loss of heat."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "1. Incorrect. Nimbus refers to rain-bearing clouds (e.g., Nimbostratus, Cumulonimbus) which are typically dark, thick, and found at low to middle altitudes, not high-altitude thin vapor. 2. Correct. Cirrus clouds are high-altitude, thin, wispy clouds made of ice crystals. 3. Correct. Cumulus clouds are the classic 'cotton-like' clouds with flat bases and puffy tops. 4. Correct. Stratus clouds are horizontal layered clouds that form in stable conditions, often from cooling or mixing of air masses."
+        },
+        {
+          "question_text": [
+            "Consider the following statements :",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Coriolis Force deflects the wind to the right direction in the northern hemisphere and to the left in the southern hemisphere."
+            },
+            {
+              "label": "Statement-II",
+              "text": "The revolution of the earth is the primary cause of the direction of the wind."
+            },
+            {
+              "label": "Statement-III",
+              "text": "The Coriolis force is directly proportional to the angle of latitude."
+            }
+          ],
+          "choices": [
+            "Both Statement-II and Statement-III are correct and both of them explain Statement-I",
+            "Both Statement-II and Statement III are correct, but only one of them explains Statement-I",
+            "Only one of the Statements II and III is correct and that explains Statement-I",
+            "Only one of the Statements II and III is correct and that does not explains Statement-I"
+          ],
+          "answer": "Only one of the Statements II and III is correct and that does not explains Statement-I",
+          "reasoning": "Statement I is a correct description of the Coriolis effect. Statement II is incorrect; the Earth's ROTATION, not revolution, causes the Coriolis effect. The primary cause of wind itself is pressure difference. Statement III is correct; the Coriolis force is zero at the equator (0° latitude) and maximum at the poles (90° latitude). Since only statement III is correct (among II and III), and it describes a property of the force rather than explaining its directional effect in detail, this option is the best fit."
+        },
+        {
+          "question_text": [
+            "Consider the following:",
+            "LIST",
+            "How many of the above are cold ocean currents?"
+          ],
+          "list_items": [
+            "1. Labrador current",
+            "2. Agulhas current",
+            "3. Kuroshio current"
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Labrador Current is a cold current flowing from the Arctic Ocean south along the coast of Labrador. 2. Agulhas Current is a warm current in the southwestern Indian Ocean. 3. Kuroshio Current is a warm current in the western North Pacific Ocean, analogous to the Gulf Stream. Therefore, only one is a cold current."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "Volcanoes are generally not located around the transform boundaries."
+            },
+            {
+              "label": "Statement II",
+              "text": "At transform boundaries, the tectonic plates slide horizontally past one another resulting in neither creation nor destruction of the Earth’s crust."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement- II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement- II is the correct explanation for Statement-I",
+          "reasoning": "Statement I is correct. Volcanism is primarily associated with divergent (mid-ocean ridges) and convergent (subduction zones) boundaries. Statement II correctly describes the motion at a transform boundary. Because there is no subduction or rifting, there is no large-scale melting of the mantle to produce magma. Therefore, the process described in Statement II is the reason for the lack of volcanoes mentioned in Statement I."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are not correct?"
+          ],
+          "list_items": [
+            "1. The movement of tectonic plates is driven by convection currents in the Earth’s mantle.",
+            "2. Subduction zones are commonly associated with divergent plate boundaries."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "2 only",
+          "reasoning": "Statement 1 is correct; mantle convection is the primary driving force behind plate tectonics. Statement 2 is incorrect; subduction zones, where one plate slides beneath another, are a hallmark of convergent plate boundaries, not divergent boundaries where plates move apart."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Polar Jet streams are strongest during winters in both the northern and southern hemisphere."
+            },
+            {
+              "label": "Statement-II",
+              "text": "During winters, the thermal contrast decreases and the intensity of the high pressure center at the pole increases."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Statement-I is correct but Statement-II is incorrect",
+          "reasoning": "Statement I is correct. Jet streams are driven by the temperature difference between polar and mid-latitude air. Statement II is incorrect. During winter, the temperature (thermal) contrast between the cold pole and warmer equator INCREASES, not decreases. This stronger temperature gradient is what makes the polar jet stream stronger in winter."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Atmospheric conduction process is primarily limited to the troposphere.",
+            "2. Atmospheric advection creates diurnal weather variations in the middle latitudes."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "Both 1 and 2",
+          "reasoning": "1. Correct. Conduction is the transfer of heat by direct contact. In the atmosphere, it's only significant in the lowest few centimeters of the troposphere where air is in direct contact with the Earth's surface. 2. Correct. Advection is the horizontal transport of heat. In mid-latitudes, the passage of warm and cold air masses (advection) is a primary cause of day-to-day (diurnal) and larger weather variations."
+        },
+        {
+          "question_text": [
+            "Consider the following statements with reference to Tropical Easterly Jet Streams:",
+            "LIST",
+            "How many of the above statements are correct?"
+          ],
+          "list_items": [
+            "1. It causes the reversal in upper air circulation.",
+            "2. The advent of easterly jet streams is held responsible for the burst of the monsoon in India.",
+            "3. It does not extend beyond 15°N latitude in the upper atmosphere."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only two",
+          "reasoning": "1. Correct. The formation of the Tropical Easterly Jet (TEJ) signifies the reversal of upper air circulation from westerly to easterly over India in summer. 2. Correct. The establishment of the TEJ is strongly correlated with the 'burst' or onset of the southwest monsoon over the Indian peninsula. 3. Incorrect. While it is centered around 15°N, the influence of the TEJ extends further north, over the Indian subcontinent, during the peak monsoon season."
+        },
+        {
+          "question_text": [
+            "Statement-I: Warming sea waters, worsened by El Nino, triggered the recent global mass coral bleaching event.",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement-I",
+              "text": "Warming sea waters, worsened by El Nino, triggered the recent global mass coral bleaching event."
+            },
+            {
+              "label": "Statement-II",
+              "text": "At elevated temperatures, zooxanthellae algae produce toxins harmful for coral, leading to rare mass bleaching events"
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+            "Statement-I is correct but Statement-II is incorrect",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Statement-I is correct but Statement-II is incorrect",
+          "reasoning": "Statement I is correct. The fourth global mass coral bleaching event (2023-24) was driven by record ocean heat, amplified by the El Niño phenomenon. Statement II is incorrect. During heat stress, corals expel the symbiotic zooxanthellae living in their tissues, causing them to turn white (bleach). The algae don't produce toxins; rather, the symbiotic relationship breaks down under stress."
+        },
+        {
+          "question_text": [
+            "PARAGRAPH",
+            "Considering 1 hour of daylight savings into account in New York, when should Mr. X be on his television set to watch the match?"
+          ],
+          "paragraph": "Mr. X lives in Itanagar and wants to watch the live streaming of the India Pakistan match which is scheduled to held in New York on June 9, 2024. New York is located at 75°W Meridian. Match starts at 10:30 A.M. EDT (Eastern Daylight Time) in New York.",
+          "choices": [
+            "8:00 PM IST on 9th June.",
+            "8:00 PM IST on 8th June",
+            "3:30 AM IST on 9th June.",
+            "10:00 PM IST on 9th June"
+          ],
+          "answer": "8:00 PM IST on 9th June.",
+          "reasoning": "India (IST) is at +5:30 GMT. New York (75°W) is at -5:00 GMT. With 1 hour daylight saving (EDT), it becomes -4:00 GMT. The time difference is 5.5 - (-4) = 9.5 hours. So, India is 9.5 hours ahead of New York. 10:30 AM in New York + 9 hours 30 minutes = 8:00 PM IST on the same day, June 9th."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. The solar output received at the top of the atmosphere remains constant through out the year.",
+            "2. The insolation received by the earth on 3rd January is slightly more than the amount received on 4th July."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "2 only",
+          "reasoning": "1. Incorrect. The solar output varies slightly due to the Earth's elliptical orbit. It is not constant. 2. Correct. The Earth is closest to the Sun (perihelion) around January 3rd, so it receives slightly more solar radiation (insolation) at that time compared to when it is farthest from the Sun (aphelion) around July 4th."
+        },
+        {
+          "question_text": [
+            "Consider the following statements about landforms created by river systems:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Oxbow lakes are formed when a wide meander from the main stem of a river is cut off to create a lake.",
+            "2. Alluvial fans are typically formed in the high gradient regions of mountain fronts where rivers emerge from steep valleys onto flat plains"
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "both 1 and 2",
+          "reasoning": "Both statements correctly describe fluvial landforms. Statement 1 accurately describes the formation of an oxbow lake from a cutoff meander. Statement 2 accurately describes the formation of an alluvial fan, where a river's sudden loss of velocity upon entering a plain causes it to deposit its sediment load in a fan shape."
+        },
+        {
+          "question_text": [
+            "With reference to temperature of Ocean Water, consider the following statements:",
+            "STATEMENTS",
+            "Which one of the following is correct in respect of the above statements?"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "The temperature of ocean water steadily declines with increasing depth."
+            },
+            {
+              "label": "Statement II",
+              "text": "The amount of sunlight reduces with increasing depth of the ocean."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I.",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I.",
+            "Statement-I is correct but Statement-II is incorrect.",
+            "Statement-I is incorrect but Statement II is correct"
+          ],
+          "answer": "Statement-I is incorrect but Statement II is correct",
+          "reasoning": "Statement I is incorrect. Ocean temperature does not decline steadily. There is typically a mixed layer at the surface, followed by a rapid decrease in the thermocline, and then very slow change in the deep ocean. Statement II is correct; sunlight is the primary source of heat for the ocean and it is absorbed rapidly with depth. While II is a reason for temperature decrease, I is an oversimplification and thus incorrect."
+        },
+        {
+          "question_text": [
+            "Which of the factors given below are favourable conditions for a Heatwave?",
+            "LIST",
+            "Select the correct options from the code given below:"
+          ],
+          "list_items": [
+            "1. Prevalence of hot dry air over a region",
+            "2. Presence of moisture in the upper atmosphere",
+            "3. Cloudy sky",
+            "4. Large amplitude anticyclonic flow over the area"
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 and 4 only",
+            "1 and 3 only",
+            "1 and 4 only"
+          ],
+          "answer": "1 and 4 only",
+          "reasoning": "Favorable conditions for a heatwave include: 1. A mass of hot, dry air. 4. An anticyclone (high-pressure system) which causes air to sink, compressing and warming it, and preventing cloud formation. Presence of moisture (2) would lead to humid heat but is not a primary cause of the dry heatwaves. Cloudy skies (3) would block sunlight and work against the formation of a heatwave."
+        },
+        {
+          "question_text": [
+            "With reference to Prevailing Winds, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. The Coriolis effect makes wind systems twist counter-clockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere.",
+            "2. Areas from Atacama of South America to the arid Kalahari of Africa, are part of the horse latitudes.",
+            "3. Doldrums is the area around the tropics with weak prevailing winds and unusually calm weather."
+          ],
+          "choices": [
+            "1 only",
+            "1 and 2 only",
+            "2 only",
+            "1, 2 and 3"
+          ],
+          "answer": "2 only",
+          "reasoning": "1. Incorrect. It's the opposite for low-pressure systems (cyclones): counter-clockwise in the North, clockwise in the South. 2. Correct. The Horse Latitudes are belts of high pressure and light winds around 30-35° N/S, and many of the world's great deserts, including the Atacama and Kalahari, are located in these belts. 3. Incorrect. The Doldrums are located around the equator, not the tropics."
+        },
+        {
+          "question_text": [
+            "Consider the following statements about Temperature Inversion:",
+            "LIST",
+            "How many of the above statements are correct?"
+          ],
+          "list_items": [
+            "1. Temperature inversion occurs when the normal lapse rate is reversed.",
+            "2. Surface inversion promotes stability in the lower layers of the atmosphere.",
+            "3. Air drainage is a type of temperature inversion that occurs in hilly regions."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "All three",
+          "reasoning": "All three statements are correct. 1. Temperature inversion is by definition a reversal of the normal lapse rate (temperature decreasing with height). 2. Since warm air is over cold air, there is no tendency for vertical motion, making the atmosphere very stable and trapping pollutants. 3. Air drainage, where cold, dense air flows down slopes into valleys at night, is a classic mechanism for forming a surface temperature inversion in hilly or mountainous terrain."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Nearly half of the solar insolation is absorbed by the surface of earth.",
+            "2. Snow and ice-covered areas have higher albedo than the upper clouds."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "1 only",
+          "reasoning": "1. Correct. Approximately 51% of the incoming solar radiation (insolation) reaches and is absorbed by the Earth's surface. 2. Incorrect. While fresh snow has a very high albedo (up to 90%), thick upper-level clouds can also have a very high albedo (70-80%). The statement that snow is always higher is not definitively correct; they are both highly reflective, but fresh snow is generally considered the most reflective natural surface."
+        },
+        {
+          "question_text": [
+            "Consider the following pairs:",
+            "MTF_DATA",
+            "How many of the pairs given above are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Baltic Sea",
+              "2. Red Sea",
+              "3. Caspian Sea",
+              "4. Mediterranean Sea"
+            ],
+            "right_column": [
+              "Sweden",
+              "Egypt",
+              "Afghanistan",
+              "Spain"
+            ]
+          },
+          "choices": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "All four"
+          ],
+          "answer": "Only three",
+          "reasoning": "1. Baltic Sea borders Sweden (Correct). 2. Red Sea borders Egypt (Correct). 3. Caspian Sea does not border Afghanistan; it borders countries like Iran, Russia, Kazakhstan, etc. (Incorrect). 4. Mediterranean Sea borders Spain (Correct). Thus, three pairs are correctly matched."
+        },
+        {
+          "question_text": [
+            "Consider the following pairs",
+            "MTF_DATA",
+            "Which of the above pairs are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Mango Shower",
+              "2. Blossom Shower",
+              "3. Nor Westers",
+              "4. Loo"
+            ],
+            "right_column": [
+              "Kerala and coastal Karnataka",
+              "Kerala and nearby areas",
+              "Bengal and Assam",
+              "Northern plains from Punjab to Bihar"
+            ]
+          },
+          "choices": [
+            "1, 2, and 3 only",
+            "2, 3, and 4 only",
+            "1, 3, and 4 only",
+            "1, 2, 3, and 4"
+          ],
+          "answer": "1, 2, 3, and 4",
+          "reasoning": "All four pairs are correctly matched. Mango Showers help in the ripening of mangoes in Kerala and Karnataka. Blossom Showers help coffee flowers blossom in Kerala. Nor' Westers (Kalbaisakhi) are thunderstorms in Bengal and Assam. Loo is the hot, dry wind of the northern plains in summer."
+        },
+        {
+          "question_text": [
+            "In the context of recent GI tag to Majuli masks, consider the following statements:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Majuli is the largest river island in the world and is situated in Assam",
+            "2. Majuli mask-making tradition was first introduced by the Ahom kings in the 17th century."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+          ],
+          "answer": "1 only",
+          "reasoning": "Statement 1 is correct. Majuli, in the Brahmaputra River in Assam, is widely recognized as the world's largest river island. Statement 2 is incorrect. The tradition of mask-making (Mukha Shilpa) in Majuli was introduced by the Vaishnavite saint Srimanta Sankaradeva in the 15th century, not by Ahom kings in the 17th century."
+        },
+        {
+          "question_text": [
+            "Consider the following statements with reference to ‘Coral reefs’ :",
+            "LIST",
+            "How many of the above given statements are correct?"
+          ],
+          "list_items": [
+            "1. Barrier reef is the first stage of reef formation according to Darwin’s Subsidence Theory.",
+            "2. Cold currents provide favourable conditions for growth of reef building corals.",
+            "3. Corals are included in Schedule-I list of Wildlife Protection Act, 1972."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "Only one",
+          "reasoning": "1. Incorrect. According to Darwin's theory, the first stage is the fringing reef. 2. Incorrect. Reef-building corals require warm tropical waters (typically 23-29°C). Cold currents are unfavorable. 3. Correct. All hard corals are listed under Schedule I of the WPA, 1972, granting them the highest level of protection."
+        },
+        {
+          "question_text": [
+            "Geostrophic winds, which travel parallel to isobars, are the result of which of the following factors?"
+          ],
+          "choices": [
+            "Negligible presence of wind resistance in the upper atmosphere.",
+            "Equilibrium between the Coriolis force and the pressure gradient force.",
+            "Dominance of thermal convection over horizontal pressure gradients.",
+            "Influence of the Earth’s rotation acting perpendicular to the wind flow."
+          ],
+          "answer": "Equilibrium between the Coriolis force and the pressure gradient force.",
+          "reasoning": "A geostrophic wind is a theoretical wind that results from the exact balance between the Pressure Gradient Force (which initiates air movement from high to low pressure) and the Coriolis force (which deflects the wind). This balance causes the wind to flow parallel to the isobars. It occurs in the upper atmosphere where friction is negligible."
+        },
+        {
+          "question_text": [
+            "Consider the following statements regarding the Thunderstorms:",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. Thunderstorms are the result of rapid descent of cool air, leading to the formation of nimbostratus clouds.",
+            "2. Lightning is the result of electrical charges building up in clouds during thunderstorms.",
+            "3. Thunder is caused by the rapid expansion of air surrounding a lightning bolt due to intense heat."
+          ],
+          "choices": [
+            "3 only",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3 only"
+          ],
+          "answer": "2 and 3 only",
+          "reasoning": "1. Incorrect. Thunderstorms result from the rapid ASCENT of warm, moist air, leading to the formation of cumulonimbus clouds, not nimbostratus. 2. Correct. Static electrical charges build up within the cloud and between the cloud and the ground, which are discharged as lightning. 3. Correct. The intense heat of a lightning strike rapidly heats and expands the surrounding air, creating a sonic shock wave that we hear as thunder."
+        },
+        {
+          "question_text": [
+            "PARAGRAPH",
+            "Which of the following options is correctly associated with the description given above?"
+          ],
+          "paragraph": "“In this atmospheric circulation, air near the surface flows towards the pole following the general direction of west to east, while air higher in the atmosphere moves equatorward and westward. This circulation was first to account for westerly winds between 35° and 60° N/S, which are caused by friction”.",
+          "choices": [
+            "Polar cell",
+            "Hadley cell",
+            "Ferrel cell",
+            "Madden-Julian Oscillation"
+          ],
+          "answer": "Ferrel cell",
+          "reasoning": "The description accurately portrays the Ferrel Cell, which is the mid-latitude circulation cell (roughly 30° to 60° latitude). It is characterized by surface westerlies and is thermally indirect, acting like a gear between the Hadley and Polar cells. The description of surface flow poleward and aloft flow equatorward is characteristic of the Ferrel cell."
+        },
+        {
+          "question_text": [
+            "Consider the following features:",
+            "PARAGRAPH",
+            "Which of the following climate types is correctly associated with the features given above?"
+          ],
+          "paragraph": "1. Equable climate with moderately warm summers and fairly mild winters. 2. Precipitation is experienced almost throughout the year with maximum in winter or autumn. 3. Deciduous forests are predominant natural vegetation with great lumbering value.",
+          "choices": [
+            "China type Climate",
+            "Tropical Monsoon Climate",
+            "Cool Temperate Eastern Margin (Laurentian) Climate",
+            "Cool Temperate Western Margin (British Type) Climate"
+          ],
+          "answer": "Cool Temperate Western Margin (British Type) Climate",
+          "reasoning": "These features perfectly describe the British Type climate. It has a small annual temperature range (equable), year-round precipitation often with a winter maximum due to cyclonic activity, and is historically associated with deciduous forests that have been extensively logged."
+        },
+        {
+          "question_text": [
+            "PARAGRAPH",
+            "With reference to the types of forests found in India, which of the following is the best described forest?"
+          ],
+          "paragraph": "“They are found in higher latitudes and altitudes with softwood evergreen trees. Silver Fox and Mink are common animals found here”.",
+          "choices": [
+            "Tropical moist deciduous forests",
+            "Tropical dry deciduous forests",
+            "Mangrove forests",
+            "Coniferous forests."
+          ],
+          "answer": "Coniferous forests.",
+          "reasoning": "The description of being in higher altitudes with softwood evergreen trees (like pine, fir, spruce) is characteristic of Montane or Coniferous forests found in the Himalayas. The animals mentioned are also typical of such cold, high-altitude ecosystems."
+        },
+        {
+          "question_text": [
+            "Consider the following statements with reference to Cloud Seeding.",
+            "LIST",
+            "Which of the statements given above is/are correct?"
+          ],
+          "list_items": [
+            "1. It works only when there are enough pre-existing clouds in the atmosphere.",
+            "2. Silver iodide can be used in cloud seeding."
+          ],
+          "choices": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2."
+          ],
+          "answer": "Both 1 and 2",
+          "reasoning": "Both statements are correct. 1. Cloud seeding is a method to modify existing clouds to enhance precipitation; it cannot create clouds from clear skies. 2. Silver iodide is a common cloud seeding agent because its crystalline structure is similar to that of ice, providing a nucleus for ice crystals to form around."
+        },
+        {
+          "question_text": [
+            "Consider the following statements:",
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Statement I",
+              "text": "An unprecedented triple-dip La-Nina event, extended by climate change led to decline in air quality over Peninsular India."
+            },
+            {
+              "label": "Statement II",
+              "text": "Triple dip La Nina event supported the transport of pollutants from North India towards Peninsular India."
+            }
+          ],
+          "choices": [
+            "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-1.",
+            "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-1.",
+            "Statement-1 is correct but Statement-II is incorrect.",
+            "Statement-I is incorrect Statement-II is correct."
+          ],
+          "answer": "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-1.",
+          "reasoning": "Recent studies have shown that the prolonged La Niña event created anomalous wind patterns. Statement II is correct as these patterns enhanced the transport of pollutants from the Indo-Gangetic Plain southward to Peninsular India. This increased transport of pollutants directly caused the decline in air quality mentioned in Statement I. Therefore, both are correct and II explains I."
+        },
+        {
+          "question_text": [
+            "Consider the following ocean-atmospheric conditions:",
+            "LIST",
+            "Which of the above conditions are taken into account by The Earth System Science Organisation (ESSO) and Indian Meteorological Department (IMD) while making the monsoon forecast in April every year?"
+          ],
+          "list_items": [
+            "1. Surface air temperature over northwest Europe.",
+            "2. Mean Sea Level pressure in East Asia.",
+            "3. Warm water volume of the equatorial Pacific Ocean."
+          ],
+          "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+          ],
+          "answer": "All three",
+          "reasoning": "The IMD uses a statistical ensemble forecasting system that incorporates several global ocean-atmospheric parameters known to influence the Indian monsoon. These include parameters related to El Niño/La Niña (like warm water volume in the Pacific), pressure patterns in various parts of the world (like East Asia), and temperatures in distant regions (like Northwest Europe), among others. All three listed factors are plausible inputs for such a complex model."
+        }
+      ]
+    }
+  ]
+}

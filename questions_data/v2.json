@@ -1,0 +1,793 @@
+{
+  "sections": [
+    {
+      "name": "Physics",
+      "description": "This section covers fundamental concepts in Physics including electricity, optics, and mechanics.",
+      "questions": [
+        {
+          "question_text": [
+            "According to Ohm's law, if a potential difference of 6V across a resistor results in a current of 2A, what is the resistance?"
+          ],
+          "choices": [
+            "12 Ω",
+            "3 Ω",
+            "0.33 Ω",
+            "8 Ω"
+          ],
+          "answer": "3 Ω",
+          "reasoning": "Ohm's Law states V = IR. Therefore, Resistance (R) = Voltage (V) / Current (I). R = 6V / 2A = 3 Ω."
+        },
+        {
+          "question_text": [
+            "A ray of light is incident on a plane mirror, making an angle of 30° with the mirror's surface.",
+            "What is the angle of reflection?"
+          ],
+          "choices": [
+            "30°",
+            "60°",
+            "90°",
+            "120°"
+          ],
+          "answer": "60°",
+          "reasoning": "The angle of incidence is the angle between the incident ray and the normal (which is 90° to the mirror). So, angle of incidence = 90° - 30° = 60°. According to the law of reflection, the angle of reflection equals the angle of incidence."
+        },
+        {
+          "question_text": [
+            "Consider the following statement regarding Earth's gravity:",
+            "STATEMENT",
+            "Evaluate the accuracy of this statement."
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "The value of acceleration due to gravity (g) is constant everywhere on the Earth's surface."
+            }
+          ],
+          "choices": [
+            "Completely true",
+            "Completely false",
+            "True only at the equator",
+            "True only at the poles"
+          ],
+          "answer": "Completely false",
+          "reasoning": "The value of 'g' varies with altitude and latitude. It is slightly greater at the poles and lesser at the equator due to the Earth's shape and rotation."
+        },
+        {
+          "question_text": [
+            "Consider the following optical components:",
+            "LIST",
+            "Which of these can form a real, inverted image of an object?"
+          ],
+          "list_items": [
+            "i. Convex lens",
+            "ii. Concave lens",
+            "iii. Plane mirror",
+            "iv. Convex mirror"
+          ],
+          "choices": [
+            "i only",
+            "ii and iv only",
+            "i and iii only",
+            "All of the above"
+          ],
+          "answer": "i only",
+          "reasoning": "Only a convex lens can converge light rays to form a real and inverted image (when the object is placed beyond the focal point). Concave lenses and convex mirrors always form virtual images, and plane mirrors form virtual, upright images."
+        },
+        {
+          "question_text": [
+            "Match the physical quantities in the left column with their correct SI units in the right column.",
+            "MTF_DATA",
+            "How many pairs are correctly matched?"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "A. Electric Current",
+              "B. Power",
+              "C. Resistance",
+              "D. Force"
+            ],
+            "right_column": [
+              "Ampere",
+              "Watt",
+              "Ohm",
+              "Newton"
+            ]
+          },
+          "choices": [
+            "1 match is correct",
+            "2 matches are correct",
+            "3 matches are correct",
+            "All 4 matches are correct"
+          ],
+          "answer": "All 4 matches are correct",
+          "reasoning": "All pairings are correct: Electric Current is measured in Amperes, Power in Watts, Resistance in Ohms, and Force in Newtons."
+        },
+        {
+          "question_text": [
+            "Evaluate the following statements about magnetic fields.",
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "Magnetic field lines never intersect each other."
+            },
+            {
+              "label": "Reason",
+              "text": "If they were to intersect, there would be two directions for the magnetic field at a single point, which is impossible."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Both incorrect"
+          ],
+          "answer": "Both correct, reason explains assertion",
+          "reasoning": "The assertion is a fundamental property of magnetic fields. The reason correctly explains that a compass needle (or any magnetic pole) can only point in one direction at any given location, making two directions at an intersection point physically impossible."
+        },
+        {
+          "question_text": [
+            "To calculate the total resistance of resistors connected in a series circuit, one must follow a specific sequence of steps.",
+            "LIST",
+            "What is the correct sequence of operations?"
+          ],
+          "list_items": [
+            "A. Sum the individual resistance values.",
+            "B. Identify all resistors in the series path.",
+            "C. The result is the equivalent resistance."
+          ],
+          "choices": [
+            "A → B → C",
+            "B → C → A",
+            "B → A → C",
+            "C → A → B"
+          ],
+          "answer": "B → A → C",
+          "reasoning": "The correct logical flow is to first identify all the components (resistors) in the series circuit (B), then perform the calculation by summing their values (A), and finally, the outcome of that sum is the total equivalent resistance (C)."
+        },
+        {
+          "question_text": [
+            "Read the passage about renewable energy sources.",
+            "PARAGRAPH",
+            "According to the text, what is a major challenge associated with solar and wind power?"
+          ],
+          "paragraph": "Renewable energy sources, such as solar and wind power, are crucial for combating climate change. They harness natural processes to generate electricity with minimal greenhouse gas emissions. Solar panels convert sunlight directly into electricity, while wind turbines use wind to spin a generator. Unlike fossil fuels, they are inexhaustible. However, their primary drawback is intermittency; solar power is only available during the day and wind power depends on variable weather conditions, making energy storage solutions essential for a reliable supply.",
+          "choices": [
+            "High greenhouse gas emissions",
+            "They are exhaustible resources",
+            "Their inconsistent and variable availability",
+            "The complexity of converting energy"
+          ],
+          "answer": "Their inconsistent and variable availability",
+          "reasoning": "The passage explicitly states that the 'primary drawback is intermittency,' referring to the fact that solar and wind power are not continuously available."
+        },
+        {
+          "question_text": [
+            "The refractive index of a medium is defined as the ratio of the speed of light in a vacuum to the speed of light in that medium.",
+            "What is the SI unit of refractive index?"
+          ],
+          "choices": [
+            "m/s",
+            "Dioptre",
+            "No unit",
+            "Metre"
+          ],
+          "answer": "No unit",
+          "reasoning": "Refractive index is a ratio of two similar quantities (speed/speed). Therefore, the units cancel out, making it a dimensionless quantity."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "The power of a convex lens is considered positive."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "A convex lens has a positive focal length according to sign conventions."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "Both A and R are true and R is the correct explanation of A.",
+          "reasoning": "Power of a lens is the reciprocal of its focal length (P = 1/f). By convention, the focal length of a convex lens is positive. Therefore, its power is also positive. The reason correctly explains the assertion."
+        }
+      ]
+    },
+    {
+      "name": "Chemistry",
+      "description": "This section tests knowledge of chemical reactions, acids and bases, metals, and the periodic table.",
+      "questions": [
+        {
+          "question_text": [
+            "What is the pH value of a completely neutral solution, such as pure water, at 25°C?"
+          ],
+          "choices": [
+            "0",
+            "7",
+            "14",
+            "1"
+          ],
+          "answer": "7",
+          "reasoning": "The pH scale ranges from 0 to 14. A pH of 7 is neutral, a pH less than 7 is acidic, and a pH greater than 7 is basic (alkaline)."
+        },
+        {
+          "question_text": [
+            "The chemical reaction CaCO₃(s) → CaO(s) + CO₂(g) is an example of which type of reaction?"
+          ],
+          "choices": [
+            "Combination reaction",
+            "Decomposition reaction",
+            "Displacement reaction",
+            "Double displacement reaction"
+          ],
+          "answer": "Decomposition reaction",
+          "reasoning": "In this reaction, a single compound (Calcium Carbonate) breaks down into two or more simpler substances (Calcium Oxide and Carbon Dioxide), which is the definition of a decomposition reaction."
+        },
+        {
+          "question_text": [
+            "Evaluate the following statement about the physical properties of metals:",
+            "STATEMENT"
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "All metals are solid at standard room temperature."
+            }
+          ],
+          "choices": [
+            "True",
+            "False",
+            "True for all metals except gold",
+            "True for all metals except iron"
+          ],
+          "answer": "False",
+          "reasoning": "This statement is false because mercury (Hg) is a metal that exists as a liquid at room temperature."
+        },
+        {
+          "question_text": [
+            "Consider the general properties of chemical substances.",
+            "LIST",
+            "Which of the following are characteristic properties of acids?"
+          ],
+          "list_items": [
+            "i. They have a sour taste.",
+            "ii. They turn blue litmus paper red.",
+            "iii. They feel slippery to the touch.",
+            "iv. They react with active metals to produce hydrogen gas."
+          ],
+          "choices": [
+            "i, ii, and iii only",
+            "i, ii, and iv only",
+            "ii and iii only",
+            "All of the above"
+          ],
+          "answer": "i, ii, and iv only",
+          "reasoning": "Acids are known for their sour taste (i), their ability to turn blue litmus red (ii), and their reaction with metals like zinc to produce H₂ gas (iv). Feeling slippery is a characteristic of bases, not acids (iii ✗)."
+        },
+        {
+          "question_text": [
+            "Match the common chemical names with their correct chemical formulas.",
+            "MTF_DATA"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Water",
+              "2. Table Salt",
+              "3. Methane",
+              "4. Sulfuric Acid"
+            ],
+            "right_column": [
+              "H₂SO₄",
+              "NaCl",
+              "CH₄",
+              "H₂O"
+            ]
+          },
+          "choices": [
+            "1-H₂O, 2-NaCl, 3-CH₄, 4-H₂SO₄",
+            "1-NaCl, 2-H₂O, 3-CH₄, 4-H₂SO₄",
+            "1-H₂O, 2-CH₄, 3-NaCl, 4-H₂SO₄",
+            "1-H₂SO₄, 2-NaCl, 3-H₂O, 4-CH₄"
+          ],
+          "answer": "1-H₂O, 2-NaCl, 3-CH₄, 4-H₂SO₄",
+          "reasoning": "The correct formulas are: Water is H₂O, Table Salt (Sodium Chloride) is NaCl, Methane is CH₄, and Sulfuric Acid is H₂SO₄."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "In a redox reaction, both oxidation and reduction take place simultaneously."
+            },
+            {
+              "label": "Reason",
+              "text": "Oxidation is the loss of electrons, while reduction is the gain of electrons, and electrons cannot be created or destroyed in a reaction."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Assertion incorrect, reason correct"
+          ],
+          "answer": "Both correct, reason explains assertion",
+          "reasoning": "A redox reaction is defined by the transfer of electrons. If one substance loses electrons (oxidation), another must gain them (reduction). The reason correctly explains this electron transfer principle, which is why the two processes must occur together."
+        },
+        {
+          "question_text": [
+            "LIST",
+            "Arrange the following steps in the correct order to balance the chemical equation: __Fe + __H₂O → __Fe₃O₄ + __H₂"
+          ],
+          "list_items": [
+            "A. Balance the Hydrogen atoms by placing a coefficient before H₂.",
+            "B. Balance the Iron atoms by placing a coefficient before Fe.",
+            "C. Balance the Oxygen atoms by placing a coefficient before H₂O."
+          ],
+          "choices": [
+            "A → C → B",
+            "B → A → C",
+            "B → C → A",
+            "C → B → A"
+          ],
+          "answer": "B → C → A",
+          "reasoning": "A common strategy is to balance metals first, then non-metals, then hydrogen, then oxygen. In this case, starting with Fe (B) is logical. Then balancing O (C) by adding a 4 to H₂O. This unbalances H, so the final step is to balance H (A) by adding a 4 to H₂. The balanced equation is 3Fe + 4H₂O → Fe₃O₄ + 4H₂."
+        },
+        {
+          "question_text": [
+            "Read the following passage about the periodic table.",
+            "PARAGRAPH",
+            "What was a primary limitation of Mendeleev's periodic table, according to the passage?"
+          ],
+          "paragraph": "Dmitri Mendeleev's periodic table of 1869 was a monumental achievement in chemistry. He arranged the elements based on increasing atomic mass and grouped them by similar properties, even leaving gaps for undiscovered elements. However, his table had limitations. The primary issue was the placement of certain elements, like tellurium and iodine, where a heavier element had to be placed before a lighter one to maintain property alignment. Furthermore, the table could not explain the position of isotopes, which are atoms of the same element with different masses.",
+          "choices": [
+            "It did not include the noble gases.",
+            "It was unable to account for the position of isotopes.",
+            "It was arranged by atomic number.",
+            "It did not leave gaps for new elements."
+          ],
+          "answer": "It was unable to account for the position of isotopes.",
+          "reasoning": "The passage explicitly mentions two limitations: the misordering of some elements by mass and its inability to 'explain the position of isotopes'."
+        },
+        {
+          "question_text": [
+            "How are covalent bonds formed between atoms?"
+          ],
+          "choices": [
+            "By transferring electrons from a metal to a non-metal",
+            "By sharing electrons between two non-metal atoms",
+            "By the attraction between positive and negative ions",
+            "By the movement of free electrons in a metallic lattice"
+          ],
+          "answer": "By sharing electrons between two non-metal atoms",
+          "reasoning": "Covalent bonding involves the mutual sharing of one or more pairs of electrons between two atoms, typically non-metals, to achieve a stable electron configuration."
+        },
+        {
+          "question_text": [
+            "Analyze the following statements about corrosion.",
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "Iron articles, when exposed to moist air, get coated with a reddish-brown substance called rust."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "The process of rusting is a redox reaction where iron is oxidized."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "Both A and R are true and R is the correct explanation of A.",
+          "reasoning": "The assertion describes the phenomenon of rusting. The reason provides the correct chemical explanation: rust (hydrated iron(III) oxide) is formed through the oxidation of iron in the presence of oxygen and water, which is a redox process. Thus, R explains A."
+        }
+      ]
+    },
+    {
+      "name": "Biology",
+      "description": "This section assesses understanding of life processes, heredity, and the human body.",
+      "questions": [
+        {
+          "question_text": [
+            "Which of the following are the final products of photosynthesis in plants?"
+          ],
+          "choices": [
+            "Carbon dioxide, water, and energy",
+            "Glucose, oxygen, and water",
+            "Oxygen and carbon dioxide",
+            "Glucose and carbon dioxide"
+          ],
+          "answer": "Glucose, oxygen, and water",
+          "reasoning": "The overall equation for photosynthesis is 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Glucose (C₆H₁₂O₆) is the primary energy-storing molecule, and oxygen (O₂) is released as a byproduct. Water is also produced in some intermediate steps and consumed in others."
+        },
+        {
+          "question_text": [
+            "Which chamber of the human heart is responsible for pumping oxygenated blood to the rest of the body?"
+          ],
+          "choices": [
+            "Right Atrium",
+            "Right Ventricle",
+            "Left Atrium",
+            "Left Ventricle"
+          ],
+          "answer": "Left Ventricle",
+          "reasoning": "The left ventricle has the thickest muscular wall because it must generate enough pressure to pump oxygenated blood through the aorta to all parts of the body."
+        },
+        {
+          "question_text": [
+            "STATEMENT",
+            "Evaluate the scientific validity of this statement related to genetics."
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "Traits acquired during an individual's lifetime, such as learned skills or muscle development from exercise, can be inherited by their offspring."
+            }
+          ],
+          "choices": [
+            "True",
+            "False",
+            "True only for simple organisms",
+            "False, but only for humans"
+          ],
+          "answer": "False",
+          "reasoning": "This describes the theory of inheritance of acquired characteristics, which has been disproven. Only changes in the genetic material (DNA) of germ cells (sperm or egg) can be passed on to the next generation."
+        },
+        {
+          "question_text": [
+            "The nervous system is composed of specialized cells called neurons.",
+            "LIST",
+            "Which of the following are the three main parts of a typical neuron?"
+          ],
+          "list_items": [
+            "i. Dendrite",
+            "ii. Axon",
+            "iii. Cell Body (Soma)",
+            "iv. Myelin"
+          ],
+          "choices": [
+            "i, ii, and iv",
+            "i, iii, and iv",
+            "ii, iii, and iv",
+            "i, ii, and iii"
+          ],
+          "answer": "i, ii, and iii",
+          "reasoning": "The fundamental structure of a neuron consists of the cell body (soma), which contains the nucleus; dendrites, which receive signals; and the axon, which transmits signals away from the cell body. Myelin is a sheath that covers the axon but is not considered one of the three main structural parts."
+        },
+        {
+          "question_text": [
+            "Match the endocrine gland with the primary hormone it produces.",
+            "MTF_DATA"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "A. Pancreas",
+              "B. Thyroid",
+              "C. Adrenal",
+              "D. Pituitary"
+            ],
+            "right_column": [
+              "Thyroxine",
+              "Adrenaline",
+              "Growth Hormone",
+              "Insulin"
+            ]
+          },
+          "choices": [
+            "A-Insulin, B-Thyroxine, C-Adrenaline, D-Growth Hormone",
+            "A-Thyroxine, B-Insulin, C-Growth Hormone, D-Adrenaline",
+            "A-Adrenaline, B-Growth Hormone, C-Insulin, D-Thyroxine",
+            "A-Insulin, B-Adrenaline, C-Thyroxine, D-Growth Hormone"
+          ],
+          "answer": "A-Insulin, B-Thyroxine, C-Adrenaline, D-Growth Hormone",
+          "reasoning": "Pancreas produces Insulin, Thyroid produces Thyroxine, Adrenal glands produce Adrenaline, and the Pituitary gland produces Growth Hormone."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "Aerobic respiration yields significantly more ATP than anaerobic respiration."
+            },
+            {
+              "label": "Reason",
+              "text": "Aerobic respiration involves the complete oxidation of glucose in the presence of oxygen, unlocking its full energy potential."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Both incorrect"
+          ],
+          "answer": "Both correct, reason explains assertion",
+          "reasoning": "Aerobic respiration produces about 36-38 ATP molecules per glucose molecule, while anaerobic respiration produces only 2. The reason is that the complete breakdown of glucose with oxygen releases much more energy than the partial breakdown without it. The reason directly explains the assertion."
+        },
+        {
+          "question_text": [
+            "A food chain shows the flow of energy in an ecosystem.",
+            "LIST",
+            "Arrange the following organisms into a logical food chain sequence."
+          ],
+          "list_items": [
+            "A. Lion",
+            "B. Grass",
+            "C. Deer"
+          ],
+          "choices": [
+            "A → C → B",
+            "B → C → A",
+            "C → A → B",
+            "B → A → C"
+          ],
+          "answer": "B → C → A",
+          "reasoning": "Energy flows from producers to consumers. Grass (B) is the producer. The deer (C), a herbivore, eats the grass. The lion (A), a carnivore, eats the deer. So the correct sequence is Grass → Deer → Lion."
+        },
+        {
+          "question_text": [
+            "PARAGRAPH",
+            "Based on the passage, what is the fundamental pairing rule in a DNA molecule?"
+          ],
+          "paragraph": "Deoxyribonucleic acid, or DNA, is the molecule that carries the genetic instructions for all known living organisms. Its structure is a double helix, resembling a twisted ladder. The 'rungs' of this ladder are made of pairs of nitrogenous bases. There are four bases: Adenine (A), Guanine (G), Cytosine (C), and Thymine (T). A crucial feature of DNA's structure is the specific base-pairing rule: Adenine always pairs with Thymine, and Guanine always pairs with Cytosine. This complementarity is key to DNA replication and function.",
+          "choices": [
+            "Adenine pairs with Guanine; Cytosine pairs with Thymine.",
+            "Adenine pairs with Cytosine; Guanine pairs with Thymine.",
+            "Adenine pairs with Thymine; Guanine pairs with Cytosine.",
+            "Any base can pair with any other base."
+          ],
+          "answer": "Adenine pairs with Thymine; Guanine pairs with Cytosine.",
+          "reasoning": "The passage explicitly states the base-pairing rule: 'Adenine always pairs with Thymine, and Guanine always pairs with Cytosine.'"
+        },
+        {
+          "question_text": [
+            "The organism Hydra reproduces by developing small outgrowths on its body that detach and grow into new individuals.",
+            "What is this mode of reproduction called?"
+          ],
+          "choices": [
+            "Fission",
+            "Fragmentation",
+            "Budding",
+            "Spore formation"
+          ],
+          "answer": "Budding",
+          "reasoning": "Budding is a type of asexual reproduction where a new individual develops from some generative anatomical point of the parent organism, which is what is described for Hydra."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "The primary role of the kidneys in the human body is to filter metabolic wastes from the blood to form urine."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "Each kidney contains millions of microscopic filtering units called nephrons."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "Both A and R are true and R is the correct explanation of A.",
+          "reasoning": "The assertion states the main function of the kidneys. The reason explains the structural basis for this function; it is because of the millions of nephrons that the kidney is able to perform its complex filtering role effectively. Therefore, the reason explains the assertion."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "description": "This section covers topics in algebra, geometry, trigonometry, and statistics.",
+      "questions": [
+        {
+          "question_text": [
+            "For a quadratic equation of the form ax² + bx + c = 0, what is the formula for the discriminant?"
+          ],
+          "choices": [
+            "b² + 4ac",
+            "b² - 4ac",
+            "4ac - b²",
+            "-b ± √(b² - 4ac)"
+          ],
+          "answer": "b² - 4ac",
+          "reasoning": "The discriminant, which determines the nature of the roots of a quadratic equation, is given by the expression D = b² - 4ac."
+        },
+        {
+          "question_text": [
+            "What is the common difference of the Arithmetic Progression (AP): 4, 1, -2, -5, ... ?"
+          ],
+          "choices": [
+            "3",
+            "4",
+            "-3",
+            "5"
+          ],
+          "answer": "-3",
+          "reasoning": "The common difference (d) is found by subtracting any term from its subsequent term. For example, d = 1 - 4 = -3, or d = -2 - 1 = -3."
+        },
+        {
+          "question_text": [
+            "Read the following statement about trigonometric functions.",
+            "STATEMENT",
+            "Is this statement mathematically correct?"
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "For any angle θ, the value of sin(θ) can be 2."
+            }
+          ],
+          "choices": [
+            "Correct",
+            "Incorrect",
+            "Correct only if θ is greater than 90°",
+            "Correct only for right-angled triangles"
+          ],
+          "answer": "Incorrect",
+          "reasoning": "The range of the sine function is [-1, 1]. The value of sin(θ) must always be between -1 and 1, inclusive. It can never be 2."
+        },
+        {
+          "question_text": [
+            "LIST",
+            "Which of the following statements about circles are true?"
+          ],
+          "list_items": [
+            "i. A tangent to a circle is perpendicular to the radius at the point of tangency.",
+            "ii. The lengths of tangents drawn from an external point to a circle are equal.",
+            "iii. A chord that passes through the center is called the diameter.",
+            "iv. A circle can have multiple diameters."
+          ],
+          "choices": [
+            "i and ii only",
+            "i, ii, and iii only",
+            "ii and iv only",
+            "All are true"
+          ],
+          "answer": "All are true",
+          "reasoning": "All four statements are fundamental theorems and definitions related to circles. (i) is the tangent-radius theorem. (ii) is the external point tangent theorem. (iii) is the definition of a diameter. (iv) A circle has infinitely many diameters."
+        },
+        {
+          "question_text": [
+            "Match the geometric shapes with their correct area or volume formulas.",
+            "MTF_DATA"
+          ],
+          "mtf_data": {
+            "left_column": [
+              "1. Area of a Circle",
+              "2. Volume of a Cube",
+              "3. Area of a Square",
+              "4. Circumference of a Circle"
+            ],
+            "right_column": [
+              "s³",
+              "s²",
+              "2πr",
+              "πr²"
+            ]
+          },
+          "choices": [
+            "1-πr², 2-s³, 3-s², 4-2πr",
+            "1-s², 2-s³, 3-2πr, 4-πr²",
+            "1-πr², 2-s², 3-s³, 4-2πr",
+            "1-2πr, 2-s³, 3-s², 4-πr²"
+          ],
+          "answer": "1-πr², 2-s³, 3-s², 4-2πr",
+          "reasoning": "The correct formulas are: Area of a Circle is πr², Volume of a Cube is s³ (side cubed), Area of a Square is s², and Circumference of a Circle is 2πr."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "The probability of a sure event is 1."
+            },
+            {
+              "label": "Reason",
+              "text": "Probability of an event E is defined as P(E) = (Number of favorable outcomes) / (Total number of outcomes)."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Assertion incorrect, reason correct"
+          ],
+          "answer": "Both correct, reason doesn't explain assertion",
+          "reasoning": "Both statements are correct. The assertion is a principle of probability. The reason is the general formula for calculating probability. While the formula can be used to show why a sure event has P=1 (favorable outcomes = total outcomes), it is the definition itself, not a direct explanation of the specific case. A more direct explanation would be 'For a sure event, every outcome is a favorable outcome.'"
+        },
+        {
+          "question_text": [
+            "LIST",
+            "Arrange the steps in the correct order for solving a pair of linear equations using the elimination method."
+          ],
+          "list_items": [
+            "A. Add or subtract the equations to eliminate one variable.",
+            "B. Solve the resulting equation for the remaining variable.",
+            "C. Multiply one or both equations by suitable numbers to make the coefficients of one variable numerically equal.",
+            "D. Substitute the value found in step B back into one of the original equations to find the other variable."
+          ],
+          "choices": [
+            "C → A → B → D",
+            "A → C → B → D",
+            "C → B → A → D",
+            "B → D → C → A"
+          ],
+          "answer": "C → A → B → D",
+          "reasoning": "First, you must make the coefficients of one variable equal (C). Then, you can add/subtract the equations to eliminate that variable (A). This leaves a single-variable equation to solve (B). Finally, you substitute that value back to find the second variable (D)."
+        },
+        {
+          "question_text": [
+            "Read the following passage about measures of central tendency.",
+            "PARAGRAPH",
+            "Which measure of central tendency is described as the 'middle value' in an ordered dataset?"
+          ],
+          "paragraph": "In statistics, measures of central tendency provide a summary of a dataset. The three most common measures are the mean, median, and mode. The mean is the arithmetic average, calculated by summing all values and dividing by the count of values. The mode is the value that appears most frequently in the dataset. The median is the value that separates the higher half from the lower half of a data sample; to find it, the data must first be arranged in ascending or descending order.",
+          "choices": [
+            "Mean",
+            "Median",
+            "Mode",
+            "Range"
+          ],
+          "answer": "Median",
+          "reasoning": "The passage defines the median as 'the value that separates the higher half from the lower half of a data sample' after arranging the data in order, which corresponds to the 'middle value'."
+        },
+        {
+          "question_text": [
+            "What is the formula for the total surface area of a sphere with radius 'r'?"
+          ],
+          "choices": [
+            "(4/3)πr³",
+            "2πr²",
+            "4πr²",
+            "πr²h"
+          ],
+          "answer": "4πr²",
+          "reasoning": "The formula for the total surface area of a sphere is 4 times pi times the square of the radius. (4/3)πr³ is the volume of a sphere."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "If two triangles are similar, then the ratio of their areas is equal to the square of the ratio of their corresponding sides."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "Two triangles are similar if their corresponding angles are equal and their corresponding sides are in the same ratio."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "Both A and R are true but R is not the correct explanation of A.",
+          "reasoning": "Both statements are correct theorems in geometry. However, the reason (R) is the definition of similar triangles. It states the conditions for similarity but does not directly derive or explain the area ratio theorem (A). The proof of A uses the definition in R, but R by itself isn't the explanation; it's the prerequisite condition."
+        }
+      ]
+    }
+  ]
+}

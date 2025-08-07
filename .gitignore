@@ -1,6 +1,4 @@
-/Generated_Papers/
-/questions_data/images/
-/questions_data/*.json
+
 /.venv/
 /fonts/
 /paper_generators/__pycache__/
