@@ -457,12 +457,12 @@ class MCQPaperGenerator(BasePaperGenerator):
         
         # Calculate actual height needed more accurately
         needed_height = self.measure_question_height(question_text, choices, reasoning)
-        safety_buffer = 5  # Keep reasonable buffer
+        safety_buffer = 3  # Reduced buffer for better space utilization
         total_needed_height = needed_height + safety_buffer
         
         # Get current position and effective page bounds
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 5
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         
         # Calculate available space in current position

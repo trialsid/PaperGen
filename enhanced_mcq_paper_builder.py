@@ -18,6 +18,13 @@ import fitz  # PyMuPDF for PDF manipulation
 
 from paper_generators.enhanced_mcq_generator import EnhancedMCQPaperGenerator, MCQConfig, SectionConfig
 
+try:
+    from fpdf.enums import XPos, YPos
+except ImportError:
+    # Fallback for older fpdf versions
+    XPos = None
+    YPos = None
+
 class BlankPageGenerator(EnhancedMCQPaperGenerator):
     """Generator for blank pages with consistent header, footer, and specific page number."""
     
@@ -35,7 +42,10 @@ class BlankPageGenerator(EnhancedMCQPaperGenerator):
         
         self.set_y(header_y)
         self.set_font('Noto', 'B', self.config.font_sizes['header'])
-        self.cell(self.w - 20, 10, "Empty page for rough work", 0, 1, 'C')
+        if XPos and YPos:
+            self.cell(self.w - 20, 10, "Empty page for rough work", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align='C')
+        else:
+            self.cell(self.w - 20, 10, "Empty page for rough work", 0, 1, 'C')
         
         self.line(10, header_y + 10, self.w - 10, header_y + 10)
         self.line(self.w/2, header_y + 10, self.w/2, self.h - 12)
@@ -47,7 +57,10 @@ class BlankPageGenerator(EnhancedMCQPaperGenerator):
         self.set_font('Noto', 'I', self.config.font_sizes['footer'])
         # Use specified page number if provided, otherwise fall back to current page_no()
         page_text = f'Page {self.specified_page_number if self.specified_page_number is not None else self.page_no()}'
-        self.cell(0, 5, page_text, 0, 0, 'C')
+        if XPos and YPos:
+            self.cell(0, 5, page_text, 0, new_x=XPos.RIGHT, new_y=YPos.TOP, align='C')
+        else:
+            self.cell(0, 5, page_text, 0, 0, 'C')
 
 def ensure_directories_exist():
     """Create necessary output directories if they don't exist."""
@@ -137,18 +150,26 @@ def rearrange_for_booklet(input_pdf_path: str, output_pdf_path: str, config: Opt
         pad_n = ((n + 3) // 4) * 4
         num_blank_pages = pad_n - n  # Number of blank pages to add
 
-        # Create all blank pages at once if needed
+        # Create styled blank pages with correct page numbers
         blank_pages = []
         if num_blank_pages > 0 and config:
+            # Create one blank page generator and reuse it for efficiency
+            blank_generator = BlankPageGenerator(config=config, paper_format='A4')
+            
             for i in range(num_blank_pages):
                 page_num = n + i + 1
                 blank_path = f'temp_blank_{i}.pdf'
-                blank_generator = BlankPageGenerator(config=config, paper_format='A4', page_number=page_num)
+                
+                # Set the correct page number for this blank page
+                blank_generator.specified_page_number = page_num
+                
+                # Reset the generator for a new page
+                blank_generator.__init__(config=config, paper_format='A4', page_number=page_num)
                 blank_generator.add_page()
                 blank_generator.output(blank_path)
                 blank_pages.append(blank_path)
                 
-            # Add blank pages to the document
+            # Add all blank pages to the document
             for blank_path in blank_pages:
                 blank_doc = fitz.open(blank_path)
                 doc.insert_pdf(blank_doc)
@@ -353,7 +374,7 @@ def generate_enhanced_mcq_sets_with_keys(
     no_shuffle: bool = False,
     no_student_info: bool = False
 ) -> Dict:
-    """Generate Enhanced MCQ sets with sections and answer keys."""
+    """Generate Enhanced MCQ sets with sections and answer keys - OPTIMIZED VERSION."""
     set_names = list(string.ascii_uppercase[:num_sets])
     set_data = {}
     
@@ -379,62 +400,73 @@ def generate_enhanced_mcq_sets_with_keys(
     # Calculate total questions
     total_questions = sum(section.required_questions for section in base_sections)
     
-    # Process each set
+    # Pre-generate all shuffled data for all sets at once
+    all_sets_data = {}
     for set_name in set_names:
-        try:
-            # Create copies of sections with shuffled questions and options for this set
-            set_sections = []
-            shuffled_set_data = []  # Store the shuffled data for this set
-            
-            for section in base_sections:
-                # Deep copy questions and prepare shuffled version
-                shuffled_questions = []
-                for q in section.questions:
-                    question_copy = q.copy()
-                    # Get all choices including the answer
-                    all_choices = question_copy['choices'].copy()
-                    correct_answer = q['answer']
-                    
-                    if not no_shuffle:
-                        # Store original indices before shuffling to track answer position
-                        original_indices = list(range(len(all_choices)))
-                        # Shuffle both choices and indices together
-                        combined = list(zip(all_choices, original_indices))
-                        random.shuffle(combined)
-                        shuffled_choices, shuffled_indices = zip(*combined)
-                        
-                        # Update the question with shuffled choices
-                        question_copy['choices'] = list(shuffled_choices)
-                        # Find new position of correct answer
-                        correct_index = all_choices.index(correct_answer)
-                        new_answer_index = shuffled_indices.index(correct_index)
-                        question_copy['answer'] = shuffled_choices[new_answer_index]
-                    
-                    shuffled_questions.append(question_copy)
+        set_sections = []
+        shuffled_set_data = []
+        
+        for section in base_sections:
+            # Deep copy questions and prepare shuffled version
+            shuffled_questions = []
+            for q in section.questions:
+                question_copy = q.copy()
+                # Get all choices including the answer
+                all_choices = question_copy['choices'].copy()
+                correct_answer = q['answer']
                 
-                # Shuffle questions and store their order
                 if not no_shuffle:
-                    question_indices = list(range(len(shuffled_questions)))
-                    random.shuffle(question_indices)
-                    ordered_questions = [shuffled_questions[i] for i in question_indices]
-                else:
-                    ordered_questions = shuffled_questions
+                    # Store original indices before shuffling to track answer position
+                    original_indices = list(range(len(all_choices)))
+                    # Shuffle both choices and indices together
+                    combined = list(zip(all_choices, original_indices))
+                    random.shuffle(combined)
+                    shuffled_choices, shuffled_indices = zip(*combined)
+                    
+                    # Update the question with shuffled choices
+                    question_copy['choices'] = list(shuffled_choices)
+                    # Find new position of correct answer
+                    correct_index = all_choices.index(correct_answer)
+                    new_answer_index = shuffled_indices.index(correct_index)
+                    question_copy['answer'] = shuffled_choices[new_answer_index]
                 
-                section_copy = SectionConfig(
-                    name=section.name,
-                    description=section.description,
-                    questions=ordered_questions,
-                    required_questions=section.required_questions
-                )
-                set_sections.append(section_copy)
-                
-                # Store the shuffled data
-                shuffled_set_data.append({
-                    'section_name': section.name,
-                    'questions': ordered_questions.copy()
-                })
+                shuffled_questions.append(question_copy)
             
-            # Generate question PDF
+            # Shuffle questions and store their order
+            if not no_shuffle:
+                question_indices = list(range(len(shuffled_questions)))
+                random.shuffle(question_indices)
+                ordered_questions = [shuffled_questions[i] for i in question_indices]
+            else:
+                ordered_questions = shuffled_questions
+            
+            section_copy = SectionConfig(
+                name=section.name,
+                description=section.description,
+                questions=ordered_questions,
+                required_questions=section.required_questions
+            )
+            set_sections.append(section_copy)
+            
+            # Store the shuffled data
+            shuffled_set_data.append({
+                'section_name': section.name,
+                'questions': ordered_questions.copy()
+            })
+        
+        all_sets_data[set_name] = {
+            'sections': set_sections,
+            'shuffled_data': shuffled_set_data
+        }
+    
+    # Process each set with optimized generator creation
+    for i, set_name in enumerate(set_names, 1):
+        print(f"Processing Set {set_name} ({i}/{num_sets})...")
+        try:
+            set_sections = all_sets_data[set_name]['sections']
+            shuffled_set_data = all_sets_data[set_name]['shuffled_data']
+            
+            # Create question paper
             pdf = EnhancedMCQPaperGenerator(config=config, show_answers=False, paper_format=paper_format, 
                                            question_count=total_questions, show_student_info=not no_student_info,
                                            strict_ordering=no_shuffle)
@@ -442,28 +474,21 @@ def generate_enhanced_mcq_sets_with_keys(
             pdf.add_page()
             total_marks = pdf.generate_from_sections(set_sections)
             
-            # Generate answers PDF using same data and ordering
+            # Define file paths
+            question_pdf_path = f'{question_papers_dir}/enhanced_mcq_set_{set_name}.pdf'
+            answer_pdf_path = f'{answer_papers_dir}/enhanced_mcq_set_{set_name}_answers.pdf'
+            booklet_pdf_path = f'{booklets_dir}/enhanced_mcq_set_{set_name}_booklet.pdf'
+            
+            # Save question paper
+            pdf.output(question_pdf_path)
+            
+            # Create answer key (reuse same sections data)
             pdf_answers = EnhancedMCQPaperGenerator(config=config, show_answers=True, paper_format=paper_format, 
                                                    question_count=total_questions, show_student_info=not no_student_info,
                                                    strict_ordering=no_shuffle)
             pdf_answers.set_set_name(set_name)
             pdf_answers.add_page()
             pdf_answers.generate_from_sections(set_sections)
-            
-            # Generate A3 booklet format
-            pdf_booklet = EnhancedMCQPaperGenerator(config=config, show_answers=False, paper_format='A3', 
-                                                   question_count=total_questions, show_student_info=not no_student_info,
-                                                   strict_ordering=no_shuffle)
-            pdf_booklet.set_set_name(set_name)
-            pdf_booklet.add_page()
-            pdf_booklet.generate_from_sections(set_sections)
-            
-            # Define file paths
-            question_pdf_path = f'{question_papers_dir}/enhanced_mcq_set_{set_name}.pdf'
-            answer_pdf_path = f'{answer_papers_dir}/enhanced_mcq_set_{set_name}_answers.pdf'
-            booklet_pdf_path = f'{booklets_dir}/enhanced_mcq_set_{set_name}_booklet.pdf'
-            
-            pdf.output(question_pdf_path)
             pdf_answers.output(answer_pdf_path)
             
             # Create booklet version with proper page ordering

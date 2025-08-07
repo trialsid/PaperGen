@@ -87,13 +87,20 @@ class BasePaperGenerator(FPDF):
         """Set the name of the current set (A, B, C, etc.)."""
         self.set_name = name
 
+
+    # Class-level font cache to prevent reloading fonts
+    _global_font_cache = {}
+    
     def _initialize_fonts(self) -> None:
         """Initialize fonts with fallback to standard fonts if custom fonts are not available."""
         for font_family, styles in self.config.font_paths.items():
             for style, path in styles.items():
+                font_key = (font_family, style)
                 try:
                     if not os.path.exists(path):
-                        print(f"Warning: Font file not found: {path}")
+                        if font_key not in self._global_font_cache:
+                            print(f"Warning: Font file not found: {path}")
+                            self._global_font_cache[font_key] = 'fallback'
                         # Use fallback fonts
                         if font_family == 'Stinger':
                             self.set_font('Arial', style)
@@ -103,11 +110,18 @@ class BasePaperGenerator(FPDF):
                             self.set_font('Arial', style)
                         continue
                         
-                    if (font_family, style) not in self._initialized_fonts:
-                        self.add_font(font_family, style, path, uni=True)
-                        self._initialized_fonts.add((font_family, style))
+                    if font_key not in self._initialized_fonts:
+                        if font_key not in self._global_font_cache:
+                            self.add_font(font_family, style, path, uni=True)
+                            self._global_font_cache[font_key] = 'loaded'
+                        else:
+                            # Font already loaded globally, just add to this instance
+                            self.add_font(font_family, style, path, uni=True)
+                        self._initialized_fonts.add(font_key)
                 except Exception as e:
-                    print(f"Warning: Could not load font {font_family} {style}: {e}")
+                    if font_key not in self._global_font_cache:
+                        print(f"Warning: Could not load font {font_family} {style}: {e}")
+                        self._global_font_cache[font_key] = 'error'
                     # Use fallback fonts
                     if font_family == 'Stinger':
                         self.set_font('Arial', style)

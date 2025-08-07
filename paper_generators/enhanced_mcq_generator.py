@@ -114,12 +114,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, statement, choices, reasoning
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -234,12 +234,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, statements, choices, reasoning
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -351,12 +351,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, sequence_items, choices, reasoning
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -447,12 +447,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, paragraph, question_text_after, choices, reasoning
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -569,12 +569,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, left_column, right_column, choices, reasoning
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
@@ -907,12 +907,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             question_text, choices, reasoning, **kwargs
         )
         
-        safety_buffer = 5
+        safety_buffer = 3
         total_needed_height = needed_height + safety_buffer
         
         # Check if we need to move to next column/page
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3
+        footer_buffer = self.MIN_FOOTER_BUFFER
         effective_page_height = self.h - footer_buffer
         available_space = effective_page_height - current_y
         
