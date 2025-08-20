@@ -1,17 +1,24 @@
 # PaperGen
 
-A Python-based tool for generating educational question papers in PDF format. Supports both Multiple Choice Questions (MCQ) and mixed-format papers with customizable layouts and formatting.
+A comprehensive Python-based tool for generating professional educational question papers in PDF format. Supports multiple question types including MCQ, Match the Following (MTF), Statements evaluation, and more with advanced formatting capabilities.
 
 ## Features
 
-- **MCQ Paper Generation**: Create multiple choice question papers with answer keys
-- **Mixed Paper Generation**: Generate papers with various question types
-- **PDF Output**: Professional PDF generation with proper formatting
-- **Customizable Templates**: Flexible configuration for different paper formats
-- **Multiple Sets**: Generate multiple paper sets (A, B, etc.) with shuffled questions
-- **Answer Keys**: Automatic generation of answer keys and detailed explanations
-- **Image Support**: Include images in questions
-- **Font Support**: Multiple font options including Arial Unicode and Noto Sans
+- **Enhanced MCQ Paper Generation**: Create sophisticated multiple choice question papers with various question types
+- **Multiple Question Formats**: 
+  - Basic Multiple Choice Questions
+  - Match the Following (MTF) with optional headers
+  - Statement evaluation (single and multiple statements)
+  - List-based questions
+  - Paragraph-based reading comprehension
+  - Assertion and Reason questions
+  - Sequencing questions
+- **Professional PDF Output**: High-quality PDF generation with proper formatting and spacing
+- **Flexible Font Sizing**: Four size configurations (x-small, small, medium, large) for different requirements
+- **Multiple Paper Sets**: Generate multiple paper sets with shuffled questions
+- **Answer Keys**: Automatic generation of answer keys with detailed explanations
+- **Advanced Formatting**: Support for complex layouts, headers, and styling
+- **Unicode Font Support**: Full Unicode support with Arial Unicode and Noto fonts
 
 ## Installation
 
@@ -23,94 +30,151 @@ pip install -r requirements.txt
 
 ## Usage
 
-### MCQ Paper Generation
+### Basic Paper Generation
 
 ```bash
-python mcq_paper_builder.py --config path/to/config.json --questions path/to/questions.json
+python enhanced_mcq_paper_builder.py --input-file questions_data/example.json
 ```
 
-### Mixed Paper Generation
+### Advanced Options
 
 ```bash
-python mixed_paper_builder.py --config path/to/config.json --questions path/to/questions.json
+# Generate with custom settings
+python enhanced_mcq_paper_builder.py --input-file questions_data/narayana2.json --size x-small --no-student-info --no-shuffle
+
+# Generate with custom titles
+python enhanced_mcq_paper_builder.py --input-file questions_data/example.json --title "Final Exam" --subtitle "Physics" --exam-title "Semester Test"
 ```
 
 ### Command Line Options
 
-- `--config`: Path to configuration JSON file
-- `--questions`: Path to questions JSON file
-- `--output-dir`: Output directory for generated papers
-- `--no-shuffle`: Disable question shuffling
-- `--sets`: Number of paper sets to generate
+- `--input-file`: Path to questions JSON file (default: questions_data/mcq_questions.json)
+- `--size`: Font and spacing size (x-small, small, medium, large) - default: medium
+- `--title`: Paper title (max 60 characters)
+- `--subtitle`: Paper subtitle (max 50 characters) 
+- `--exam-title`: Exam title (max 50 characters)
+- `--no-student-info`: Remove student information section from first page
+- `--no-shuffle`: Disable question shuffling within sections
+- `--layout`: Layout type (one-column, two-column) - default: two-column
 
 ## File Structure
 
-- `mcq_paper_builder.py`: Main script for MCQ paper generation
-- `mixed_paper_builder.py`: Main script for mixed paper generation
+- `enhanced_mcq_paper_builder.py`: Main enhanced script with full feature support
 - `paper_generators/`: Core paper generation modules
-  - `base_generator.py`: Base generator class
-  - `mcq_generator.py`: MCQ-specific generator
-  - `mixed_generator.py`: Mixed paper generator
-  - `styles.py`: Styling and formatting utilities
-- `questions_data/`: Sample question data files
-- `fonts/`: Font files for PDF generation
-- `Generated_Papers/`: Output directory for generated PDFs
+  - `enhanced_mcq_generator.py`: Advanced MCQ generator with MTF and statement support
+  - `mcq_generator.py`: Base MCQ generator class
+  - `styles.py`: Font sizing and spacing configurations
+- `questions_data/`: Question data files and documentation
+  - `example.json`: Comprehensive example with all question types
+  - `narayana2.json`: Sample question bank with 100 questions
+  - `prompt.txt`: Documentation for AI-assisted question conversion
+- `Generated_Papers/`: Output directory for generated PDFs (auto-created)
 
 ## Question Format
 
-Questions should be stored in JSON format. See `questions_data/` for examples.
+Questions are organized in sections within JSON files. The system supports multiple question types with flexible formatting.
 
-### MCQ Questions Format
-```json
-{
-  "questions": [
-    {
-      "question": "What is the capital of France?",
-      "options": ["London", "Berlin", "Paris", "Madrid"],
-      "correct_answer": "Paris",
-      "explanation": "Paris is the capital city of France."
-    }
-  ]
-}
-```
-
-### Mixed Questions Format
+### Basic Structure
 ```json
 {
   "sections": [
     {
-      "title": "Section A",
-      "questions": [
-        {
-          "question": "Explain the process of photosynthesis.",
-          "marks": 5,
-          "type": "essay"
-        }
-      ]
+      "name": "Section Name",
+      "description": "Section description or instructions",
+      "questions": [...]
     }
   ]
 }
 ```
 
-## Configuration
+### Basic MCQ Question
+```json
+{
+  "question_text": ["What is the capital of France?"],
+  "choices": ["London", "Berlin", "Paris", "Madrid"],
+  "answer": "Paris",
+  "reasoning": "Paris is the capital and largest city of France."
+}
+```
 
-Paper generation can be customized through JSON configuration files. Configure:
-- Paper title and subtitle
-- Font sizes and styles
-- Page layout and spacing
-- Section formatting
-- Answer key generation options
+### Match the Following (MTF)
+```json
+{
+  "question_text": ["Match the items:", "MTF_DATA"],
+  "mtf_data": {
+    "left_header": "Countries",
+    "right_header": "Capitals",
+    "left_column": ["A. France", "B. Germany", "C. Italy"],
+    "right_column": ["Berlin", "Rome", "Paris"]
+  },
+  "choices": ["A-3, B-1, C-2", "A-1, B-2, C-3", "A-2, B-3, C-1", "A-3, B-2, C-1"],
+  "answer": "A-3, B-1, C-2",
+  "reasoning": "France-Paris, Germany-Berlin, Italy-Rome"
+}
+```
+
+### Statement Evaluation
+```json
+{
+  "question_text": ["STATEMENTS"],
+  "statements": [
+    {
+      "label": "Statement-1",
+      "text": "The Earth revolves around the Sun."
+    },
+    {
+      "label": "Statement-2", 
+      "text": "The Moon is a natural satellite of Earth."
+    }
+  ],
+  "choices": ["1 only", "2 only", "Both 1 and 2", "Neither 1 nor 2"],
+  "answer": "Both 1 and 2",
+  "reasoning": "Both statements are scientifically accurate."
+}
+```
+
+## Font Size Configurations
+
+Choose from four predefined size configurations:
+
+- **x-small**: Ultra-compact formatting for maximum content density
+- **small**: Compact formatting for space efficiency  
+- **medium**: Default balanced formatting
+- **large**: Spacious formatting for better readability
+
+Each configuration adjusts font sizes, spacing, and layout proportionally.
 
 ## Output
 
-Generated papers are saved in the `Generated_Papers/` directory:
-- `MCQ/`: MCQ papers, answer keys, and booklets
-- `Mixed/`: Mixed format papers and booklets
+Generated papers are automatically saved with descriptive filenames:
+- Papers include both question paper and answer key in single PDF
+- Automatic page numbering and professional formatting
+- Support for blank pages for rough work
+- Generated in the current directory with timestamp-based naming
+
+## Exam Duration
+
+Default exam duration is set to **120 minutes** and appears in the paper header.
 
 ## Requirements
 
 - Python 3.7+
-- fpdf==1.7.2
-- PyMuPDF==1.25.3
-- Pillow==11.1.0
-- Other dependencies listed in requirements.txt
+- fpdf2 (for PDF generation)
+- PyMuPDF (for PDF processing)
+- Pillow (for image support)
+- Other dependencies as listed in requirements.txt
+
+## Contributing
+
+See `questions_data/prompt.txt` for detailed documentation on question format specifications and guidelines for creating question banks.
+
+## Examples
+
+Check the `questions_data/` folder for:
+- `example.json`: Demonstrates all supported question types
+- `narayana2.json`: Real-world question bank with 100 diverse questions
+
+Generate a sample paper:
+```bash
+python enhanced_mcq_paper_builder.py --input-file questions_data/example.json --size small
+```
