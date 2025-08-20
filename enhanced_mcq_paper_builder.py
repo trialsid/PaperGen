@@ -580,7 +580,7 @@ Examples:
     parser.add_argument('--exam-title', type=str, help='Exam title (max 50 characters)')
     parser.add_argument('--input-file', type=str, default='questions_data/mcq_questions.json',
                       help='Input JSON file with sections data (default: questions_data/mcq_questions.json)')
-    parser.add_argument('--size', type=str, default='medium', choices=['small', 'medium', 'large'],
+    parser.add_argument('--size', type=str, default='medium', choices=['x-small', 'small', 'medium', 'large'],
                       help='Font and spacing size configuration (default: medium)')
     parser.add_argument('--no-student-info', action='store_true',
                       help='Remove student information and instructions from the first page')

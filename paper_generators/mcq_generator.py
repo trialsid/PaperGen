@@ -236,7 +236,7 @@ class MCQPaperGenerator(BasePaperGenerator):
         
         # Create a table structure with two columns
         labels = ['Questions:', 'Duration:']
-        values = [f'{self.question_count}', '45min']
+        values = [f'{self.question_count}', '120min']
         
         # Calculate required column widths
         self.set_font('Noto', '', 10)

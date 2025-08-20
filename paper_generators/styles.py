@@ -20,6 +20,19 @@ class PaperStyles:
     
     # Font size configurations
     FONT_SIZE_CONFIGS = {
+        'x-small': {
+            'title': 22,
+            'subtitle': 12,
+            'exam_title': 16,
+            'header': 9,
+            'question': 10,
+            'option': 10,
+            'footer': 7,
+            'section_name': 11,
+            'section_description': 10,
+            'question_number': 8,
+            'option_label': 8
+        },
         'small': {
             'title': 26,
             'subtitle': 14,
@@ -66,6 +79,19 @@ class PaperStyles:
     
     # Spacing configurations
     SPACING_CONFIGS = {
+        'x-small': {
+            'question_number_width': 8,
+            'option_spacing': 5,
+            'footer_height': 10,
+            'column_spacing': 12,
+            'option_column_gap': 2,
+            'line_height': 3.5,
+            'section_spacing': {
+                'before_section': 3,
+                'after_section_name': 1,
+                'after_description': 2
+            }
+        },
         'small': {
             'question_number_width': 10,
             'option_spacing': 6,
