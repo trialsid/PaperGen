@@ -52,29 +52,55 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
     
     
     def render_mtf_table(self, left_column: List[str], right_column: List[str], 
-                        x: float, y: float, width: float) -> float:
+                        x: float, y: float, width: float, 
+                        left_header: str = None, right_header: str = None) -> float:
         """Render MTF data as a properly aligned table and return height used."""
         # Calculate column widths
         left_width = width * 0.45  # 45% for left column
         dash_width = width * 0.1   # 10% for dash separator
         right_width = width * 0.45 # 45% for right column
         
-        # Set font for table content
+        current_y = y
+        
+        # Set font for table content (same for headers and data)
         self.set_font('ArialUni', '', self.config.font_sizes['option'])
         
-        current_y = y
-        max_items = max(len(left_column), len(right_column))
+        # Prepare data including headers as first row if they exist
+        left_data = []
+        right_data = []
         
-        # Render each row
+        # Add headers as first row if they exist
+        if left_header or right_header:
+            left_data.append(left_header or '')
+            right_data.append(right_header or '')
+        
+        # Add actual data
+        left_data.extend(left_column)
+        right_data.extend(right_column)
+        
+        max_items = max(len(left_data), len(right_data))
+        
+        # Render each row (including headers as first row)
         for i in range(max_items):
             row_start_y = current_y
             left_end_y = row_start_y
             right_end_y = row_start_y
             
+            # Determine if this is the header row (first row and headers exist)
+            is_header_row = (i == 0 and (left_header or right_header))
+            
+            # Set font based on whether this is a header row
+            if is_header_row:
+                # Use statement label styling for headers
+                self.set_font('ArialUni', 'B', self.config.font_sizes['option_label'])
+            else:
+                # Use regular data font
+                self.set_font('ArialUni', '', self.config.font_sizes['option'])
+            
             # Left column item
-            if i < len(left_column):
+            if i < len(left_data):
                 self.set_xy(x, current_y)
-                left_text = left_column[i]
+                left_text = left_data[i]
                 
                 # Write left column text and track actual end position
                 self.multi_cell(left_width, self.config.spacing['line_height'], 
@@ -82,9 +108,9 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 left_end_y = self.get_y()
             
             # Right column item - render at same starting Y as left column
-            if i < len(right_column):
+            if i < len(right_data):
                 self.set_xy(x + left_width + dash_width, row_start_y)
-                right_text = right_column[i]
+                right_text = right_data[i]
                 
                 # Write right column text and track actual end position
                 self.multi_cell(right_width, self.config.spacing['line_height'], 
@@ -94,8 +120,8 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             # Calculate actual row height based on which column went further
             actual_row_height = max(left_end_y, right_end_y) - row_start_y
             
-            # Position dash separator at the middle of the actual row height
-            dash_y = row_start_y + (actual_row_height / 2) - 2
+            # Position dash separator aligned with the text baseline of the first line
+            dash_y = row_start_y - 0.5 # Align with text baseline (small offset for visual alignment)
             self.set_xy(x + left_width, dash_y)
             self.cell(dash_width, 5, '-', 0, 0, 'C')
             
@@ -1073,9 +1099,12 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         left_column = mtf_data.get('left_column', [])
         right_column = mtf_data.get('right_column', [])
+        left_header = mtf_data.get('left_header')
+        right_header = mtf_data.get('right_header')
         
         mtf_height = self.render_mtf_table(left_column, right_column, 
-                                          table_x, current_y, table_width)
+                                          table_x, current_y, table_width,
+                                          left_header, right_header)
         
         return current_y + mtf_height + 1  # Add spacing after MTF table
     
@@ -1180,22 +1209,43 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                     mtf_data = kwargs.get('mtf_data', {})
                     left_column = mtf_data.get('left_column', [])
                     right_column = mtf_data.get('right_column', [])
-                    max_items = max(len(left_column), len(right_column))
+                    left_header = mtf_data.get('left_header')
+                    right_header = mtf_data.get('right_header')
                     table_width = self._question_width - 5
                     left_width = table_width * 0.45
                     right_width = table_width * 0.45
                     
+                    # Prepare data including headers as first row if they exist
+                    left_data = []
+                    right_data = []
+                    
+                    # Add headers as first row if they exist
+                    if left_header or right_header:
+                        left_data.append(left_header or '')
+                        right_data.append(right_header or '')
+                    
+                    # Add actual data
+                    left_data.extend(left_column)
+                    right_data.extend(right_column)
+                    
+                    max_items = max(len(left_data), len(right_data))
+                    
                     mtf_height = 0
+                    # Calculate height for all rows (headers + data)
                     for i in range(max_items):
                         row_height = 0
-                        if i < len(left_column):
+                        # Determine if this is the header row and use appropriate font size
+                        is_header_row = (i == 0 and (left_header or right_header))
+                        font_size = self.config.font_sizes['option_label'] if is_header_row else self.config.font_sizes['option']
+                        
+                        if i < len(left_data):
                             left_height = self.estimate_text_height(
-                                left_column[i], left_width, self.config.font_sizes['option']
+                                left_data[i], left_width, font_size
                             )
                             row_height = max(row_height, left_height)
-                        if i < len(right_column):
+                        if i < len(right_data):
                             right_height = self.estimate_text_height(
-                                right_column[i], right_width, self.config.font_sizes['option']
+                                right_data[i], right_width, font_size
                             )
                             row_height = max(row_height, right_height)
                         # Use the maximum height from both columns for each row

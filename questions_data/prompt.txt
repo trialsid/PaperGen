@@ -1,0 +1,258 @@
+INSTRUCTIONS FOR CONVERTING QUESTIONS TO JSON FORMAT
+
+You are tasked with converting a list of questions into a specific JSON structure for question paper generation. Follow these guidelines strictly:
+
+## JSON STRUCTURE OVERVIEW
+
+The JSON should contain:
+- A "sections" array with one or more sections
+- Each section has: "name", "description", and "questions" array
+- Each question has: "question_text", "choices", "answer", "reasoning", and optional special fields
+
+## QUESTION TYPES AND FORMATS
+
+### 1. BASIC MULTIPLE CHOICE
+```json
+{
+  "question_text": ["Question content here"],
+  "choices": ["Option A", "Option B", "Option C", "Option D"],
+  "answer": "Correct option text",
+  "reasoning": "Explanation of why this is correct"
+}
+```
+
+### 2. MULTI-LINE QUESTIONS
+Split longer questions across multiple lines in the question_text array:
+```json
+{
+  "question_text": [
+    "First line of the question.",
+    "Second line with additional context.",
+    "Final line asking the actual question?"
+  ],
+  "choices": ["A", "B", "C", "D"],
+  "answer": "B",
+  "reasoning": "Explanation here"
+}
+```
+
+### 3. STATEMENT EVALUATION QUESTIONS
+For questions asking to evaluate statements, use "STATEMENT" placeholder and statements array:
+```json
+{
+  "question_text": [
+    "Evaluate the following statement:",
+    "STATEMENT",
+    "Is this statement correct?"
+  ],
+  "statements": [
+    {
+      "label": "Statement",
+      "text": "The actual statement to evaluate"
+    }
+  ],
+  "choices": ["True", "False", "Partially true", "Cannot be determined"],
+  "answer": "True",
+  "reasoning": "Explanation of why the statement is true/false"
+}
+```
+
+### 4. LIST-BASED QUESTIONS
+For questions with multiple items to evaluate, use "LIST" placeholder and list_items array:
+```json
+{
+  "question_text": [
+    "Which of the following are correct?",
+    "LIST"
+  ],
+  "list_items": [
+    "i. First item",
+    "ii. Second item", 
+    "iii. Third item",
+    "iv. Fourth item"
+  ],
+  "choices": [
+    "i and ii only",
+    "i, ii, and iii only", 
+    "ii and iv only",
+    "All of the above"
+  ],
+  "answer": "i, ii, and iii only",
+  "reasoning": "Items i, ii, and iii are correct because..."
+}
+```
+
+### 5. MATCH THE FOLLOWING (MTF)
+For matching questions, use "MTF_DATA" placeholder and mtf_data object:
+```json
+{
+  "question_text": [
+    "Match the items in Column A with Column B.",
+    "MTF_DATA"
+  ],
+  "mtf_data": {
+    "left_header": "Column A Title",          // Optional: Header for left column
+    "right_header": "Column B Title",         // Optional: Header for right column
+    "left_column": [
+      "A. Item 1",
+      "B. Item 2",
+      "C. Item 3",
+      "D. Item 4"
+    ],
+    "right_column": [
+      "Match for Item 2",
+      "Match for Item 4", 
+      "Match for Item 1",
+      "Match for Item 3"
+    ]
+  },
+  "choices": [
+    "A-3, B-1, C-4, D-2",
+    "A-1, B-2, C-3, D-4",
+    "A-2, B-3, C-1, D-4",
+    "A-4, B-1, C-2, D-3"
+  ],
+  "answer": "A-3, B-1, C-4, D-2",
+  "reasoning": "A matches with item 3 because..."
+}
+```
+
+**MTF Header Guidelines:**
+- `left_header` and `right_header` are optional fields
+- Use descriptive headers like "Countries", "Capitals", "Elements", "Atomic Numbers"
+- Headers will be displayed prominently above their respective columns
+- If headers are not provided, no header will be shown (maintains backward compatibility)
+
+### 6. ASSERTION AND REASON QUESTIONS
+For questions with assertion and reason, use statements array with specific labels:
+```json
+{
+  "question_text": ["STATEMENTS"],
+  "statements": [
+    {
+      "label": "Assertion", 
+      "text": "The assertion statement"
+    },
+    {
+      "label": "Reason",
+      "text": "The reason statement"
+    }
+  ],
+  "choices": [
+    "Both correct, reason explains assertion",
+    "Both correct, reason doesn't explain assertion", 
+    "Assertion correct, reason incorrect",
+    "Both incorrect"
+  ],
+  "answer": "Both correct, reason explains assertion",
+  "reasoning": "Both statements are correct and the reason properly explains..."
+}
+```
+
+Alternative format for Assertion/Reason:
+```json
+{
+  "statements": [
+    {
+      "label": "Assertion (A)",
+      "text": "The assertion"
+    },
+    {
+      "label": "Reason (R)", 
+      "text": "The reason"
+    }
+  ],
+  "choices": [
+    "Both A and R are true and R is the correct explanation of A.",
+    "Both A and R are true but R is not the correct explanation of A.",
+    "A is true but R is false.",
+    "A is false but R is true."
+  ]
+}
+```
+
+### 7. SEQUENCING/ORDERING QUESTIONS
+For step-by-step ordering, use LIST format:
+```json
+{
+  "question_text": [
+    "Arrange the following steps in correct order:",
+    "LIST",
+    "What is the correct sequence?"
+  ],
+  "list_items": [
+    "A. Final step",
+    "B. First step", 
+    "C. Middle step"
+  ],
+  "choices": [
+    "A → B → C",
+    "B → C → A",
+    "C → A → B", 
+    "B → A → C"
+  ],
+  "answer": "B → C → A",
+  "reasoning": "The logical sequence is first step (B), then middle step (C), then final step (A)"
+}
+```
+
+### 8. READING COMPREHENSION
+For passage-based questions, use "PARAGRAPH" placeholder and paragraph field:
+```json
+{
+  "question_text": [
+    "Read the following passage:",
+    "PARAGRAPH", 
+    "Based on the passage, what is the main idea?"
+  ],
+  "paragraph": "The actual passage text goes here. It can be multiple sentences explaining a concept or describing a scenario that the question will be based on.",
+  "choices": [
+    "Option based on passage",
+    "Another option",
+    "Third option", 
+    "Fourth option"
+  ],
+  "answer": "Option based on passage",
+  "reasoning": "The passage clearly states that..."
+}
+```
+
+## KEY FORMATTING RULES
+
+1. **question_text**: Always an array, even for single-line questions
+2. **choices**: Exactly 4 options as an array of strings
+3. **answer**: Must match exactly one of the choices
+4. **reasoning**: Clear explanation for the correct answer
+5. **Placeholders**: Use "STATEMENT", "LIST", "MTF_DATA", "STATEMENTS", "PARAGRAPH" as placeholders
+6. **Labels**: Use consistent labels like "Statement", "Assertion", "Reason", "Assertion (A)", "Reason (R)"
+
+## SECTION STRUCTURE
+
+Organize questions into logical sections:
+```json
+{
+  "sections": [
+    {
+      "name": "Physics", 
+      "description": "Questions covering fundamental physics concepts",
+      "questions": [/* question objects here */]
+    },
+    {
+      "name": "Chemistry",
+      "description": "Questions on chemical reactions and properties", 
+      "questions": [/* question objects here */]
+    }
+  ]
+}
+```
+
+## IMPORTANT NOTES
+
+- Every question must have all required fields
+- Answer must exactly match one of the four choices
+- Reasoning should explain why the answer is correct
+- Use appropriate placeholders for special question types
+- Maintain consistent formatting throughout
+- Ensure JSON is valid and properly structured
+
+When given a list of questions, analyze each one to determine its type, then convert it using the appropriate format above.
