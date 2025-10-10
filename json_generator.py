@@ -1,0 +1,930 @@
+import os
+import json
+from datetime import datetime
+from google import genai
+from google.genai import types
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+
+def generate():
+    # Get user input
+    user_input = input("Enter the topic or subject for generating 20 questions: ")
+    
+    client = genai.Client(
+        api_key=os.environ.get("GEMINI_API_KEY"),
+    )
+
+    model = "gemini-2.5-pro"
+    contents = [
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""Make 20 questions based on the user request:
+                  """ + user_input + """
+
+                  Strictly follow keys and structure of the questions given below.
+                  Make sure you use the response json is like the file below.
+                  Answer text should be in the choices array.
+                  Section name and description should be based on the topic of the question.
+                  Use mixure of question types in each section.
+
+                  Example file:
+                  {
+                    "sections": [
+                      {
+                        "name": "Question Text Array Format",
+                        "description": "This section demonstrates how the question_text array creates line breaks, with each string value becoming a separate line when rendered.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "This question has one string in the question_text array, creating a single line. How many strings are in this question_text array?"
+                            ],
+                            "choices": [
+                              "1 string",
+                              "2 strings",
+                              "3 strings",
+                              "4 strings"
+                            ],
+                            "answer": "1 string",
+                            "reasoning": "The question_text array contains exactly 1 string, which creates a single line display."
+                          },
+                          {
+                            "question_text": [
+                              "What is the chemical symbol for water?"
+                            ],
+                            "choices": [
+                              "H2O",
+                              "CO2",
+                              "NaCl",
+                              "O2"
+                            ],
+                            "answer": "H2O",
+                            "reasoning": "Water is composed of two hydrogen atoms and one oxygen atom, represented by the chemical formula H2O."
+                          },
+                          {
+                            "question_text": [
+                              "This question demonstrates two-line formatting with separate strings.",
+                              "How many strings are in this question_text array?"
+                            ],
+                            "choices": [
+                              "1 string",
+                              "2 strings",
+                              "3 strings",
+                              "4 strings"
+                            ],
+                            "answer": "2 strings",
+                            "reasoning": "The question_text array contains exactly 2 strings. Each string in the array represents a separate line when displayed."
+                          },
+                          {
+                            "question_text": [
+                              "A light ray travels from air into glass.",
+                              "What phenomenon occurs at the boundary?"
+                            ],
+                            "choices": [
+                              "Reflection only",
+                              "Refraction only",
+                              "Both reflection and refraction",
+                              "Neither reflection nor refraction"
+                            ],
+                            "answer": "Both reflection and refraction",
+                            "reasoning": "When light travels from one medium to another, part of it is reflected back and part is refracted (bent) as it enters the new medium."
+                          },
+                          {
+                            "question_text": [
+                              "This question demonstrates three-line formatting.",
+                              "The question_text array has three string values.",
+                              "How many separate lines will be displayed when this question is rendered?"
+                            ],
+                            "choices": [
+                              "1 line",
+                              "2 lines",
+                              "3 lines",
+                              "4 lines"
+                            ],
+                            "answer": "3 lines",
+                            "reasoning": "Since the question_text array contains 3 strings, exactly 3 separate lines will be displayed when rendered, demonstrating the array-to-newline relationship."
+                          },
+                          {
+                            "question_text": [
+                              "During photosynthesis, plants absorb carbon dioxide from the atmosphere.",
+                              "They use sunlight energy to convert it into glucose.",
+                              "What gas is released as a byproduct of this process?"
+                            ],
+                            "choices": [
+                              "Nitrogen",
+                              "Oxygen",
+                              "Hydrogen",
+                              "Carbon monoxide"
+                            ],
+                            "answer": "Oxygen",
+                            "reasoning": "Photosynthesis converts carbon dioxide and water into glucose and oxygen using sunlight energy. Oxygen is released as a byproduct."
+                          }
+                        ]
+                      },
+                      {
+                        "name": "LIST Placeholder Format",
+                        "description": "This section demonstrates how the LIST placeholder in question_text works with list_items to display formatted lists.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "This question uses LIST placeholder to display items from list_items array.",
+                              "LIST",
+                              "How many items are in the list below?"
+                            ],
+                            "list_items": [
+                              "Item 1: First list item",
+                              "Item 2: Second list item"
+                            ],
+                            "choices": [
+                              "1 item",
+                              "2 items",
+                              "3 items",
+                              "4 items"
+                            ],
+                            "answer": "2 items",
+                            "reasoning": "The list_items array contains exactly 2 items, which are displayed when LIST placeholder is used in question_text."
+                          },
+                          {
+                            "question_text": [
+                              "Which of the following are states of matter?",
+                              "LIST"
+                            ],
+                            "list_items": [
+                              "i. Solid",
+                              "ii. Liquid",
+                              "iii. Gas",
+                              "iv. Plasma"
+                            ],
+                            "choices": [
+                              "i, ii, and iii only",
+                              "i and ii only",
+                              "All of the above",
+                              "i and iii only"
+                            ],
+                            "answer": "All of the above",
+                            "reasoning": "Solid, liquid, gas, and plasma are all recognized states of matter in physics."
+                          },
+                          {
+                            "question_text": [
+                              "This question shows intro-text, LIST, question-text structure with three parts.",
+                              "LIST",
+                              "What pattern does this question demonstrate?"
+                            ],
+                            "list_items": [
+                              "Part 1: Introduction text",
+                              "Part 2: List items displayed here",
+                              "Part 3: Question text after the list"
+                            ],
+                            "choices": [
+                              "intro-LIST-question structure",
+                              "LIST-intro-question structure",
+                              "question-LIST-intro structure",
+                              "intro-question-LIST structure"
+                            ],
+                            "answer": "intro-LIST-question structure",
+                            "reasoning": "The question_text array has introduction text, then LIST placeholder, then question text, demonstrating the intro-LIST-question structure."
+                          },
+                          {
+                            "question_text": [
+                              "Consider the following steps to solve a linear equation:",
+                              "LIST",
+                              "What is the correct order to solve 2x + 5 = 15?"
+                            ],
+                            "list_items": [
+                              "A. Subtract 5 from both sides",
+                              "B. Divide both sides by 2",
+                              "C. Check the solution"
+                            ],
+                            "choices": [
+                              "A → B → C",
+                              "B → A → C",
+                              "A → C → B",
+                              "C → A → B"
+                            ],
+                            "answer": "A → B → C",
+                            "reasoning": "To solve 2x + 5 = 15: first subtract 5 to get 2x = 10, then divide by 2 to get x = 5, then check by substituting back."
+                          },
+                          {
+                            "question_text": [
+                              "LIST",
+                              "Order the above events in chronological order."
+                            ],
+                            "list_items": [
+                              "a. World War II ends",
+                              "b. Moon landing",
+                              "c. Fall of Berlin Wall",
+                              "d. Internet becomes public"
+                            ],
+                            "choices": [
+                              "a → b → c → d",
+                              "b → a → d → c",
+                              "a → c → b → d",
+                              "d → b → a → c"
+                            ],
+                            "answer": "a → b → c → d",
+                            "reasoning": "Chronological order: World War II ended in 1945, Moon landing occurred in 1969, Berlin Wall fell in 1989, and Internet became public in early 1990s."
+                          }
+                        ]
+                      },
+                      {
+                        "name": "STATEMENT/STATEMENTS Placeholder Format",
+                        "description": "This section demonstrates STATEMENT placeholder (rare case for single statement) and STATEMENTS placeholder (common case for multiple statements) usage with statements array.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "STATEMENT",
+                              "This question uses STATEMENT placeholder for a single statement (rare case).",
+                              "How does the STATEMENT placeholder work?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Statement",
+                                "text": "The STATEMENT placeholder gets replaced with one statement from the statements array during rendering."
+                              }
+                            ],
+                            "choices": [
+                              "It displays single statement content",
+                              "It shows only the label",
+                              "It creates a numbered list",
+                              "It hides the statement text"
+                            ],
+                            "answer": "It displays single statement content",
+                            "reasoning": "The STATEMENT placeholder in question_text gets replaced with the labeled text from the statements array when the question is rendered for single statement usage."
+                          },
+                          {
+                            "question_text": [
+                              "STATEMENT",
+                              "Evaluate the scientific accuracy of the statement above.",
+                              "Is this statement about gravitational force correct?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Statement",
+                                "text": "Objects with greater mass exert stronger gravitational force on other objects."
+                              }
+                            ],
+                            "choices": [
+                              "True - the statement is scientifically accurate",
+                              "False - mass does not affect gravitational force",
+                              "Partially true - only applies to planets",
+                              "Cannot be determined from given information"
+                            ],
+                            "answer": "True - the statement is scientifically accurate",
+                            "reasoning": "According to Newton's law of universal gravitation, gravitational force is directly proportional to the masses of the objects involved, making this statement scientifically accurate."
+                          },
+                          {
+                            "question_text": [
+                              "This question uses STATEMENTS placeholder (not STATEMENT) with multiple statements.",
+                              "STATEMENTS",
+                              "How many roman numeral statements are shown above?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Statement I",
+                                "text": "This is the first roman numeral statement in the array."
+                              },
+                              {
+                                "label": "Statement II",
+                                "text": "This is the second roman numeral statement in the array."
+                              }
+                            ],
+                            "choices": [
+                              "1 statement",
+                              "2 statements",
+                              "3 statements",
+                              "No statements"
+                            ],
+                            "answer": "2 statements",
+                            "reasoning": "The statements array contains exactly 2 statements labeled as Statement I and Statement II."
+                          },
+                          {
+                            "question_text": [
+                              "Consider the following statements about the water cycle:",
+                              "STATEMENTS",
+                              "Which statements are correct?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Statement I",
+                                "text": "Water evaporates from oceans, lakes, and rivers due to solar energy."
+                              },
+                              {
+                                "label": "Statement II",
+                                "text": "Condensation occurs when water vapor cools and forms droplets in clouds."
+                              }
+                            ],
+                            "choices": [
+                              "Statement I only",
+                              "Statement II only",
+                              "Both Statement I and Statement II",
+                              "Neither statement"
+                            ],
+                            "answer": "Both Statement I and Statement II",
+                            "reasoning": "Statement I correctly describes evaporation driven by solar energy, and Statement II accurately explains condensation as water vapor cooling to form cloud droplets."
+                          },
+                          {
+                            "question_text": [
+                              "This question demonstrates multiple text blocks around STATEMENTS placeholder.",
+                              "The structure is: text, text, STATEMENTS, text.",
+                              "STATEMENTS",
+                              "How many text blocks surround the STATEMENTS placeholder in this question?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Example Statement",
+                                "text": "There are text blocks before and after the STATEMENTS placeholder."
+                              },
+                              {
+                                "label": "Structure Note",
+                                "text": "This creates a more complex question format with multiple parts."
+                              },
+                              {
+                                "label": "Usage Info",
+                                "text": "You can have up to 3 or more statements in the statements array."
+                              }
+                            ],
+                            "choices": [
+                              "2 text blocks (before only)",
+                              "3 text blocks (2 before, 1 after)",
+                              "1 text block (after only)",
+                              "4 text blocks total"
+                            ],
+                            "answer": "3 text blocks (2 before, 1 after)",
+                            "reasoning": "The question_text has 2 text blocks before STATEMENTS and 1 text block after, making 3 text blocks total surrounding the placeholder."
+                          },
+                          {
+                            "question_text": [
+                              "In biological systems, photosynthesis is a crucial process.",
+                              "Consider the relationship between light and this process:",
+                              "STATEMENTS",
+                              "Evaluate the correctness of the assertion, reasoning, and inference."
+                            ],
+                            "statements": [
+                              {
+                                "label": "Assertion (A)",
+                                "text": "Light energy is essential for photosynthesis to occur."
+                              },
+                              {
+                                "label": "Reasoning (R)",
+                                "text": "Chlorophyll absorbs light energy to convert CO2 and water into glucose and oxygen."
+                              },
+                              {
+                                "label": "Inference (I)",
+                                "text": "Without adequate light, plants cannot produce food through photosynthesis."
+                              }
+                            ],
+                            "choices": [
+                              "A is correct, R is correct, I is correct",
+                              "A is correct, R is correct, I is wrong",
+                              "A is correct, R is wrong, I is correct",
+                              "A is wrong, R is correct, I is correct",
+                              "A is wrong, R is wrong, I is correct",
+                              "All are wrong"
+                            ],
+                            "answer": "A is correct, R is correct, I is correct",
+                            "reasoning": "The assertion correctly states light is essential for photosynthesis, the reasoning accurately explains the chlorophyll mechanism, and the inference logically follows that without light, photosynthesis cannot occur."
+                          }
+                        ]
+                      },
+                      {
+                        "name": "PARAGRAPH Placeholder Format",
+                        "description": "This section demonstrates how the PARAGRAPH placeholder in question_text works with paragraph field to display short paragraph content.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "This question uses PARAGRAPH placeholder to display content from paragraph field.",
+                              "PARAGRAPH",
+                              "How does the PARAGRAPH placeholder work?"
+                            ],
+                            "paragraph": "The PARAGRAPH placeholder gets replaced with the text from the paragraph field during rendering.",
+                            "choices": [
+                              "It displays the paragraph field content",
+                              "It shows only formatted text",
+                              "It creates multiple paragraphs",
+                              "It hides the paragraph text"
+                            ],
+                            "answer": "It displays the paragraph field content",
+                            "reasoning": "The PARAGRAPH placeholder in question_text gets replaced with the text from the paragraph field when the question is rendered."
+                          },
+                          {
+                            "question_text": [
+                              "Read the statement about chemical reactions:",
+                              "PARAGRAPH",
+                              "What is required for reactions to occur?"
+                            ],
+                            "paragraph": "Chemical reactions need activation energy to proceed.",
+                            "choices": [
+                              "Low temperature",
+                              "Activation energy",
+                              "High pressure",
+                              "Presence of water"
+                            ],
+                            "answer": "Activation energy",
+                            "reasoning": "The paragraph directly mentions that chemical reactions need activation energy to proceed."
+                          },
+                          {
+                            "question_text": [
+                              "This question shows intro-text, PARAGRAPH, question-text structure.",
+                              "PARAGRAPH",
+                              "What pattern does this question demonstrate?"
+                            ],
+                            "paragraph": "The PARAGRAPH placeholder is positioned between introduction and question text, creating a three-part structure.",
+                            "choices": [
+                              "intro-PARAGRAPH-question structure",
+                              "PARAGRAPH-intro-question structure",
+                              "question-PARAGRAPH-intro structure",
+                              "intro-question-PARAGRAPH structure"
+                            ],
+                            "answer": "intro-PARAGRAPH-question structure",
+                            "reasoning": "The question_text array has introduction text, then PARAGRAPH placeholder, then question text, demonstrating the intro-PARAGRAPH-question structure."
+                          },
+                          {
+                            "question_text": [
+                              "Consider the following information about ecosystems:",
+                              "PARAGRAPH",
+                              "What role do decomposers play in ecosystems?"
+                            ],
+                            "paragraph": "Decomposers are vital organisms in ecosystems that break down dead organic matter from plants and animals. They include bacteria, fungi, and certain insects that feed on decaying material. Through their metabolic processes, they decompose complex organic compounds and return essential nutrients like nitrogen, phosphorus, and carbon back to the soil, making these nutrients available for uptake by living plants and continuing the nutrient cycle.",
+                            "choices": [
+                              "They produce oxygen for other organisms",
+                              "They recycle nutrients back to the ecosystem",
+                              "They control population sizes of other species",
+                              "They provide energy directly to consumers"
+                            ],
+                            "answer": "They recycle nutrients back to the ecosystem",
+                            "reasoning": "The paragraph explains that decomposers break down dead matter and return nutrients to soil, which is the process of recycling nutrients in ecosystems."
+                          },
+                          {
+                            "question_text": [
+                              "This question demonstrates using \\n characters within paragraph text to create line breaks.",
+                              "PARAGRAPH",
+                              "How many lines are displayed in the paragraph above?"
+                            ],
+                            "paragraph": "This is line 1 of the paragraph.\nThis is line 2 of the paragraph.\nThis is line 3 of the paragraph.",
+                            "choices": [
+                              "1 line",
+                              "2 lines",
+                              "3 lines",
+                              "4 lines"
+                            ],
+                            "answer": "3 lines",
+                            "reasoning": "The \\n characters in the paragraph field create line breaks, resulting in 3 separate lines of text within the paragraph block."
+                          },
+                          {
+                            "question_text": [
+                              "Read the following passage about climate change:",
+                              "PARAGRAPH", 
+                              "What is identified as the primary driver of current climate change?"
+                            ],
+                            "paragraph": "Climate change refers to long-term shifts in global weather patterns and temperatures. Since the Industrial Revolution, human activities have dramatically increased the concentration of greenhouse gases in Earth's atmosphere, particularly carbon dioxide from burning fossil fuels, deforestation, and industrial processes.\n\nThese greenhouse gases trap heat from the sun, causing global temperatures to rise at an unprecedented rate. Scientists have concluded that human activities are the primary driver of climate change observed since the mid-20th century, with natural climate variations playing a much smaller role.",
+                            "choices": [
+                              "Natural climate variations",
+                              "Solar radiation changes",
+                              "Human activities and greenhouse gas emissions",
+                              "Deforestation only"
+                            ],
+                            "answer": "Human activities and greenhouse gas emissions",
+                            "reasoning": "The passage clearly states that human activities are the primary driver of climate change, particularly through increasing greenhouse gas concentrations from fossil fuel burning and other activities."
+                          }
+                        ]
+                      },
+                      {
+                        "name": "MTF (Match The Following) Placeholder Format",
+                        "description": "This section demonstrates how the MTF_DATA placeholder in question_text works with mtf_data object to display match-the-following questions with left and right columns.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "This question uses MTF_DATA placeholder to display match-the-following content from mtf_data object.",
+                              "MTF_DATA",
+                              "How does the MTF_DATA placeholder work?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Example Left Column",
+                              "right_header": "Example Right Column", 
+                              "left_column": [
+                                "a. Left Item 1",
+                                "b. Left Item 2"
+                              ],
+                              "right_column": [
+                                "Right Item 1",
+                                "Right Item 2"
+                              ]
+                            },
+                            "choices": [
+                              "It displays the mtf_data object content in two columns",
+                              "It shows only the headers",
+                              "It creates a single list",
+                              "It hides the matching data"
+                            ],
+                            "answer": "It displays the mtf_data object content in two columns",
+                            "reasoning": "The MTF_DATA placeholder in question_text gets replaced with the formatted left and right columns from the mtf_data object when the question is rendered."
+                          },
+                          {
+                            "question_text": [
+                              "MTF_DATA",
+                              "Which planet is closest to the Sun according to the data above?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Planets",
+                              "right_header": "Distance from Sun (million km)",
+                              "left_column": [
+                                "Mercury",
+                                "Venus", 
+                                "Earth",
+                                "Mars"
+                              ],
+                              "right_column": [
+                                "227.9",
+                                "57.9",
+                                "149.6", 
+                                "108.2"
+                              ]
+                            },
+                            "choices": [
+                              "Mercury",
+                              "Venus",
+                              "Earth",
+                              "Mars"
+                            ],
+                            "answer": "Mercury",
+                            "reasoning": "According to the data, Mercury has the shortest distance from the Sun at 57.9 million km, making it the closest planet to the Sun."
+                          },
+                          {
+                            "question_text": [
+                              "MTF_DATA",
+                              "How many of the above are correctly matched?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Chemical Elements",
+                              "right_header": "Atomic Numbers",
+                              "left_column": [
+                                "Hydrogen",
+                                "Helium",
+                                "Lithium",
+                                "Beryllium"
+                              ],
+                              "right_column": [
+                                "2",
+                                "1",
+                                "4",
+                                "3"
+                              ]
+                            },
+                            "choices": [
+                              "0 correctly matched",
+                              "1 correctly matched",
+                              "2 correctly matched",
+                              "3 correctly matched"
+                            ],
+                            "answer": "0 correctly matched",
+                            "reasoning": "The correct atomic numbers are: Hydrogen-1, Helium-2, Lithium-3, Beryllium-4. In the given data: Hydrogen is matched with 2 (wrong), Helium with 1 (wrong), Lithium with 4 (wrong), and Beryllium with 3 (wrong). None are correctly matched."
+                          },
+                          {
+                            "question_text": [
+                              "This question demonstrates intro-text, MTF_DATA, question-text structure.",
+                              "MTF_DATA",
+                              "What pattern does this question demonstrate?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Structure Parts",
+                              "right_header": "Descriptions",
+                              "left_column": [
+                                "a. Part 1",
+                                "b. Part 2", 
+                                "c. Part 3"
+                              ],
+                              "right_column": [
+                                "Question text after MTF_DATA",
+                                "Introduction text before MTF_DATA",
+                                "MTF_DATA placeholder in middle"
+                              ]
+                            },
+                            "choices": [
+                              "intro-MTF_DATA-question structure",
+                              "MTF_DATA-intro-question structure", 
+                              "question-MTF_DATA-intro structure",
+                              "intro-question-MTF_DATA structure"
+                            ],
+                            "answer": "intro-MTF_DATA-question structure",
+                            "reasoning": "The question_text array has introduction text, then MTF_DATA placeholder, then question text, demonstrating the intro-MTF_DATA-question structure."
+                          },
+                          {
+                            "question_text": [
+                              "Match the chemical elements with their symbols:",
+                              "MTF_DATA", 
+                              "Which option shows the correct matching?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Elements",
+                              "right_header": "Chemical Symbols",
+                              "left_column": [
+                                "i. Sodium",
+                                "ii. Potassium",
+                                "iii. Calcium", 
+                                "iv. Magnesium"
+                              ],
+                              "right_column": [
+                                "a. Ca",
+                                "b. Na",
+                                "c. Mg",
+                                "d. K"
+                              ]
+                            },
+                            "choices": [
+                              "i-b, ii-d, iii-a, iv-c",
+                              "i-d, ii-b, iii-c, iv-a",
+                              "i-a, ii-c, iii-b, iv-d", 
+                              "i-c, ii-a, iii-d, iv-b"
+                            ],
+                            "answer": "i-b, ii-d, iii-a, iv-c",
+                            "reasoning": "Sodium has symbol Na, Potassium has K, Calcium has Ca, and Magnesium has Mg based on their Latin names."
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Mixed Placeholder Combinations",
+                        "description": "This section demonstrates using multiple placeholders together in a single question, showing various combinations like PARAGRAPH + LIST, STATEMENTS + PARAGRAPH, etc.",
+                        "questions": [
+                          {
+                            "question_text": [
+                              "This question demonstrates PARAGRAPH + LIST combination usage.",
+                              "PARAGRAPH",
+                              "LIST",
+                              "How many placeholders are used in this question structure?"
+                            ],
+                            "paragraph": "This paragraph provides context before the list items are displayed.",
+                            "list_items": [
+                              "i. First list item after paragraph",
+                              "ii. Second list item", 
+                              "iii. Third list item"
+                            ],
+                            "choices": [
+                              "1 placeholder (PARAGRAPH only)",
+                              "2 placeholders (PARAGRAPH + LIST)",
+                              "3 placeholders including text",
+                              "No placeholders used"
+                            ],
+                            "answer": "2 placeholders (PARAGRAPH + LIST)",
+                            "reasoning": "This question uses both PARAGRAPH placeholder (replaced with paragraph field content) and LIST placeholder (replaced with list_items array), demonstrating mixed placeholder usage."
+                          },
+                          {
+                            "question_text": [
+                              "Read the background information:",
+                              "PARAGRAPH",
+                              "Consider the following options:",
+                              "LIST",
+                              "Which option best addresses the main concern mentioned in the paragraph?"
+                            ],
+                            "paragraph": "Climate change requires immediate action through renewable energy adoption. The primary challenge is transitioning from fossil fuel dependency while maintaining economic stability.",
+                            "list_items": [
+                              "a. Increase coal production",
+                              "b. Invest in solar and wind energy",
+                              "c. Ignore environmental concerns",
+                              "d. Wait for future technology"
+                            ],
+                            "choices": [
+                              "Option a",
+                              "Option b", 
+                              "Option c",
+                              "Option d"
+                            ],
+                            "answer": "Option b",
+                            "reasoning": "The paragraph emphasizes the need for renewable energy adoption to address climate change, making solar and wind energy investment (option b) the best choice."
+                          },
+                          {
+                            "question_text": [
+                              "STATEMENTS",
+                              "Based on the statements above:",
+                              "LIST",
+                              "Which combination of statement and action is most appropriate?"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Statement I",
+                                "text": "Regular exercise improves cardiovascular health."
+                              },
+                              {
+                                "label": "Statement II", 
+                                "text": "Proper nutrition supports muscle recovery."
+                              }
+                            ],
+                            "list_items": [
+                              "1. Statement I + Daily cardio routine",
+                              "2. Statement II + Protein-rich diet",
+                              "3. Both statements + Comprehensive fitness plan",
+                              "4. Neither statement + Sedentary lifestyle"
+                            ],
+                            "choices": [
+                              "Option 1 only",
+                              "Option 2 only",
+                              "Option 3 (comprehensive approach)",
+                              "Option 4 (no action needed)"
+                            ],
+                            "answer": "Option 3 (comprehensive approach)",
+                            "reasoning": "Both statements are scientifically accurate, so a comprehensive fitness plan that combines cardio exercise and proper nutrition (option 3) addresses both statements effectively."
+                          },
+                          {
+                            "question_text": [
+                              "Analyze the following scenario:",
+                              "PARAGRAPH",
+                              "Evaluate these statements:",
+                              "STATEMENTS", 
+                              "What is the most logical conclusion?"
+                            ],
+                            "paragraph": "A company's quarterly sales dropped by 15% compared to the previous quarter. The marketing budget was reduced by 30% during the same period, while competitor spending increased by 20%.",
+                            "statements": [
+                              {
+                                "label": "Assertion (A)",
+                                "text": "Reduced marketing budget contributed to the sales decline."
+                              },
+                              {
+                                "label": "Reasoning (R)",
+                                "text": "Marketing investment directly correlates with brand visibility and customer acquisition."
+                              }
+                            ],
+                            "choices": [
+                              "Both A and R are correct, R explains A",
+                              "Both A and R are correct, R doesn't explain A", 
+                              "A is correct, R is incorrect",
+                              "Both A and R are incorrect"
+                            ],
+                            "answer": "Both A and R are correct, R explains A",
+                            "reasoning": "The assertion correctly identifies reduced marketing budget as a contributing factor to sales decline, and the reasoning properly explains the relationship between marketing investment and sales performance, especially given the competitive context."
+                          },
+                          {
+                            "question_text": [
+                              "Study the research data:",
+                              "MTF_DATA",
+                              "Read the analysis:",
+                              "PARAGRAPH",
+                              "Based on both the data and analysis, what conclusion can be drawn?"
+                            ],
+                            "mtf_data": {
+                              "left_header": "Study Groups",
+                              "right_header": "Success Rate (%)",
+                              "left_column": [
+                                "Group A",
+                                "Group B",
+                                "Group C"
+                              ],
+                              "right_column": [
+                                "85",
+                                "72",
+                                "91"
+                              ]
+                            },
+                            "paragraph": "The data shows varying success rates across different study groups. Group C demonstrated the highest performance, likely due to enhanced preparation methods and consistent practice schedules implemented throughout the study period.",
+                            "choices": [
+                              "Group A performed best overall",
+                              "Group C had the most effective study methods",
+                              "All groups performed equally well",
+                              "The data is insufficient to draw conclusions"
+                            ],
+                            "answer": "Group C had the most effective study methods",
+                            "reasoning": "The MTF data shows Group C with the highest success rate (91%), and the paragraph analysis confirms this was due to enhanced preparation methods, supporting the conclusion about their effectiveness."
+                          },
+                          {
+                            "question_text": [
+                              "Consider the following experimental conditions:",
+                              "LIST",
+                              "Evaluate the hypothesis:",
+                              "STATEMENTS",
+                              "Which experimental condition best supports the reasoning provided?"
+                            ],
+                            "list_items": [
+                              "α. Temperature increased to 25°C",
+                              "β. pH maintained at 7.0", 
+                              "γ. Light exposure for 12 hours daily",
+                              "δ. Nutrient solution concentration doubled"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Hypothesis (H)",
+                                "text": "Plant growth rate increases with optimal light exposure."
+                              },
+                              {
+                                "label": "Reasoning (R)",
+                                "text": "Photosynthesis efficiency directly depends on adequate light availability."
+                              }
+                            ],
+                            "choices": [
+                              "Condition α (temperature)",
+                              "Condition β (pH)",
+                              "Condition γ (light exposure)", 
+                              "Condition δ (nutrients)"
+                            ],
+                            "answer": "Condition γ (light exposure)",
+                            "reasoning": "The hypothesis focuses on light exposure's effect on plant growth, and the reasoning explains this through photosynthesis efficiency. Condition γ (12 hours daily light exposure) directly tests this relationship."
+                          },
+                          {
+                            "question_text": [
+                              "Review the following research findings:",
+                              "PARAGRAPH",
+                              "Match the findings with their implications:",
+                              "MTF_DATA",
+                              "How many matches are scientifically accurate?"
+                            ],
+                            "paragraph": "Recent studies on sleep deprivation show significant impacts on cognitive function, memory consolidation, and emotional regulation. Participants with less than 6 hours of sleep showed 40% reduced problem-solving ability and increased stress hormone levels.",
+                            "mtf_data": {
+                              "left_header": "Sleep Duration",
+                              "right_header": "Primary Effect",
+                              "left_column": [
+                                "Less than 6 hours",
+                                "6-7 hours",
+                                "8+ hours"
+                              ],
+                              "right_column": [
+                                "Optimal cognitive function",
+                                "Reduced problem-solving ability", 
+                                "Moderate cognitive performance"
+                              ]
+                            },
+                            "choices": [
+                              "0 matches are accurate",
+                              "1 match is accurate",
+                              "2 matches are accurate",
+                              "3 matches are accurate"
+                            ],
+                            "answer": "1 match is accurate",
+                            "reasoning": "Based on the paragraph, less than 6 hours should match with 'Reduced problem-solving ability', 6-7 hours with 'Moderate cognitive performance', and 8+ hours with 'Optimal cognitive function'. Only the middle pairing is correctly matched in the given data."
+                          },
+                          {
+                            "question_text": [
+                              "Examine the business case study:",
+                              "PARAGRAPH",
+                              "Consider these strategic options:",
+                              "LIST", 
+                              "Evaluate the following analysis:",
+                              "STATEMENTS",
+                              "Which combination of option and reasoning is most sound?"
+                            ],
+                            "paragraph": "TechCorp's market share declined from 25% to 18% over two years. Competitor analysis reveals that rivals invested heavily in AI-powered features while TechCorp focused on cost reduction. Customer feedback indicates demand for innovative solutions over price cuts.",
+                            "list_items": [
+                              "I. Reduce prices further",
+                              "II. Invest in AI technology",
+                              "III. Maintain current strategy", 
+                              "IV. Exit the market"
+                            ],
+                            "statements": [
+                              {
+                                "label": "Strategic Analysis (S)",
+                                "text": "Investment in innovation aligns with customer demand and competitive trends."
+                              },
+                              {
+                                "label": "Market Reality (M)",
+                                "text": "Price reduction strategy failed to prevent market share loss."
+                              }
+                            ],
+                            "choices": [
+                              "Option I + Analysis S",
+                              "Option II + Both S and M",
+                              "Option III + Analysis M",
+                              "Option IV + Neither S nor M"
+                            ],
+                            "answer": "Option II + Both S and M",
+                            "reasoning": "The paragraph shows that AI investment by competitors succeeded while cost reduction failed. Option II (invest in AI) aligns with both the strategic analysis about innovation demand and the market reality about price reduction failure."
+                          }
+                        ]
+                      }
+                    ]
+                  }"""),
+                
+            ],
+        ),
+    ]
+    generate_content_config = types.GenerateContentConfig(
+        thinking_config = types.ThinkingConfig(
+            thinking_budget=-1,
+        ),
+        response_mime_type="application/json",
+    )
+
+    # Generate timestamp for filename
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"generated_{timestamp}.json"
+    filepath = os.path.join("questions_data", filename)
+    
+    # Collect all chunks
+    response_text = ""
+    for chunk in client.models.generate_content_stream(
+        model=model,
+        contents=contents,
+        config=generate_content_config,
+    ):
+        if chunk.text is not None:
+            print(chunk.text, end="")
+            response_text += chunk.text
+    
+    # Save to file
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(response_text)
+        print(f"\n\nJSON saved to: {filepath}")
+    except Exception as e:
+        print(f"\nError saving file: {e}")
+
+if __name__ == "__main__":
+    generate()

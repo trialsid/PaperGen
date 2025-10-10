@@ -1,0 +1,37 @@
+Section,Question Number,Set A,Set B
+Question Text Array Format,1,Oxygen,H2O
+Question Text Array Format,2,2 strings,1 string
+Question Text Array Format,3,1 string,3 lines
+Question Text Array Format,4,3 lines,Oxygen
+Question Text Array Format,5,H2O,Both reflection and refraction
+Question Text Array Format,6,Both reflection and refraction,2 strings
+LIST Placeholder Format,1,a → b → c → d,All of the above
+LIST Placeholder Format,2,2 items,a → b → c → d
+LIST Placeholder Format,3,All of the above,A → B → C
+LIST Placeholder Format,4,intro-LIST-question structure,intro-LIST-question structure
+LIST Placeholder Format,5,A → B → C,2 items
+STATEMENT/STATEMENTS Placeholder Format,1,True - the statement is scientifically accurate,True - the statement is scientifically accurate
+STATEMENT/STATEMENTS Placeholder Format,2,2 statements,2 statements
+STATEMENT/STATEMENTS Placeholder Format,3,"3 text blocks (2 before, 1 after)","A is correct, R is correct, I is correct"
+STATEMENT/STATEMENTS Placeholder Format,4,It displays single statement content,It displays single statement content
+STATEMENT/STATEMENTS Placeholder Format,5,Both Statement I and Statement II,"3 text blocks (2 before, 1 after)"
+STATEMENT/STATEMENTS Placeholder Format,6,"A is correct, R is correct, I is correct",Both Statement I and Statement II
+PARAGRAPH Placeholder Format,1,intro-PARAGRAPH-question structure,Activation energy
+PARAGRAPH Placeholder Format,2,Activation energy,intro-PARAGRAPH-question structure
+PARAGRAPH Placeholder Format,3,Human activities and greenhouse gas emissions,It displays the paragraph field content
+PARAGRAPH Placeholder Format,4,3 lines,They recycle nutrients back to the ecosystem
+PARAGRAPH Placeholder Format,5,It displays the paragraph field content,3 lines
+PARAGRAPH Placeholder Format,6,They recycle nutrients back to the ecosystem,Human activities and greenhouse gas emissions
+MTF (Match The Following) Placeholder Format,1,0 correctly matched,It displays the mtf_data object content in two columns
+MTF (Match The Following) Placeholder Format,2,intro-MTF_DATA-question structure,0 correctly matched
+MTF (Match The Following) Placeholder Format,3,"i-b, ii-d, iii-a, iv-c","i-b, ii-d, iii-a, iv-c"
+MTF (Match The Following) Placeholder Format,4,It displays the mtf_data object content in two columns,Mercury
+MTF (Match The Following) Placeholder Format,5,Mercury,intro-MTF_DATA-question structure
+Mixed Placeholder Combinations,1,Group C had the most effective study methods,Option II + Both S and M
+Mixed Placeholder Combinations,2,Option b,Condition γ (light exposure)
+Mixed Placeholder Combinations,3,Option 3 (comprehensive approach),Option 3 (comprehensive approach)
+Mixed Placeholder Combinations,4,"Both A and R are correct, R explains A",1 match is accurate
+Mixed Placeholder Combinations,5,2 placeholders (PARAGRAPH + LIST),Group C had the most effective study methods
+Mixed Placeholder Combinations,6,1 match is accurate,Option b
+Mixed Placeholder Combinations,7,Condition γ (light exposure),"Both A and R are correct, R explains A"
+Mixed Placeholder Combinations,8,Option II + Both S and M,2 placeholders (PARAGRAPH + LIST)

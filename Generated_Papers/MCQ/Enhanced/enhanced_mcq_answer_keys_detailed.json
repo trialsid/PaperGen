@@ -1,0 +1,360 @@
+{
+  "Set A": {
+    "total_marks": 36,
+    "sections": [
+      {
+        "name": "Question Text Array Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "Oxygen"
+          },
+          {
+            "number": 2,
+            "answer": "2 strings"
+          },
+          {
+            "number": 3,
+            "answer": "1 string"
+          },
+          {
+            "number": 4,
+            "answer": "3 lines"
+          },
+          {
+            "number": 5,
+            "answer": "H2O"
+          },
+          {
+            "number": 6,
+            "answer": "Both reflection and refraction"
+          }
+        ]
+      },
+      {
+        "name": "LIST Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "a \u2192 b \u2192 c \u2192 d"
+          },
+          {
+            "number": 2,
+            "answer": "2 items"
+          },
+          {
+            "number": 3,
+            "answer": "All of the above"
+          },
+          {
+            "number": 4,
+            "answer": "intro-LIST-question structure"
+          },
+          {
+            "number": 5,
+            "answer": "A \u2192 B \u2192 C"
+          }
+        ]
+      },
+      {
+        "name": "STATEMENT/STATEMENTS Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "True - the statement is scientifically accurate"
+          },
+          {
+            "number": 2,
+            "answer": "2 statements"
+          },
+          {
+            "number": 3,
+            "answer": "3 text blocks (2 before, 1 after)"
+          },
+          {
+            "number": 4,
+            "answer": "It displays single statement content"
+          },
+          {
+            "number": 5,
+            "answer": "Both Statement I and Statement II"
+          },
+          {
+            "number": 6,
+            "answer": "A is correct, R is correct, I is correct"
+          }
+        ]
+      },
+      {
+        "name": "PARAGRAPH Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "intro-PARAGRAPH-question structure"
+          },
+          {
+            "number": 2,
+            "answer": "Activation energy"
+          },
+          {
+            "number": 3,
+            "answer": "Human activities and greenhouse gas emissions"
+          },
+          {
+            "number": 4,
+            "answer": "3 lines"
+          },
+          {
+            "number": 5,
+            "answer": "It displays the paragraph field content"
+          },
+          {
+            "number": 6,
+            "answer": "They recycle nutrients back to the ecosystem"
+          }
+        ]
+      },
+      {
+        "name": "MTF (Match The Following) Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "0 correctly matched"
+          },
+          {
+            "number": 2,
+            "answer": "intro-MTF_DATA-question structure"
+          },
+          {
+            "number": 3,
+            "answer": "i-b, ii-d, iii-a, iv-c"
+          },
+          {
+            "number": 4,
+            "answer": "It displays the mtf_data object content in two columns"
+          },
+          {
+            "number": 5,
+            "answer": "Mercury"
+          }
+        ]
+      },
+      {
+        "name": "Mixed Placeholder Combinations",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "Group C had the most effective study methods"
+          },
+          {
+            "number": 2,
+            "answer": "Option b"
+          },
+          {
+            "number": 3,
+            "answer": "Option 3 (comprehensive approach)"
+          },
+          {
+            "number": 4,
+            "answer": "Both A and R are correct, R explains A"
+          },
+          {
+            "number": 5,
+            "answer": "2 placeholders (PARAGRAPH + LIST)"
+          },
+          {
+            "number": 6,
+            "answer": "1 match is accurate"
+          },
+          {
+            "number": 7,
+            "answer": "Condition \u03b3 (light exposure)"
+          },
+          {
+            "number": 8,
+            "answer": "Option II + Both S and M"
+          }
+        ]
+      }
+    ]
+  },
+  "Set B": {
+    "total_marks": 36,
+    "sections": [
+      {
+        "name": "Question Text Array Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "H2O"
+          },
+          {
+            "number": 2,
+            "answer": "1 string"
+          },
+          {
+            "number": 3,
+            "answer": "3 lines"
+          },
+          {
+            "number": 4,
+            "answer": "Oxygen"
+          },
+          {
+            "number": 5,
+            "answer": "Both reflection and refraction"
+          },
+          {
+            "number": 6,
+            "answer": "2 strings"
+          }
+        ]
+      },
+      {
+        "name": "LIST Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "All of the above"
+          },
+          {
+            "number": 2,
+            "answer": "a \u2192 b \u2192 c \u2192 d"
+          },
+          {
+            "number": 3,
+            "answer": "A \u2192 B \u2192 C"
+          },
+          {
+            "number": 4,
+            "answer": "intro-LIST-question structure"
+          },
+          {
+            "number": 5,
+            "answer": "2 items"
+          }
+        ]
+      },
+      {
+        "name": "STATEMENT/STATEMENTS Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "True - the statement is scientifically accurate"
+          },
+          {
+            "number": 2,
+            "answer": "2 statements"
+          },
+          {
+            "number": 3,
+            "answer": "A is correct, R is correct, I is correct"
+          },
+          {
+            "number": 4,
+            "answer": "It displays single statement content"
+          },
+          {
+            "number": 5,
+            "answer": "3 text blocks (2 before, 1 after)"
+          },
+          {
+            "number": 6,
+            "answer": "Both Statement I and Statement II"
+          }
+        ]
+      },
+      {
+        "name": "PARAGRAPH Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "Activation energy"
+          },
+          {
+            "number": 2,
+            "answer": "intro-PARAGRAPH-question structure"
+          },
+          {
+            "number": 3,
+            "answer": "It displays the paragraph field content"
+          },
+          {
+            "number": 4,
+            "answer": "They recycle nutrients back to the ecosystem"
+          },
+          {
+            "number": 5,
+            "answer": "3 lines"
+          },
+          {
+            "number": 6,
+            "answer": "Human activities and greenhouse gas emissions"
+          }
+        ]
+      },
+      {
+        "name": "MTF (Match The Following) Placeholder Format",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "It displays the mtf_data object content in two columns"
+          },
+          {
+            "number": 2,
+            "answer": "0 correctly matched"
+          },
+          {
+            "number": 3,
+            "answer": "i-b, ii-d, iii-a, iv-c"
+          },
+          {
+            "number": 4,
+            "answer": "Mercury"
+          },
+          {
+            "number": 5,
+            "answer": "intro-MTF_DATA-question structure"
+          }
+        ]
+      },
+      {
+        "name": "Mixed Placeholder Combinations",
+        "questions": [
+          {
+            "number": 1,
+            "answer": "Option II + Both S and M"
+          },
+          {
+            "number": 2,
+            "answer": "Condition \u03b3 (light exposure)"
+          },
+          {
+            "number": 3,
+            "answer": "Option 3 (comprehensive approach)"
+          },
+          {
+            "number": 4,
+            "answer": "1 match is accurate"
+          },
+          {
+            "number": 5,
+            "answer": "Group C had the most effective study methods"
+          },
+          {
+            "number": 6,
+            "answer": "Option b"
+          },
+          {
+            "number": 7,
+            "answer": "Both A and R are correct, R explains A"
+          },
+          {
+            "number": 8,
+            "answer": "2 placeholders (PARAGRAPH + LIST)"
+          }
+        ]
+      }
+    ]
+  }
+}
