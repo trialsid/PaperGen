@@ -7,4 +7,7 @@
 /frontend/
 .env
 old_requirements.txt
+
+# Ignore all PDFs except those in Generated_Papers
 *.pdf
+!Generated_Papers/**/*.pdf
