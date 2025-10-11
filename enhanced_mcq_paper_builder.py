@@ -522,10 +522,10 @@ def generate_enhanced_mcq_sets_with_keys(
                                 'number': i + 1,
                                 'answer': question['answer']
                             }
-                            for i, question in enumerate(section_data['questions'][:section.required_questions])
+                            for i, question in enumerate(section_data['questions'][:section_cfg.required_questions])
                         ]
                     }
-                    for section_data in shuffled_set_data
+                    for section_cfg, section_data in zip(set_sections, shuffled_set_data)
                 ]
             }
             

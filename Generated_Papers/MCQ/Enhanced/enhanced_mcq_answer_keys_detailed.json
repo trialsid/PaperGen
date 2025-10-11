@@ -7,11 +7,11 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Prime number"
+            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
           },
           {
             "number": 2,
-            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
+            "answer": "Prime number"
           },
           {
             "number": 3,
@@ -24,15 +24,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "i, iii, and iv only"
+            "answer": "2 and 23"
           },
           {
             "number": 2,
-            "answer": "6"
+            "answer": "i, iii, and iv only"
           },
           {
             "number": 3,
-            "answer": "2 and 23"
+            "answer": "6"
           }
         ]
       },
@@ -41,7 +41,7 @@
         "questions": [
           {
             "number": 1,
-            "answer": "It is an unproven conjecture."
+            "answer": "Both A and R are correct, and R is the correct explanation for A."
           },
           {
             "number": 2,
@@ -49,7 +49,7 @@
           },
           {
             "number": 3,
-            "answer": "Both A and R are correct, and R is the correct explanation for A."
+            "answer": "It is an unproven conjecture."
           }
         ]
       },
@@ -58,7 +58,7 @@
         "questions": [
           {
             "number": 1,
-            "answer": "7 + 13"
+            "answer": "2"
           },
           {
             "number": 2,
@@ -66,7 +66,7 @@
           },
           {
             "number": 3,
-            "answer": "2"
+            "answer": "7 + 13"
           }
         ]
       },
@@ -75,15 +75,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "i-c, ii-a, iii-b"
-          },
-          {
-            "number": 2,
             "answer": "1-c, 2-a, 3-b"
           },
           {
-            "number": 3,
+            "number": 2,
             "answer": "A-3, B-1, C-2"
+          },
+          {
+            "number": 3,
+            "answer": "i-c, ii-a, iii-b"
           }
         ]
       },
@@ -92,19 +92,19 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Pair ii"
-          },
-          {
-            "number": 2,
             "answer": "8"
           },
           {
+            "number": 2,
+            "answer": "Pair ii"
+          },
+          {
             "number": 3,
-            "answer": "25"
+            "answer": "Both A and R are correct, and R explains A"
           },
           {
             "number": 4,
-            "answer": "Both A and R are correct, and R explains A"
+            "answer": "25"
           }
         ]
       }
@@ -118,7 +118,7 @@
         "questions": [
           {
             "number": 1,
-            "answer": "28"
+            "answer": "Prime number"
           },
           {
             "number": 2,
@@ -126,7 +126,7 @@
           },
           {
             "number": 3,
-            "answer": "Prime number"
+            "answer": "28"
           }
         ]
       },
@@ -139,11 +139,11 @@
           },
           {
             "number": 2,
-            "answer": "i, iii, and iv only"
+            "answer": "2 and 23"
           },
           {
             "number": 3,
-            "answer": "2 and 23"
+            "answer": "i, iii, and iv only"
           }
         ]
       },
@@ -152,11 +152,11 @@
         "questions": [
           {
             "number": 1,
-            "answer": "It is an unproven conjecture."
+            "answer": "Both A and R are correct, and R is the correct explanation for A."
           },
           {
             "number": 2,
-            "answer": "Both A and R are correct, and R is the correct explanation for A."
+            "answer": "It is an unproven conjecture."
           },
           {
             "number": 3,
@@ -169,15 +169,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "7 + 13"
-          },
-          {
-            "number": 2,
             "answer": "21"
           },
           {
-            "number": 3,
+            "number": 2,
             "answer": "2"
+          },
+          {
+            "number": 3,
+            "answer": "7 + 13"
           }
         ]
       },
@@ -186,7 +186,7 @@
         "questions": [
           {
             "number": 1,
-            "answer": "i-c, ii-a, iii-b"
+            "answer": "1-c, 2-a, 3-b"
           },
           {
             "number": 2,
@@ -194,7 +194,7 @@
           },
           {
             "number": 3,
-            "answer": "1-c, 2-a, 3-b"
+            "answer": "i-c, ii-a, iii-b"
           }
         ]
       },
@@ -203,7 +203,7 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Pair ii"
+            "answer": "8"
           },
           {
             "number": 2,
@@ -211,11 +211,11 @@
           },
           {
             "number": 3,
-            "answer": "25"
+            "answer": "Pair ii"
           },
           {
             "number": 4,
-            "answer": "8"
+            "answer": "25"
           }
         ]
       }
