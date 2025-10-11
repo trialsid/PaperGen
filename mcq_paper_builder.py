@@ -193,7 +193,8 @@ def generate_mcq_sets_with_keys(
     output_prefix: str = 'mcq_set',
     paper_format: str = 'A4',
     config: Optional[MCQConfig] = None,
-    no_shuffle: bool = False
+    no_shuffle: bool = False,
+    no_student_info: bool = False
 ) -> Dict:
     """Generate MCQ sets with sections and answer keys."""
     set_names = list(string.ascii_uppercase[:num_sets])
@@ -277,24 +278,24 @@ def generate_mcq_sets_with_keys(
                 })
             
             # Generate question PDF
-            pdf = MCQPaperGenerator(config=config, show_answers=False, paper_format=paper_format, 
-                                   question_count=total_questions, show_student_info=not args.no_student_info,
+            pdf = MCQPaperGenerator(config=config, show_answers=False, paper_format=paper_format,
+                                   question_count=total_questions, show_student_info=not no_student_info,
                                    strict_ordering=no_shuffle)
             pdf.set_set_name(set_name)
             pdf.add_page()
             total_marks = pdf.generate_from_sections(set_sections)
-            
+
             # Generate answers PDF using same data and ordering
-            pdf_answers = MCQPaperGenerator(config=config, show_answers=True, paper_format=paper_format, 
-                                          question_count=total_questions, show_student_info=not args.no_student_info,
+            pdf_answers = MCQPaperGenerator(config=config, show_answers=True, paper_format=paper_format,
+                                          question_count=total_questions, show_student_info=not no_student_info,
                                           strict_ordering=no_shuffle)
             pdf_answers.set_set_name(set_name)
             pdf_answers.add_page()
             pdf_answers.generate_from_sections(set_sections)
-            
+
             # Generate A3 booklet format
-            pdf_booklet = MCQPaperGenerator(config=config, show_answers=False, paper_format='A3', 
-                                          question_count=total_questions, show_student_info=not args.no_student_info,
+            pdf_booklet = MCQPaperGenerator(config=config, show_answers=False, paper_format='A3',
+                                          question_count=total_questions, show_student_info=not no_student_info,
                                           strict_ordering=no_shuffle)
             pdf_booklet.set_set_name(set_name)
             pdf_booklet.add_page()
@@ -442,7 +443,8 @@ if __name__ == "__main__":
             output_prefix='Generated_Papers/MCQ/Questions/mcq_set',
             paper_format='A4',
             config=config,
-            no_shuffle=args.no_shuffle
+            no_shuffle=args.no_shuffle,
+            no_student_info=args.no_student_info
         )
         
         print("\nGeneration complete!")
