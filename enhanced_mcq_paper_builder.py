@@ -375,6 +375,15 @@ def generate_enhanced_mcq_sets_with_keys(
     no_student_info: bool = False
 ) -> Dict:
     """Generate Enhanced MCQ sets with sections and answer keys - OPTIMIZED VERSION."""
+    if num_sets < 1:
+        raise ValueError("Number of sets must be at least 1.")
+
+    max_sets = len(string.ascii_uppercase)
+    if num_sets > max_sets:
+        raise ValueError(
+            f"Number of sets ({num_sets}) exceeds the supported maximum of {max_sets}."
+        )
+
     set_names = list(string.ascii_uppercase[:num_sets])
     set_data = {}
     

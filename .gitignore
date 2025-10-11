@@ -3,11 +3,20 @@
 /questions_data_old/
 /.venv/
 /fonts/
-/paper_generators/__pycache__/
 /frontend/
 .env
 old_requirements.txt
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
 # Ignore all PDFs except those in Generated_Papers
 *.pdf
 !Generated_Papers/**/*.pdf
+
+# Windows artifacts
+nul

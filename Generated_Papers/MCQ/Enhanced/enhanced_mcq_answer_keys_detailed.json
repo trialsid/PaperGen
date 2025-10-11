@@ -1,33 +1,21 @@
 {
   "Set A": {
-    "total_marks": 36,
+    "total_marks": 19,
     "sections": [
       {
         "name": "Question Text Array Format",
         "questions": [
           {
             "number": 1,
-            "answer": "Oxygen"
+            "answer": "Prime number"
           },
           {
             "number": 2,
-            "answer": "2 strings"
+            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
           },
           {
             "number": 3,
-            "answer": "1 string"
-          },
-          {
-            "number": 4,
-            "answer": "3 lines"
-          },
-          {
-            "number": 5,
-            "answer": "H2O"
-          },
-          {
-            "number": 6,
-            "answer": "Both reflection and refraction"
+            "answer": "28"
           }
         ]
       },
@@ -36,23 +24,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "a \u2192 b \u2192 c \u2192 d"
+            "answer": "i, iii, and iv only"
           },
           {
             "number": 2,
-            "answer": "2 items"
+            "answer": "6"
           },
           {
             "number": 3,
-            "answer": "All of the above"
-          },
-          {
-            "number": 4,
-            "answer": "intro-LIST-question structure"
-          },
-          {
-            "number": 5,
-            "answer": "A \u2192 B \u2192 C"
+            "answer": "2 and 23"
           }
         ]
       },
@@ -61,27 +41,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "True - the statement is scientifically accurate"
+            "answer": "It is an unproven conjecture."
           },
           {
             "number": 2,
-            "answer": "2 statements"
-          },
-          {
-            "number": 3,
-            "answer": "3 text blocks (2 before, 1 after)"
-          },
-          {
-            "number": 4,
-            "answer": "It displays single statement content"
-          },
-          {
-            "number": 5,
             "answer": "Both Statement I and Statement II"
           },
           {
-            "number": 6,
-            "answer": "A is correct, R is correct, I is correct"
+            "number": 3,
+            "answer": "Both A and R are correct, and R is the correct explanation for A."
           }
         ]
       },
@@ -90,27 +58,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "intro-PARAGRAPH-question structure"
+            "answer": "7 + 13"
           },
           {
             "number": 2,
-            "answer": "Activation energy"
+            "answer": "21"
           },
           {
             "number": 3,
-            "answer": "Human activities and greenhouse gas emissions"
-          },
-          {
-            "number": 4,
-            "answer": "3 lines"
-          },
-          {
-            "number": 5,
-            "answer": "It displays the paragraph field content"
-          },
-          {
-            "number": 6,
-            "answer": "They recycle nutrients back to the ecosystem"
+            "answer": "2"
           }
         ]
       },
@@ -119,23 +75,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "0 correctly matched"
+            "answer": "i-c, ii-a, iii-b"
           },
           {
             "number": 2,
-            "answer": "intro-MTF_DATA-question structure"
+            "answer": "1-c, 2-a, 3-b"
           },
           {
             "number": 3,
-            "answer": "i-b, ii-d, iii-a, iv-c"
-          },
-          {
-            "number": 4,
-            "answer": "It displays the mtf_data object content in two columns"
-          },
-          {
-            "number": 5,
-            "answer": "Mercury"
+            "answer": "A-3, B-1, C-2"
           }
         ]
       },
@@ -144,69 +92,41 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Group C had the most effective study methods"
+            "answer": "Pair ii"
           },
           {
             "number": 2,
-            "answer": "Option b"
+            "answer": "8"
           },
           {
             "number": 3,
-            "answer": "Option 3 (comprehensive approach)"
+            "answer": "25"
           },
           {
             "number": 4,
-            "answer": "Both A and R are correct, R explains A"
-          },
-          {
-            "number": 5,
-            "answer": "2 placeholders (PARAGRAPH + LIST)"
-          },
-          {
-            "number": 6,
-            "answer": "1 match is accurate"
-          },
-          {
-            "number": 7,
-            "answer": "Condition \u03b3 (light exposure)"
-          },
-          {
-            "number": 8,
-            "answer": "Option II + Both S and M"
+            "answer": "Both A and R are correct, and R explains A"
           }
         ]
       }
     ]
   },
   "Set B": {
-    "total_marks": 36,
+    "total_marks": 19,
     "sections": [
       {
         "name": "Question Text Array Format",
         "questions": [
           {
             "number": 1,
-            "answer": "H2O"
+            "answer": "28"
           },
           {
             "number": 2,
-            "answer": "1 string"
+            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
           },
           {
             "number": 3,
-            "answer": "3 lines"
-          },
-          {
-            "number": 4,
-            "answer": "Oxygen"
-          },
-          {
-            "number": 5,
-            "answer": "Both reflection and refraction"
-          },
-          {
-            "number": 6,
-            "answer": "2 strings"
+            "answer": "Prime number"
           }
         ]
       },
@@ -215,23 +135,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "All of the above"
+            "answer": "6"
           },
           {
             "number": 2,
-            "answer": "a \u2192 b \u2192 c \u2192 d"
+            "answer": "i, iii, and iv only"
           },
           {
             "number": 3,
-            "answer": "A \u2192 B \u2192 C"
-          },
-          {
-            "number": 4,
-            "answer": "intro-LIST-question structure"
-          },
-          {
-            "number": 5,
-            "answer": "2 items"
+            "answer": "2 and 23"
           }
         ]
       },
@@ -240,26 +152,14 @@
         "questions": [
           {
             "number": 1,
-            "answer": "True - the statement is scientifically accurate"
+            "answer": "It is an unproven conjecture."
           },
           {
             "number": 2,
-            "answer": "2 statements"
+            "answer": "Both A and R are correct, and R is the correct explanation for A."
           },
           {
             "number": 3,
-            "answer": "A is correct, R is correct, I is correct"
-          },
-          {
-            "number": 4,
-            "answer": "It displays single statement content"
-          },
-          {
-            "number": 5,
-            "answer": "3 text blocks (2 before, 1 after)"
-          },
-          {
-            "number": 6,
             "answer": "Both Statement I and Statement II"
           }
         ]
@@ -269,27 +169,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Activation energy"
+            "answer": "7 + 13"
           },
           {
             "number": 2,
-            "answer": "intro-PARAGRAPH-question structure"
+            "answer": "21"
           },
           {
             "number": 3,
-            "answer": "It displays the paragraph field content"
-          },
-          {
-            "number": 4,
-            "answer": "They recycle nutrients back to the ecosystem"
-          },
-          {
-            "number": 5,
-            "answer": "3 lines"
-          },
-          {
-            "number": 6,
-            "answer": "Human activities and greenhouse gas emissions"
+            "answer": "2"
           }
         ]
       },
@@ -298,23 +186,15 @@
         "questions": [
           {
             "number": 1,
-            "answer": "It displays the mtf_data object content in two columns"
+            "answer": "i-c, ii-a, iii-b"
           },
           {
             "number": 2,
-            "answer": "0 correctly matched"
+            "answer": "A-3, B-1, C-2"
           },
           {
             "number": 3,
-            "answer": "i-b, ii-d, iii-a, iv-c"
-          },
-          {
-            "number": 4,
-            "answer": "Mercury"
-          },
-          {
-            "number": 5,
-            "answer": "intro-MTF_DATA-question structure"
+            "answer": "1-c, 2-a, 3-b"
           }
         ]
       },
@@ -323,35 +203,19 @@
         "questions": [
           {
             "number": 1,
-            "answer": "Option II + Both S and M"
+            "answer": "Pair ii"
           },
           {
             "number": 2,
-            "answer": "Condition \u03b3 (light exposure)"
+            "answer": "Both A and R are correct, and R explains A"
           },
           {
             "number": 3,
-            "answer": "Option 3 (comprehensive approach)"
+            "answer": "25"
           },
           {
             "number": 4,
-            "answer": "1 match is accurate"
-          },
-          {
-            "number": 5,
-            "answer": "Group C had the most effective study methods"
-          },
-          {
-            "number": 6,
-            "answer": "Option b"
-          },
-          {
-            "number": 7,
-            "answer": "Both A and R are correct, R explains A"
-          },
-          {
-            "number": 8,
-            "answer": "2 placeholders (PARAGRAPH + LIST)"
+            "answer": "8"
           }
         ]
       }
