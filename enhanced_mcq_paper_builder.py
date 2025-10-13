@@ -612,19 +612,31 @@ Examples:
         # Override defaults with command line arguments if provided
         if args.num_sets is not None:
             NUM_SETS = args.num_sets
-        
-        # Get user input for titles if not provided via command line
-        title = args.title if args.title else input("Enter school name (max 60 chars): ")
-        subtitle = args.subtitle if args.subtitle else input("Enter subtitle (max 50 chars): ")
-        exam_title = args.exam_title if args.exam_title else input("Enter exam title (max 50 chars): ")
-        
+
         # Ensure all required directories exist
         ensure_directories_exist()
-        
-        # Load sections data
+
+        # Load sections data and optional metadata
         with open(args.input_file, 'r', encoding='utf-8') as file:
             data = json.load(file)
             sections_data = data['sections']
+            json_metadata = data.get('metadata', {})
+
+        # Generate sensible defaults from input filename
+        input_basename = Path(args.input_file).stem
+        default_title = f"MCQ Paper - {input_basename}"[:60]  # Truncate to max length
+        default_subtitle = "Generated Question Paper"[:50]
+        default_exam_title = "MCQ Examination"[:50]
+
+        # Fallback chain: CLI args → JSON metadata → sensible defaults
+        title = args.title or json_metadata.get('title') or default_title
+        subtitle = args.subtitle or json_metadata.get('subtitle') or default_subtitle
+        exam_title = args.exam_title or json_metadata.get('exam_title') or default_exam_title
+
+        # Ensure lengths are within limits (in case metadata exceeded limits)
+        title = title[:60]
+        subtitle = subtitle[:50]
+        exam_title = exam_title[:50]
             
         # Calculate total questions across all sections
         total_questions = sum(len(section['questions']) for section in sections_data)

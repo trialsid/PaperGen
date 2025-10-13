@@ -77,6 +77,11 @@ Questions are organized in sections within JSON files. The system supports multi
 ### Basic Structure
 ```json
 {
+  "metadata": {
+    "title": "Springfield High School",
+    "subtitle": "Class 10 - Science",
+    "exam_title": "Mid-Term Examination"
+  },
   "sections": [
     {
       "name": "Section Name",
@@ -86,6 +91,45 @@ Questions are organized in sections within JSON files. The system supports multi
   ]
 }
 ```
+
+**Note:** The `metadata` field is optional. The system uses a fallback chain to determine paper titles.
+
+### Metadata Fallback Chain
+
+Paper titles (title, subtitle, exam_title) are determined by this **priority order**:
+
+1. **CLI Arguments** (highest priority) - `--title`, `--subtitle`, `--exam-title`
+2. **JSON Metadata** - Optional `metadata` object in input JSON file
+3. **Sensible Defaults** (lowest priority) - Auto-generated from input filename
+
+**Examples:**
+
+| Scenario | CLI Arg | JSON Metadata | Result |
+|----------|---------|---------------|--------|
+| CLI provided | `--title "Final Exam"` | `"title": "Midterm"` | Uses `"Final Exam"` |
+| JSON only | *(none)* | `"title": "Midterm"` | Uses `"Midterm"` |
+| Neither | *(none)* | *(none)* | Uses `"MCQ Paper - filename"` |
+
+```bash
+# Example 1: Using CLI arguments (highest priority)
+python enhanced_mcq_paper_builder.py --input-file test.json --title "Final Exam"
+
+# Example 2: Using JSON metadata (add to your JSON file)
+# {
+#   "metadata": {"title": "Final Exam", "subtitle": "Physics"},
+#   "sections": [...]
+# }
+python enhanced_mcq_paper_builder.py --input-file test.json
+
+# Example 3: Using defaults (no CLI args, no metadata in JSON)
+python enhanced_mcq_paper_builder.py --input-file test.json
+# Generates: "MCQ Paper - test" as title
+```
+
+**Benefits:**
+- **Non-interactive**: No blocking prompts for CI/CD pipelines
+- **Flexible**: Choose the most convenient configuration method
+- **Reliable**: Always works with sensible defaults
 
 ### Basic MCQ Question
 ```json
