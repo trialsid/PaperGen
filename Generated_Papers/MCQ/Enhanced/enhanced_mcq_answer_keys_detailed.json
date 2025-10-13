@@ -1,221 +1,111 @@
 {
   "Set A": {
-    "total_marks": 19,
+    "total_marks": 9,
     "sections": [
       {
-        "name": "Question Text Array Format",
+        "name": "Calculus: Differentiation and Integration",
         "questions": [
           {
             "number": 1,
-            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
+            "answer": "\u03c0/4"
           },
           {
             "number": 2,
-            "answer": "Prime number"
+            "answer": "0"
           },
           {
             "number": 3,
-            "answer": "28"
-          }
-        ]
-      },
-      {
-        "name": "LIST Placeholder Format",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "2 and 23"
-          },
-          {
-            "number": 2,
-            "answer": "i, iii, and iv only"
-          },
-          {
-            "number": 3,
-            "answer": "6"
-          }
-        ]
-      },
-      {
-        "name": "STATEMENT/STATEMENTS Placeholder Format",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "Both A and R are correct, and R is the correct explanation for A."
-          },
-          {
-            "number": 2,
             "answer": "Both Statement I and Statement II"
-          },
-          {
-            "number": 3,
-            "answer": "It is an unproven conjecture."
           }
         ]
       },
       {
-        "name": "PARAGRAPH Placeholder Format",
+        "name": "Linear Algebra: Matrices and Vector Spaces",
         "questions": [
           {
             "number": 1,
-            "answer": "2"
+            "answer": "1-d, 2-a, 3-c, 4-b"
           },
           {
             "number": 2,
-            "answer": "21"
+            "answer": "Property iii"
           },
           {
             "number": 3,
-            "answer": "7 + 13"
+            "answer": "Both statements are true"
           }
         ]
       },
       {
-        "name": "MTF (Match The Following) Placeholder Format",
+        "name": "Complex Analysis and Series",
         "questions": [
           {
             "number": 1,
-            "answer": "1-c, 2-a, 3-b"
+            "answer": "Both (A) and (R) are true, and (R) is the correct explanation of (A)."
           },
           {
             "number": 2,
-            "answer": "A-3, B-1, C-2"
+            "answer": "Conditionally convergent"
           },
           {
             "number": 3,
-            "answer": "i-c, ii-a, iii-b"
-          }
-        ]
-      },
-      {
-        "name": "Mixed Placeholder Combinations",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "8"
-          },
-          {
-            "number": 2,
-            "answer": "Pair ii"
-          },
-          {
-            "number": 3,
-            "answer": "Both A and R are correct, and R explains A"
-          },
-          {
-            "number": 4,
-            "answer": "25"
+            "answer": "Step 4"
           }
         ]
       }
     ]
   },
   "Set B": {
-    "total_marks": 19,
+    "total_marks": 9,
     "sections": [
       {
-        "name": "Question Text Array Format",
+        "name": "Calculus: Differentiation and Integration",
         "questions": [
           {
             "number": 1,
-            "answer": "Prime number"
+            "answer": "\u03c0/4"
           },
           {
             "number": 2,
-            "answer": "2\u00b2 \u00d7 3 \u00d7 7"
-          },
-          {
-            "number": 3,
-            "answer": "28"
-          }
-        ]
-      },
-      {
-        "name": "LIST Placeholder Format",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "6"
-          },
-          {
-            "number": 2,
-            "answer": "2 and 23"
-          },
-          {
-            "number": 3,
-            "answer": "i, iii, and iv only"
-          }
-        ]
-      },
-      {
-        "name": "STATEMENT/STATEMENTS Placeholder Format",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "Both A and R are correct, and R is the correct explanation for A."
-          },
-          {
-            "number": 2,
-            "answer": "It is an unproven conjecture."
-          },
-          {
-            "number": 3,
             "answer": "Both Statement I and Statement II"
+          },
+          {
+            "number": 3,
+            "answer": "0"
           }
         ]
       },
       {
-        "name": "PARAGRAPH Placeholder Format",
+        "name": "Linear Algebra: Matrices and Vector Spaces",
         "questions": [
           {
             "number": 1,
-            "answer": "21"
+            "answer": "Both statements are true"
           },
           {
             "number": 2,
-            "answer": "2"
+            "answer": "Property iii"
           },
           {
             "number": 3,
-            "answer": "7 + 13"
+            "answer": "1-d, 2-a, 3-c, 4-b"
           }
         ]
       },
       {
-        "name": "MTF (Match The Following) Placeholder Format",
+        "name": "Complex Analysis and Series",
         "questions": [
           {
             "number": 1,
-            "answer": "1-c, 2-a, 3-b"
+            "answer": "Conditionally convergent"
           },
           {
             "number": 2,
-            "answer": "A-3, B-1, C-2"
+            "answer": "Both (A) and (R) are true, and (R) is the correct explanation of (A)."
           },
           {
             "number": 3,
-            "answer": "i-c, ii-a, iii-b"
-          }
-        ]
-      },
-      {
-        "name": "Mixed Placeholder Combinations",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "8"
-          },
-          {
-            "number": 2,
-            "answer": "Both A and R are correct, and R explains A"
-          },
-          {
-            "number": 3,
-            "answer": "Pair ii"
-          },
-          {
-            "number": 4,
-            "answer": "25"
+            "answer": "Step 4"
           }
         ]
       }

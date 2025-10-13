@@ -920,9 +920,9 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
 
         return total_height
     
-    def add_question(self, number: int, question_text, choices: List[str], 
+    def add_question(self, number: int, question_text, choices: List[str],
                     correct_answer_index: Optional[int] = None, reasoning: Optional[str] = None,
-                    question_type: str = "mcq", **kwargs) -> None:
+                    **kwargs) -> None:
         """Universal question renderer that processes question_text arrays sequentially."""
         
         # Convert single string to array for backward compatibility
@@ -960,8 +960,8 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                 self.current_side = 'left'
                 self.set_xy(10, 20)
             
-            return self.add_question(number, question_text, choices, 
-                                   correct_answer_index, reasoning, question_type, **kwargs)
+            return self.add_question(number, question_text, choices,
+                                   correct_answer_index, reasoning, **kwargs)
         
         # Now render the question
         x_start = 10 if self.current_side == 'left' else self.w/2 + 2
@@ -1318,26 +1318,24 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             
             # Add all questions
             for question in questions_with_numbers:
-                # Prepare kwargs based on question type
+                # Prepare kwargs for question-specific data
                 kwargs = {}
-                q_type = question.get('question_type', 'mcq')
-                
+
                 # Add all question type specific data to kwargs (universal approach)
                 kwargs['statement'] = question.get('statement', '')
                 kwargs['statements'] = question.get('statements', [])
                 kwargs['list_items'] = question.get('list_items', [])
                 kwargs['paragraph'] = question.get('paragraph', '')
                 kwargs['mtf_data'] = question.get('mtf_data', {})
-                
+
                 question_texts = self._get_question_text(question)
-                
+
                 self.add_question(
                     question['number'],
                     question_texts,  # Use the helper method result
                     question['choices'],
                     question['choices'].index(question['answer']) if self.show_answers else None,
                     question.get('reasoning') if self.show_answers and 'reasoning' in question else None,
-                    q_type,  # Pass question_type as positional parameter
                     **kwargs
                 )
                 total_marks += section.marks_per_question

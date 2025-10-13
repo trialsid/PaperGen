@@ -1,20 +1,10 @@
 Section,Question Number,Set A,Set B
-Question Text Array Format,1,2² × 3 × 7,Prime number
-Question Text Array Format,2,Prime number,2² × 3 × 7
-Question Text Array Format,3,28,28
-LIST Placeholder Format,1,2 and 23,6
-LIST Placeholder Format,2,"i, iii, and iv only",2 and 23
-LIST Placeholder Format,3,6,"i, iii, and iv only"
-STATEMENT/STATEMENTS Placeholder Format,1,"Both A and R are correct, and R is the correct explanation for A.","Both A and R are correct, and R is the correct explanation for A."
-STATEMENT/STATEMENTS Placeholder Format,2,Both Statement I and Statement II,It is an unproven conjecture.
-STATEMENT/STATEMENTS Placeholder Format,3,It is an unproven conjecture.,Both Statement I and Statement II
-PARAGRAPH Placeholder Format,1,2,21
-PARAGRAPH Placeholder Format,2,21,2
-PARAGRAPH Placeholder Format,3,7 + 13,7 + 13
-MTF (Match The Following) Placeholder Format,1,"1-c, 2-a, 3-b","1-c, 2-a, 3-b"
-MTF (Match The Following) Placeholder Format,2,"A-3, B-1, C-2","A-3, B-1, C-2"
-MTF (Match The Following) Placeholder Format,3,"i-c, ii-a, iii-b","i-c, ii-a, iii-b"
-Mixed Placeholder Combinations,1,8,8
-Mixed Placeholder Combinations,2,Pair ii,"Both A and R are correct, and R explains A"
-Mixed Placeholder Combinations,3,"Both A and R are correct, and R explains A",Pair ii
-Mixed Placeholder Combinations,4,25,25
+Calculus: Differentiation and Integration,1,π/4,π/4
+Calculus: Differentiation and Integration,2,0,Both Statement I and Statement II
+Calculus: Differentiation and Integration,3,Both Statement I and Statement II,0
+Linear Algebra: Matrices and Vector Spaces,1,"1-d, 2-a, 3-c, 4-b",Both statements are true
+Linear Algebra: Matrices and Vector Spaces,2,Property iii,Property iii
+Linear Algebra: Matrices and Vector Spaces,3,Both statements are true,"1-d, 2-a, 3-c, 4-b"
+Complex Analysis and Series,1,"Both (A) and (R) are true, and (R) is the correct explanation of (A).",Conditionally convergent
+Complex Analysis and Series,2,Conditionally convergent,"Both (A) and (R) are true, and (R) is the correct explanation of (A)."
+Complex Analysis and Series,3,Step 4,Step 4
