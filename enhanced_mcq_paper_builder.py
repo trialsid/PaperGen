@@ -396,6 +396,15 @@ def generate_enhanced_mcq_sets_with_keys(
     booklets_dir = 'Generated_Papers/MCQ/Enhanced/Booklets'
     keys_dir = 'Generated_Papers/MCQ/Enhanced'
 
+    # Provide a default configuration when caller does not supply one
+    if config is None:
+        config = MCQConfig(
+            title='Standard High School',
+            subtitle='Mathematics Department',
+            exam_title='MCQ Practice Set',
+            paper_format=paper_format
+        )
+
     # Convert sections data to SectionConfig objects
     base_sections = []
     for section_dict in sections_data:
