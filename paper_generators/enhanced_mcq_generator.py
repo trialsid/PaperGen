@@ -30,21 +30,25 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
                         text, self._question_width, self.config.font_sizes['question']
                     )
                     total_question_height += text_height + 2  # Add spacing between segments
-            
-            # Call parent method for choices and reasoning calculation
+
+            # Use actual render width for choices (accounting for label)
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
+
+            # Calculate choices height using proper width
             choices_height = 0
             for choice in choices:
                 choice_height = self.estimate_text_height(
-                    choice, self._question_width // 2, self.config.font_sizes['option']
+                    choice, single_option_render_width, self.config.font_sizes['option']
                 )
                 choices_height += choice_height
-            
+
             reasoning_height = 0
             if reasoning and self.show_answers:
                 reasoning_height = self.estimate_text_height(
-                    reasoning, self._question_width, self.config.font_sizes['option']
+                    reasoning, single_option_render_width, self.config.font_sizes['option']
                 ) + 7
-            
+
             return total_question_height + choices_height + reasoning_height + 5
         else:
             # Fallback to parent method for string input
@@ -736,37 +740,19 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             total_height += row_height + 1  # Row height + spacing between rows
         
         total_height += 3  # Spacing after table
-        
-        # Choices height (reuse existing logic)
-        half_options_width = (self._options_width/2) - 1
-        i = 0
-        while i < len(choices):
-            if i + 1 < len(choices) and self.can_fit_two_options(choices[i], choices[i+1]):
-                height = max(
-                    self.estimate_text_height(
-                        f"A. {choices[i]}", half_options_width, self.config.font_sizes['option']
-                    ),
-                    self.estimate_text_height(
-                        f"B. {choices[i+1]}", half_options_width, self.config.font_sizes['option']
-                    )
-                ) + 0.1
-                total_height += height
-                i += 2
-                continue
-            
-            option_height = self.estimate_text_height(
-                f"A. {choices[i]}", self._options_width, self.config.font_sizes['option']
-            ) + 0.1
-            total_height += option_height + 0.5
-            i += 1
-        
-        # Reasoning height
+
+        # Choices height (use helper method with corrected widths)
+        total_height += self._calculate_choices_height(choices)
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 2  # Safety buffer
     
     def measure_statement_question_height(self, question_text: str, statement: str, 
@@ -786,16 +772,18 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Choices height (reuse existing logic)
         total_height += self._calculate_choices_height(choices)
-        
-        # Reasoning height
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 2  # Safety buffer
-    
+
     def measure_multiple_statement_question_height(self, question_text: str, statements: List[str],
                                                  choices: List[str], reasoning: Optional[str] = None) -> float:
         """Calculate height needed for a multiple statement question."""
@@ -816,16 +804,18 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Choices height
         total_height += self._calculate_choices_height(choices)
-        
-        # Reasoning height
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 2  # Safety buffer
-    
+
     def measure_sequencing_question_height(self, question_text: str, sequence_items: List[str],
                                          choices: List[str], reasoning: Optional[str] = None) -> float:
         """Calculate height needed for a sequencing question."""
@@ -843,21 +833,23 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
             items_height += item_height + 1  # Spacing between items
         
         total_height = question_height + items_height + 4  # Spacing
-        
-        # Choices height (prefer single column for sequencing)
+
+        # Choices height (prefer single column for sequencing, use actual render width)
+        label_adjustment = 4
+        single_option_render_width = self._options_width - label_adjustment
         for choice in choices:
             choice_height = self.estimate_text_height(
-                f"A. {choice}", self._options_width, self.config.font_sizes['option']
+                choice, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += choice_height + 1
-        
-        # Reasoning height
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 2  # Safety buffer
     
     def measure_paragraph_question_height(self, question_text: str, paragraph: str, question_text_after: str,
@@ -879,44 +871,53 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         )
         
         total_height = question_height + paragraph_height + question_after_height + 6  # Spacing
-        
+
         # Choices height
         total_height += self._calculate_choices_height(choices)
-        
-        # Reasoning height
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 2  # Safety buffer
     
     def _calculate_choices_height(self, choices: List[str]) -> float:
         """Helper method to calculate choices height."""
-        half_options_width = (self._options_width/2) - 1
+        # Calculate actual rendering widths (accounting for label width of 5mm minus 1mm added back = 4mm)
+        label_adjustment = 4
+        single_option_render_width = self._options_width - label_adjustment
+
+        # For side-by-side: account for gap and label on each side
+        half_width_before_label = (self._options_width - self.config.spacing['option_column_gap']) / 2
+        half_option_render_width = half_width_before_label - label_adjustment
+
         total_height = 0
         i = 0
         while i < len(choices):
             if i + 1 < len(choices) and self.can_fit_two_options(choices[i], choices[i+1]):
                 height = max(
                     self.estimate_text_height(
-                        f"A. {choices[i]}", half_options_width, self.config.font_sizes['option']
+                        choices[i], half_option_render_width, self.config.font_sizes['option']
                     ),
                     self.estimate_text_height(
-                        f"B. {choices[i+1]}", half_options_width, self.config.font_sizes['option']
+                        choices[i+1], half_option_render_width, self.config.font_sizes['option']
                     )
                 ) + 0.1
                 total_height += height
                 i += 2
                 continue
-            
+
             option_height = self.estimate_text_height(
-                f"A. {choices[i]}", self._options_width, self.config.font_sizes['option']
+                choices[i], single_option_render_width, self.config.font_sizes['option']
             ) + 0.1
             total_height += option_height + 0.5
             i += 1
-        
+
         return total_height
     
     def add_question(self, number: int, question_text, choices: List[str], 
@@ -1265,14 +1266,16 @@ class EnhancedMCQPaperGenerator(MCQPaperGenerator):
         
         # Choices height
         total_height += self._calculate_choices_height(choices)
-        
-        # Reasoning height
+
+        # Reasoning height (use actual render width)
         if reasoning and self.show_answers:
+            label_adjustment = 4
+            single_option_render_width = self._options_width - label_adjustment
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}", self._options_width, self.config.font_sizes['option']
+                reasoning, single_option_render_width, self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7
-        
+
         return total_height + 5  # Safety buffer
     
     def generate_from_sections(self, sections: List[SectionConfig]) -> int:

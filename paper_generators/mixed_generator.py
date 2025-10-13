@@ -527,44 +527,49 @@ class MixedPaperGenerator(BasePaperGenerator):
         # Estimate question text height
         self.set_font('ArialUni', 'I', self.config.font_sizes['question'])
         question_height = self.estimate_text_height(question_text, self._question_width)
-        
+
         # Estimate options height
         total_height = question_height + 1  # Add 1 for spacing after question
-        
-        # Calculate options width
-        half_options_width = (self._options_width - self.config.spacing['option_column_gap']) / 2
-        
+
+        # Calculate actual rendering widths (accounting for label width of 5mm minus 1mm added back = 4mm)
+        label_adjustment = 4
+        single_option_render_width = self._options_width - label_adjustment
+
+        # For side-by-side: account for gap and label on each side
+        half_width_before_label = (self._options_width - self.config.spacing['option_column_gap']) / 2
+        half_option_render_width = half_width_before_label - label_adjustment
+
         i = 0
         while i < len(choices):
             if i + 1 < len(choices) and self.can_fit_two_options(choices[i], choices[i+1]):
-                # For side-by-side options, calculate max height with very minimal padding
+                # For side-by-side options, use actual render width
                 height = max(
                     self.estimate_text_height(
-                        f"A. {choices[i]}", 
-                        half_options_width, 
+                        choices[i],
+                        half_option_render_width,
                         self.config.font_sizes['option']
                     ),
                     self.estimate_text_height(
-                        f"B. {choices[i+1]}", 
-                        half_options_width, 
+                        choices[i+1],
+                        half_option_render_width,
                         self.config.font_sizes['option']
                     )
                 ) + 0.1  # Minimal padding of 0.1 to match MCQPaperGenerator
                 total_height += height
                 i += 2
                 continue
-            
-            # For single options, add very minimal padding
+
+            # For single options, use actual render width
             option_height = self.estimate_text_height(
-                f"A. {choices[i]}", 
-                self._options_width, 
+                choices[i],
+                single_option_render_width,
                 self.config.font_sizes['option']
             ) + 0.1  # Minimal padding of 0.1 to match MCQPaperGenerator
-            
+
             total_height += option_height
             i += 1
             total_height += 0.5  # Add 0.5 between non-side-by-side options to match MCQPaperGenerator
-        
+
         # Add a very minimal buffer for safety
         buffer_space = 2  # 2 to match MCQPaperGenerator
         return total_height + buffer_space

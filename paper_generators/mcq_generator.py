@@ -565,57 +565,63 @@ class MCQPaperGenerator(BasePaperGenerator):
         """Calculate the height needed for a question and its options."""
         # Calculate question text height with minimal padding
         question_height = self.estimate_text_height(
-            question_text, 
-            self._question_width, 
+            question_text,
+            self._question_width,
             self.config.font_sizes['question']
         )
-        
+
         # Add very minimal spacing after question
         total_height = question_height + 1  # Reduced from 1.5 to 1
-        
-        half_options_width = (self._options_width/2) - 1  # Reduced from 1.5 to 1
-        
+
+        # Calculate actual rendering widths (accounting for label width of 5mm minus 1mm added back = 4mm)
+        label_adjustment = 4
+        single_option_render_width = self._options_width - label_adjustment
+
+        # For side-by-side: account for gap and label on each side
+        half_width_before_label = (self._options_width - self.config.spacing['option_column_gap']) / 2
+        half_option_render_width = half_width_before_label - label_adjustment
+
         # Calculate options height with very minimal padding
         i = 0
         while i < len(choices):
             if i + 1 < len(choices) and self.can_fit_two_options(choices[i], choices[i+1]):
-                # For side-by-side options, calculate max height with very minimal padding
+                # For side-by-side options, use actual render width
                 height = max(
                     self.estimate_text_height(
-                        f"A. {choices[i]}", 
-                        half_options_width, 
+                        choices[i],
+                        half_option_render_width,
                         self.config.font_sizes['option']
                     ),
                     self.estimate_text_height(
-                        f"B. {choices[i+1]}", 
-                        half_options_width, 
+                        choices[i+1],
+                        half_option_render_width,
                         self.config.font_sizes['option']
                     )
                 ) + 0.1  # Reduced from 0.25 to 0.1
                 total_height += height
                 i += 2
                 continue
-            
-            # For single options, add very minimal padding
+
+            # For single options, use actual render width
             option_height = self.estimate_text_height(
-                f"A. {choices[i]}", 
-                self._options_width, 
+                choices[i],
+                single_option_render_width,
                 self.config.font_sizes['option']
             ) + 0.1  # Reduced from 0.25 to 0.1
-            
+
             total_height += option_height
             i += 1
             total_height += 0.5  # Reduced from 0.75 to 0.5
-        
+
         # Add height for reasoning if available and we're showing answers
         if reasoning and self.show_answers:
             reasoning_height = self.estimate_text_height(
-                f"Explanation: {reasoning}",
-                self._options_width,
+                reasoning,
+                single_option_render_width,
                 self.config.font_sizes['option']
             )
             total_height += reasoning_height + 7  # Extra space for the explanation label and padding
-        
+
         # Add a very minimal buffer for safety
         buffer_space = 2  # Reduced from 3 to 2
         return total_height + buffer_space
