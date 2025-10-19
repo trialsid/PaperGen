@@ -38,7 +38,9 @@ class PaperStyles:
             'info_table_value': 8,
             'student_info_label': 8,
             'instructions_title': 8,
-            'instructions_text': 8
+            'instructions_text': 8,
+            # End marker font size
+            'end_marker': 12
         },
         'small': {
             'title': 26,
@@ -58,7 +60,9 @@ class PaperStyles:
             'info_table_value': 9,
             'student_info_label': 9,
             'instructions_title': 9,
-            'instructions_text': 9
+            'instructions_text': 9,
+            # End marker font size
+            'end_marker': 13
         },
         'medium': {  # Current default
             'title': 30,
@@ -78,7 +82,9 @@ class PaperStyles:
             'info_table_value': 10,
             'student_info_label': 10,
             'instructions_title': 10,
-            'instructions_text': 10
+            'instructions_text': 10,
+            # End marker font size
+            'end_marker': 14
         },
         'large': {
             'title': 34,
@@ -98,7 +104,9 @@ class PaperStyles:
             'info_table_value': 11,
             'student_info_label': 11,
             'instructions_title': 11,
-            'instructions_text': 11
+            'instructions_text': 11,
+            # End marker font size
+            'end_marker': 16
         }
     }
     

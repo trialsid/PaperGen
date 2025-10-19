@@ -270,8 +270,10 @@ class MixedPaperGenerator(BasePaperGenerator):
         
         # Right side - Total Questions and Duration info
         # Create a table structure with two columns
+        # Calculate duration: 1.5 minutes per question, rounded
+        duration_minutes = round(self.question_count * 1.5)
         labels = ['Marks:', 'Duration:']
-        values = [f'{self.question_count}', '30min']
+        values = [f'{self.question_count}', f'{duration_minutes}min']
 
         # Calculate required column widths
         self.set_font('Noto', '', self.config.font_sizes['info_table_label'])

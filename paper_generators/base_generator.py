@@ -383,7 +383,7 @@ class BasePaperGenerator(FPDF):
         
         # Draw the END text with gradient-colored asterisks
         text = "END"
-        self.set_font('Noto', 'B', 14)
+        self.set_font('Noto', 'B', self.config.font_sizes['end_marker'])
         
         # Calculate text width to center properly
         text_width = self.get_string_width(text)

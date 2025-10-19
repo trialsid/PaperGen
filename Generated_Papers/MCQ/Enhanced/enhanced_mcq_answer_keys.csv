@@ -1,25 +1,25 @@
 Section,Question Number,Set A,Set B
-Science Fundamentals,1,True,H2O
-Science Fundamentals,2,H2O,Activation energy
-Science Fundamentals,3,Activation energy,Both A and R are true and R is the correct explanation of A.
-Science Fundamentals,4,Ampere,Recycle nutrients
-Science Fundamentals,5,Both A and R are true and R is the correct explanation of A.,All of the above
-Science Fundamentals,6,Both reflection and refraction,"Both correct, reason explains assertion"
-Science Fundamentals,7,"A-1, B-2, C-6, D-8",Ampere
-Science Fundamentals,8,Glucose and oxygen,Both reflection and refraction
-Science Fundamentals,9,B → A → C,Current stays same
-Science Fundamentals,10,Recycle nutrients,True
-Science Fundamentals,11,"Both correct, reason explains assertion","A-1, B-2, C-6, D-8"
-Science Fundamentals,12,All of the above,Glucose and oxygen
-Science Fundamentals,13,Current stays same,B → A → C
-Mathematics Basics,1,0.5,9π square units
-Mathematics Basics,2,"Both correct, reason explains assertion",B → A → C
-Mathematics Basics,3,"A-3, B-4, C-5, D-6",7
-Mathematics Basics,4,9π square units,True
-Mathematics Basics,5,A is false but R is true.,A is false but R is true.
-Mathematics Basics,6,120,2 only
-Mathematics Basics,7,B → A → C,"A-3, B-4, C-5, D-6"
-Mathematics Basics,8,"i, ii, and iii only","Both correct, reason explains assertion"
-Mathematics Basics,9,2 only,"i, ii, and iii only"
-Mathematics Basics,10,True,120
-Mathematics Basics,11,7,0.5
+Science Fundamentals,1,Current stays same,Both A and R are true and R is the correct explanation of A.
+Science Fundamentals,2,"Both correct, reason explains assertion",Recycle nutrients
+Science Fundamentals,3,H2O,Both reflection and refraction
+Science Fundamentals,4,True,"Both correct, reason explains assertion"
+Science Fundamentals,5,Ampere,All of the above
+Science Fundamentals,6,Activation energy,Activation energy
+Science Fundamentals,7,Recycle nutrients,Glucose and oxygen
+Science Fundamentals,8,B → A → C,B → A → C
+Science Fundamentals,9,"A-1, B-2, C-6, D-8",True
+Science Fundamentals,10,Both A and R are true and R is the correct explanation of A.,Current stays same
+Science Fundamentals,11,Both reflection and refraction,"A-1, B-2, C-6, D-8"
+Science Fundamentals,12,Glucose and oxygen,H2O
+Science Fundamentals,13,All of the above,Ampere
+Mathematics Basics,1,"A-3, B-4, C-5, D-6",2 only
+Mathematics Basics,2,120,"i, ii, and iii only"
+Mathematics Basics,3,"i, ii, and iii only","A-3, B-4, C-5, D-6"
+Mathematics Basics,4,B → A → C,120
+Mathematics Basics,5,0.5,B → A → C
+Mathematics Basics,6,"Both correct, reason explains assertion",9π square units
+Mathematics Basics,7,2 only,0.5
+Mathematics Basics,8,7,"Both correct, reason explains assertion"
+Mathematics Basics,9,9π square units,A is false but R is true.
+Mathematics Basics,10,True,7
+Mathematics Basics,11,A is false but R is true.,True
