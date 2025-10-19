@@ -149,21 +149,21 @@ class MixedPaperGenerator(BasePaperGenerator):
         # School name
         self.set_font('Stinger', 'B', title_font_size)
         self.set_y(PaperStyles.HEADER_SETTINGS['first_page_y'])
-        self.cell(0, 10, self.config.title, 0, 1, 'C')
+        self.cell(0, self.config.spacing['title_block_spacing']['title_line_height'], self.config.title, 0, 1, 'C')
 
         # Subtitle
         self.set_font('Stinger', 'B', self.config.font_sizes['subtitle'])
-        self.cell(0, 10, self.config.subtitle, 0, 1, 'C')
+        self.cell(0, self.config.spacing['title_block_spacing']['subtitle_line_height'], self.config.subtitle, 0, 1, 'C')
 
         # Exam title
         self.set_font('Noto', 'I', self.config.font_sizes['exam_title'])
         title_text = self.config.exam_title
         if self.show_answers:
             title_text += ' (ANSWERS)'
-        self.cell(0, 10, title_text, 0, 1, 'C')
+        self.cell(0, self.config.spacing['title_block_spacing']['exam_title_line_height'], title_text, 0, 1, 'C')
 
         # Draw first line below the titles
-        first_line_y = self.get_y() + PaperStyles.HEADER_SETTINGS['line_y_offset']
+        first_line_y = self.get_y() + self.config.spacing['title_block_spacing']['after_title_block']
         self.line(10, first_line_y, self.w - 10, first_line_y)
 
         if self.show_student_info:
@@ -171,16 +171,16 @@ class MixedPaperGenerator(BasePaperGenerator):
             self.set_draw_color(*PaperStyles.COLORS['light_grey'])  # Light grey
             
             # Name field
-            start_y = first_line_y + 5
-            self.set_font('Noto', '', PaperStyles.STUDENT_INFO['label_font_size'])
+            start_y = first_line_y + self.config.spacing['header_spacing']['after_first_line']
+            self.set_font('Noto', '', self.config.font_sizes['student_info_label'])
             label_name = "Name:"
             name_width = self.get_string_width(label_name)
             self.set_xy(12, start_y)
             self.cell(name_width, 5, label_name, 0, 0)
-            self.line(12 + name_width + 2, start_y + PaperStyles.STUDENT_INFO['line_offset'], self.w/2 - 5, start_y + PaperStyles.STUDENT_INFO['line_offset'])
+            self.line(12 + name_width + 2, start_y + self.config.spacing['header_spacing']['student_line_offset'], self.w/2 - 5, start_y + self.config.spacing['header_spacing']['student_line_offset'])
 
             # Class and Section fields
-            next_y = start_y + PaperStyles.STUDENT_INFO['field_spacing']
+            next_y = start_y + self.config.spacing['header_spacing']['student_field_spacing']
             label_class = "Class:"
             class_width = self.get_string_width(label_class)
             label_section = "Section:"
@@ -191,39 +191,39 @@ class MixedPaperGenerator(BasePaperGenerator):
             self.set_xy(12, next_y)
             self.cell(class_width, 5, label_class, 0, 0)
             class_line_end = 12 + class_width + 2 + line_length
-            self.line(12 + class_width + 2, next_y + PaperStyles.STUDENT_INFO['line_offset'], class_line_end, next_y + PaperStyles.STUDENT_INFO['line_offset'])
-            
+            self.line(12 + class_width + 2, next_y + self.config.spacing['header_spacing']['student_line_offset'], class_line_end, next_y + self.config.spacing['header_spacing']['student_line_offset'])
+
             section_x = class_line_end + 5
             self.set_xy(section_x, next_y)
             self.cell(section_width, 5, label_section, 0, 0)
-            self.line(section_x + section_width + 2, next_y + PaperStyles.STUDENT_INFO['line_offset'], 
-                    self.w/2 - 5, next_y + PaperStyles.STUDENT_INFO['line_offset'])
-            
+            self.line(section_x + section_width + 2, next_y + self.config.spacing['header_spacing']['student_line_offset'],
+                    self.w/2 - 5, next_y + self.config.spacing['header_spacing']['student_line_offset'])
+
             # Roll Number field
-            roll_y = next_y + PaperStyles.STUDENT_INFO['field_spacing']
+            roll_y = next_y + self.config.spacing['header_spacing']['student_field_spacing']
             label_roll = "Roll no.:"
             roll_width = self.get_string_width(label_roll)
             
             self.set_xy(12, roll_y)
             self.cell(roll_width, 5, label_roll, 0, 0)
-            self.line(12 + roll_width + 2, roll_y + PaperStyles.STUDENT_INFO['line_offset'], self.w/2 - 5, roll_y + PaperStyles.STUDENT_INFO['line_offset'])
-            
+            self.line(12 + roll_width + 2, roll_y + self.config.spacing['header_spacing']['student_line_offset'], self.w/2 - 5, roll_y + self.config.spacing['header_spacing']['student_line_offset'])
+
             # Reset draw color to black
             self.set_draw_color(*PaperStyles.COLORS['black'])
-            
-            student_end_y = roll_y + 5
+
+            student_end_y = roll_y + self.config.spacing['header_spacing']['after_student_field']
 
             # Instructions section
             instructions_x = self.w / 2 + 5
             instructions_width = (self.w / 2) - 15  # Leave margin on right edge
-            instructions_y = start_y - 2 
-            
-            self.set_font('Noto', 'B', PaperStyles.INSTRUCTIONS['title_font_size'])
+            instructions_y = start_y - self.config.spacing['header_spacing']['instructions_offset']
+
+            self.set_font('Noto', 'B', self.config.font_sizes['instructions_title'])
             self.set_xy(instructions_x, instructions_y)
             self.cell(0, 5, "Instructions:", 0, 1)
-            instructions_y += 5
-            
-            self.set_font('Noto', '', PaperStyles.INSTRUCTIONS['text_font_size'])
+            instructions_y += self.config.spacing['header_spacing']['after_instructions_title']
+
+            self.set_font('Noto', '', self.config.font_sizes['instructions_text'])
             instructions = [
                 "Carefully read all questions before answering.",
                 "Answer only on the provided sheet.",
@@ -240,70 +240,73 @@ class MixedPaperGenerator(BasePaperGenerator):
                 self.cell(bullet_width, 5, '•', 0, 0)
                 # Use multi_cell for wrapping text instead of single cell
                 self.set_xy(instructions_x + bullet_width, instructions_y)
-                self.multi_cell(text_width, PaperStyles.INSTRUCTIONS['line_height'], instruction, 0, 'L')
-                instructions_y = self.get_y() + 1  # Add small spacing between instructions
+                self.multi_cell(text_width, self.config.spacing['header_spacing']['between_instructions'] + 3, instruction, 0, 'L')
+                instructions_y = self.get_y() + self.config.spacing['header_spacing']['between_instructions']  # Add spacing between instructions
             
             instructions_end_y = instructions_y
             split_section_end_y = max(student_end_y, instructions_end_y)
             
-            self.line(self.w/2, first_line_y, self.w/2, split_section_end_y + 2)
-            second_line_y = split_section_end_y + 2
+            self.line(self.w/2, first_line_y, self.w/2, split_section_end_y + self.config.spacing['header_spacing']['before_second_line'])
+            second_line_y = split_section_end_y + self.config.spacing['header_spacing']['before_second_line']
         else:
             # Skip student info and instructions, just add a small gap
-            second_line_y = first_line_y + 1  # Reduced from 10 to 1
+            second_line_y = first_line_y + self.config.spacing['header_spacing']['minimal_gap']
             
         # Draw second horizontal line (above SET info)
         self.line(10, second_line_y, self.w - 10, second_line_y)
 
-        set_name_height = 10
-        vertical_gap = 1
+        set_name_height = self.config.spacing['header_spacing']['set_section_height']
+        vertical_gap = self.config.spacing['header_spacing']['set_vertical_gap']
         set_name_y = second_line_y + vertical_gap
         third_line_y = set_name_y + set_name_height + vertical_gap
 
-        # Left side - SET name section
+        # Left side - SET name section (vertically centered)
         self.set_font('Noto', 'B', self.config.font_sizes['header'])
         self.set_y(set_name_y)
         self.set_x(10)
-        self.cell(7, 10, 'SET', 0, 0, 'L')
-        self.set_font('Stinger', 'B', 28)
-        self.cell(20, 10, f' {self.set_name}', 0, 0, 'L')
+        self.cell(7, set_name_height, 'SET', 0, 0, 'L')
+        self.set_font('Stinger', 'B', self.config.font_sizes['set_name'])
+        self.cell(20, set_name_height, f' {self.set_name}', 0, 0, 'L')
         
         # Right side - Total Questions and Duration info
-        right_side_width = (self.w/2) - 15
-        right_side_start = self.w*0.78
-        
         # Create a table structure with two columns
         labels = ['Marks:', 'Duration:']
         values = [f'{self.question_count}', '30min']
-        
+
         # Calculate required column widths
-        self.set_font('Noto', '', 10)
+        self.set_font('Noto', '', self.config.font_sizes['info_table_label'])
         max_label_width = max(self.get_string_width(label) for label in labels)
-        
-        # Add some padding to the label width
-        label_column_width = max_label_width + 5
-        value_column_width = right_side_width - label_column_width
-        
-        # Position to align with the right edge
-        right_align_start = right_side_start + right_side_width - label_column_width - value_column_width
-        
+
+        # Calculate value column width
+        self.set_font('Noto', 'B', self.config.font_sizes['info_table_value'])
+        max_value_width = max(self.get_string_width(value) for value in values)
+
+        # Add padding
+        label_column_width = max_label_width + 2
+        value_column_width = max_value_width + 2
+
+        # Position table so values align with right edge (self.w - 10)
+        table_right_edge = self.w - 10
+        table_start_x = table_right_edge - label_column_width - value_column_width
+
         # Draw each row of the table
         for i, (label, value) in enumerate(zip(labels, values)):
-            row_y = set_name_y + (i * 5)
-            
-            # Label cell (right aligned)
-            self.set_xy(right_align_start, row_y)
-            self.set_font('Noto', '', 10)
+            row_y = set_name_y + (i * self.config.spacing['header_spacing']['info_table_row_height'])
+
+            # Label cell (right aligned - aligns colons)
+            self.set_xy(table_start_x, row_y)
+            self.set_font('Noto', '', self.config.font_sizes['info_table_label'])
             self.cell(label_column_width, 5, label, 0, 0, 'R')
-            
-            # Value cell (left aligned)
-            self.set_font('Noto', 'B', self.config.font_sizes['option_label'])
-            self.cell(value_column_width, 5, value, 0, 1, 'L')
+
+            # Value cell (right aligned to separator line edge at self.w - 10)
+            self.set_font('Noto', 'B', self.config.font_sizes['info_table_value'])
+            self.cell(value_column_width, 5, value, 0, 0, 'R')
 
         self.line(10, third_line_y, self.w - 10, third_line_y)
         # Add a second line right below the third line to create a double-line effect
-        self.line(10, third_line_y + 1, self.w - 10, third_line_y + 1)
-        self.first_page_offset = third_line_y + 1  # Adjust the offset to account for the additional line
+        double_line_gap = self.config.spacing['header_spacing']['double_line_gap']
+        self.line(10, third_line_y + double_line_gap, self.w - 10, third_line_y + double_line_gap)
+        self.first_page_offset = third_line_y + double_line_gap  # Adjust the offset to account for the additional line
         question_area_end_y = self.h - 12
         self.line(self.w / 2, third_line_y, self.w / 2, question_area_end_y)
         self.set_xy(10, self.first_page_offset + 5)
