@@ -225,10 +225,10 @@ class MixedPaperGenerator(BasePaperGenerator):
 
             self.set_font('Noto', '', self.config.font_sizes['instructions_text'])
             instructions = [
-                "Carefully read all questions before answering.",
-                "Answer only on the provided sheet.",
-                "Write clearly; follow question format.",
-                "Manage your time for all sections."
+                "Read all questions carefully",
+                "Mark answers on separate OMR sheet",
+                "Use question paper for rough work",
+                "Manage time to complete all sections"
             ]
             
             # Calculate bullet width

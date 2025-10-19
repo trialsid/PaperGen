@@ -187,10 +187,10 @@ class MCQPaperGenerator(BasePaperGenerator):
 
             self.set_font('Noto', '', self.config.font_sizes['instructions_text'])
             instructions = [
-                "Fill OMR sheet with blue/black pen.",
-                "Fill circles completely.",
-                "No stray marks.",
-                "Enter Name, Class, Section."
+                "Read all questions carefully",
+                "Mark answers on separate OMR sheet",
+                "Use question paper for rough work",
+                "Manage time to complete all sections"
             ]
             
             # Calculate bullet width
