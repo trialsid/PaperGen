@@ -1,10 +1,25 @@
 Section,Question Number,Set A,Set B
-Calculus: Differentiation and Integration,1,π/4,π/4
-Calculus: Differentiation and Integration,2,0,Both Statement I and Statement II
-Calculus: Differentiation and Integration,3,Both Statement I and Statement II,0
-Linear Algebra: Matrices and Vector Spaces,1,"1-d, 2-a, 3-c, 4-b",Both statements are true
-Linear Algebra: Matrices and Vector Spaces,2,Property iii,Property iii
-Linear Algebra: Matrices and Vector Spaces,3,Both statements are true,"1-d, 2-a, 3-c, 4-b"
-Complex Analysis and Series,1,"Both (A) and (R) are true, and (R) is the correct explanation of (A).",Conditionally convergent
-Complex Analysis and Series,2,Conditionally convergent,"Both (A) and (R) are true, and (R) is the correct explanation of (A)."
-Complex Analysis and Series,3,Step 4,Step 4
+Science Fundamentals,1,True,Ampere
+Science Fundamentals,2,H2O,Recycle nutrients
+Science Fundamentals,3,Both reflection and refraction,Current stays same
+Science Fundamentals,4,Both A and R are true and R is the correct explanation of A.,Both A and R are true and R is the correct explanation of A.
+Science Fundamentals,5,All of the above,"A-1, B-2, C-6, D-8"
+Science Fundamentals,6,Glucose and oxygen,"Both correct, reason explains assertion"
+Science Fundamentals,7,"A-1, B-2, C-6, D-8",All of the above
+Science Fundamentals,8,Recycle nutrients,Activation energy
+Science Fundamentals,9,Current stays same,Both reflection and refraction
+Science Fundamentals,10,"Both correct, reason explains assertion",Glucose and oxygen
+Science Fundamentals,11,B → A → C,H2O
+Science Fundamentals,12,Ampere,True
+Science Fundamentals,13,Activation energy,B → A → C
+Mathematics Basics,1,9π square units,"A-3, B-4, C-5, D-6"
+Mathematics Basics,2,"A-3, B-4, C-5, D-6",B → A → C
+Mathematics Basics,3,"Both correct, reason explains assertion",True
+Mathematics Basics,4,B → A → C,"i, ii, and iii only"
+Mathematics Basics,5,7,9π square units
+Mathematics Basics,6,True,2 only
+Mathematics Basics,7,"i, ii, and iii only",A is false but R is true.
+Mathematics Basics,8,0.5,120
+Mathematics Basics,9,A is false but R is true.,0.5
+Mathematics Basics,10,120,7
+Mathematics Basics,11,2 only,"Both correct, reason explains assertion"

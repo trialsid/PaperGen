@@ -1,111 +1,221 @@
 {
   "Set A": {
-    "total_marks": 9,
+    "total_marks": 24,
     "sections": [
       {
-        "name": "Calculus: Differentiation and Integration",
+        "name": "Science Fundamentals",
         "questions": [
           {
             "number": 1,
-            "answer": "\u03c0/4"
+            "answer": "True"
           },
           {
             "number": 2,
-            "answer": "0"
+            "answer": "H2O"
           },
           {
             "number": 3,
-            "answer": "Both Statement I and Statement II"
+            "answer": "Both reflection and refraction"
+          },
+          {
+            "number": 4,
+            "answer": "Both A and R are true and R is the correct explanation of A."
+          },
+          {
+            "number": 5,
+            "answer": "All of the above"
+          },
+          {
+            "number": 6,
+            "answer": "Glucose and oxygen"
+          },
+          {
+            "number": 7,
+            "answer": "A-1, B-2, C-6, D-8"
+          },
+          {
+            "number": 8,
+            "answer": "Recycle nutrients"
+          },
+          {
+            "number": 9,
+            "answer": "Current stays same"
+          },
+          {
+            "number": 10,
+            "answer": "Both correct, reason explains assertion"
+          },
+          {
+            "number": 11,
+            "answer": "B \u2192 A \u2192 C"
+          },
+          {
+            "number": 12,
+            "answer": "Ampere"
+          },
+          {
+            "number": 13,
+            "answer": "Activation energy"
           }
         ]
       },
       {
-        "name": "Linear Algebra: Matrices and Vector Spaces",
+        "name": "Mathematics Basics",
         "questions": [
           {
             "number": 1,
-            "answer": "1-d, 2-a, 3-c, 4-b"
+            "answer": "9\u03c0 square units"
           },
           {
             "number": 2,
-            "answer": "Property iii"
+            "answer": "A-3, B-4, C-5, D-6"
           },
           {
             "number": 3,
-            "answer": "Both statements are true"
-          }
-        ]
-      },
-      {
-        "name": "Complex Analysis and Series",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "Both (A) and (R) are true, and (R) is the correct explanation of (A)."
+            "answer": "Both correct, reason explains assertion"
           },
           {
-            "number": 2,
-            "answer": "Conditionally convergent"
+            "number": 4,
+            "answer": "B \u2192 A \u2192 C"
           },
           {
-            "number": 3,
-            "answer": "Step 4"
+            "number": 5,
+            "answer": "7"
+          },
+          {
+            "number": 6,
+            "answer": "True"
+          },
+          {
+            "number": 7,
+            "answer": "i, ii, and iii only"
+          },
+          {
+            "number": 8,
+            "answer": "0.5"
+          },
+          {
+            "number": 9,
+            "answer": "A is false but R is true."
+          },
+          {
+            "number": 10,
+            "answer": "120"
+          },
+          {
+            "number": 11,
+            "answer": "2 only"
           }
         ]
       }
     ]
   },
   "Set B": {
-    "total_marks": 9,
+    "total_marks": 24,
     "sections": [
       {
-        "name": "Calculus: Differentiation and Integration",
+        "name": "Science Fundamentals",
         "questions": [
           {
             "number": 1,
-            "answer": "\u03c0/4"
+            "answer": "Ampere"
           },
           {
             "number": 2,
-            "answer": "Both Statement I and Statement II"
+            "answer": "Recycle nutrients"
           },
           {
             "number": 3,
-            "answer": "0"
+            "answer": "Current stays same"
+          },
+          {
+            "number": 4,
+            "answer": "Both A and R are true and R is the correct explanation of A."
+          },
+          {
+            "number": 5,
+            "answer": "A-1, B-2, C-6, D-8"
+          },
+          {
+            "number": 6,
+            "answer": "Both correct, reason explains assertion"
+          },
+          {
+            "number": 7,
+            "answer": "All of the above"
+          },
+          {
+            "number": 8,
+            "answer": "Activation energy"
+          },
+          {
+            "number": 9,
+            "answer": "Both reflection and refraction"
+          },
+          {
+            "number": 10,
+            "answer": "Glucose and oxygen"
+          },
+          {
+            "number": 11,
+            "answer": "H2O"
+          },
+          {
+            "number": 12,
+            "answer": "True"
+          },
+          {
+            "number": 13,
+            "answer": "B \u2192 A \u2192 C"
           }
         ]
       },
       {
-        "name": "Linear Algebra: Matrices and Vector Spaces",
+        "name": "Mathematics Basics",
         "questions": [
           {
             "number": 1,
-            "answer": "Both statements are true"
+            "answer": "A-3, B-4, C-5, D-6"
           },
           {
             "number": 2,
-            "answer": "Property iii"
+            "answer": "B \u2192 A \u2192 C"
           },
           {
             "number": 3,
-            "answer": "1-d, 2-a, 3-c, 4-b"
-          }
-        ]
-      },
-      {
-        "name": "Complex Analysis and Series",
-        "questions": [
-          {
-            "number": 1,
-            "answer": "Conditionally convergent"
+            "answer": "True"
           },
           {
-            "number": 2,
-            "answer": "Both (A) and (R) are true, and (R) is the correct explanation of (A)."
+            "number": 4,
+            "answer": "i, ii, and iii only"
           },
           {
-            "number": 3,
-            "answer": "Step 4"
+            "number": 5,
+            "answer": "9\u03c0 square units"
+          },
+          {
+            "number": 6,
+            "answer": "2 only"
+          },
+          {
+            "number": 7,
+            "answer": "A is false but R is true."
+          },
+          {
+            "number": 8,
+            "answer": "120"
+          },
+          {
+            "number": 9,
+            "answer": "0.5"
+          },
+          {
+            "number": 10,
+            "answer": "7"
+          },
+          {
+            "number": 11,
+            "answer": "Both correct, reason explains assertion"
           }
         ]
       }
