@@ -70,7 +70,7 @@ class MixedPaperGenerator(BasePaperGenerator):
                     width: float, is_answer: bool = False) -> float:
         """Write a single option and return its height."""
         # Check if we're too close to the footer
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Same as MCQPaperGenerator
+        footer_buffer = self.footer_buffer + 2  # Same as MCQPaperGenerator
         if y > (self.h - footer_buffer):
             return 0  # Return 0 instead of -1 to match MCQPaperGenerator
         
@@ -110,7 +110,7 @@ class MixedPaperGenerator(BasePaperGenerator):
             return 0
 
         # Check if we're too close to the footer
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Same as MCQPaperGenerator
+        footer_buffer = self.footer_buffer + 2  # Same as MCQPaperGenerator
         if y > (self.h - footer_buffer):
             return 0  # Return 0 instead of -1 to match MCQPaperGenerator
             
@@ -309,7 +309,7 @@ class MixedPaperGenerator(BasePaperGenerator):
         double_line_gap = self.config.spacing['header_spacing']['double_line_gap']
         self.line(10, third_line_y + double_line_gap, self.w - 10, third_line_y + double_line_gap)
         self.first_page_offset = third_line_y + double_line_gap  # Adjust the offset to account for the additional line
-        question_area_end_y = self.h - 12
+        question_area_end_y = self.h - self.footer_buffer
         self.line(self.w / 2, third_line_y, self.w / 2, question_area_end_y)
         self.set_xy(10, self.first_page_offset + 5)
 
@@ -344,7 +344,7 @@ class MixedPaperGenerator(BasePaperGenerator):
                 0, 0, 'R')
         
         self.line(10, header_y + 10, self.w - 10, header_y + 10)
-        self.line(self.w/2, header_y + 10, self.w/2, self.h - 12)
+        self.line(self.w/2, header_y + 10, self.w/2, self.h - self.footer_buffer)
         self.set_xy(10, header_y + 15)
 
     def _write_mcq_question(self, number: int, question: Dict) -> None:
@@ -353,7 +353,7 @@ class MixedPaperGenerator(BasePaperGenerator):
         needed_height = self._measure_mcq_question_height(question['question'], question['choices'])
         
         # Check if the question can fit in a single column
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
         column_height = effective_page_height - (self.first_page_offset + 5 if self.page_no() == 1 else 20)
         
         # If the question is too tall for a single column, we need to adjust our approach
@@ -424,7 +424,7 @@ class MixedPaperGenerator(BasePaperGenerator):
             current_y = self.get_y() + 1
             
             # Calculate remaining space in current column
-            effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+            effective_page_height = self.h - self.footer_buffer
             remaining_space = effective_page_height - current_y
             
             # Calculate height needed for options only
@@ -679,7 +679,7 @@ class MixedPaperGenerator(BasePaperGenerator):
         question_height = self._measure_fb_question_height(question_text)
         
         # Check if the question can fit in a single column
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
         column_height = effective_page_height - (self.first_page_offset + 5 if self.page_no() == 1 else 20)
         
         # If the question is too tall for a single column, we need to adjust our approach
@@ -827,7 +827,7 @@ class MixedPaperGenerator(BasePaperGenerator):
         total_height = question_height + headers_height + pairs_height + 4  # Add 4 points for final spacing
         
         # Check if the question can fit in a single column
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
         column_height = effective_page_height - (self.first_page_offset + 5 if self.page_no() == 1 else 20)
         
         # If the question is too tall for a single column, we need to adjust our approach
@@ -988,7 +988,7 @@ class MixedPaperGenerator(BasePaperGenerator):
     def check_and_adjust_position(self, needed_height: float, questions: List[Dict], current_idx: int) -> Tuple[bool, int]:
         """Check if there's enough space for content and adjust position if needed."""
         current_y = self.get_y()
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
         
         # Calculate available space from current position
         if self.page_no() == 1:

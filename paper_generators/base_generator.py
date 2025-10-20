@@ -50,9 +50,7 @@ class PaperConfig:
 
 class BasePaperGenerator(FPDF):
     """Base class for all paper generators with common functionality."""
-    
-    MIN_FOOTER_BUFFER = 12
-    
+
     def __init__(self, 
                  config: Optional[PaperConfig] = None,
                  show_answers: bool = False,
@@ -87,6 +85,13 @@ class BasePaperGenerator(FPDF):
         """Set the name of the current set (A, B, C, etc.)."""
         self.set_name = name
 
+    @property
+    def footer_buffer(self) -> float:
+        """
+        Get the size-aware footer buffer based on the current spacing configuration.
+        Returns the footer_height value from the active size profile.
+        """
+        return self.config.spacing['footer_height']
 
     # Class-level font cache to prevent reloading fonts
     _global_font_cache = {}
@@ -203,7 +208,7 @@ class BasePaperGenerator(FPDF):
         
         # Check if current position would orphan the section header
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER + 3  # Use class constant with small buffer
+        footer_buffer = self.footer_buffer + 3  # Use size-aware footer buffer with small extra padding
         effective_page_height = self.h - footer_buffer
         
         # Add extra spacing if not at top of column
@@ -260,7 +265,7 @@ class BasePaperGenerator(FPDF):
 
     def footer(self) -> None:
         """Draw page footer with page number."""
-        self.line(10, self.h - 12, self.w - 10, self.h - 12)
+        self.line(10, self.h - self.footer_buffer, self.w - 10, self.h - self.footer_buffer)
         self.set_y(-10)
         self.set_font('Noto', 'I', self.config.font_sizes['footer'])
         self.cell(0, 5, f'Page {self.page_no()}', 0, 0, 'C')
@@ -290,10 +295,10 @@ class BasePaperGenerator(FPDF):
         
         # Estimate the height needed for this option
         option_height = self.estimate_text_height(option_text_to_measure, width - 5 + 1, self.config.font_sizes['option'])
-        
+
         # Check if there's enough space on the current page
         current_y = y
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
         
         # If option won't fit in remaining space, return -1
         if (current_y + option_height) > effective_page_height:
@@ -345,10 +350,15 @@ class BasePaperGenerator(FPDF):
         Draw a styled "END" marker with gradient-colored asterisks.
         This is used at the end of question papers to indicate the end of the questions.
         """
+        # Calculate size-aware end marker height
+        line_height = self.config.spacing['line_height']
+        vertical_spacing = 2 * line_height  # Spacing before and after
+        text_row_height = line_height  # Height of the text row
+        end_marker_height = vertical_spacing + text_row_height + vertical_spacing
+
         # Check if there's enough space for the end marker in the current column
         y_pos = self.get_y()
-        end_marker_height = 20  # Approximate height for the end marker with spacing
-        effective_page_height = self.h - self.MIN_FOOTER_BUFFER
+        effective_page_height = self.h - self.footer_buffer
 
         # If there's not enough space in the current column for the end marker
         if (y_pos + end_marker_height) > effective_page_height:
@@ -364,66 +374,105 @@ class BasePaperGenerator(FPDF):
                 self.current_side = 'left'
                 self.set_xy(10, 20)
         
-        # Determine which column we're in
+        # Determine which column we're in and use full column width (including question number area)
         if self.current_side == 'left':
-            x = 10
-            width = self.w/2 - 12
+            x_start = 10
         else:
-            x = self.w/2 + 2
-            width = self.w/2 - 12
-            
-        # Add some space before the END text
-        self.ln(10)
-        
+            x_start = self.w/2 + 2
+        # Use full column width
+        available_width = self._column_width
+
+        # Add size-aware spacing before the END text
+        self.ln(vertical_spacing)
+
         # Current y position for the text
         y_pos = self.get_y()
-        
-        # Center position calculation
-        center_x = x + width/2
-        
-        # Draw the END text with gradient-colored asterisks
-        text = "END"
+
+        # Set font for measurements
         self.set_font('Noto', 'B', self.config.font_sizes['end_marker'])
-        
-        # Calculate text width to center properly
+
+        # Calculate widths for symmetric layout
+        text = "END"
         text_width = self.get_string_width(text)
-        
-        # Draw gradient asterisks (4 on each side)
-        asterisk_x_start = center_x - (text_width/2) - 30  # Starting position for asterisks
-        
-        # Gradient colors from light grey to dark gray (left side)
+        asterisk_width = self.get_string_width("*")
+
+        # Use 6 asterisks on each side for better visual balance
+        num_asterisks = 6
+        total_asterisks = num_asterisks * 2  # Both sides
+
+        # Calculate total space needed for fixed elements
+        total_asterisk_width = asterisk_width * total_asterisks
+        total_fixed_width = text_width + total_asterisk_width
+
+        # Calculate remaining space for gaps
+        # Gaps needed: edge + between_left_asterisks(5) + before_text + after_text + between_right_asterisks(5) + edge
+        # Total: 2 edge + 10 between asterisks + 2 around text = 14 gaps
+        num_gaps = 2 + (num_asterisks - 1) + 1 + 1 + (num_asterisks - 1) + 2
+        remaining_space = available_width - total_fixed_width
+
+        # Ensure we don't have negative space
+        if remaining_space < 0:
+            # Fallback: reduce number of asterisks if width is too small
+            num_asterisks = max(3, int((available_width - text_width) / (asterisk_width * 2.5)))
+            total_asterisks = num_asterisks * 2
+            total_asterisk_width = asterisk_width * total_asterisks
+            total_fixed_width = text_width + total_asterisk_width
+            num_gaps = 2 + (num_asterisks - 1) + 1 + 1 + (num_asterisks - 1) + 2
+            remaining_space = available_width - total_fixed_width
+
+        gap_width = remaining_space / num_gaps if num_gaps > 0 else 0
+
+        # Gradient colors from light grey to dark gray (left side - towards center)
+        # Adjust number of colors based on actual asterisks
         left_colors = [
-            (200, 200, 200),  # Light grey
-            (170, 170, 170),
-            (140, 140, 140),
-            (110, 110, 110)   # Darker grey
-        ]
-        
-        # Gradient colors from dark gray to light grey (right side)
+            (220, 220, 220),  # Very light grey
+            (190, 190, 190),
+            (160, 160, 160),
+            (130, 130, 130),
+            (100, 100, 100),
+            (70, 70, 70)      # Dark grey
+        ][:num_asterisks]
+
+        # Gradient colors from dark gray to light grey (right side - away from center)
         right_colors = [
-            (110, 110, 110),  # Darker grey
-            (140, 140, 140),
-            (170, 170, 170),
-            (200, 200, 200)   # Light grey
-        ]
-        
+            (70, 70, 70),     # Dark grey
+            (100, 100, 100),
+            (130, 130, 130),
+            (160, 160, 160),
+            (190, 190, 190),
+            (220, 220, 220)   # Very light grey
+        ][:num_asterisks]
+
+        # Calculate starting position for left asterisks
+        current_x = x_start + gap_width  # Start with edge gap
+
         # Draw left asterisks with gradient
         for i, color in enumerate(left_colors):
             self.set_text_color(color[0], color[1], color[2])
-            self.set_xy(asterisk_x_start + (i * 7), y_pos)
-            self.cell(7, 5, "*", 0, 0, 'C')
-        
+            self.set_xy(current_x, y_pos)
+            self.cell(asterisk_width, text_row_height, "*", 0, 0, 'L')
+            current_x += asterisk_width + gap_width
+
+        # Add gap before text
+        current_x += gap_width
+
         # Draw the END text in black
-        self.set_text_color(0, 0, 0)  # Black
-        self.set_xy(center_x - text_width/2, y_pos)
-        self.cell(text_width, 5, text, 0, 0, 'C')
-        
+        self.set_text_color(0, 0, 0)
+        self.set_xy(current_x, y_pos)
+        self.cell(text_width, text_row_height, text, 0, 0, 'L')
+        current_x += text_width
+
+        # Add gap after text
+        current_x += gap_width
+
         # Draw right asterisks with gradient
         for i, color in enumerate(right_colors):
-            self.set_xy(center_x + text_width/2 + (i * 7), y_pos)
+            current_x += gap_width  # Gap before each asterisk
             self.set_text_color(color[0], color[1], color[2])
-            self.cell(7, 5, "*", 0, 0, 'C')
-        
-        # Reset position and text color
-        self.ln(10)
+            self.set_xy(current_x, y_pos)
+            self.cell(asterisk_width, text_row_height, "*", 0, 0, 'L')
+            current_x += asterisk_width
+
+        # Add size-aware spacing after the END text and reset text color
+        self.ln(vertical_spacing)
         self.set_text_color(0, 0, 0) 

@@ -1,26 +1,22 @@
 Question_Number,Section,Marks,Set_A,Set_B
-1,Science Fundamentals,1,D,C
-2,Science Fundamentals,1,D,D
-3,Science Fundamentals,1,D,B
-4,Science Fundamentals,1,D,A
-5,Science Fundamentals,1,B,A
-6,Science Fundamentals,1,C,B
-7,Science Fundamentals,1,C,A
-8,Science Fundamentals,1,C,D
-9,Science Fundamentals,1,B,D
-10,Science Fundamentals,1,D,D
-11,Science Fundamentals,1,A,C
-12,Science Fundamentals,1,A,C
-13,Science Fundamentals,1,C,B
-14,Mathematics Basics,1,D,B
-15,Mathematics Basics,1,C,C
-16,Mathematics Basics,1,C,C
-17,Mathematics Basics,1,B,A
-18,Mathematics Basics,1,B,D
-19,Mathematics Basics,1,D,D
-20,Mathematics Basics,1,C,C
-21,Mathematics Basics,1,B,A
-22,Mathematics Basics,1,D,A
-23,Mathematics Basics,1,B,A
-24,Mathematics Basics,1,A,D
-TOTAL,,24,,
+1,Mathematics,1,D,B
+2,Mathematics,1,A,D
+3,Mathematics,1,A,D
+4,Mathematics,1,B,A
+5,Mathematics,1,C,A
+6,Mathematics,1,A,B
+7,Mathematics,1,B,C
+8,Mathematics,1,A,B
+9,Mathematics,1,A,D
+10,Mathematics,1,A,D
+11,Science,1,A,E
+12,Science,1,D,C
+13,Science,1,E,B
+14,Science,1,E,D
+15,Science,1,C,C
+16,Science,1,B,D
+17,Science,1,D,A
+18,Science,1,E,A
+19,Science,1,C,B
+20,Science,1,C,B
+TOTAL,,20,,

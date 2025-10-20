@@ -48,11 +48,11 @@ class BlankPageGenerator(EnhancedMCQPaperGenerator):
             self.cell(self.w - 20, 10, "Empty page for rough work", 0, 1, 'C')
         
         self.line(10, header_y + 10, self.w - 10, header_y + 10)
-        self.line(self.w/2, header_y + 10, self.w/2, self.h - 12)
+        self.line(self.w/2, header_y + 10, self.w/2, self.h - self.footer_buffer)
         self.set_xy(10, header_y + 15)
 
     def footer(self) -> None:
-        self.line(10, self.h - 12, self.w - 10, self.h - 12)
+        self.line(10, self.h - self.footer_buffer, self.w - 10, self.h - self.footer_buffer)
         self.set_y(-10)
         self.set_font('Noto', 'I', self.config.font_sizes['footer'])
         # Use specified page number if provided, otherwise fall back to current page_no()

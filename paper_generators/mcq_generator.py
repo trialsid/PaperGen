@@ -271,7 +271,7 @@ class MCQPaperGenerator(BasePaperGenerator):
         double_line_gap = self.config.spacing['header_spacing']['double_line_gap']
         self.line(10, third_line_y + double_line_gap, self.w - 10, third_line_y + double_line_gap)
         self.first_page_offset = third_line_y + double_line_gap  # Adjust the offset to account for the additional line
-        question_area_end_y = self.h - 12
+        question_area_end_y = self.h - self.footer_buffer
         self.line(self.w / 2, third_line_y, self.w / 2, question_area_end_y)
         self.set_xy(10, self.first_page_offset + 5)
 
@@ -306,11 +306,11 @@ class MCQPaperGenerator(BasePaperGenerator):
                 0, 0, 'R')
         
         self.line(10, header_y + 10, self.w - 10, header_y + 10)
-        self.line(self.w/2, header_y + 10, self.w/2, self.h - 12)
+        self.line(self.w/2, header_y + 10, self.w/2, self.h - self.footer_buffer)
         self.set_xy(10, header_y + 15)
 
     def footer(self) -> None:
-        self.line(10, self.h - 12, self.w - 10, self.h - 12)
+        self.line(10, self.h - self.footer_buffer, self.w - 10, self.h - self.footer_buffer)
         self.set_y(-10)
         self.set_font('Noto', 'I', self.config.font_sizes['footer'])
         self.cell(0, 5, f'Page {self.page_no()}', 0, 0, 'C')
@@ -339,13 +339,13 @@ class MCQPaperGenerator(BasePaperGenerator):
         """Write a single option and return its height."""
         # Calculate height needed for this option first
         option_height = self.estimate_text_height(
-            f"{label} {option_text}", 
-            width, 
+            f"{label} {option_text}",
+            width,
             self.config.font_sizes['option']
         )
-        
+
         # Check if we have enough space for this complete option
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2
+        footer_buffer = self.footer_buffer + 2
         if (y + option_height) > (self.h - footer_buffer):
             return -1  # Return -1 to indicate insufficient space
             
@@ -464,10 +464,10 @@ class MCQPaperGenerator(BasePaperGenerator):
         needed_height = self.measure_question_height(question_text, choices, reasoning)
         safety_buffer = 3  # Reduced buffer for better space utilization
         total_needed_height = needed_height + safety_buffer
-        
+
         # Get current position and effective page bounds
         current_y = self.get_y()
-        footer_buffer = self.MIN_FOOTER_BUFFER
+        footer_buffer = self.footer_buffer
         effective_page_height = self.h - footer_buffer
         
         # Calculate available space in current position
@@ -634,8 +634,8 @@ class MCQPaperGenerator(BasePaperGenerator):
     def check_and_adjust_position(self, needed_height: float, questions: List[Dict], current_idx: int) -> Tuple[bool, int]:
         """Check if there's enough space for content and adjust position if needed."""
         current_y = self.get_y()
-        # Use a very minimal footer buffer
-        footer_buffer = self.MIN_FOOTER_BUFFER + 2  # Reduced from 3 to 2
+        # Use size-aware footer buffer
+        footer_buffer = self.footer_buffer + 2  # Add small extra padding
         effective_page_height = self.h - footer_buffer
         
         # Calculate available space from current position
