@@ -1,0 +1,477 @@
+{
+  "sections": [
+    {
+      "name": "Science Fundamentals",
+      "description": "This section covers basic concepts in physical sciences and natural phenomena.",
+      "questions": [
+        {
+          "question_text": [
+            "What is the chemical symbol for water?"
+          ],
+          "choices": [
+            "H2O",
+            "CO2",
+            "NaCl",
+            "O2"
+          ],
+          "answer": "H2O",
+          "reasoning": "Water is composed of two hydrogen atoms and one oxygen atom, represented by the chemical formula H2O."
+        },
+        {
+          "question_text": [
+            "A light ray travels from air into glass.",
+            "What phenomenon occurs at the boundary?"
+          ],
+          "choices": [
+            "Reflection only",
+            "Refraction only",
+            "Both reflection and refraction",
+            "Neither reflection nor refraction"
+          ],
+          "answer": "Both reflection and refraction",
+          "reasoning": "When light travels from one medium to another, part of it is reflected back and part is refracted (bent) as it enters the new medium."
+        },
+        {
+          "question_text": [
+            "Consider the following statement about gravity:",
+            "STATEMENT",
+            "Is this statement scientifically accurate?"
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "Objects with greater mass exert stronger gravitational force."
+            }
+          ],
+          "choices": [
+            "True",
+            "False",
+            "True only on Earth",
+            "True only in space"
+          ],
+          "answer": "True",
+          "reasoning": "According to Newton's law of universal gravitation, gravitational force is directly proportional to the masses of the objects involved."
+        },
+        {
+          "question_text": [
+            "Read the statement about chemical reactions:",
+            "PARAGRAPH",
+            "What is required for reactions to occur?"
+          ],
+          "paragraph": "Chemical reactions need activation energy to proceed.",
+          "choices": [
+            "Low temperature",
+            "Activation energy",
+            "High pressure",
+            "Presence of water"
+          ],
+          "answer": "Activation energy",
+          "reasoning": "The statement directly mentions that chemical reactions need activation energy to proceed."
+        },
+        {
+          "question_text": [
+            "Consider this statement about ecosystems:",
+            "PARAGRAPH", 
+            "What do decomposers do?"
+          ],
+          "paragraph": "Decomposers break down dead matter and return nutrients to soil.",
+          "choices": [
+            "Produce oxygen",
+            "Recycle nutrients",
+            "Control populations",
+            "Store energy"
+          ],
+          "answer": "Recycle nutrients",
+          "reasoning": "The statement explains that decomposers return nutrients to soil, which is recycling nutrients back to the ecosystem."
+        },
+        {
+          "question_text": [
+            "Analyze this statement about circuits:",
+            "PARAGRAPH",
+            "How does current behave in series circuits?"
+          ],
+          "paragraph": "In series circuits, the same current flows through all components.",
+          "choices": [
+            "Current increases",
+            "Current decreases", 
+            "Current stays same",
+            "Current alternates"
+          ],
+          "answer": "Current stays same",
+          "reasoning": "The statement clearly says the same current flows through all components in series circuits."
+        },
+        {
+          "question_text": [
+            "Which of the following are states of matter?",
+            "LIST"
+          ],
+          "list_items": [
+            "i. Solid",
+            "ii. Liquid", 
+            "iii. Gas",
+            "iv. Plasma"
+          ],
+          "choices": [
+            "i, ii, and iii only",
+            "i and ii only",
+            "ii and iii only",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "reasoning": "Solid, liquid, gas, and plasma are all recognized states of matter in physics."
+        },
+        {
+          "question_text": [
+            "Match the elements with their atomic numbers.",
+            "MTF_DATA"
+          ],
+          "mtf_data": {
+            "left_header": "Elements",
+            "right_header": "Atomic Numbers",
+            "left_column": [
+              "A. Hydrogen",
+              "B. Helium",
+              "C. Carbon",
+              "D. Oxygen"
+            ],
+            "right_column": [
+              "8",
+              "6",
+              "2",
+              "1"
+            ]
+          },
+          "choices": [
+            "A-1, B-2, C-6, D-8",
+            "A-2, B-1, C-8, D-6",
+            "A-1, B-6, C-2, D-8",
+            "A-8, B-6, C-2, D-1"
+          ],
+          "answer": "A-1, B-2, C-6, D-8",
+          "reasoning": "Hydrogen has atomic number 1, Helium has 2, Carbon has 6, and Oxygen has 8."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "Sound travels faster in solids than in gases."
+            },
+            {
+              "label": "Reason", 
+              "text": "Particles in solids are more closely packed, allowing vibrations to transmit more efficiently."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Both incorrect"
+          ],
+          "answer": "Both correct, reason explains assertion",
+          "reasoning": "Sound does travel faster in solids than gases, and the reason correctly explains this is due to closer particle arrangement facilitating vibration transmission."
+        },
+        {
+          "question_text": [
+            "To measure the volume of an irregularly shaped object, follow these steps:",
+            "LIST",
+            "What is the correct sequence?"
+          ],
+          "list_items": [
+            "A. Record the new water level.",
+            "B. Fill a measuring cylinder with water and note the initial level.",
+            "C. Calculate the difference between final and initial water levels."
+          ],
+          "choices": [
+            "A → B → C",
+            "B → A → C",
+            "C → A → B",
+            "B → C → A"
+          ],
+          "answer": "B → A → C",
+          "reasoning": "First measure initial water level (B), then add object and record new level (A), finally calculate the difference to find volume (C)."
+        },
+        {
+          "question_text": [
+            "Read the following passage about photosynthesis:",
+            "PARAGRAPH",
+            "According to the passage, what are the main products of photosynthesis?"
+          ],
+          "paragraph": "Photosynthesis is the process by which green plants and some bacteria convert carbon dioxide and water into glucose using sunlight as energy. This process occurs primarily in the chloroplasts of plant cells. The overall chemical equation is: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. This process not only produces food for the plant but also releases oxygen as a byproduct, which is essential for most life forms on Earth.",
+          "choices": [
+            "Carbon dioxide and water",
+            "Glucose and oxygen",
+            "Sunlight and chloroplasts",
+            "Water and energy"
+          ],
+          "answer": "Glucose and oxygen",
+          "reasoning": "The passage clearly states that photosynthesis produces glucose (C₆H₁₂O₆) and releases oxygen (O₂) as a byproduct."
+        },
+        {
+          "question_text": [
+            "What is the SI base unit for electric current?"
+          ],
+          "choices": [
+            "Volt",
+            "Ampere",
+            "Ohm",
+            "Watt"
+          ],
+          "answer": "Ampere",
+          "reasoning": "The ampere (A) is the SI base unit for electric current. Volt measures potential difference, Ohm measures resistance, and Watt measures power."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "Metals are good conductors of electricity."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "Metals have free electrons that can move easily through the material."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "Both A and R are true and R is the correct explanation of A.",
+          "reasoning": "Metals are indeed good electrical conductors, and this is because they have mobile electrons (free electrons) that can carry electric current through the material."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics Basics",
+      "description": "This section tests fundamental mathematical concepts and problem-solving skills.",
+      "questions": [
+        {
+          "question_text": [
+            "What is the result of 15 × 8?"
+          ],
+          "choices": [
+            "120",
+            "130",
+            "125",
+            "115"
+          ],
+          "answer": "120",
+          "reasoning": "15 × 8 = 120. This can be calculated as (10 × 8) + (5 × 8) = 80 + 40 = 120."
+        },
+        {
+          "question_text": [
+            "If x + 5 = 12, what is the value of x?",
+            "Show your working."
+          ],
+          "choices": [
+            "7",
+            "17",
+            "5",
+            "12"
+          ],
+          "answer": "7",
+          "reasoning": "To solve x + 5 = 12, subtract 5 from both sides: x = 12 - 5 = 7."
+        },
+        {
+          "question_text": [
+            "Evaluate the following statement about prime numbers:",
+            "STATEMENT"
+          ],
+          "statements": [
+            {
+              "label": "Statement",
+              "text": "Every even number greater than 2 is composite."
+            }
+          ],
+          "choices": [
+            "True",
+            "False",
+            "True only for numbers less than 10",
+            "Cannot be determined"
+          ],
+          "answer": "True",
+          "reasoning": "All even numbers greater than 2 are divisible by 2, which means they have factors other than 1 and themselves, making them composite by definition."
+        },
+        {
+          "question_text": [
+            "Which of the following are properties of rectangles?",
+            "LIST"
+          ],
+          "list_items": [
+            "i. Opposite sides are parallel",
+            "ii. All angles are 90 degrees",
+            "iii. Diagonals are equal in length",
+            "iv. All sides are equal"
+          ],
+          "choices": [
+            "i, ii, and iii only",
+            "i and ii only",
+            "ii and iv only",
+            "All of the above"
+          ],
+          "answer": "i, ii, and iii only",
+          "reasoning": "Rectangles have parallel opposite sides (i), all angles are 90° (ii), and diagonals are equal (iii). However, all sides being equal (iv) is only true for squares, which are a special type of rectangle."
+        },
+        {
+          "question_text": [
+            "Match the geometric shapes with their number of sides.",
+            "MTF_DATA"
+          ],
+          "mtf_data": {
+            "left_header": "Geometric Shapes",
+            "right_header": "Number of Sides",
+            "left_column": [
+              "A. Triangle",
+              "B. Square", 
+              "C. Pentagon",
+              "D. Hexagon"
+            ],
+            "right_column": [
+              "6 sides",
+              "4 sides",
+              "5 sides", 
+              "3 sides"
+            ]
+          },
+          "choices": [
+            "A-3, B-4, C-5, D-6",
+            "A-4, B-3, C-6, D-5",
+            "A-3, B-5, C-4, D-6",
+            "A-6, B-4, C-3, D-5"
+          ],
+          "answer": "A-3, B-4, C-5, D-6",
+          "reasoning": "Triangle has 3 sides, Square has 4 sides, Pentagon has 5 sides, and Hexagon has 6 sides."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion",
+              "text": "The sum of angles in any triangle is 180 degrees."
+            },
+            {
+              "label": "Reason", 
+              "text": "This is a fundamental theorem in Euclidean geometry."
+            }
+          ],
+          "choices": [
+            "Both correct, reason explains assertion",
+            "Both correct, reason doesn't explain assertion",
+            "Assertion correct, reason incorrect",
+            "Both incorrect"
+          ],
+          "answer": "Both correct, reason explains assertion",
+          "reasoning": "The assertion states a fundamental geometric fact, and the reason correctly identifies it as a basic theorem in Euclidean geometry."
+        },
+        {
+          "question_text": [
+            "Consider the following statements about renewable energy sources:",
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Statement-1",
+              "text": "Solar energy is the most widely used renewable energy source globally."
+            },
+            {
+              "label": "Statement-2", 
+              "text": "Wind power generates electricity without producing greenhouse gas emissions during operation."
+            },
+            {
+              "label": "Statement-3",
+              "text": "Hydroelectric power plants can only be built on fast-flowing rivers."
+            }
+          ],
+          "choices": [
+            "1 and 2 only",
+            "2 only", 
+            "1 and 3 only",
+            "All statements are correct"
+          ],
+          "answer": "2 only",
+          "reasoning": "Statement-1 is incorrect as hydroelectric power is currently the most widely used renewable source globally. Statement-2 is correct as wind turbines produce no emissions during operation. Statement-3 is incorrect as hydroelectric plants can also use dams on slower rivers or utilize pumped storage systems."
+        },
+        {
+          "question_text": [
+            "To solve a quadratic equation ax² + bx + c = 0 using the quadratic formula:",
+            "LIST",
+            "What is the correct order of steps?"
+          ],
+          "list_items": [
+            "A. Apply the quadratic formula x = (-b ± √(b² - 4ac))/(2a)",
+            "B. Identify the coefficients a, b, and c",
+            "C. Simplify to get the final answer(s)"
+          ],
+          "choices": [
+            "A → B → C",
+            "B → A → C",
+            "C → A → B",
+            "B → C → A"
+          ],
+          "answer": "B → A → C",
+          "reasoning": "First identify the coefficients (B), then apply the quadratic formula (A), and finally simplify to get the solution (C)."
+        },
+        {
+          "question_text": [
+            "Read the passage about probability:",
+            "PARAGRAPH",
+            "What is the probability of getting heads when flipping a fair coin?"
+          ],
+          "paragraph": "Probability is a measure of the likelihood that an event will occur. It is expressed as a number between 0 and 1, where 0 means the event cannot happen and 1 means the event is certain to happen. For a fair coin, there are two equally likely outcomes when flipped: heads or tails. Since only one of these two outcomes is the desired result (heads), the probability is calculated as the number of favorable outcomes divided by the total number of possible outcomes.",
+          "choices": [
+            "0",
+            "0.5",
+            "1",
+            "2"
+          ],
+          "answer": "0.5",
+          "reasoning": "For a fair coin, there is 1 favorable outcome (heads) out of 2 possible outcomes (heads or tails), so the probability is 1/2 = 0.5."
+        },
+        {
+          "question_text": [
+            "What is the area of a circle with radius 3 units?"
+          ],
+          "choices": [
+            "6π square units",
+            "9π square units",
+            "3π square units",
+            "18π square units"
+          ],
+          "answer": "9π square units",
+          "reasoning": "The area of a circle is πr². With radius = 3, the area = π × 3² = 9π square units."
+        },
+        {
+          "question_text": [
+            "STATEMENTS"
+          ],
+          "statements": [
+            {
+              "label": "Assertion (A)",
+              "text": "The median of a dataset is always one of the values in the dataset."
+            },
+            {
+              "label": "Reason (R)",
+              "text": "The median is the middle value when data is arranged in order."
+            }
+          ],
+          "choices": [
+            "Both A and R are true and R is the correct explanation of A.",
+            "Both A and R are true but R is not the correct explanation of A.",
+            "A is true but R is false.",
+            "A is false but R is true."
+          ],
+          "answer": "A is false but R is true.",
+          "reasoning": "The reason correctly defines median, but the assertion is false. When there's an even number of values, the median is the average of the two middle values, which may not be in the original dataset."
+        }
+      ]
+    }
+  ]
+}

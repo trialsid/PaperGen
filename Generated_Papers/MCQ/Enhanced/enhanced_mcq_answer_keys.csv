@@ -1,25 +1,26 @@
-Section,Question Number,Set A,Set B
-Science Fundamentals,1,Current stays same,Both A and R are true and R is the correct explanation of A.
-Science Fundamentals,2,"Both correct, reason explains assertion",Recycle nutrients
-Science Fundamentals,3,H2O,Both reflection and refraction
-Science Fundamentals,4,True,"Both correct, reason explains assertion"
-Science Fundamentals,5,Ampere,All of the above
-Science Fundamentals,6,Activation energy,Activation energy
-Science Fundamentals,7,Recycle nutrients,Glucose and oxygen
-Science Fundamentals,8,B → A → C,B → A → C
-Science Fundamentals,9,"A-1, B-2, C-6, D-8",True
-Science Fundamentals,10,Both A and R are true and R is the correct explanation of A.,Current stays same
-Science Fundamentals,11,Both reflection and refraction,"A-1, B-2, C-6, D-8"
-Science Fundamentals,12,Glucose and oxygen,H2O
-Science Fundamentals,13,All of the above,Ampere
-Mathematics Basics,1,"A-3, B-4, C-5, D-6",2 only
-Mathematics Basics,2,120,"i, ii, and iii only"
-Mathematics Basics,3,"i, ii, and iii only","A-3, B-4, C-5, D-6"
-Mathematics Basics,4,B → A → C,120
-Mathematics Basics,5,0.5,B → A → C
-Mathematics Basics,6,"Both correct, reason explains assertion",9π square units
-Mathematics Basics,7,2 only,0.5
-Mathematics Basics,8,7,"Both correct, reason explains assertion"
-Mathematics Basics,9,9π square units,A is false but R is true.
-Mathematics Basics,10,True,7
-Mathematics Basics,11,A is false but R is true.,True
+Question_Number,Section,Marks,Set_A,Set_B
+1,Science Fundamentals,1,D,C
+2,Science Fundamentals,1,D,D
+3,Science Fundamentals,1,D,B
+4,Science Fundamentals,1,D,A
+5,Science Fundamentals,1,B,A
+6,Science Fundamentals,1,C,B
+7,Science Fundamentals,1,C,A
+8,Science Fundamentals,1,C,D
+9,Science Fundamentals,1,B,D
+10,Science Fundamentals,1,D,D
+11,Science Fundamentals,1,A,C
+12,Science Fundamentals,1,A,C
+13,Science Fundamentals,1,C,B
+14,Mathematics Basics,1,D,B
+15,Mathematics Basics,1,C,C
+16,Mathematics Basics,1,C,C
+17,Mathematics Basics,1,B,A
+18,Mathematics Basics,1,B,D
+19,Mathematics Basics,1,D,D
+20,Mathematics Basics,1,C,C
+21,Mathematics Basics,1,B,A
+22,Mathematics Basics,1,D,A
+23,Mathematics Basics,1,B,A
+24,Mathematics Basics,1,A,D
+TOTAL,,24,,

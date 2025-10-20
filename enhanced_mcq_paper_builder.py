@@ -543,37 +543,70 @@ def generate_enhanced_mcq_sets_with_keys(
             traceback.print_exc()
             continue
 
-    # Generate answer key files
+    # Generate unified answer key CSV with serial question numbering
     try:
-        # Prepare CSV data
-        csv_rows = [['Section', 'Question Number'] + [f'Set {name}' for name in set_names]]
-        
-        for section_idx, section in enumerate(base_sections):
-            for q_num in range(1, section.required_questions + 1):
-                row = [section.name, q_num]
+        # Build question-centric data structure
+        questions_data = []
+        question_num = 1
+
+        for section_idx, base_section in enumerate(base_sections):
+            for q_idx in range(base_section.required_questions):
+                question_row = {
+                    'question_number': question_num,
+                    'section': base_section.name,
+                    'marks': None,
+                    'answers': {}
+                }
+
+                # Collect data from each set
                 for set_name in set_names:
+                    set_sections = all_sets_data[set_name]['sections']
+                    section = set_sections[section_idx]
+                    question = section.questions[q_idx]
+
+                    # Get marks from first set (same across all sets)
+                    if question_row['marks'] is None:
+                        question_row['marks'] = question.get('marks', 1)
+
+                    # Convert answer text to option letter (A, B, C, D)
+                    correct_answer_text = question['answer']
+                    choices = question.get('choices', [])
                     try:
-                        section_data = next(
-                            s for s in set_data[f"Set {set_name}"]['sections']
-                            if s['name'] == section.name
-                        )
-                        answer = section_data['questions'][q_num - 1]['answer']
-                        row.append(answer)
-                    except (KeyError, IndexError, StopIteration):
-                        row.append('?')
-                csv_rows.append(row)
-        
-        # Write CSV
+                        answer_index = choices.index(correct_answer_text)
+                        answer_letter = chr(65 + answer_index)  # 65 is ASCII for 'A'
+                    except (ValueError, IndexError):
+                        answer_letter = '?'  # Fallback if answer not found in choices
+
+                    question_row['answers'][set_name] = answer_letter
+
+                questions_data.append(question_row)
+                question_num += 1
+
+        # Prepare CSV data with Question_Number as primary key
+        csv_rows = [['Question_Number', 'Section', 'Marks'] + [f'Set_{name}' for name in set_names]]
+
+        for q_data in questions_data:
+            row = [
+                q_data['question_number'],
+                q_data['section'],
+                q_data['marks']
+            ]
+            for set_name in set_names:
+                row.append(q_data['answers'][set_name])
+            csv_rows.append(row)
+
+        # Add total row
+        total_marks = sum(q['marks'] for q in questions_data)
+        total_row = ['TOTAL', '', total_marks] + [''] * len(set_names)
+        csv_rows.append(total_row)
+
+        # Write unified CSV
         with open(f'{keys_dir}/enhanced_mcq_answer_keys.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(csv_rows)
-            
-        # Write JSON
-        with open(f'{keys_dir}/enhanced_mcq_answer_keys_detailed.json', 'w') as f:
-            json.dump(set_data, f, indent=2)
-            
+
     except Exception as e:
-        print(f"Error generating answer key files: {e}")
+        print(f"Error generating answer key file: {e}")
         raise
     
     return set_data
@@ -681,8 +714,7 @@ Examples:
         print("  - Question papers: Generated_Papers/MCQ/Enhanced/Questions/")
         print("  - Answer keys: Generated_Papers/MCQ/Enhanced/Answers/")
         print("  - Booklets (A3): Generated_Papers/MCQ/Enhanced/Booklets/")
-        print("  - Answer key CSV: Generated_Papers/MCQ/Enhanced/enhanced_mcq_answer_keys.csv")
-        print("  - Detailed JSON: Generated_Papers/MCQ/Enhanced/enhanced_mcq_answer_keys_detailed.json")
+        print("  - Unified answer key: Generated_Papers/MCQ/Enhanced/enhanced_mcq_answer_keys.csv")
         
     except FileNotFoundError:
         print(f"Error: Input file {args.input_file} not found!")
